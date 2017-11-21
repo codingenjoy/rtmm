@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/My97DatePicker/WdatePicker.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+    </script>
+    <style type="text/css">
+        .sp_icon1 {
+            margin-left:8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="TopMenu">
+        <div class="Logo"></div>
+        <ol class="MainMenu">
+            <li><a class="catalogue_management" title="分类管理"><span class="longText">分类管理</span></a></li>
+            <li><a class="supplier_management" title="厂商管理"><span class="longText">厂商管理</span></a></li>
+            <li><a class="item_management" title="商品管理"><span class="longText">商品管理</span></a></li>
+            <li><a class="order_management" title="订单管理"><span class="longText">订单管理</span></a></li>
+            <li><a class="promotion_management promotion_management_on" title="促销管理"><span class="longText">促销管理</span></a></li>
+            <li><a class="achievement_analysis" title="业绩分析"><span class="longText">业绩分析</span></a></li>
+            <li><a class="parameter_management" title="参数管理"><span class="longText">参数管理</span></a></li>
+            <li><a class="day-end_management" title="日结管理"><span class="longText">日结管理</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">我的工作台</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">ToBeAGood Programer!</span></a></li>
+        </ol>
+        <ol class="RMenu">
+            <li class="MenuDrop"><a class="RM4"></a>
+                <ol class="FavDrop">
+                            <li class="FavDrop1"><div class="RM1"></div>
+                                <span>我的收藏</span>
+                            </li>
+                            <li class="FavDrop2"><div class="RM3"></div>
+                                <span>语言设置</span></li>
+                            <li class="FavDrop3"><div class="RM2"></div>
+                                <span>密码设置</span></li>
+                            <li class="FavDrop5"><div class="RM5"></div><span>退出帐号</span></li>
+                 </ol>
+            </li>
+            <li class="RMenu_Text"><div class="longText">欢迎，Java.管理员 Csharp Dot</div></li> 
+        </ol>
+        <ol class="MyFav" style="display:none;">
+            <li><a>我的收藏1</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏2</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏3</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏4</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏5</a><div class="Closediv CircleClose"></div></li>
+        </ol>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="1www" class="Sub" href="Supplier-11.html"><span class="L1_No"></span>
+                           <span class="SubText">集团信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                    <li>
+                        <a id="1ee" class="Sub" href="Supplier-21.html"><span class="L1_No"></span>
+                           <span class="SubText">公司信息</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a id="A1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">合同管理</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="A2" class="Sub" href="#"><span class="L2_No"></span>
+                                   <span class="SubText">本年度合同管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A7" class="Sub" href="#"><span class="L2_No"></span>
+                                   <span class="SubText">全部合同查询</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A8" class="Sub Sub_on" href="#"><span class="L2_No"></span>
+                                   <span class="SubText">批量修改扣款金额</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A9" class="Sub" href="#"><span class="L2_No"></span>
+                                   <span class="SubText">赞助科目组管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A5" class="Sub" href="#"><span class="L2_No"></span>
+                                   <span class="SubText">系统界面模板</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A3" class="Sub" href="#"><span class="L2_No"></span>
+                                   <span class="SubText">专柜商品契约</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A4" class="Sub" href="#"><span class="L2_No"></span>
+                                   <span class="SubText">赞助科目查询</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            
+                            <li>
+                                <a  id="A6" class="Sub" href="#"><span class="L2_No"></span>
+                                   <span class="SubText">纸板合同模板</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="fff1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">厂商管理</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg" class="Sub" href="Supplier-31.html"><span class="L2_No"></span>
+                                   <span class="SubText">厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub" href="Supplier-41.html"><span class="L2_No"></span>
+                                   <span class="SubText">未生效厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3"></td>
+                        <td></td>
+                        <td class="Tools4"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td id="tools11" class="Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12   testAdd"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools23"></td>
+                        <td></td>
+                        <td class="Tools24"></td>
+                        <td></td>
+                        <td class="Tools25"></td>
+                        <td></td>
+                        <td class="Tools26"></td>
+                        <td></td>
+                        <td class="Tools27"></td>
+                        <td></td>
+                        <td class="Tools28"></td>
+                        <td></td>
+                        <td class="Tools29"></td>
+                        <td></td>
+                        <td class="Tools30"></td>
+                        <td></td>
+                        <td class="Tools31"></td>
+                    </tr>
+                </table>
+                <div class="RightTool active">
+                    <div id="Tools22" class="Tools22_disable Icon-size1 " title="content"></div>
+                </div>
+                <div class="RightTool hover">
+                    <div class="Icon-size1 Tools21_disable" title="list"></div>
+                </div>
+                <div class="RightTool checked">
+                    <div class="Tools22_disable Icon-size1 " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21_disable" title="list"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                            <!--第一个-->
+                            <div class="tags1_left tags1_left_on"></div>
+                            <div class="tagsM tagsM_on">批量修改扣款金额</div>
+
+                            <div class="tags tags3_r_on"></div>
+            </div>
+            <div class="Container-1">
+
+                <div class="Content" >
+                    <div class="CInfo"></div>
+
+                    <div style="height:300px;" class="CM">
+                        <div class="CM-bar"><div>条款与科目组</div></div>
+                        <div class="CM-div">
+
+                            <div class="ig_top10">
+                                <div class="icol_text w9"><span>选择厂商&nbsp;</span></div>
+                                <select class="fl_left w10"><option></option></select>
+                                <div class="icol_text w7"><span>年份</span></div>
+                                <input type="text" class="inputText w7 fl_left" />
+                            </div>
+
+                            <div class="contract_cm contract_cmz">
+
+                                <div class="contract_cm1">
+                                    <table cellpadding="0" cellspacing="0" class="align_center">
+                                        <tr>
+                                            <td><div style="width:30px;"></div></td>
+                                            <td><div style="width:103px;">支付方式</div></td>
+                                            <td><div style="width:223px;">公司名称</div></td>
+                                            <td><div style="width:105px;">合同编号</div></td>
+                                            <td><div style="width:103px;">合同状态</div></td>
+                                            
+                                        </tr>
+                                    </table>
+
+                                    <div class="cm_table2">
+                                        <div class="item">
+                                            <input type="checkbox" class="ckbox fl_left"  />
+                                            <div class="iconPut fl_left" style="width:100px;">
+                                                <input style="width:80%" type="text"/>
+                                                <div class="ListWin"></div>
+                                            </div>
+                                            <input type="text" class="inputText fl_left" style="width:220px;" />
+                                            <input type="text" class="inputText fl_left longText" style="width:103px;" value="SPECIAL BUY PRICE DISCOUNT" title="SPECIAL BUY PRICE DISCOUNT"/>
+                                            <input type="text" class="inputText fl_left" style="width:100px;" />
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="ig">
+					                    <input type="checkbox" class="sp_icon1" />
+					                    <div class="Icon-size2 Tools10 sp_icon2"></div>
+					                    <div class="Icon-size2 Line-1 sp_icon3 "></div>
+					                    <div class="Icon-size2 Tools11 sp_icon4"></div>
+                                        <div class="Icon-size2 Line-1 sp_icon3 "></div>
+					                    <div class="Icon-size2 copy sp_icon4"></div>
+				                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div style="height:235px;margin-top:2px;" class="CM">
+                        <div class="CM-bar"><div>条款与科目组</div></div>
+                        <div class="CM-div">
+                            <div class="contract_cm contract_cmx">
+
+                                <div class="contract_cm1z">
+                                    <table cellpadding="0" cellspacing="0" class="align_center">
+                                        <tr>
+                                            <td><div style="width:30px;"></div></td>
+                                            <td><div style="width:103px;">原始科目组编号</div></td>
+                                            <td><div style="width:233px;">原始科目组中文名称</div></td>
+                                            <td><div style="width:103px;">目标科目组编号</div></td>
+                                            <td><div style="width:238px;">目标科目组中文名称</div></td>
+                                            
+                                        </tr>
+                                    </table>
+
+                                    <div class="cm_table2">
+                                        <div class="item">
+                                            <input type="checkbox" class="ckbox fl_left"  />
+                                            
+                                            <div class="iconPut fl_left" style="width:100px;">
+                                                <input style="width:80%" type="text"/>
+                                                <div class="ListWin"></div>
+                                            </div>
+
+                                            <input type="text" class="inputText fl_left Black" style="width:230px;" />
+
+                                            <div class="iconPut fl_left" style="width:100px;">
+                                                <input style="width:80%" type="text"/>
+                                                <div class="ListWin"></div>
+                                            </div>
+                                            
+                                            <input type="text" class="inputText fl_left longText Black" style="width:230px;" value="SPECIAL BUY PRICE DISCOUNT" title="SPECIAL BUY PRICE DISCOUNT"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="ig">
+					                    <input type="checkbox" class="sp_icon1" />
+					                    <div class="Icon-size2 Tools10 sp_icon2"></div>
+					                    <div class="Icon-size2 Line-1 sp_icon3 "></div>
+					                    <div class="Icon-size2 Tools11 sp_icon4"></div>
+				                    </div>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+       </div>
+    </div>
+
+</body>
+</html>

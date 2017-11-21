@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js"></script>
+
+    <style type="text/css">
+        .CInfo .inputText {
+            float:left;margin-top:3px;
+        }
+        .wfUL {
+            display:block;background:#f9f9f9;height:30px;
+        }
+            .wfUL li {
+                float:left;margin:7px 0;padding:0 30px;border-left:1px solid #333;cursor:pointer;
+            }
+        .wfUL .gzz {
+            border:0;
+        }
+        .ig .item {
+            float:left;padding:3px 30px;margin:3px 5px;cursor:pointer;
+        }
+        .gc_on {
+            color:#3F9673;font-weight:bolder;
+        }
+        .wser {
+            height:476px;
+        }
+
+        .wser2 {
+            height:100%;width:48%;float:right;
+        }
+        .CInfo .cfbtn1,.CInfo .cfbtn2 {
+            padding:0 10px;background:#ddd6d6;cursor:pointer;margin:0;float:none;
+        }
+        .cfbtn2 {
+            color:#F37864;position:absolute;top:3px;right:4px;
+        }
+        .cfbtn1 {
+            position:absolute;top:3px;right:64px;
+        }
+        .CInfo {
+            position:relative;top:0;left:0;
+        }
+        .Tools11 {
+            display:block;width:16px;height:21px;margin-left:10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:40px;">
+    <iframe class="TopMenu" src="../maintop.html" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="fff1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">我的草稿箱</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">厂商管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">商品管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A4" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">订单管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A5" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">促销管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="A1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">待办事项</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="A2" class="Sub Sub_on"><span class="L2_No qipao"></span>
+                                   <span class="SubText">我的待办</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A3" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">办理查询</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="A6" class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">公告信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools3_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools23_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools32_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools10_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools17_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools19_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools24_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools25_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools28_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29_disable"></td>
+                    </tr>
+                </table>
+                <div class="RightTool ToolsBg">
+                    <div class="Tools22 Icon-size1 Tools22_on " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                <div class="tags1_left tags1_left_on"></div>
+                            <div class="tagsM tagsM_on">委托管理</div>
+                            <div class="tags tags3_r_on"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+                    <div class="CInfo">
+                        <div class="icol_text"><span>来源节点</span></div>
+                        <input type="text" class="inputText w15" />
+                        <div class="icol_text w7"><span>目标节点</span></div>
+                        <input type="text" class="inputText w15" />
+
+                        
+                        <span class="cfbtn2">删除</span>
+                        <span class="cfbtn1">保存</span>
+                    </div>
+
+                    <div class="ig">
+                        <div class="item item_on">参与者配置</div>
+                        <div class="item">表达式配置</div>
+                    </div>
+                    <ul class="wfUL">
+                        <li class="gzz">工作组</li>
+                        <li>个人</li>
+                        <li class="gc_on">Service</li>
+                        <li>多维度</li>
+                    </ul>
+
+                        
+                   <div class="wser">
+                            <div class="htable_div">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td><div class="t_cols align_center" style="width:30px;">&nbsp;</div></td>
+                                            <td><div class="t_cols" style="width:250px;">功能描述</div></td>
+                                            <td><div class="t_cols" style="width:375px;">业务实现Bean</div></td>
+                                            <td><div class="t_cols" style="width:325px;">备注</div></td>
+                                            <td><div style="width:16px;">&nbsp;</div></td>
+                                        </tr>
+                                    </thead>
+	                            </table>
+                            </div>
+                            <div class="btable_div" style="height:380px;">
+                                <table  class="single_tb w100">
+                                    <tr>
+                                        <td class="align_center" style="width:30px;"><input type="checkbox" /></td>
+                                        <td style="width:251px;">源工作组D-目标工作组反反复复</td>
+                                        <td style="width:376px;">业务实现Bean1</td>
+                                        <td style="width:326px;">业务实现Bean1</td>
+                                        <td style="width:auto">&nbsp;</td>
+                                    </tr>
+                                </table>    
+                            </div> 
+                            <div class="htable_div">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td><div class="t_cols align_center" style="width:30px;">&nbsp;</div></td>
+                                            <td><div class="t_cols" style="width:250px;">
+                                                    <input type="text" class="inputText w95" />
+                                                </div></td>
+                                            <td><div class="t_cols" style="width:375px;">
+                                                    <input type="text" class="inputText w95" />
+                                                </div></td>
+                                            <td><div class="t_cols" style="width:325px;">
+                                                    <input type="text" class="inputText w95" />
+                                                </div></td>
+                                            <td><div style="width:30px;">
+                                                    <span class="Tools11"></span>
+                                                </div></td>
+                                        </tr>
+                                    </thead>
+	                            </table>
+                            </div>
+                   <div class="paging">
+	                    <div class="fl_left">
+		                    第1-20项,共 5 项&nbsp;&nbsp;|&nbsp;每页显示 <select>
+			                    <option value="10">10</option>
+			                    <option value="20" selected="selected">20</option>
+			                    <option value="30">30</option>
+		                    </select> 项
+	                    </div>
+	                    <div class="fl_right page_list">
+                            <span class="fl_right" style="margin-right:10px;">&nbsp;&nbsp;&nbsp;到第 <input name="pageNo" id="goto_page" class="page_no_input" maxlength="5" type="text"> 页 <input value="go" type="button"></span>
+                                <a class="page_end_block" title="尾页"></a>
+                                <a class="page_next_block" title="下一页"></a>
+                                <a title="6" class="num">999999</a>
+                                <a style="cursor:default;">...</a>
+                                <a title="2" class="num">3</a>
+                                <a title="2" class="num">2</a>
+                                <a title="1" class="num">1</a>
+                                <a title="上一页" class="page_prev_block_off"></a>
+                                <a title="首页" class="page_first_block_off"></a>  
+	                    </div>
+                    </div>
+
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

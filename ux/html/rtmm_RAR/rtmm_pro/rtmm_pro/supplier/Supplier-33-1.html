@@ -1,0 +1,21 @@
+﻿
+<body>
+                            <table id="dg" style="height:420px;width:990px;"></table>
+                            <script type="text/javascript">
+
+                                $('#dg').datagrid({
+                                    rownumbers: false,
+                                    //singleSelect: false,
+                                    pagination: true,
+                                    pageSize: 20,
+                                    url: 'json/datagrid_data11.json',
+                                    columns: [[
+                                    { field: 'no', title: '店号', sortable: true, halign: 'center', width: 318 },
+                                    { field: 'status', title: '状态', width: 107 },
+                                    { field: 'pay_status', title: '付款状态', width: 100 },
+                                    { field: 'city', title: '注册城市', width: 102 }
+                                    ]]
+                                });
+                            </script>
+</body>
+

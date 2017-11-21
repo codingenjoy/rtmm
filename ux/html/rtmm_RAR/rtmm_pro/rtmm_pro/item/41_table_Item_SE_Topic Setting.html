@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/easyUI/jquery.easyui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../css/easyUI/datagrid.css"/>
+    <style type="text/css">
+        /*这个样式请程序员不要复制*/
+        .SubMenu {
+            width:198px;
+            height:610px;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:40px;">
+    <iframe class="TopMenu" src="../maintop.html" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <iframe class="SubMenu" src="leftMenu.html" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools3_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools23_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools32_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools10_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools17_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools19_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools24_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools25_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools28_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29_disable"></td>
+                    </tr>
+                </table>
+                <div class="RightTool ToolsBg">
+                    <div class="Tools22 Icon-size1 Tools22_on " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                <!--第一个-->
+                            <div class="tags1_left tags1_left_on"></div>
+                            <div class="tagsM tagsM_on">主题设定</div>
+                            <div class="tags tags_left_on"></div>
+                            <!--最后一个-->
+                            <div class="tagsM">SE商品查询</div>
+                            <div class="tags tags3_r_off"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Search Bar_on" ><!-- Bar_on-->
+                    <div class="SearchTop">
+                        <span>查询条件</span>
+                        <div class="Icon-size1 CircleClose C-id" onclick="DispOrHid('C-id')"></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SMiddle">
+                        <table class="SearchTable" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="ST_td1"><span>SE期数</span></td>
+                                <td><input type="text" class="inputText w35" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>开始日期</span></td>
+                                <td><div class="iconPut w70 fl_left C_Func ">
+                                    <input class="w80" type="text" />
+                                    <div class="Calendar"></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>结束日期</span></td>
+                                <td><div class="iconPut w70 fl_left C_Func ">
+                                    <input class="w80" type="text" />
+                                    <div class="Calendar"></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>SE主题</span></td>
+                                <td><input type="text" class="inputText w80" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>创建日期</span></td>
+                                <td><div class="iconPut w70 fl_left C_Func ">
+                                    <input class="w80" type="text" />
+                                    <div class="Calendar"></div></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SearchFooter">
+                        <div class="Icon-size1 Tools20"></div>
+                        <div class="Icon-size1 Tools6"></div>
+                    </div>
+                </div>
+                <div class="Content" style="width:74%;">
+                    <table id="dg" style="height:570px;"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('#i1').combobox({
+            //url: 'combobox_data.json',
+            width: 100,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-总公司",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i2').combobox({
+            //url: 'combobox_data.json',
+            width: 100,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i3').combobox({
+            //url: 'combobox_data.json',
+            width: 60,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "年",
+                "selected": true
+            }, {
+                "id": 2,
+                "text": "月"
+            }, {
+                "id": 3,
+                "text": "天"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#dg').datagrid({
+            rownumbers: false,
+            //singleSelect: false,
+            pagination: true,
+            pageSize: 20,
+            url: 'json/datagrid_data5.json',
+            columns: [[
+            { field: 'ck', checkbox: true },
+            { field: 'no', title: '公司编号', sortable: true, align: 'right', halign: 'center' ,width:100},
+            { field: 'name', title: '公司名称', sortable: true, halign: 'center', width: 190 },
+            { field: 'type', title: '公司类型', halign: 'center', width: 100 },
+            { field: 'status', title: '状态', halign: 'center', width: 80 },
+            { field: 'status', title: '税号', halign: 'center', width: 80 },
+            { field: 'city', title: '注册城市', halign: 'center', width: 80 },
+            { field: 'date', title: '创建日期', halign: 'center', width: 80 },
+            { field: 'temp', title: ' ', halign: 'center', width:38 }
+
+            ]],
+            onClickRow: function (rowIndex, rowData) {
+                var no = rowData.no;
+                //alert('公司编号:' + no);
+                $(".datagrid-row").each(function () {
+                    var _no = $(this).find(".datagrid-cell-c1-no").text();
+                    //alert(_no);
+                    if (no == _no) {
+                        $(this).find("input").attr("checked", "checked");
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

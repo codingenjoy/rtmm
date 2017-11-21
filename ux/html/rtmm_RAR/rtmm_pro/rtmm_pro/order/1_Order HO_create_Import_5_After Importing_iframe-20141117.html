@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/default.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/iframeContent.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/My97DatePicker/WdatePicker.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/iframeContent.js" charset="utf-8"></script>
+    <style type="text/css">
+        .item {
+            display:inline-block;
+            float:left;
+            padding:3px 20px;
+            margin-left:5px;
+            margin-top:1px;
+        }
+        /*.right_import {
+            display:none;
+        }*/
+        .error_import {
+            display:none;
+        }
+        .btable_checked .Icon-size1 {
+            display:block;
+            background:url(../images/choosed.png) 0 0 no-repeat;
+            margin-left:4px;
+        }
+        .choosed {
+            display:block;float:left;width:17px;height:17px;
+            background:url(../images/choosed.png) -20px 0 no-repeat;
+            margin-left:4px;
+            margin-top:3px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("#right_import").click(function () {
+                $(".error_import").css("display", "none");
+                $(".right_import").css("display", "block");
+            });
+            $("#error_import").click(function () {
+
+                $(".right_import").css("display", "none");
+                $(".error_import").css("display", "block");
+            });
+        });
+        
+    </script>
+</head>
+<body>
+<div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3"></td>
+                        <td></td>
+                        <td class="Tools4"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td id="tools11" class="Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12   testAdd"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+<!--                        <td class="Line-1"></td>
+                        <td class="Tools5"></td>
+                        <td></td>
+                        <td class="Tools7"></td>
+                        <td></td>
+                        <td class="Tools8"></td>
+                        <td></td>
+                        <td class="Tools9"></td>
+                        <td></td>
+                        <td class="Tools13"></td>
+                        <td></td>
+                        <td class="Tools14"></td>
+                        <td></td>
+                        <td class="Tools15"></td>-->
+                        <td class="Line-1"></td>
+                        <td class="Tools23"></td>
+                        <td></td>
+                        <td class="Tools24"></td>
+                        <td></td>
+                        <td class="Tools25"></td>
+                        <td></td>
+                        <td class="Tools26"></td>
+                        <td></td>
+                        <td class="Tools27"></td>
+                        <td></td>
+                        <td class="Tools28"></td>
+                        <td></td>
+                        <td class="Tools29"></td>
+                        <td></td>
+                        <td class="Tools30"></td>
+                        <td></td>
+                        <td class="Tools31"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Tools22 Icon-size1 " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                            <!--第一个-->
+                            <div class="tags1_left"></div>
+                            <div class="tagsM">总部订单信息s</div>
+                            <div class="tags tags_right_on"></div>
+                            <!--一定不要忘了tag3-->
+                            <!--add-->
+                            <div class="tagsM_q  tagsM_on">导入新总部订单</div>
+                            <div class="tags3_close_on">
+                                <div class="tags_close"></div>
+                            </div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+
+                    <div class="CInfo">
+                        <div class="icol_text">导入条目数&nbsp;</div>
+                        <div class="item item_on" id="right_import">导入正确</div>
+                        <div class="item" id="error_import">导入错误</div>
+                    </div>
+
+                    <div class="ig_top10 right_import">
+                        <div class="icol_text">正确条目数&nbsp;</div>
+                        <input type="text" class="inputText w5 fl_left" />
+                        <div class="icol_text">&nbsp;&nbsp;订购总数量&nbsp;</div>
+                        <input type="text" class="inputText w10 fl_left" />
+                        <div class="icol_text">&nbsp;&nbsp;订购总金额&nbsp;</div>
+                        <input type="text" class="inputText w10 fl_left" /><div class="icol_text">&nbsp;元</div>
+                        
+                    </div>
+
+                    <div class="ig_top10 error_import" style="display:none;">
+                        <div class="icol_text">错误条目数&nbsp;</div>
+                        <input type="text" class="inputText w5 fl_left" />
+                        <div class="icol_text">&nbsp;&nbsp;错误原因&nbsp;</div>
+                        <select class="w10 fl_left"><option></option></select>
+                        <span class="choosed"></span><div class="icol_text">&nbsp;验证全部</div>
+                    </div>
+
+                    <div class="htable_div right_import">
+                        <table>
+                            <thead>
+                            <tr>
+                                <!--<td><div class="t_cols align_center" style="width:30px;"><input type="checkbox" /></div></td>-->
+                                <td><div class="t_cols" style="width:85px;">店号<!--<div style="display:inline-block;width:10px;height:20px;"></div>--></div></td>
+                                <td><div class="t_cols" style="width:65px;">厂编</div></td>
+                                <td><div class="t_cols" style="width:130px;">公司名称</div></td>
+                                <td><div class="t_cols" style="width:85px;">货号</div></td>
+                                <td><div class="t_cols" style="width:135px;">品名</div></td>
+                                <td><div class="t_cols" style="width:80px;">订购数量</div></td>
+                                <td><div class="t_cols" style="width:80px;">订赠品数</div></td>
+                                <td><div class="t_cols" style="width:85px;">订货收货日</div></td>
+
+                                <td><div class="t_cols" style="width:85px;">导入进价(元)</div></td>
+                                <td><div class="t_cols" style="width:85px;">实际进价(元)</div></td>
+                                <td><div class="t_cols" style="width:85px;">促销期数</div></td>
+                                <td><div style="width:16px;">&nbsp;</div></td>
+                            </tr>
+                        </thead>
+	                    </table>
+                    </div>
+                    <div class="btable_div right_import" style="height:439px;">
+                        <table  class="single_tb w100"><!--multi_tb为多选 width:1001px;-->
+                            <tr>
+                                <!--<td class="align_center" style="width:30px;"><input type="checkbox" /></td>-->
+                                <td style="width:86px;">123456</td>
+                                <td style="width:66px;">世界杯</td>
+                                <td style="width:131px;" title="XXXXX有限公司">XXXXX有限公司</td>
+                                <td style="width:86px;">P&GXXXXX有限公司世界杯世界杯</td>
+                                <td style="width:136px;" title="XXXXX有限公司">123456</td>
+                                <td style="width:81px;"><input type="text" class="inputText w95 align_right" /></td>
+                                <td style="width:81px;"><input type="text" class="inputText w95 align_right" /></td>
+                                <td style="width:86px;"><input type="text" class="Wdate w95 fl_left" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/></td>
+
+                                <td style="width:83px;" class="align_right">123456</td>
+                                <td style="width:85px;" class="align_right">123456</td>
+                                <td style="width:87px;" class="align_right">123456</td>
+
+                                <td style="width:auto">&nbsp;</td>
+                            </tr>
+                        </table>    
+                    </div>
+
+                    <div class="htable_div error_import" style="display:none;">
+                        <table>
+                            <thead>
+                            <tr>
+                                <!--<td><div class="t_cols align_center" style="width:30px;"><input type="checkbox" /></div></td>-->
+                                <td><div class="t_cols" style="width:85px;">店号<!--<div style="display:inline-block;width:10px;height:20px;"></div>--></div></td>
+                                <td><div class="t_cols" style="width:65px;">厂编</div></td>
+                                <td><div class="t_cols" style="width:120px;">公司名称</div></td>
+                                <td><div class="t_cols" style="width:85px;">货号</div></td>
+                                <td><div class="t_cols" style="width:120px;">品名</div></td>
+                                <td><div class="t_cols" style="width:80px;">订购数量</div></td>
+                                <td><div class="t_cols" style="width:80px;">订赠品数</div></td>
+                                <td><div class="t_cols" style="width:85px;">订货收货日</div></td>
+
+                                <td><div class="t_cols" style="width:85px;">导入进价(元)</div></td>
+                                <td><div class="t_cols" style="width:85px;">实际进价(元)</div></td>
+                                <td><div class="t_cols" style="width:85px;">促销期数</div></td>
+
+                                <td><div class="t_cols" style="width:25px;">&nbsp;</div></td>
+
+                                <td><div style="width:16px;">&nbsp;</div></td>
+                            </tr>
+                        </thead>
+	                    </table>
+                    </div>
+                    <div class="btable_div error_import" style="height:439px;display:none;">
+                        <table  class="single_tb w100"><!--multi_tb为多选 width:1001px;-->
+                            <tr>
+                                <!--<td class="align_center" style="width:30px;"><input type="checkbox" /></td>-->
+                                <td style="width:86px;">123456</td>
+                                <td style="width:66px;">世界杯</td>
+                                <td style="width:121px;" title="XXXXX有限公司">XXXXX有限公司</td>
+                                <td style="width:86px;">P&GXXXXX有限公司世界杯世界杯</td>
+                                <td style="width:121px;" title="XXXXX有限公司">123456</td>
+                                <td style="width:81px;"><input type="text" class="inputText w95 align_right" /></td>
+                                <td style="width:81px;"><input type="text" class="inputText w95 align_right" /></td>
+                                <td style="width:86px;"><input type="text" class="Wdate w95 fl_left" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/></td>
+
+                                <td style="width:83px;" class="align_right">123456</td>
+                                <td style="width:85px;" class="align_right">123456</td>
+                                <td style="width:87px;" class="align_right">123456</td>
+                                <td style="width:26px;">
+                                    <span class="Icon-size1"></span>
+                                </td>
+                                <td style="width:auto">&nbsp;</td>
+                            </tr>
+                        </table>    
+                    </div>
+
+                    <div class="paging">
+	                    <div class="fl_left">
+		                    第1-20项,共 5 项&nbsp;&nbsp;|&nbsp;每页显示 <select>
+			                    <option value="10">10</option>
+			                    <option value="20" selected="selected">20</option>
+			                    <option value="30">30</option>
+		                    </select> 项
+	                    </div>
+	                    <div class="fl_right page_list">
+                            <span class="fl_right" style="margin-right:10px;">&nbsp;&nbsp;&nbsp;到第 <input name="pageNo" id="goto_page" class="page_no_input" maxlength="5" type="text"/> 页 <input value="go"  type="button"/></span>
+                                <a class="page_end_block" title="尾页"></a>
+                                <a class="page_next_block" title="下一页"></a>
+                                <a title="6" class="num">999999</a>
+                                <a style="cursor:default;">...</a>
+                                <a title="2" class="num">3</a>
+                                <a title="2" class="num">2</a>
+                                <a title="1" class="num">1</a>
+                                <a title="上一页" class="page_prev_block_off"></a>
+                                <a title="首页" class="page_first_block_off"></a>  
+	                    </div>
+                    </div>
+
+                </div>
+            </div>
+</body>
+</html>

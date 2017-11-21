@@ -1,0 +1,273 @@
+﻿body{
+    padding:0px;margin:0px auto;
+    color:#333333;
+    font-size:12px;
+    font-family:'Microsoft YaHei',Arial;
+}
+a {
+    border:0;
+    display:block;
+    text-decoration:none;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    color:#333333;
+}
+table {
+    color:#333333;
+    font-size:12px;
+    font-family:'Microsoft YaHei',Arial;
+    border:none;
+    border-collapse:collapse;
+}
+table, td, tr ,ul,ol,li{
+    margin:0;
+    padding:0;
+}
+ol ,li{
+    list-style:none;
+}
+select {
+    height:22px;border: 1px solid #999999;padding:0;
+}
+input {
+    margin:0;
+    border:0;padding: 0;outline:none;
+}
+input[type="radio"]:focus,input[type="checkbox"]:focus{outline:0}
+    input[type="checkbox"] {
+        vertical-align:middle;
+    }
+.inputText {
+    border:1px solid #999999;font-family: microsoft yahei;
+    font-size: 12px;color:#333;
+    height:20px;
+    line-height:20px;
+}
+.clearBoth {
+    clear:both;
+}
+.vertical {
+    vertical-align:middle;
+}
+/*文字不换行，过长用省略号显示*/
+.longText{
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    /*word-break: keep-all;*/
+    text-overflow: ellipsis;
+}
+/*color*/
+.Black {
+    background-color:#cccccc;
+}
+.GreenBg,.item_on {
+    background-color:#3F9673;
+    color:#fff;
+}
+.GrayBg {
+    background-color:#e5e5e5;
+    color:#333;
+}
+.lightBlue{
+    background-color:#B4DECD;
+}
+.fl_left {
+    float:left;
+}
+.fl_right {
+    float:right;
+}
+.align_center {
+    text-align:center;
+}
+.align_right {
+    text-align:right;
+}
+.align_left {
+    text-align:left;
+}
+.borderRight {
+    border-right:1px solid #333;
+}
+.borderLeft {
+    border-left:1px solid #333;
+}
+.Bar_off {
+    display:none;
+}
+.top3 {
+    margin-top:3px;
+}
+.top5 {
+    margin-top:5px;
+}
+.top10 {
+    margin-top:10px;
+}
+.top15 {
+    margin-top:15px;
+}
+.top20 {
+    margin-top:20px;
+}
+/*宽度组件*/
+.w5 {
+    width:5%;
+}
+.w7 {
+    width:7%;
+}
+.w8 {
+    width:8%;
+}
+.w9 {
+    width:9%;
+}
+.w10 {
+    width:10% !important;
+}
+.w11{
+    width:11%;
+}
+.w12_5 {
+    width:12.5%;
+}
+.w14{
+    width:14%;
+}
+.w15{
+    width:15%;
+}
+.w17{
+    width:17%;
+}
+.w20{
+    width:20%;
+}
+.w23{
+    width:23%;
+}
+.w25 {
+    width:25%;
+}
+.w28 {
+    width:28%;
+}
+.w30 {
+    width:30.5%;
+}
+.w31 {
+    width:31%;
+}
+.w35 {
+    width:35%;
+}
+.w36 {
+    width:36%;
+}
+.w39 {
+    width:39%;
+}
+.w40 {
+    width:40%;
+}
+.w44 {
+    width:44%;
+}
+.w45 {
+    width:45%;
+}
+.w48 {
+    width:48%;
+}
+.w49 {
+    width:49%;
+}
+.w50 {
+    width:50%;
+}
+.w53 {
+    width:53%;
+}
+.w55 {
+    width:55%;
+}
+.w58 {
+    width:58%;
+}
+.w60 {
+    width:60%;
+}
+.w62 {
+    width:62%;
+}
+.w64 {
+    width:64%;
+}
+.w65 {
+    width:65%;
+}
+.w70 {
+    width:70%;
+}
+.w71 {
+    width:71%;
+}
+.w74 {
+    width:74%;
+}
+.w75 {
+    width:75%;
+}
+.w76 {
+    width:76%;
+}
+.w77 {
+    width:77%;
+}
+.w78 {
+    width:78%;
+}
+.w80 {
+    width:80%;
+}
+.w82 {
+    width:82%;
+}
+.w83 {
+    width:83%;
+}
+.w85 {
+    width:85%;
+}
+.w86 {
+    width:86%;
+}
+.w87{
+    width:87%;
+}
+.w90 {
+    width:90%;
+}
+.w91 {
+    width:91%;
+}
+.w93 {
+    width:93%;
+}
+.w94 {
+    width:94%;
+}
+.w95 {
+    width:95%;
+}
+.w96 {
+    width:96%;
+}
+.w100{
+    width:100%;
+}
+._w70 {
+    width:70px;
+}

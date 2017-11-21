@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+<link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" type="text/javascript"></script>
+    <script src="../js/easyUI/jquery.easyui.min.js" charset="utf-8" type="text/javascript"></script>
+    <link href="../css/easyUI/tree.css" type="text/css" rel="stylesheet"/>
+    <style type="text/css">
+        .Table_Panel {
+            height:550px;
+            overflow:hidden;
+        }
+        .CM_p {
+            height:280px;
+            width:595px;
+            margin: 20px 2px 0px 20px;
+        }
+        .t2, .t3 {
+            height:240px;
+            overflow-x:hidden;
+            overflow-y:auto;
+            float:left;
+            background:#fff;
+            margin-top:20px;
+            border:1px solid #808080;
+        }
+        .t2 {
+            width:328px;
+            margin-left:20px;
+        }
+        .t3 {
+            width:200px;
+            margin-left:5px;
+        }
+        .CM2 {
+            background:#f9f9f9;
+            width:296px;
+            height:240px;
+            float:right;margin-top:3px;
+        }
+        .b{
+            height:209px;overflow:auto;
+        }
+        .d {
+            width:235px;
+            height:200px;
+            background:#fff;
+            margin:20px auto auto 40px;
+            border:1px solid #808080;
+        }
+        .e, .f,.b {
+            width:215px;margin:0 auto;line-height:26px;
+        }
+        .e{
+            overflow:auto;
+            height:169px;
+        }
+            .e div,.b div {
+                border-top:1px solid #fff;
+                height:28px;
+                cursor:pointer;
+            }
+        .f {
+            border-top:1px solid #808080;
+            height:30px;
+        }
+        .tree-icon {
+            display:none;
+        }
+        .Panel_footer {
+            width:937px;
+        }
+        .first_div {
+            height:100%;width:100%;
+        }
+        .second_div {
+            height:89px;width:100%;margin-top:2px;
+        }
+    </style>
+</head>
+<body style="background:#f00;">
+    <div class="Panel" style="width:937px;">
+        <div class="Panel_top">
+            <span>选择下传区域</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <div class="" style="width:615px;height:523px;float:left;">
+                <div class="CM_p CM">
+                    <div class="CM-bar" style="height:280px;"><div>大卖场</div></div>
+                    <div class="t2">
+                        <ul id="tt"></ul>
+                    </div>
+                    <div class="t3">
+                        <div class="b inputDiv" style="width:180px;">
+                            <div class="item2"><label>
+                                        <input type="checkbox" name="n"/>
+                                     </label><span>998-上海加工中心</span></div>
+                            <div class="item2"><label>
+                                        <input type="checkbox" name="n"/>
+                                     </label><span>998-上海加工中心</span></div>
+                            <div class="item2"><label>
+                                        <input type="checkbox" name="n"/>
+                                     </label><span>998-上海加工中心</span></div>
+                            <div class="item2"><label>
+                                        <input type="checkbox" name="n"/>
+                                     </label><span>998-上海加工中心</span></div>
+                        </div>
+                        <div class="f"  style="width:180px;"><label>
+                                        <input type="checkbox" name="n" class="checkAll"/>
+                                     </label><span>全选</span></div>
+                    </div>
+                </div>
+                <div class="p52_2_2">
+                    <div class="CM2" style="margin-left:3px;">
+                        <div class="CM-bar" style="height:240px;"><div>大卖场</div></div>
+                        <div class="d">
+                            <div class="e inputDiv">
+                                <div class="item3"><label>
+                                        <input type="checkbox" name="a"/>
+                                     </label><span>998-上海加工中心</span></div>
+                                <div class="item3"><label>
+                                        <input type="checkbox" name="a"/>
+                                     </label><span>998-上海加工中心</span></div>
+                                <div class="item3"><label>
+                                        <input type="checkbox" name="a"/>
+                                     </label><span>998-上海加工中心</span></div>
+                                <div class="item3"><label>
+                                        <input type="checkbox" name="a"/>
+                                     </label><span>998-上海加工中心</span></div>
+                            </div>
+                            <div class="f"><label>
+                                        <input type="checkbox" name="a" class="checkAll"/>
+                                     </label><span>全选</span></div>
+                        </div>
+                    </div>
+                    <div class="CM2">
+                        <div class="CM-bar" style="height:240px;"><div>大卖场</div></div>
+                        <div class="d">
+                            <div class="e inputDiv">
+                                <div  class="item4"><label>
+                                        <input type="checkbox" name="d"/>
+                                     </label><span>998-上海加工中心</span></div>
+                                <div class="item4"><label>
+                                        <input type="checkbox" name="d"/>
+                                     </label><span>998-上海加工中心</span></div>
+                            </div>
+                            <div class="f"><label>
+                                        <input type="checkbox" name="d" class="checkAll"/>
+                                     </label><span>全选</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p52_2_1">
+                <div class="CM first_div">
+                    <div class="CM-bar"><div>显示方式</div></div>
+                    <div class="CM-div" style="width:90%;">
+                            <div class="ig" style="margin-top:15px;">
+                                <input type="checkbox" />&nbsp;&nbsp;允收天数
+                            </div>
+                            <div class="ig">
+                                <input type="checkbox" />&nbsp;&nbsp;允收天数
+                            </div>
+                            <div class="ig">
+                                <input type="checkbox" />&nbsp;&nbsp;允收天数
+                            </div>
+                            <div class="ig">
+                                <input type="checkbox" />&nbsp;&nbsp;允收天数
+                            </div>
+                            <div class="ig">
+                                <input type="checkbox" />&nbsp;&nbsp;允收天数
+                            </div>
+                            <div class="ig">
+                                <input type="checkbox" />&nbsp;&nbsp;允收天数
+                            </div>
+                            <div class="ig">
+                                <input type="checkbox" />&nbsp;&nbsp;允收天数
+                            </div>
+                            <div class="ig">
+                                <input type="checkbox" />&nbsp;&nbsp;允收天数
+                            </div>
+                     </div>
+                </div>      
+            </div>
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">确定</div>
+                <div class="PanelBtn2">取消</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#tt').tree({
+            checkbox: true,
+            url: 'json/tree_data1.json'
+        });
+    </script>
+</body>
+</html>

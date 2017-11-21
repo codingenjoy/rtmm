@@ -1,0 +1,569 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/easyUI/jquery.easyui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../css/easyUI/combo.css"/>
+    <script src="../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <script src="../js/tempScript.js" charset="utf-8" type="text/javascript"></script><!--这个js只是演示用，程序员不必考虑它-->
+    <style type="text/css">
+        .CInfo .combo,.CInfo input{
+            background-color:#cccccc;
+        }
+
+        /*这个样式请程序员不要复制 start*/
+        .SubMenu {
+            width:198px;
+            height:610px;
+        }
+        /*这个样式请程序员不要复制 end*/
+        /*改*/
+        .p52_text3 {
+            margin-left: 190px;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:40px;">
+    <iframe class="TopMenu" src="../maintop.html" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <iframe class="SubMenu" src="leftMenu.html" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools3_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools23_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools32_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools10"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools12"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools17_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools19_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools24_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools25_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools28_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29_disable"></td>
+                    </tr>
+                </table>
+                <div class="RightTool ToolsBg">
+                    <div id="content1" class="Tools22 Icon-size1 Tools22_on " title="Content"></div>
+                </div>
+                <div class="RightTool">
+                    <div id="list1" class="Icon-size1 Tools21" title="List"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                <!--第一个-->
+                            <div class="tags1_left tags1_left_on"></div>
+                            <div class="tagsM tagsM_on">商品总览</div>
+                            <div class="tags tags_left_on"></div>
+
+                             <!--中间-->
+                            <div class="tagsM">商品变价</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品变价</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品条码</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">改包装设定</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品厂商</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品陈列信息</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品进销存</div>
+                            <div class="tags"></div>
+
+                            <!--最后一个-->
+                            <div class="tagsM">DC商品</div>
+                            <div class="tags tags3_r_off"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+	                <div class="CInfo">
+                        <span>项</span>
+                        <span>10，000</span>
+                        <span>/</span>
+                        <span>1</span>
+                        <span>第</span>
+                        <span>|</span>
+                        <span>张三</span>
+                        <span>修改人</span>
+                        <span>2014-03-03</span>
+                        <span>修改日期</span>
+                        <span>李四</span>
+                        <span>建档人</span>
+                        <span>2014-02-02</span>
+                        <span>创建日期</span>
+                    </div>
+
+                    <div style="height:120px;" class="CM">
+                            <div class="CM-bar"><div>修改的版块</div></div>
+                            <div class="CM-div">
+                                <div class="ig" style="padding-top:20px;padding-left:20px;">
+                                    <input type="radio" name="a" checked="checked"/><span style="margin-left:5px;margin-right:50px;">修改商品基本信息</span>
+                                    <input type="radio" name="a"/><span style="margin-left:5px;">新增商品非主厂商</span>
+                                </div>
+                                <div class="ig" style="padding-left:20px;">
+                                    <input type="radio" name="a"/><span style="margin-left:5px;margin-right:50px;">设置商品变价</span>
+                                    <input type="radio" name="a" style="margin-left: 24px;"/><span style="margin-left:5px;">取消商品厂商关联</span>
+                                </div>
+                                <div class="ig" style="padding-left:20px;">
+                                    <input type="radio" name="a"/><span style="margin-left:5px;margin-right:50px;">修改商品门店信息</span>
+                                    <input type="radio" name="a"/><span style="margin-left:5px;">修改商品厂商特殊进价税率</span>
+                                </div>
+                            </div>
+                    </div>
+                    <div style="height:250px;margin-top:2px;" class="CM">
+                            <div class="CM-bar"><div>修改的商品</div></div>
+                            <div class="CM-div">
+                                <div class="w60 p52_tb"><!--改 w60-->
+                                    <div class="ig">
+                                        <span class="p52_text1">货号</span>
+                                        <span class="p52_text2">品名</span>
+                                        <span class="p52_text3">状态</span>
+                                    </div>
+                                    <div class="p52_tb1">
+                                        <div class="ig" style="margin-top:5px;">
+                                            <input type="checkbox" class="fl_left"/>
+                                            <input class="inputText twoinput20 w20 Black" type="text" />
+                                            <input class="inputText twoinput20 w50 Black" type="text" />
+                                            <input class="inputText twoinput20 w20 Black" type="text" />
+                                        </div>
+                                        <div class="ig">
+                                            <input type="checkbox" class="fl_left"/>
+                                            <input class="inputText twoinput20 w20 Black" type="text" />
+                                            <input class="inputText twoinput20 w50 Black" type="text" />
+                                            <input class="inputText twoinput20 w20 Black" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="ig">
+                                        <input class="sp_icon1" type="checkbox" />
+                                        <div class="Icon-size2 Tools10 sp_icon2"></div>
+                                        <div class="Icon-size2 Line-1 sp_icon3 "></div>
+                                        <div class="Icon-size2 Tools11 sp_icon4"></div>
+                                        <div class="Icon-size2 Line-1 sp_icon3 "></div>
+                                        <div class="Icon-size2 copy sp_icon4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div id="popupWin" style="position:absolute;z-index:999;left:10px;top:10px;"></div>
+    <script type="text/javascript">
+        $(".Tools12").click(function () {
+            modifyBank();
+        });
+        function modifyBank() {
+            var selector = "#popupWin";
+            $(selector).window({
+                width: 660,
+                height: 680,
+                modal: true,
+                shadow: false,
+                border: false,
+                noheader: true
+            });
+            $(selector).window('open');
+
+            $(selector).window('refresh', 'file:///D:/我的酷盘/rtmm/rtmm/TestHTML/item-p52-panel2.html');
+
+            window.windowSelector = selector;
+        }
+        $('#i1').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-总公司",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i2').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i3').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i4').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i5').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i6').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i7').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i8').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i9').combobox({
+            //url: 'combobox_data.json',
+            width: 90,
+            height:20,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-正常",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i10').combobox({
+            //url: 'combobox_data.json',
+            width: 100,
+            height: 20,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-正常",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i11').combobox({
+            //url: 'combobox_data.json',
+            width: 100,
+            height: 20,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-正常",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+    </script>
+</body>
+</html>

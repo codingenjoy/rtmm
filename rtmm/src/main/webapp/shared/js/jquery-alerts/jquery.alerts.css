@@ -1,0 +1,82 @@
+#popup_container {
+	font-family:'Microsoft YaHei', Arial, sans-serif;
+	font-size: 12px;
+    color:#333;
+	width: 310px;
+	background:#3F9673;
+	padding:5px;
+}
+
+#popup_title {
+	line-height: 25px;
+	color: #fff;
+	background-color:#3F9673;
+}
+#popup_cancel {
+    background: #999 !important;
+}
+#popup_content {
+	background-color: #fff;
+	padding: 1.1em 1.75em 1em;
+	margin: 0em;
+    margin-top:5px;
+}
+/*#popup_content.alert {
+	background-image: url(images/alert_info.jpg);
+	background-repeat: no-repeat;
+	background-position: 20px 10px;
+}*/
+#popup_content.error {
+	background-image: url(images/cha.jpg);
+	background-repeat: no-repeat;
+	background-position: 20px 10px;
+}
+#popup_content.success {
+	background-image: url(images/gou.jpg);
+	background-repeat: no-repeat;
+	background-position: 20px 10px;
+}
+#popup_content.warning {
+	background-image: url(images/warn.jpg);
+	background-repeat: no-repeat;
+	background-position: 20px 10px;
+}
+#popup_content.prompt,#popup_content.common  {
+	background-image: url(images/alert_info.jpg);
+	background-repeat: no-repeat;
+	background-position: 20px 10px;
+}
+#popup_content.confirm {
+	background-image: url(images/comfirm.jpg);
+	background-repeat: no-repeat;
+	background-position: 20px 10px;
+}
+#popup_message {
+	padding-left: 48px;
+	margin-top: 5px;
+	word-break:break-all;
+}
+#popup_panel {
+	text-align: center;
+	margin: 2em 0em 0em 1em;
+}
+
+#popup_prompt {
+	margin: .5em 0em;
+}
+
+#popup_panel input{
+	color:#fff;
+	background: #f37864;
+	height: 25px;
+	width: 80px;
+	line-height:24px\0;
+	*line-height:22px !important;
+	cursor: pointer;
+	margin-left: 10px;
+	margin-right: 10px;
+    text-align:center;
+}
+#popup_overlay {
+    top:0;left:0;position:absolute;z-index:99998;background:url(images/alpha.png);
+}

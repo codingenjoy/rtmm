@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-1.7.1.js"></script>
+    <style type="text/css">
+        .demo {
+            border:1px solid #808080;font-family:'Microsoft YaHei';font-size:12px;padding:5px;margin:50px;width:200px;color:#333;
+        }
+        pre {
+            padding:20px 0;background:#cbc9c9;
+        }
+        .defaultText {
+            color:#cbc9c9;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#dt").focus(function (e) {
+                $e = $(e.target);
+                $e.val('').removeClass("defaultText");
+            });
+            $("#dt").blur(function (e) {
+                $e = $(e.target);
+                if ($e.val() == '') {
+                    $e.val('请填写内容').addClass("defaultText");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <input id="dt" type="text" class="demo defaultText" value="请填写内容" />
+    <pre>
+        .defaultText {
+            color:#cbc9c9;
+        }
+    </pre>
+</body>
+</html>

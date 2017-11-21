@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="css/G.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Componet.css" rel="Stylesheet" />
+    <script src="js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/easyUI/jquery.easyui.min.js" charset="utf-8" type="text/javascript"></script>
+    <link type="text/css" href="css/easyUI/calendar.css" rel="Stylesheet" />
+    <style type="text/css">
+        .username {
+            width:15%;
+            float:left;
+            margin-left:3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="TopMenu">
+        <div class="Logo"></div>
+        <ol class="MainMenu">
+            <li><a class="catalogue_management" title="分类管理" href="Catelog-11.html"><span class="longText">分类管理</span></a></li>
+            <li><a class="supplier_management" title="厂商管理" href="Supplier-11.html"><span class="longText">厂商管理</span></a></li>
+            <li><a class="item_management" title="商品管理"><span class="longText">商品管理</span></a></li>
+            <li><a class="order_management" title="订单管理"><span class="longText">订单管理</span></a></li>
+            <li><a class="promotion_management" title="促销管理"><span class="longText">促销管理</span></a></li>
+            <li><a class="achievement_analysis" title="业绩分析"><span class="longText">业绩分析</span></a></li>
+            <li><a class="parameter_management parameter_management_on" title="参数管理" href="Param-11.html"><span class="longText">参数管理</span></a></li>
+            <li><a class="day-end_management" title="日结管理"><span class="longText">日结管理</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">我的工作台</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">ToBeAGood Programer!</span></a></li>
+        </ol>
+<ol class="RMenu">
+            <li class="MenuDrop"><a class="RM4"></a>
+                <ol class="FavDrop">
+                            <li class="FavDrop1"><div class="RM1"></div>
+                                <span>我的收藏</span>
+                            </li>
+                            <li class="FavDrop2"><div class="RM3"></div>
+                                <span>语言设置</span></li>
+                            <li class="FavDrop3"><div class="RM2"></div>
+                                <span>密码设置</span></li>
+                            <li class="FavDrop5"><div class="RM5"></div><span>退出帐号</span></li>
+                 </ol>
+            </li>
+            <li class="RMenu_Text"><div class="longText">欢迎，Java.管理员 Csharp Dot</div></li> 
+        </ol>
+        <ol class="MyFav" style="display:none;">
+            <li><a>我的收藏1</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏2</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏3</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏4</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏5</a><div class="Closediv CircleClose"></div></li>
+        </ol>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">用户管理</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="1fff"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">系统管理</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg"  class="Sub" href="Param-11.html"><span class="L2_No"></span>
+                                   <span class="SubText">角色与权限管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub" href="Param-21.html"><span class="L2_No"></span>
+                                   <span class="SubText">职位与角色管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a id="asa" class="Sub Sub_on" href="Param-32.html"><span class="L2_No"></span>
+                                   <span class="SubText">用户管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3_disable"></td>
+                        <td></td>
+                        <td class="Tools4_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools5"></td>
+                        <td></td>
+                        <td class="Tools7"></td>
+                        <td></td>
+                        <td class="Tools8"></td>
+                        <td></td>
+                        <td class="Tools9"></td>
+                        <td></td>
+                        <td class="Tools13"></td>
+                        <td></td>
+                        <td class="Tools14"></td>
+                        <td></td>
+                        <td class="Tools15"></td>
+                        <td class="Line-1"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools22" title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                <div class="tagx tagL_off"></div>
+                <div class="tag tagM_off">用户管理</div>
+                <div class="tagx tagR_off"></div>
+
+                <div class="tagx tagL"></div>
+                <div class="tagM">创建新用户</div>
+                <div class="tagx2 tagR2"><div class="tagx_close"></div></div>
+            </div>
+            <div class="Container-1">
+                
+                <div class="Content">
+                    <div class="CInfo"></div>
+                    <div class="line" style="width:100%"></div>
+                    <div style="height:539px;background:#f9f9f9;overflow:hidden;">
+                        <table class="CM_table CM" style="width:100%;">
+                        <tr>
+                            <td class="w10"><span>*用户名</span></td>
+                            <td>
+                                <select class="w10 fl_left">
+                                    <option>内部人员</option>
+                                </select>
+                                <input id="userName" type="text" class="inputText username errorInput" />
+                                <div title="该用户已存在!" class="errorMsg" style="margin:5px auto auto 5px;"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>姓名</span></td>
+                            <td><input type="text" class="inputText w20" /></td>
+                        </tr>
+                        <tr>
+                            <td><span>主要职位</span></td>
+                            <td><input type="text" class="inputText w20" /></td>
+                        </tr>
+                        <tr>
+                            <td><span>*创建初始密码</span></td>
+                            <td><input type="text" class="inputText w20" />（默认值为工号后六位）</td>
+                        </tr>
+                        <tr>
+                            <td><span>用户状态</span></td>
+                            <td><input type="text" class="inputText w15" /></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><div class="iconPut w20 fl_left">
+                                                <input type="text" class="w90"/>
+                                                <div class="C_Func Calendar"></div>
+                                            </div>
+                                <div class="fl_left w70">&nbsp;&nbsp;邮箱&nbsp;<input class="inputText w25" /></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>基本用户角色</span></td>
+                            <td rowspan="2">
+                                <table class="CM_table w95">
+                                    <tr style="text-align:center;border-bottom:1px solid #cccccc;">
+                                        <td style="width:3%"></td>
+                                        <td style="width:19%">*店号</td>
+                                        <td style="width:19%">*角色</td>
+                                        <td style="width:19%">*部门</td>
+                                        <td style="width:16%">备注</td>
+                                        <td style="width:12%">*生效日期</td>
+                                        <td style="width:12%">*失效日期</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td></td>
+                                        <td><div class="iconPut w95">
+                                                <input type="text" class="w87"/>
+                                                <div class="ListWin"></div>
+                                            </div></td>
+                                        <td><select class="w95"><option></option></select></td>
+                                        <td><select class="w95"><option></option></select></td>
+                                        <td><input type="text" class="inputText w95"/></td>
+                                        <td><div class="iconPut w95">
+                                                <input type="text" class="w80"/>
+                                                <div class="C_Func Calendar"></div>
+                                            </div></td>
+                                        <td><div class="iconPut w95">
+                                                <input type="text" class="w80"/>
+                                                <div class="C_Func Calendar"></div>
+                                            </div></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+                        <tr>
+                            <td><span>额外用户角色</span></td>
+                            <td rowspan="2">
+                                <table class="CM_table w95">
+                                    <tr style="text-align:center;border-bottom:1px solid #cccccc;">
+                                        <td style="width:3%"></td>
+                                        <td style="width:19%">*店号</td>
+                                        <td style="width:19%">*角色</td>
+                                        <td style="width:19%">*部门</td>
+                                        <td style="width:16%">备注</td>
+                                        <td style="width:12%">*生效日期</td>
+                                        <td style="width:12%">*失效日期</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td><div class="iconPut w95">
+                                                <input type="text" class="w87"/>
+                                                <div class="ListWin"></div>
+                                            </div></td>
+                                        <td><select class="w95">
+                                            <option></option>
+                                            </select></td>
+                                        <td><div class="iconPut w95">
+                                                <input type="text" class="w86"/>
+                                                <div class="ListWin"></div>
+                                            </div></td>
+                                        <td>
+                                            <input type="text"  class="inputText w95"/>
+                                        </td>
+                                        <td><div class="iconPut w95">
+                                                <input type="text" class="w80"/>
+                                                <div class="Calendar"></div>
+                                            </div></td>
+                                        <td><div class="iconPut w95">
+                                                <input type="text" class="w80"/>
+                                                <div class="Calendar"></div>
+                                            </div></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td><td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td rowspan="2">
+                                <table class="CM_table w95">
+                                    <tr style="text-align:center;border-bottom:1px solid #cccccc;">
+                                        <td style="width:3%"></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>
+                                            <div class="Icon-size2 Tools10_disable fl_left"></div>
+                                            <div class="Line-1 Icon-size2 fl_left"></div>
+                                            <div class="Tools11 Icon-size2 fl_left"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </table>
+                    </div>
+               </div>
+        </div>
+    </div>
+    </div>
+    <div id="date_div" style="width:160px;height:180px;display:none;position:absolute;z-index:9999;"></div>
+    <script type="text/javascript">
+        //日历
+        $('#date_div').calendar({
+            current: new Date()
+        });
+        //validate
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="../js/tempScript.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/easyUI/jquery.easyui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../css/easyUI/combo.css"/>
+    <style type="text/css">
+        /*这个样式请程序员不要复制 start*/
+        .SubMenu {
+            width:198px;
+            height:610px;
+        }
+        /*这个样式请程序员不要复制 end*/
+        .CInfo .combo,.CInfo input{
+            background-color:#cccccc;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:40px;">
+    <iframe class="TopMenu" src="../maintop.html" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <iframe class="SubMenu" src="leftMenu.html" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools3_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools23_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools32_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools10_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools17_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools19_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools24_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools25_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools28_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29_disable"></td>
+                    </tr>
+                </table>
+                <div class="RightTool ToolsBg">
+                    <div class="Tools22 Icon-size1 Tools22_on " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                <!--这里面的id都是演示所用，程序员可以删除-->
+                <!--第一个-->
+                            <div class="tags1_left"></div>
+                            <div id="overview" class="tagsM">商品总览</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="changePrice" class="tagsM">商品变价</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="guige" class="tagsM">商品规格</div>
+                            <div class="tags tags_right_on"></div>
+                <!--中间-->
+                            <div id="tiaoma" class="tagsM tagsM_on">商品条码</div>
+                            <div class="tags tags_left_on"></div>
+                <!--中间-->
+                            <div id="guanlian" class="tagsM">商品关联</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="i_changshang" class="tagsM">商品厂商</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="chenlie" class="tagsM">商品陈列</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="jinxiaocun" class="tagsM">商品进销存</div>
+                            <div class="tags"></div>
+
+                <!--最后一个-->
+                            <div id="dc_info" class="tagsM">DC信息</div>
+                            <div class="tags tags3_r_off"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+	                <div class="CInfo">
+                        
+                        <span>项</span>
+                        <span>10，000</span>
+                        <span>/</span>
+                        <span>1</span>
+                        <span>第</span>
+                        <span>|</span>
+                        <span>张三</span>
+                        <span>修改人</span>
+                        <span>2014-03-03</span>
+                        <span>修改日期</span>
+                        <span>李四</span>
+                        <span>建档人</span>
+                        <span>2014-02-02</span>
+                        <span>创建日期</span>
+                    </div>
+
+                    <div style="height:60px;" class="CM">
+                        <div class="CM-bar"><div>货号</div></div>
+                        <div class="CM-div">
+                            <div class="hh_item">
+                                 <div class="icol_text w7"><span>货号</span></div>
+                                 <div class="iconPut iq" style="width:13%;"><input style="width:83%" type="text"/><div class="ListWin"></div></div>
+                                 <input class="inputText iq" style="width:20%;" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:470px;margin-top:2px;" class="CM">
+                        <div class="CM-bar"><div>商品条码信息</div></div>
+                        <div class="CM-div">
+                            <div class="txm_info">
+                                <div class="txm_title">
+                                    <span style="margin-left:120px;">条码</span><span style="margin-left:110px;">创建日期</span>
+                                    <span style="margin-left:50px;">建档人</span>
+                                </div>
+                                <div class="sp_tb">
+                                    <div class="ig">
+                                        <input type="checkbox"/>
+                                        <input type="text" class="w45 inputText"/>
+                                        <input type="text" class="w20 inputText"/>
+                                        <input type="text" class="w20 inputText"/>
+                                    </div>
+                                    <div class="ig">
+                                        <input type="checkbox"/>
+                                        <input type="text" class="w45 inputText"/>
+                                        <input type="text" class="w20 inputText"/>
+                                        <input type="text" class="w20 inputText"/>
+                                    </div>
+                                    <div class="ig">
+                                        <input type="checkbox"/>
+                                        <input type="text" class="w45 inputText"/>
+                                        <input type="text" class="w20 inputText"/>
+                                        <input type="text" class="w20 inputText"/>
+                                    </div>
+                                    <div class="ig">
+                                        <input type="checkbox"/>
+                                        <input type="text" class="w45 inputText"/>
+                                        <input type="text" class="w20 inputText"/>
+                                        <input type="text" class="w20 inputText"/>
+                                    </div>
+                                    <div class="ig">
+                                        <input type="checkbox"/>
+                                        <input type="text" class="w45 inputText"/>
+                                        <input type="text" class="w20 inputText"/>
+                                        <input type="text" class="w20 inputText"/>
+                                    </div>
+                                </div>
+                                <div class="ig">
+                                    <input type="checkbox" class="sp_icon1"/>
+                                    <div class="Icon-size2 Tools10 sp_icon2">
+                                    </div><div class="Icon-size2 Line-1 sp_icon3 "></div>
+                                    <div class="Icon-size2 Tools11 sp_icon4" ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

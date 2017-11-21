@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="css/G.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Componet.css" rel="Stylesheet" />
+    <script src="js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/jump.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/easyUI/jquery.easyui.min.js" charset="utf-8" type="text/javascript"></script>
+    <link type="text/css" href="css/easyUI/datagrid.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/pagination.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/calendar.css" rel="Stylesheet" />
+    <style type="text/css">
+        .tbx {
+            height:479px;
+        }
+        .tbx td{
+            height:30px;
+        }
+            .tbx tr {
+                cursor:pointer;
+            }
+            .tbx tr:hover {
+                background:#99cc66;
+            }
+        .Con_tb {
+            width:35%;margin-top:0px;height:580px;float:left;
+        }
+        .Con_R {
+            width:65%;float:right;height:580px;
+        }
+        .con_title {
+            height:30px;background:#EEEEEE;overflow:hidden;
+        }
+            .con_title table {
+                margin-top:5px;
+            }
+            .con_title td {
+                height:20px;
+            }
+        .my-datagrid-cell-check {
+            width:5%;
+        }
+        .my-datagrid-cell-c1-no {
+            width:10%;
+        }
+        .my-datagrid-cell-c1-name {
+            width:15%;
+        }
+        .my-datagrid-cell-c1-status {
+            width:10%;
+        }
+        .my-datagrid-cell-c1-level {
+            width:15%;
+        }
+        .my-datagrid-cell-c1-company {
+            width:25%;
+        }
+        .my-datagrid-cell-c1-status2 {
+            width:10%;
+        }
+        .my-datagrid-cell-c1-area {
+            width:10%;
+        }
+        /*.my-head-td-ck {
+            width:5%;
+        }
+        .my-head-td-no {
+            width:20%;
+        }
+        .my-head-td-name {
+            width:25%;
+        }
+        .my-head-td-en_name {
+            width:30%;
+        }
+        .my-head-td-date {
+            width:auto;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="TopMenu">
+        <div class="Logo"></div>
+        <ol class="MainMenu">
+            <li><a class="catalogue_management catalogue_management_on" title="分类管理" href="Catelog-11.html"><span class="longText">分类管理</span></a></li>
+            <li><a class="supplier_management" title="厂商管理" href="Supplier-11.html"><span class="longText">厂商管理</span></a></li>
+            <li><a class="item_management" title="商品管理"><span class="longText">商品管理</span></a></li>
+            <li><a class="order_management" title="订单管理"><span class="longText">订单管理</span></a></li>
+            <li><a class="promotion_management" title="促销管理"><span class="longText">促销管理</span></a></li>
+            <li><a class="achievement_analysis" title="业绩分析"><span class="longText">业绩分析</span></a></li>
+            <li><a class="parameter_management" title="参数管理" href="Param-11.html"><span class="longText">参数管理</span></a></li>
+            <li><a class="day-end_management" title="日结管理"><span class="longText">日结管理</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">我的工作台</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">ToBeAGood Programer!</span></a></li>
+        </ol>
+<ol class="RMenu">
+            <li class="MenuDrop"><a class="RM4"></a>
+                <ol class="FavDrop">
+                            <li class="FavDrop1"><div class="RM1"></div>
+                                <span>我的收藏</span>
+                            </li>
+                            <li class="FavDrop2"><div class="RM3"></div>
+                                <span>语言设置</span></li>
+                            <li class="FavDrop3"><div class="RM2"></div>
+                                <span>密码设置</span></li>
+                            <li class="FavDrop5"><div class="RM5"></div><span>退出帐号</span></li>
+                 </ol>
+            </li>
+            <li class="RMenu_Text"><div class="longText">欢迎，Java.管理员 Csharp Dot</div></li> 
+        </ol>
+        <ol class="MyFav" style="display:none;">
+            <li><a>我的收藏1</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏2</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏3</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏4</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏5</a><div class="Closediv CircleClose"></div></li>
+        </ol>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">处课信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+            <ol class="SubList">
+                    <li>
+                        <a id="1www" class="Sub"  href="Catelog-11.html"><span class="L1_No"></span>
+                           <span class="SubText">公司信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                    <li>
+                        <a id="1ee" class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">分店管理</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="A1" class="Sub" href="Catelog-21.html"><span class="L2_No"></span>
+                                   <span class="SubText">分店信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A2" class="Sub" href="Catelog-31.html"><span class="L2_No"></span>
+                                   <span class="SubText">仓库信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="fff1"  class="Sub Sub_on" href="Catelog-41.html"><span class="L1_No"></span>
+                           <span class="SubText">处课信息</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a id="1fff"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">大中小分类信息</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg"  class="Sub" href="Catelog-51.html"><span class="L2_No"></span>
+                                   <span class="SubText">大分类</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub" href="Catelog-61.html"><span class="L2_No"></span>
+                                   <span class="SubText">中分类</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a id="asa" class="Sub" href="Catelog-71.html"><span class="L2_No"></span>
+                                   <span class="SubText">小分类</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3_disable"></td>
+                        <td></td>
+                        <td class="Tools4_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools5"></td>
+                        <td></td>
+                        <td class="Tools7"></td>
+                        <td></td>
+                        <td class="Tools8"></td>
+                        <td></td>
+                        <td class="Tools9"></td>
+                        <td></td>
+                        <td class="Tools13"></td>
+                        <td></td>
+                        <td class="Tools14"></td>
+                        <td></td>
+                        <td class="Tools15"></td>
+                        <td class="Line-1"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools22" title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                <div class="tagx tagL"></div>
+                <div class="tagM">处课信息</div>
+                <div class="tagx2 tagR2"></div>
+            </div>
+            <div class="Container-1">
+                
+                <div class="Content">
+                    <div class="Con_tb"><!-- Bar_on-->
+                        <div class="SearchTopx">
+                            <span>处别信息</span>
+                            <div class="Icon-size2 Tools11" style="margin-top:6px;"></div>
+                        </div>
+                        <div class="con_title">
+                            <table class="w100">
+                                <tr>
+                                    <td class="w10 align_center"  style="border-right:1px solid #cccccc;"><input type="checkbox" /></td>
+                                    <td class="w10 align_center"  style="border-right:1px solid #cccccc;">处别</td>
+                                    <td class="w35 align_center"  style="border-right:1px solid #cccccc;">中文名称</td>
+                                    <td class="w45 align_center">英文名称</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tbx">
+                            <table class="w100">
+                                <tr>
+                                    <td class="w10 align_center"><input type="checkbox" style="display:inline-block;" /></td>
+                                    <td class="w10 align_center">001</td>
+                                    <td class="w35">纺织品</td>
+                                    <td class="w45">TEXTEEEE</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" style="display:none;" /></td>
+                                    <td class="align_center">008</td>
+                                    <td>纺织品</td>
+                                    <td>TESTTESTTTT</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" style="display:none;" /></td>
+                                    <td class="align_center">008</td>
+                                    <td>纺织品</td>
+                                    <td>TESTTESTTTT</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" style="display:none;" /></td>
+                                    <td class="align_center">008</td>
+                                    <td>纺织品</td>
+                                    <td>TESTTESTTTT</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" style="display:none;" /></td>
+                                    <td class="align_center">008</td>
+                                    <td>纺织品</td>
+                                    <td>TESTTESTTTT</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="line"></div>
+                        
+                    </div>
+
+                    <div class="Con_R">
+                        <div class="Point_L"><!--px没有样式，可以随便取-->
+                            <div></div><div></div><div class="px Point_L2"></div>
+                            <div class="px"></div><div class="px"></div><div class="px"></div>
+                            <div class="px Point_L2"></div><div class="px"></div><div class="px"></div>
+                            <div class="px"></div><div class="px"></div><div class="px"></div>
+                            <div class="px"></div><div class="px"></div><div class="px"></div>
+                            <div class="px"></div><div class="px"></div><div class="px"></div>
+                        </div>
+                        <div class="Point_R">
+                            <div style="height:30px; line-height:25px;"><span style="float:left;">课别信息</span> <div class="Icon-size2 Tools11" style="float:right;margin-right:5px; margin-top:5px;"></div></div>
+                            <table id="dg" style="height:538px;width:646px"></table>
+                            <script type="text/javascript">
+                                $('#dg').datagrid({
+                                    rownumbers: false,
+                                    //singleSelect: false,
+                                    pagination: true,
+                                    pageSize: 20,
+                                    url: 'json/datagrid_data5.json',
+                                    columns: [[
+                                    { field: 'ck', checkbox: true, },
+                                    { field: 'no', title: '公司编号', sortable: true, },
+                                    { field: 'name', title: '公司名称', sortable: true, },
+                                    { field: 'type', title: '公司类型', },
+                                    { field: 'status', title: '状态', },
+                                    { field: 'city', title: '注册城市', },
+                                    { field: 'date', title: '创建日期', }
+                                    ]]
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    <div id="date_div" style="width:160px;height:180px;display:none;position:absolute;z-index:9999;"></div>
+    <script type="text/javascript">
+        $('#dg').datagrid({
+            rownumbers: false,
+            //singleSelect: false,
+            pagination: true,
+            pageSize: 20,
+            url: 'json/datagrid_data6.json',
+            columns: [[
+            { field: 'ck', checkbox: true, },
+            { field: 'no', title: '分店店号', sortable: true, },
+            { field: 'name', title: '分店名称', sortable: true, },
+            { field: 'status', title: '分店状态', },
+            { field: 'level', title: '分店等级', },
+            { field: 'company', title: '公司', },
+            { field: 'status2', title: '分店业态', },
+            { field: 'area', title: '区域/城市', }
+            ]]
+        });
+
+        //日历
+        $('#date_div').calendar({
+            current: new Date()
+        });
+        
+    </script>
+</body>
+</html>

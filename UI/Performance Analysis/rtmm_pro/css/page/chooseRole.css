@@ -1,0 +1,118 @@
+﻿body,.bg{
+    padding:0px;margin:0px auto;
+    width:1240px;
+    height:700px;
+    color:#333333;
+}
+a {
+    border:0;
+    display:block;
+    text-decoration:none;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    color:#333333;
+}
+.bg {
+    background:url(../../images/crole.jpg);
+    overflow:hidden;
+}
+body,table,span {
+    font-family:'Microsoft YaHei';
+    font-size:12px;
+}
+table {
+    border:none;
+    border-collapse:collapse;
+}
+.m {
+    height:372px;overflow:hidden;
+}
+.crole1 {
+    background:url(../../images/crole1.png) left center no-repeat;
+}
+.crole1 span{
+    margin-left:25px;
+}
+.tb1 {
+    width:600px;margin:0 auto;
+}
+    .tb1 td {
+        height:30px;
+    }
+.tb2 tr {
+    cursor:pointer;
+}
+.tb2 tr:hover,.tr_over {
+    background:#81e0a9;
+    color:#fff;
+}
+.tr_on {
+    background:#3F9673;
+    color:#fff;
+}
+    .tr_on div {
+        float:right;margin-right:10px;background: url('../../images/icon0401.png') no-repeat -11px -476px; height:16px;width:16px;
+    }
+.divx {
+    height:30px;
+}
+.div1 {
+    height:20px;margin-top:2px;line-height:20px;position:relative;
+}
+.div1 div{
+    float:left;
+    height:20px;
+    text-align:center;
+    margin-top:5px;
+}
+.div11 {
+    width:179px;color:#000;
+}
+.div12 {
+    width:233px;
+    border-left:1px solid #808080;
+    border-right:1px solid #808080;
+}
+.div13 {
+    width:179px;
+}
+.tbody {
+    height:220px;width:100%;
+}
+.tbody_div {
+    height:220px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    border-bottom:2px solid #fff;
+}
+.tb2 {
+    width:100%;
+}
+.Panel_footer {
+    height:40px;
+}
+.divx, .Panel_footer {
+    background-image:url(../../images/role_bg.png);
+    background-color:none;
+}
+.PanelBtn1 {
+    position:relative;z-index:99;
+    width: 78px;
+    height: 100%;
+    margin:3px auto;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none repeat scroll 0% 0% #F37864 ;
+    border: 1px solid #F37864;
+    color:#fff;
+}
+
+.PanelBtn1:hover {
+    border:1px solid #3F9673;
+}
+.Panel_top span {
+    margin-left: 20px;
+    line-height: 40px;
+    float: left;
+}

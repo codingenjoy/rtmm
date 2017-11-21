@@ -1,0 +1,66 @@
+.Con_tb {
+	width: 25%;
+	margin-top: 0px;
+	height: 549px;
+	float: left;
+}
+
+.Con_R {
+	width: 75%;
+	float: right;
+	height: 580px;
+}
+
+.SearchTopx select {
+	margin-left: 10px;
+	margin-top: 3px;
+}
+
+.tt {
+	height: 507px;
+	border-bottom: 1px solid #dbdbdb;
+	border-top: 1px solid #dbdbdb;
+	overflow: auto;
+}
+
+.tree-folder {
+	background: url('../../images/easyUI/tree_icons-1.png') no-repeat scroll
+		-339px -1px;
+}
+
+.tree-node-hover .tree-folder,.tree-node-selected .tree-folder {
+	background: url('../../images/easyUI/tree_icons-1.png') no-repeat scroll
+		-339px -19px;
+}
+
+.tree-file {
+	background: url('../../images/easyUI/tree_icons-1.png') no-repeat scroll
+		-358px 3px transparent;
+}
+
+.tree-node-hover .tree-file,.tree-node-selected .tree-file {
+	background: url('../../images/easyUI/tree_icons-1.png') no-repeat scroll
+		-297px 3px transparent;
+}
+
+.Point_R1 {
+	height: 30px;
+	line-height: 30px;
+}
+
+.Point_R2 {
+	/*height:538px;width:746px;*/
+	height: 93%;
+	width: 99%;
+	border-top: 1px solid #cccccc;
+	overflow: auto;
+}
+
+.search_p {
+	width: 240px;
+	float: right;
+	border: 1px solid #cccccc;
+	margin-top: 3px;
+	overflow: hidden;
+	margin-right: 5px;
+}

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../window/popup.js" type="text/javascript"></script>
+    <link href="../window/popup.css" type="text/css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        $(".PanelClose").live("click", function () {
+            //var $topWindow = $(window.parent.document);
+            //var $alertPop = $topWindow.find("#windowPop");
+            //$(this).parents(".Panel").remove();
+            //$alertPop.css("display", "none");
+            //$(window.parent.document).find("#alert_layer").remove();
+            closePop("windowPop1");
+        });
+
+        $(document).ready(function () {
+            $("#test").click(function () {
+                //alert("");
+                successAlert_frame("sssss", 500, 200, "rrrrrrrrrrrrrrrr");
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="Panel" style="width:600px;height:auto;">
+         <div class="Panel_top">
+                <span class="alert_title">Message！</span>
+                <div class="PanelClose"></div>
+            </div>
+         <div class="Table_Panel" id="alert_body" style="height:400px;">
+                <!--//具体内容--><input class="inputText" type="text" id="in" /><br />
+                <input type="button" value="测试iframe弹窗" onclick="alert($('#in').val());"/>
+             <input id="test" type="button" value="测试第二层弹窗"/>
+            </div>
+         <div class="Panel_footer">
+            <div class="pt_div PanelBtn1">确定</div>
+            <div class="pt_div PanelBtn2">取消</div>
+         </div>
+        <div style="clear:both;"></div>
+    </div>
+</body>
+</html>

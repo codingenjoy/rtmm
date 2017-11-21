@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+<link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" type="text/javascript"></script>
+    <script src="../js/zTree_v3/js/jquery.ztree.all-3.5.js" type="text/javascript"></script>
+    <link href="../js/zTree_v3/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+    <link href="../js/zTree_v3/css/zTreeStyle/tree_1.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <style type="text/css">
+        .Table_Panel {
+            height:550px;
+            overflow:hidden;
+        }
+        .CM_p {
+            height:280px;
+            width:595px;
+            margin:20px auto 0px auto;
+        }
+        .t2, .t3 {
+            height:240px;
+            overflow-x:hidden;
+            overflow-y:auto;
+            float:left;
+            background:#fff;
+            margin-top:20px;
+            border:1px solid #808080;
+        }
+        .t2 {
+            width:328px;
+            margin-left:20px;
+        }
+        .t3 {
+            width:200px;
+            margin-left:5px;
+        }
+        .CM2 {
+            background:#f9f9f9;
+            width:296px;
+            height:240px;
+        }
+        .b{
+            height:209px;overflow:auto;
+        }
+        .d {
+            width:235px;
+            height:200px;
+            background:#fff;
+            margin:20px auto auto 40px;
+            border:1px solid #808080;
+        }
+        .e, .f,.b {
+            width:215px;margin:0 auto;line-height:26px;
+        }
+        .e{
+            overflow:auto;
+            height:169px;
+        }
+            .e div,.b div {
+                border-top:1px solid #fff;
+                height:28px;
+                cursor:pointer;
+            }
+        .f {
+            border-top:1px solid #808080;
+            height:30px;
+        }
+        .tree-icon {
+            display:none;
+        }
+    </style>
+    <div class="Panel" style="width:635px;">
+        <div class="Panel_top">
+            <span>选择需要订购商品的门店</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <div class="CM_p">
+                <div class="CM-bar" style="height:280px;"><div>大卖场</div></div>
+                <div class="t2">
+                    <ul id="treeDemo" class="ztree"></ul>
+                </div>
+                <script>
+                    var setting = {
+                        check: {
+                            enable: true
+                        },
+                        data: {
+                            key: {
+                                title: "title"
+                            },
+                            simpleData: {
+                                enable: true
+                            }
+                        }
+                    };
+
+                    var zNodes = [
+                        { id: 1, pId: 0, name: "父节点1", title: "", open: true },
+                        { id: 11, pId: 1, name: "父节点11", title: "" },
+                        { id: 2, pId: 0, name: "父节点2", title: "" },
+                        { id: 21, pId: 2, name: "父节点21", title: ""},
+                        { id: 22, pId: 2, name: "父节点22", title: "" },
+                        { id: 4, pId: 0, name: "父节点x", title: "" },
+                        { id: 41, pId: 4, name: "父节点x1", title: ""},
+                        { id: 42, pId: 4, name: "父节点x2", title: ""},
+                        { id: 43, pId: 4, name: "父节点x3", title: ""},
+                        { id: 44, pId: 4, name: "父节点x4", title: ""},
+                        { id: 45, pId: 4, name: "父节点x5", title: ""},
+                        { id: 46, pId: 4, name: "父节点x6", title: ""},
+                        { id: 47, pId: 4, name: "父节点22", title: "" }
+                    ];
+                    $(document).ready(function () {
+                        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+                        //$("#hideNodesBtn").bind("click", { type: "rename" }, hideNodes);
+                        //$("#showNodesBtn").bind("click", { type: "icon" }, showNodes);
+                        //setTitle();
+                        //count();
+                    });
+    </script>
+                <div class="t3">
+                    <div class="b inputDiv" style="width:180px;">
+                        <div class="item2"><label>
+                                    <input type="checkbox" name="n"/>
+                                 </label><span>998-上海加工中心</span></div>
+                        <div class="item2"><label>
+                                    <input type="checkbox" name="n"/>
+                                 </label><span>998-上海加工中心</span></div>
+                        <div class="item2"><label>
+                                    <input type="checkbox" name="n"/>
+                                 </label><span>998-上海加工中心</span></div>
+                        <div class="item2"><label>
+                                    <input type="checkbox" name="n"/>
+                                 </label><span>998-上海加工中心</span></div>
+                    </div>
+                    <div class="f"  style="width:180px;"><label>
+                                    <input type="checkbox" name="n" class="checkAll"/>
+                                 </label><span>全选</span></div>
+                </div>
+            </div>
+            <div style="width:595px;height:240px;margin:3px auto;">
+                <div class="CM2" style="float:left;">
+                    <div class="CM-bar" style="height:240px;"><div>加工中心</div></div>
+                    <div class="d">
+                        <div class="e inputDiv">
+                            <div class="item3"><label>
+                                    <input type="checkbox" name="a"/>
+                                 </label><span>998-上海加工中心</span></div>
+                            <div class="item3"><label>
+                                    <input type="checkbox" name="a"/>
+                                 </label><span>998-上海加工中心</span></div>
+                            <div class="item3"><label>
+                                    <input type="checkbox" name="a"/>
+                                 </label><span>998-上海加工中心</span></div>
+                            <div class="item3"><label>
+                                    <input type="checkbox" name="a"/>
+                                 </label><span>998-上海加工中心</span></div>
+                        </div>
+                        <div class="f"><label>
+                                    <input type="checkbox" name="a" class="checkAll"/>
+                                 </label><span>全选</span></div>
+                    </div>
+                </div>
+                <div class="CM2" style="margin-left:3px;float:right;">
+                    <div class="CM-bar" style="height:240px;"><div>物流中心</div></div>
+                    <div class="d">
+                        <div class="e inputDiv">
+                            <div  class="item4"><label>
+                                    <input type="checkbox" name="d"/>
+                                 </label><span>998-上海加工中心</span></div>
+                            <div class="item4"><label>
+                                    <input type="checkbox" name="d"/>
+                                 </label><span>998-上海加工中心</span></div>
+                        </div>
+                        <div class="f"><label>
+                                    <input type="checkbox" name="d" class="checkAll"/>
+                                 </label><span>全选</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">保持</div>
+                <div class="PanelBtn2">取消</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

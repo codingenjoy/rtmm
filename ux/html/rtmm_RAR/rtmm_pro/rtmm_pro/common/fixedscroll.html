@@ -1,0 +1,70 @@
+﻿ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+     <title></title>
+     <style type="text/css">
+         .canfloat
+         {
+             position: fixed;
+             top: 10px;
+         }
+         .newsItem
+         {
+             width: 220px;
+             float: right;
+             padding: 0px 0px 5px;
+             margin-bottom: 2em;
+         }
+         .newsItem .catListTitle
+         {
+             text-align: left;
+             padding: 5px 10px;
+             border: 1px solid #CCC;
+             background: none repeat scroll 0% 0% #F0F0F0;
+         }
+         .catListTitle
+         {
+             font-weight: bold;
+             line-height: 1.5em;
+             font-size: 110%;
+             margin-top: 15px;
+             margin-bottom: 10px;
+             border-bottom: 1px solid #000;
+             text-align: center;
+         }
+     </style>
+     <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+     <script type="text/javascript">
+         $(function () {
+             $(window).scroll(function () {
+                 var ref_min = $("#sign")[0];
+                 if (!ref_min) return;
+                 var scroll_top = $(window).scrollTop();
+                 var ref_height_min = ref_min.offsetTop + $("#floatdiv")[0].offsetHeight;
+                 if (scroll_top > ref_height_min) {
+                     $("#floatdiv").addClass("canfloat");
+                 } else {
+                     $("#floatdiv").removeClass("canfloat");
+                 }
+             });
+         });
+     </script>
+ </head>
+ <body>
+     <div>
+         <div style="height: 2500px; float: left;">
+         </div>
+         <div class="newsItem">
+             <div style="height: 500px;">
+             </div>
+             <div>
+                 我只是占位的
+             </div>
+             <div id="sign" title="我只是记录的"></div>
+             <div id="floatdiv" class="canfloat" style="background:#f00">
+                 <h3 class="catListTitle">公告</h3>
+             </div>
+         </div>
+     </div>
+ </body>
+ </html>

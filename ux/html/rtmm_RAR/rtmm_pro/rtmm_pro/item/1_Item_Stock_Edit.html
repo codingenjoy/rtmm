@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="../js/tempScript.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/easyUI/jquery.easyui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../css/easyUI/combo.css"/>
+    <style type="text/css">
+        /*这个样式请程序员不要复制 start*/
+        .SubMenu {
+            width:198px;
+            height:610px;
+        }
+        /*这个样式请程序员不要复制 end*/
+        .ListWin {
+            height: 20px;
+            width: 20px;
+            margin-top: 5px;
+            margin-left: 3px;
+        }
+        .CInfo .combo,.CInfo input{
+            background-color:#cccccc;
+        }
+        .license2:hover {
+            background-position:-3px -19px;
+        }
+        .tb50 {
+            width:|40%;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:40px;">
+    <iframe class="TopMenu" src="../maintop.html" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <iframe class="SubMenu" src="leftMenu.html" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools3_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools23_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools32_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools10_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools17_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools19_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools24_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools25_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools28_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29_disable"></td>
+                    </tr>
+                </table>
+                <div class="RightTool ToolsBg">
+                    <div class="Tools22 Icon-size1 Tools22_on " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                <!--这里面的id都是演示所用，程序员可以删除-->
+                <!--第一个-->
+                            <div class="tags1_left"></div>
+                            <div id="overview" class="tagsM">商品总览</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="changePrice" class="tagsM">商品变价</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="guige" class="tagsM">商品规格</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="tiaoma" class="tagsM">商品条码</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="guanlian" class="tagsM">商品关联</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="i_changshang" class="tagsM">商品厂商</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="chenlie" class="tagsM">商品陈列</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="jinxiaocun" class="tagsM">商品进销存</div>
+                            <div class="tags"></div>
+
+                <!--最后一个-->
+                            <div id="dc_info" class="tagsM">DC信息</div>
+                            <div class="tags tags3 tags_right_on"></div>
+                            <!--一定不要忘了tag3-->
+                            <!--add-->
+                            <div class="tagsM_q  tagsM_on">修改商品陈列信息</div>
+                            <div class="tags3_close_on">
+                                <div class="tags_close"></div>
+                            </div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+	                <div class="CInfo">
+                        <span>项</span>
+                        <span>10，000</span>
+                        <span>/</span>
+                        <span>1</span>
+                        <span>第</span>
+                        <span>|</span>
+                        <span>张三</span>
+                        <span>修改人</span>
+                        <span>2014-03-03</span>
+                        <span>修改日期</span>
+                        <span>李四</span>
+                        <span>建档人</span>
+                        <span>2014-02-02</span>
+                        <span>创建日期</span>
+                    </div>
+
+                    <div style="height:60px;" class="CM">
+                        <div class="CM-bar"><div>货号</div></div>
+                        <div class="CM-div">
+                            <div class="hh_item">
+                                 <div class="icol_text w7"><span>主场商</span></div>
+                                 <div class="iconPut iq" style="width:13%;"><input style="width:83%" type="text"/><div class="ListWin"></div></div>
+                                 <input class="inputText iq Black" style="width:20%;" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:300px;">
+                        <div class="tb50">
+                            <div style="height:180px;margin-top:2px;" class="CM">
+                                <div class="CM-bar"><div>陈列信息</div></div>
+                                <div class="CM-div">
+                                    <div class="ig"  style="margin-top:15px;">
+                                        <div class="msg_txt">健康食品</div>
+                                        <div class="iconPut iq fl_left" style="width:13%;">
+                                            <input type="text" style="width:60%" />
+                                            <div class="ListWin"></div>
+                                        </div>
+                                        <input class="inputText iq Black" type="text" style="width:20%;" />
+                                    </div>
+                                    <div style="height:120px;">
+                                        <div class="tb50">
+                                            <div class="ig">
+                                                <div class="msg_txt" style="width:36%;">健康食品</div>
+                                                <input class="w44 inputText" />
+                                            </div>
+                                            <div class="ig">
+                                                <div class="msg_txt" style="width:36%;">层数</div>
+                                                <input class="w44 inputText" />
+                                            </div>
+                                            <div class="ig">
+                                                <div class="msg_txt" style="width:36%;">深度</div>
+                                                <input class="w44 inputText" />
+                                            </div>
+                                            <div class="ig">
+                                                <div class="msg_txt" style="width:36%;">排面容量</div>
+                                                <input class="w44 inputText" />
+                                            </div>
+                                        </div>
+                                        <div class="tb49">
+                                            <div class="ig">
+                                                <div class="msg_txt" style="width:36%;">最小首排面量(y)</div>
+                                                <input class="w44 inputText" />
+                                            </div>
+                                            <div class="ig">
+                                                <div class="msg_txt" style="width:36%;">最小层数(x)</div>
+                                                <input class="w44 inputText" />
+                                            </div>
+                                            <div class="ig">
+                                                <div class="msg_txt" style="width:36%;">最小深度(z)</div>
+                                                <input class="w44 inputText" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="height:118px; margin-top:2px;" class="CM">
+                                <div class="CM-bar"><div>货架卡信息</div></div>
+                                <div class="CM-div">
+                                    <div class="ig"  style="margin-top:15px;">
+                                        <div class="msg_txt">货架卡</div>
+                                        <select class="w23"><option></option></select>
+                                        <span>&nbsp;&nbsp;&nbsp;下架临保天数&nbsp;</span>
+                                        <input type="text" class="inputText w10" /><span>&nbsp;天</span>
+                                    </div>
+                                    <div class="ig">
+                                        <div class="msg_txt">列印序号</div>
+                                        <input type="text" class="inputText w15"/>
+                                    </div>
+                                    <div class="ig">
+                                        <div class="msg_txt">货架卡列印张数</div>
+                                        <input type="text" class="inputText w15"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tb50">
+                            <div style="height:300px; margin-top:2px;" class="CM">
+                                <div class="CM-bar"><div>磅秤机信息</div></div>
+                                <div class="CM-div">
+                                    <div class="ig"  style="margin-top:15px;">
+                                        <div class="msg_txt">保存方式</div>
+                                        <div style="float:left;width:110px;"><input type="text" class="inputText w95"/></div>
+                                    </div>
+                                    <div style="height:60px;">
+                                        <div class="msg_txt">
+                                            <div>磅秤机备注</div>
+                                        </div>
+                                        <textarea class="w70 txtarea" rows="2"></textarea>
+                                    </div>
+                                    <div class="ig">
+                                        <div class="msg_txt">磅秤机变价</div>
+                                        <select class="w20"><option></option></select>
+                                        <span>&nbsp;&nbsp;&nbsp;磅秤机标签类型&nbsp;</span>
+                                        <select class="w20"><option></option></select>
+                                    </div>
+                                    <div class="ig">
+                                        <div class="msg_txt">下传包装机</div>
+                                        <select class="w20"><option></option></select>
+                                        <span>&nbsp;&nbsp;&nbsp;追溯码&nbsp;</span>
+                                        <select class="w20"><option></option></select>
+                                    </div>
+                                    <div class="ig">
+                                        <div class="msg_txt">下传包装机</div>
+                                        <input class="w20 inputText" type="text"/>
+                                        <span>&nbsp;g</span>
+        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:140px;margin-top:2px;" class="CM">
+                        <div class="CM-bar"><div>证照信息</div></div>
+                        <div class="CM-div">
+                            <div class="zz_info">
+                                <div class="zz_1">
+                                    <span class="zz_11">证件类型</span>
+                                    <span class="zz_12">证件号码</span>
+                                    <span class="zz_13">发证机关</span>
+                                    <span class="zz_14">截止日期</span>
+                                    <span class="zz_15">起始日期</span>
+                                </div>
+                                <div class="zz_2">
+                                    <div class="ig" style="margin-top:5px;margin-left:10px;">
+                                        <div class="license1 fl_left">
+                                            <div class="license2"></div>
+                                        </div>
+                                        <input type="text" class="w17 inputText Black" />
+                                        <input type="text" class="w20 inputText Black" />
+                                        <input type="text" class="w17 inputText Black" />
+                                        <input type="text" class="w17 inputText Black" />
+                                        <select class="w17"><option></option></select>
+                                    </div>
+                                    <div class="ig" style="margin-left:10px;">
+                                        <div class="license1 fl_left">
+                                            <div class="license2"></div>
+                                        </div>
+                                        <input type="text" class="w17 inputText" />
+                                        <input type="text" class="w20 inputText" />
+                                        <input type="text" class="w17 inputText" />
+                                        <input type="text" class="w17 inputText" />
+                                        <select class="w17"><option></option></select>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../../css/default.css" rel="stylesheet" />
+    <link href="f.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="f.js"></script>
+    <title></title>
+    <style type="text/css">
+        table {
+            margin:0;padding:0;border:1px solid #cfcccc;border-collapse:collapse;
+        }
+        body,table {
+            font-size:12px;
+            font-family:'Microsoft YaHei',Arial;
+        }
+        #frozen_cols {
+            height:300px;
+            width:120px;
+        }
+        #move_cols {
+            height:300px;/* equals #frozen_cols.height */
+            width:500px;
+        }
+        #f_cols_body,#m_cols_body {
+            height:260px;/* equals #frozen_cols.height - #f_cols_head.height(default value is 40px) */
+        }
+    </style>
+</head>
+<body>
+<div style="height:301px;width:670px;overflow:hidden;">
+    <!--left frozen parts of a table-->
+    <div id="frozen_cols">
+        <!--frozen top head parts-->
+        <div id="f_cols_head">
+            <div class="f_head_1">
+                <table>
+                    <tr>
+                        <td><div style="width:30px;">o</div></td>
+                        <td><div style="width:80px;">序列号</div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--frozen body parts-->
+        <div id="f_cols_body" style="background:#cfb3b3;">
+            <table>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;background:#b6ff00">data1</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data2</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data3</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data4</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data5</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data6</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data7</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data8</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data9</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data0</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data1</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data2</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data3</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data3</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data3</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data3</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data3</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;"><input type="checkbox" /></div></td>
+                    <td><div style="width:80px;">data3</div></td>
+               </tr>
+                <tr>
+                    <td><div style="width:30px;">&nbsp;</td>
+                    <td><div style="width:80px;background:#f00">temp</div></td>
+               </tr>
+           </table>
+        </div>
+    </div>
+    <!--right parts that can scroll-->
+    <div id="move_cols">
+        <!--frozen top head parts when drag the y-scroll -->
+        <div id="m_cols_head" style="background:#a33636">
+             <table>
+                  <tr>
+                      <td><div style="width:90px;background:#cfcccc">序列号1</div></td>
+                      <td><div style="width:90px;">序列号2</div></td>
+                      <td><div style="width:90px;">序列号3</div></td>
+                      <td><div style="width:90px;">序列号4</div></td>
+                      <td><div style="width:90px;">序列号5</div></td>
+                      <td><div style="width:90px;">序列号6</div></td>
+                      <td><div style="width:90px;">序列号7</div></td>
+                      <td><div style="width:90px;">序列号8</div></td>
+                      <td><div style="width:90px;">序列号9</div></td>
+                      <td><div style="width:90px;">序列号0</div></td>
+                      <td><div style="width:90px;">序列号1</div></td>
+                      <td><div style="width:90px;">序列号2</div></td>
+                      <td><div style="width:90px;">序列号3</div></td>
+                      
+                      <td><div style="width:90px;background:#b6ff00">temp</div></td><!--占位-->
+                  </tr>
+              </table>
+        </div>
+        <!--this parts can be scrolled all the time-->
+        <div id="m_cols_body" style="background:#6c4949;">
+            <table>
+                <tr>
+                    <td><div style="width:90px;background:#b6ff00">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+                <tr>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                    <td><div style="width:90px;">data4</div></td>
+                    <td><div style="width:90px;">data5</div></td>
+                    <td><div style="width:90px;">data6</div></td>
+                    <td><div style="width:90px;">data7</div></td>
+                    <td><div style="width:90px;">data8</div></td>
+                    <td><div style="width:90px;">data9</div></td>
+                    <td><div style="width:90px;">data0</div></td>
+                    <td><div style="width:90px;">data1</div></td>
+                    <td><div style="width:90px;">data2</div></td>
+                    <td><div style="width:90px;">data3</div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

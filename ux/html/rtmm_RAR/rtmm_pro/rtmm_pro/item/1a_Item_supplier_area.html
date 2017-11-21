@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="../js/tempScript.js" charset="utf-8" type="text/javascript"></script>
+
+    <style type="text/css">
+
+        .row {
+            padding-top:8px;
+        }
+        .zr_11 {
+            margin-left:28px;
+        }
+        .zr_12 {
+            margin-left:50px;
+        }
+        .zr_13 {
+            margin-left:52px;
+        }
+        .zr_14 {
+            margin-left:98px;
+        }
+        .zr_15 {
+            margin-left:107px;
+        }
+        .zr_16 {
+            margin-left:49px;
+        }
+        .zr_17 {
+            margin-left:14px;
+        }
+        .zr_18 {
+            margin-left:23px;
+        }
+        /*overwrite*/
+        .zz_2 {
+            height:360px;
+        }
+        .zz_info {
+            width:96%;
+        }
+        .fl_left {
+            margin-right:3px;
+        }
+        .fx_div21 {
+            height:20px;margin-top:5px;margin-bottom:5px;
+        }
+        .fx_div21_1 {
+            height:20px;width:80px;text-align:center;cursor:pointer;float:left;
+        }
+        .fx_div21_2 {
+            height:20px;width:80px;text-align:center;cursor:pointer;margin-left:5px;float:left;
+        }
+        .fx_div21_3 {
+            height:20px;width:80px;text-align:center;cursor:pointer;margin-left:5px;float:left;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:40px;">
+    <iframe class="TopMenu" src="../maintop.html" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <iframe class="SubMenu" src="leftMenu.html" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools3_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools23_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools32_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools10_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools17_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools19_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools24_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools25_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools28_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29_disable"></td>
+                    </tr>
+                </table>
+                <div class="RightTool ToolsBg">
+                    <div class="Tools22 Icon-size1 Tools22_on " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                <!--这里面的id都是演示所用，程序员可以删除-->
+                <!--第一个-->
+                            <div class="tags1_left"></div>
+                            <div id="overview" class="tagsM">商品总览</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="changePrice" class="tagsM">商品变价</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="guige" class="tagsM">商品规格</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="tiaoma" class="tagsM">商品条码</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="guanlian" class="tagsM">商品关联</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="i_changshang" class="tagsM">商品厂商</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="chenlie" class="tagsM">商品陈列</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="jinxiaocun" class="tagsM">商品进销存</div>
+                            <div class="tags"></div>
+                <div id="Div1" class="tagsM">DC信息</div>
+                            <div class="tags tags_right_on"></div>
+
+                <!--最后一个-->
+                            <div id="dc_info" class="tagsM tagsM_on">商品供应区域</div>
+                            <div class="tags tags3_r_on"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+	                <div class="CInfo">
+
+                        <span>项</span>
+                        <span>10，000</span>
+                        <span>/</span>
+                        <span>1</span>
+                        <span>第</span>
+                        <span>|</span>
+                        <span>张三</span>
+                        <span>修改人</span>
+                        <span>2014-03-03</span>
+                        <span>修改日期</span>
+                        <span>李四</span>
+                        <span>建档人</span>
+                        <span>2014-02-02</span>
+                        <span>创建日期</span>
+                    </div>
+
+                    <div style="height:60px;" class="CM">
+                        <div class="CM-bar"><div>货号</div></div>
+                        <div class="CM-div">
+                            <div class="hh_item">
+                                 <div class="icol_text w7"><span>主场商</span></div>
+                                 <div class="iconPut iq" style="width:10%;"><input style="width:79%" type="text"/><div class="ListWin"></div></div>
+                                 <input class="inputText iq Black" style="width:20%;" type="text"/>
+
+                                <span class="fl_left" style="line-height:20px;">&nbsp;&nbsp;&nbsp;课别&nbsp;&nbsp;</span>
+                                <select class="w15"><option></option></select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="height:470px;margin-top:2px;" class="CM">
+                        <div class="CM-bar"><div>业态和区域</div></div>
+                        <div class="CM-div">
+                            <div class="zz_info">
+
+                                <div class="fx_div21">
+                                        <div class="fx_div21_1 item item_on">大卖场</div>
+                                        <div class="fx_div21_2 item">加工中心</div>
+                                        <div class="fx_div21_3 item">物流中心</div>
+                                </div>
+                                <hr />
+                                <div class="fx_div21">
+                                        <span class="zr_11">所属区域</span>
+                                    <span class="zr_12">所属省份</span>
+                                    <span class="zr_13">所属城市</span>
+                                    <span class="zr_14">店号</span>
+                                    <span class="zr_15">状态</span>
+                                    <span class="zr_16">当前进价（元）</span>
+                                    <span class="zr_17">当前售价（元）</span>
+                                    <span class="zr_18">净成本（元）</span>
+                                </div>
+                                <div class="zz_2">
+                                    <div class="row">
+                                        <input type="text" class="inputText w10 fl_left" value="eryuiop"/>
+                                        <input type="text" class="inputText w10 fl_left" value="eryuiop" />
+                                        <input type="text" class="inputText w10 fl_left" value="eryuiop" />
+                                        <input type="text" class="inputText w17 fl_left" value="eryuiop" />
+                                        <input type="text" class="inputText w10 fl_left" />
+                                        <input type="text" class="inputText w10 fl_left align_right"  value="eryuiop"/>
+                                        <input type="text" class="inputText w10 fl_left align_right" value="eryuiop" />
+                                        <input type="text" class="inputText w10 fl_left align_right" value="eryuiop" />
+                                        <div style="clear:both;"></div>
+                                    </div>
+
+                                </div>
+                                <div class="paging">
+	                                <div class="fl_left">
+		                                第1-20项,共 5 项&nbsp;&nbsp;|&nbsp;每页显示 <select>
+			                                <option value="10">10</option>
+			                                <option value="20" selected="selected">20</option>
+			                                <option value="30">30</option>
+		                                </select> 项
+	                                </div>
+	                                <div class="fl_right page_list">
+                                        <span class="fl_right" style="margin-right:10px;">&nbsp;&nbsp;&nbsp;到第 <input name="pageNo" id="goto_page" class="page_no_input" maxlength="5" type="text"/> 页 <input value="go"  type="button"/></span>
+                                            <a class="page_end_block" title="尾页"></a>
+                                            <a class="page_next_block" title="下一页"></a>
+                                            <a title="6" class="num">999999</a>
+                                            <a style="cursor:default;">...</a>
+                                            <a title="2" class="num">3</a>
+                                            <a title="2" class="num">2</a>
+                                            <a title="1" class="num">1</a>
+                                            <a title="上一页" class="page_prev_block_off"></a>
+                                            <a title="首页" class="page_first_block_off"></a>  
+	                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+       
+    </script>
+</body>
+</html>

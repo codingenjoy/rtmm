@@ -1,0 +1,9 @@
+﻿        .ztree li span.button.ico_docu {
+            background-image:none;
+        }
+        .ztree li span.button.ico_open ,.ztree li span.button.ico_close{
+            background-image:none;
+        }
+.ztree li span.button {
+    width:5px;
+}

@@ -1,0 +1,64 @@
+﻿
+        .tbx {
+            height:478px;
+            overflow-x:hidden;overflow-y:auto;
+        }
+        .tbx td{
+            height:30px;
+            overflow:hidden;
+            white-space:nowrap;word-break:keep-all;
+        }
+.tbx td div{
+    width:110px;height:20px;
+}
+            .tbx tr {
+                cursor:pointer;
+            }
+            .tbx tr:hover {
+                background:#99cc66;
+            }
+        .Con_tb {
+            width:25%;margin-top:0px;height:549px;float:left;
+        }
+        .Con_R {
+            width:75%;float:right;height:580px;
+        }
+        .con_title {
+            height:30px;background:#EEEEEE;overflow:hidden;
+        }
+            .con_title table {
+                margin-top:5px;
+            }
+            .con_title td {
+                height:20px;
+            }
+        .Point_R1 {
+            height:30px; line-height:25px;
+        }
+        .Point_R2 {
+            /*height:538px;width:746px;*/
+            height:93%;width:99%;
+            border:1px solid #cccccc;
+            overflow:auto;
+        }
+        .item{
+            display:block;
+            width:60px;height:25px;text-align:center;
+            float:left;margin-left:5px;margin-top:2px;
+            cursor:pointer;
+        }
+.item_on {
+    background:#3F9673;
+            color:#fff;
+}
+.item_on2 {
+    background:#3F9673 !important;
+            color:#fff;
+}
+.tr_even {
+    background:#f5f5f5;
+}
+.Point_R1 span:hover{
+            background:#99cc66;
+            color:#fff;
+        }

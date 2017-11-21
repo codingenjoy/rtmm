@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="css/G.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Componet.css" rel="Stylesheet" />
+    <script src="js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="js/easyUI/jquery.easyui.min.js" charset="utf-8" type="text/javascript"></script>
+    <link type="text/css" href="css/easyUI/datagrid.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/pagination.css" rel="Stylesheet" />
+
+</head>
+<body>
+    <style type="text/css">
+        .Table_Panel {
+            height:470px;
+            overflow:hidden;
+        }
+        .tpanel1 {
+            margin:15px auto;width:97%;height:100%;
+        }
+        .tpanel11 {
+            height:30px;width:100%;
+        }
+        .SearchList {
+            height:30px;background-color:#f5f5f5;width:98%;float:left;
+        }
+            .SearchList input {
+                width:97%;float:left;height:20px;margin:5px 5px;
+            }
+            .SearchList div {
+                width:16px; height:21px;margin-top:5px;float:left;
+            }
+        .add {
+            width:2%;height:21px; float:left;margin-top:5px;background-position: -358px -2px;
+        }
+    </style>
+    <div class="Panel" style="width:1040px;">
+        <div class="Panel_top">
+            <span>选择订货退货地址</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <div class="tpanel1">
+                <div class="tpanel11">
+                    <div class="SearchList">
+                        <!--<div class="iconPut" style="height:22px;width:99%;margin-left:5px;display:inline;">-->
+                            <input class="" type="text"/>
+                            <div class="Tools6"></div>
+                        <!--</div>-->
+                    </div>
+                    <div class="Tools11 add"></div>
+                </div>
+                <div style="height:435px;overflow:hidden;">
+                    <table id="dg" style="height:425px;width:1009px;"></table>
+                </div>
+            </div>
+            
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">保持</div>
+                <div class="PanelBtn2">取消</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#dg').datagrid({
+            rownumbers: false,
+            //singleSelect: false,
+            pagination: true,
+            pageSize: 20,
+            url: 'json/datagrid_data2.json',
+            columns: [[
+            { field: 'ck', checkbox: true, },
+            { field: 'jt', title: '集团', sortable: true, },
+            { field: 'no', title: '集团编号', sortable: true, },
+            { field: 'name', title: '公司名称', sortable: true, },
+            { field: 'en_name', title: '公司英文名称', },
+            { field: 'type', title: '公司类型', },
+            { field: 'tax', title: '税号', },
+            { field: 'city', title: '注册城市', },
+            { field: 'date', title: '创建日期', }
+            ]]
+        });
+    </script>
+</body>
+</html>

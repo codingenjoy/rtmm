@@ -1,0 +1,1010 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/easyUI/jquery.easyui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../css/easyUI/combo.css"/>
+    <link rel="stylesheet" type="text/css" href="../jquery-zwindow/css/default/zWindow.css"/>
+    <script src="../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    
+    <script src="../js/Highcharts-4.0.3/js/highcharts.js" type="text/javascript"></script>
+    <style type="text/css">
+        .CInfo .combo,.CInfo input{
+            background-color:#cccccc;
+        }
+        
+        .i_input1_2 {
+            float: left;
+            height: 30px;
+            width: 33%;
+        }
+        .ib_2 {
+            float:left;
+            width:32%;
+        }
+
+
+
+/*这个样式请程序员不要复制 start*/
+        .SubMenu {
+            width:198px;
+            height:610px;
+        }
+/*这个样式请程序员不要复制 end*/
+
+
+
+        .edit_div {
+            width:20px;height:20px;float:left;margin-left:5px;
+        }
+        .iq {
+            width:25%;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:40px;">
+    <iframe class="TopMenu" src="../maintop.html" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <iframe class="SubMenu" src="leftMenu.html" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools3_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools23_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools32_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools10"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools12"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools17_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools19_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools24_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools25_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools28_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29_disable"></td>
+                    </tr>
+                </table>
+                <div class="RightTool ToolsBg">
+                    <div id="content1" class="Tools22 Icon-size1 Tools22_on " title="Content"></div>
+                </div>
+                <div class="RightTool">
+                    <div id="list1" class="Icon-size1 Tools21" title="List"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                <!--第一个-->
+                            <div class="tags1_left tags1_left_on"></div>
+                            <div class="tagsM tagsM_on">商品总览</div>
+                            <div class="tags tags_left_on"></div>
+
+                             <!--中间-->
+                            <div class="tagsM">商品变价</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品变价</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品条码</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">改包装设定</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品厂商</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品陈列信息</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品进销存</div>
+                            <div class="tags"></div>
+
+                            <!--最后一个-->
+                            <div class="tagsM">DC商品</div>
+                            <div class="tags tags3_r_off"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+	                <div class="CInfo">
+                        <div style="float:left;" class="w25">
+                            <div class="cinfo_div">店号</div>
+                            <input id="cc" name="dept" data-options="editable:false,panelHeight:'auto'"/>
+    <script type="text/javascript">
+        $('#cc').combobox({
+            //url: 'combobox_data.json',
+            width: 200,
+            readonly:true,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "102-上海长阳店",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                alert(rec.id + "....." + rec.text);
+            }
+        });
+    </script>
+                        </div>
+                        <span>项</span>
+                        <span>10，000</span>
+                        <span>/</span>
+                        <span>1</span>
+                        <span>第</span>
+                        <span>|</span>
+                        <span>张三</span>
+                        <span>修改人</span>
+                        <span>2014-03-03</span>
+                        <span>修改日期</span>
+                        <span>李四</span>
+                        <span>建档人</span>
+                        <span>2014-02-02</span>
+                        <span>创建日期</span>
+                    </div>
+
+                    <div style="height:270px;" class="CM">
+                        <div class="CM-bar"><div>基本信息</div></div>
+                        <div class="CM-div">
+                            <div class="ic">
+                                <div class="pic_1">
+                                    <img src="../images/photo/1.jpg" width="111" height="111" />
+                                    <!--<div class="pic_2"></div>-->
+                                        <div class="pic_21">
+                                            <div class="look_pic edit_div"></div>
+                                            <div class="edit_pic edit_div"></div>
+                                        </div>
+                                    
+                                </div>
+                                <div class="item11_1">
+                                    <!--1-->
+                                    <div class="icol_text w7"><span>货号</span></div>
+                                    <div class="i_input1_2">
+                                        <input type="text" class="inputText ib_2" />
+                                        <!--<div class="iconPut ib_2">
+                                            <input type="text" class="w75"/>
+                                            <div class="ListWin"></div>
+                                        </div>
+                                        <div class="icol_text w12_5">
+                                        <span>条码</span>
+                                        </div>
+                                        <div class="iconPut ib">
+                                            <input type="text" class="w80"/>
+                                            <div class="ListWin"></div>
+                                        </div>-->
+                                    </div>
+                                    <div class="icol_text w10"><span>产地维护</span></div>
+                                    <div class="i_input2"><input id="i1" data-options="editable:false,panelHeight:'auto'"/></div>
+                                    <div class="icol_text w10"><span>*项目类型</span></div>
+                                    <div class="i_input3"><input id="i2" data-options="editable:false,panelHeight:'auto'"/></div>
+                                    <!--1-->
+                                    <div class="icol_text w7"><span>*品名</span></div>
+                                    <div class="i_input1_2"><input type="text" class="inputText w90_5"/></div>
+                                    <div class="icol_text w10"><span>*商品类别</span></div>
+                                    <div class="i_input2"><input id="i3" data-options="editable:false,panelHeight:'auto'"/></div>
+                                    <div class="icol_text w10"><span>*加工类别</span></div>
+                                    <div class="i_input3"><input id="i4" data-options="editable:false,panelHeight:'auto'"/></div>
+                                    <!--1-->
+                                    <div class="icol_text w7"><span>英文品名</span></div>
+                                    <div class="i_input1_2"><input type="text" class="inputText w90_5"/></div>
+                                    <div class="icol_text w10"><span>*采购方式</span></div>
+                                    <div class="i_input2"><input id="i5" data-options="editable:false,panelHeight:'auto'"/></div>
+                                    <div class="icol_text w10"><span>*采购期限</span></div>
+                                    <div class="i_input3"><input id="i6" data-options="editable:false,panelHeight:'auto'"/></div>
+                                    <!--1-->
+                                    <div class="icol_text w7"><span>主厂商</span></div>
+                                    <div class="i_input1_2"><input type="text" class="inputText w28"/><input type="text" class="inputText w60" style="margin-left:5px;"/></div>
+                                    <div class="icol_text w10"><span>季节期数</span></div>
+                                    <div class="i_input2"><input id="i7" data-options="editable:false,panelHeight:'auto'"/></div>
+                                    <div class="icol_text w10"><span>有效期间</span></div>
+                                    <!--<div class="i_input3"><input id="i8" data-options="editable:false,panelHeight:'auto'"/></div>-->
+                                    <input class="inputText w10 fl_left" type="text""/>
+                                    <span class="fl_left">&nbsp;-&nbsp;</span>
+                                    <input class="inputText w10 fl_left" type="text""/>
+                                </div>
+                            </div>
+                            <div class="ic">
+                                <div class="ig">
+                                    <span class="icol_text2">主状态</span>
+                                    <div class="ia">
+                                        <div class="iconPut w95">
+                                            <input type="text" class="w75"/>
+                                            <div class="pie"></div>
+                                        </div>
+                                    </div>
+                                    <span class="icol_text2">品牌</span>
+                                    <!--<div class="iconPut ih"><input type="text" style="width:71%" value="xx"/><div class="ListWin"></div></div>-->
+                                    <input type="text" class="inputText ih" />
+                                    <input type="text" class="inputText ik" />
+                                    <div class="icol_text w11"><span>产地维护v</span></div>
+                                    <!--<div class="iconPut ih" style="width:5%"><input type="text" class="w60"/><div class="ListWin"></div></div>-->
+                                    <input type="text" class="inputText ik" style="width:7%;" />
+                                    <span class="fl_left">&nbsp;&nbsp;条码贴标&nbsp;&nbsp;</span>
+                                    <!--<div class="iconPut w10 fl_left C_Func "><input class="w80" type="text"/><div class="Calendar"></div> </div>-->
+                                    <input class="inputText w10" type="text" />
+                                </div>
+                                <div class="io">
+                                    <div class="ig">
+                                    <span class="icol_text2">处别</span>
+                                    <!--<div class="iconPut iq"><input type="text" class="w60 longText"/><div class="ListWin"></div></div>-->
+                                    <input class="inputText iq"/>
+                                    <input class="longText inputText w50" />
+                                    </div><div class="ig">
+                                    <span class="icol_text2">课别</span>
+                                    <!--<div class="iconPut iq"><input type="text" class="w60 longText"/><div class="ListWin"></div></div>-->
+                                    <input class="inputText iq"/>
+                                    <input class="longText inputText w50" />
+                                    </div><div class="ig">
+                                    <span class="icol_text2">群组</span>
+                                    <!--<div class="iconPut iq"><input type="text" class="w60 longText"/><div class="ListWin"></div></div>-->
+                                    <input class="inputText iq"/>
+                                    <input class="longText inputText w50" /></div>
+                                </div>
+                                <div class="io2">
+                                    <div class="ig">
+                                    <span class="icol_text2">大分类</span>
+                                    <input class="inputText iq"  style="width:27%;"/>
+                                    <!--<div class="iconPut iq"><input type="text" class="w60 longText" value="9898989"/><div class="ListWin"></div></div>-->
+                                    <input class="longText inputText w35" type="text" value="123445555" />
+                                    </div><div class="ig">
+                                    <span class="icol_text2">中分类</span>
+                                    <input class="inputText iq"  style="width:27%;"/>
+                                    <!--<div class="iconPut iq"><input type="text" class="w60 longText"/><div class="ListWin"></div></div>-->
+                                    <input class="longText inputText w35" />
+                                    </div><div class="ig">
+                                    <span class="icol_text2">小分类</span>
+                                    <!--<div class="iconPut iq"><input type="text" class="w60 longText"/><div class="ListWin"></div></div>-->
+                                    <input class="inputText iq" style="width:27%;"/>
+                                    <input class="longText inputText w35 red_info" _title="以下区域B属性超出：华东，华南<br/>以下区域B属性超出：华东，华南<br/>以下区域B属性超出：华东，华南<br/>"/></div>
+                                </div>
+<!--                                <div class="io">
+                                    <div class="ig">
+                                        <span class="icol_text2">长</span>
+                                        <input class="longText inputText w35" /><span class="icol_text2">cm</span>
+                                    </div>
+                                    <div class="ig">
+                                        <span class="icol_text2">宽</span>
+                                        <input class="longText inputText w35" /><span class="icol_text2">cm</span>
+                                    </div>
+                                    <div class="ig">
+                                        <span class="icol_text2">高</span>
+                                        <input class="longText inputText w35" /><span class="icol_text2">cm</span>
+                                    </div>
+                                </div>-->
+                                <div class="ip">
+                                    <div class="ip1 w12_5">
+                                            <div><span>销售单位</span></div>
+                                            <div><span>成本时点</span></div>
+                                            <div><span>分类管控</span></div>
+                                        </div>
+                                    <div class="ip2 w25">
+                                            <div class="ig">
+                                                <!--<div class="iconPut iq1"><input type="text" class="w60 longText"/><div class="ListWin"></div></div>-->
+                                                <input type="text" class="inputText w35" />
+                                            </div>
+                                            <div class="ig">
+                                                <input id="i10" data-options="editable:false,panelHeight:'auto'"/>
+                                            </div>
+                                    </div>
+                                    <div class="ip3 w60">
+                                            <div class="ig">
+                                                <span class="icol_text2">进价</span>
+                                                
+                                                <input type="text" class="inputText w30 fl_left" />
+                                                <span class="fl_left">元</span>
+                                                <span class="icol_text2">税率</span>
+                                                <input class="longText inputText w30" type="text" value="123445555" />
+                                            </div>
+                                            <div class="ig">
+                                                <span class="icol_text2">售价</span>
+                                                <input type="text" class="inputText w30 fl_left" />
+                                                <span class="fl_left">元</span>
+                                                <span class="icol_text2">税率</span>
+                                                <input class="longText inputText w30" type="text" value="123445555" />
+                                            </div>
+                                    </div>
+                                    <input class="ia inputText" /><span class="icol_text2">采购备注</span><input class="w47 inputText" />
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="height:260px;margin-top:2px;" class="CM">
+                        <div style="width:48%;float:left;height:100%;">
+                            <div class="CM-bar">
+                                <div>状态及价格信息</div>
+                                <div class="icm Icon-size2" style="margin-top:120px;" title="新增商品下传区域"></div>
+                            </div>
+                            <div class="CM-div">
+                                <div class="ig" style="margin-top:15px;">
+                                    <div class="icol_text w15"><span>产地维护</span></div>
+                                    <input type="text" class="w20 inputText fl_left"/>
+                                    <div class="icol_text w15"><span>BNO属性</span></div>
+                                    <input class="inputText w20 InputBg fl_left"  />
+                                </div>
+                                <div class="ig">
+                                    <div class="icol_text w15"><span>生效日期</span></div>
+                                    <!--<div class="iconPut w25 fl_left"><input class="w80" type="text"/><div class="C_Func Calendar"></div> </div>-->
+                                    <input class="inputText fl_left w20" type="text"/>
+                                    <div class="icol_text w15"><span>DC属性</span></div>
+                                    <input class="inputText w20 InputBg fl_left"  />
+                                </div>
+                                <div class="ig">
+                                    <div class="icol_text w15"><span>主场商</span></div>
+                                    <!--<div class="iconPut iq" style="width:20%;"><input type="text" style="width:77%"/><div class="ListWin"></div></div>-->
+                                    <input class="inputText w20 fl_left" />
+                                    <input type="text" class="inputText w58" style="margin-left:3px;"/>
+                                </div>
+                                <!--<div class="isv">
+                                    <div class="isv1">
+                                        <div class="ig">
+                                            <div class="icol_text w30"><span>正常进价</span></div>
+                                            <input type="text" class="w50 inputText"/>&nbsp;元
+                                        </div>
+                                        <div class="ig">
+                                            <div class="icol_text w30"><span>当前进价</span></div>
+                                            <input type="text" class="w50 inputText"/>&nbsp;元
+                                        </div>
+                                        <div class="ig">
+                                            <div class="icol_text w30"><span>买价限制</span></div>
+                                            <input type="text" class="w50 inputText Black " title="仅当成本时点为2，店内采购时输入"/>&nbsp;元
+                                        </div>
+                                    </div>
+                                    <div class="isv2">
+                                        <div class="ig">
+                                            <div class="icol_text w30"><span>正常售价</span></div>
+                                            <input type="text" class="w50 inputText"/>&nbsp;元
+                                        </div>
+                                        <div class="ig">
+                                            <div class="icol_text w30"><span>当前售价</span></div>
+                                            <input type="text" class="w50 inputText"/>&nbsp;元
+                                        </div>
+                                        <div class="ig">
+                                            <div class="icol_text w30"><span>最低售价</span></div>
+                                            <input type="text" class="w50 inputText"/>&nbsp;元
+                                        </div>
+                                    </div>
+                                </div>-->
+                                <div class="ig">
+                                            <div class="icol_text w15"><span>正常进价</span></div>
+                                            <input type="text" class="w25 inputText"/>&nbsp;元
+                                        
+                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;正常售价&nbsp;</span>
+                                            <input type="text" class="w25 inputText"/>&nbsp;元
+                                        </div>
+                                <div class="ig">
+                                            <div class="icol_text w15"><span>当前进价</span></div>
+                                            <input type="text" class="w25 inputText"/>&nbsp;元
+
+                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;当前售价&nbsp;</span>
+                                            <input type="text" class="w25 inputText"/>&nbsp;元
+                                        </div>
+                                <div class="ig">
+                                            <div class="icol_text w15"><span>买价限制</span></div>
+                                            <input type="text" class="w25 inputText info " title="仅当成本时点为2，店内采购时输入"/>&nbsp;元
+                                        
+                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;最低售价&nbsp;</span>
+                                            <input type="text" class="w25 inputText"/>&nbsp;元
+                                        </div>
+                                
+                                <div class="ig">
+                                    <div class="icol_text w15"><span>净成本</span></div>
+                                    <input class="inputText w25" type="text" />
+                                    <span>元&nbsp;&nbsp;&nbsp;DMS</span>
+                                    <input class="inputText w15" type="text" />
+                                    <span>&nbsp;&nbsp;&nbsp;促销DMS&nbsp;</span>
+                                    <input type="text" class="w10 inputText" />
+                                </div>
+                                <div class="ig">
+                                    <div class="icol_text w15"><span>门店变价</span></div>
+                                    <input class="inputText w15" type="text" />
+                                    <span>&nbsp;&nbsp;&nbsp;可否销售</span>
+                                    <input class="inputText w15" type="text" />
+                                    <span>&nbsp;&nbsp;&nbsp;价格段&nbsp;&nbsp;&nbsp;T</span>
+                                    <input type="text" class="w10 inputText" />
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="dhsc3">
+                            <div class="CM-bar"><div>订货及生产商信息</div><div class="Icon-size2 icm" style="margin-top:105px;"></div></div>
+                            <div class="CM-div">
+                                    <div class="ig dhxx_info_1"  style="margin-top:15px;">
+                                        <div class="icol_text w15"><span>*订货方式</span></div>
+                                        <input type="checkbox" /><span>电脑</span>
+                                        <input type="checkbox" /><span>手工</span>
+                                        <input type="checkbox" /><span>总公司</span>
+                                        <input type="checkbox" /><span>日配</span>
+                                    </div>
+                                    <div style="height:90px;">
+                                        <div class="dh_info1">
+                                            <div class="ig">
+                                                <input type="radio" style="margin-left:12px;"/>
+                                                <span>订货周期</span>
+                                                <input type="text" class="w30 inputText" />
+                                                <span>周</span>
+                                            </div>
+                                            <div style="height:60px;">
+                                                <div class="dh_radio1"> 
+                                                    <input type="radio"/>
+                                                </div>
+                                                <div class="dh_radio2">
+                                                    <div class="ig">
+                                                        <span>&nbsp;订购点&nbsp;</span><input type="text" class="w50 inputText" />
+                                                    </div>
+                                                    <div class="ig">
+                                                        <span>&nbsp;订购量&nbsp;</span><input type="text" class="w50 inputText" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dh_info2">
+                                              <div class="ig">
+                                                        <div class="icol_text w44"><span>&nbsp;可否退货</span></div><input type="text" class="inputText w35" />
+                                                    </div>
+                                            <div class="ig">
+                                                        <div class="icol_text w44"><span>&nbsp;可否收货</span></div><input type="text" class="inputText w35" />
+                                                    </div>
+                                              <div class="ig">
+                                                        <div class="icol_text w44"><span>&nbsp;箱含量</span></div><input type="text" class="w35 inputText" />
+                                                    </div>
+                                        </div>
+                                        <div class="dh_info3">
+                                              <div class="ig">
+                                                        <div class="icol_text w44"><span>&nbsp;订购倍数</span></div><input type="text" class="w35 inputText" />
+                                                    </div>
+                                              <div class="ig">
+                                                        <div class="icol_text w44"><span>&nbsp;允收天数</span></div><input type="text" class="w35 inputText" />&nbsp;天
+                                                    </div>
+                                        </div>
+                                    </div>
+                                    <div class="ig">
+                                        <div class="icol_text w15"><span>产地</span></div>
+                                        <input type="text" class="inputText w30" />
+                                    </div>
+                                    <div class="ig">
+                                        <div class="icol_text w15"><span>生产单位</span></div><input class="w50 inputText" type="text"/>
+                                    </div>
+                                <div class="ig">
+                                    <div class="icol_text w15"><span>单位地址</span></div>
+                                            <div class="iconPut" style="width:20%;float:left;">
+                                                <input type="text" style="width:75%;" value="上海" readonly="readonly"/>
+                                                <div style="color:#999999;">省</div>
+                                            </div>
+                                            <div class="iconPut" style="width:28%;float:left; margin-left:3px;">
+                                                <input type="text" value="上海市" readonly="readonly" class="w80" />
+                                                <div style="color:#999999;">市</div>
+                                                <!-- <div class="ListWin cityselected"></div>-->
+                                                </div>
+                                            </div>
+                                        <div class="ig">
+                                            <div class="icol_text w15"><span>&nbsp;</span></div>
+                                            <input class="w50 inputText" />
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div id="popupWin" style="position:absolute;z-index:999;left:10px;top:10px;"></div>
+    <div id="lookItemPic" class='picture_layer'>
+        <div style='width:1032px;height:500px;background:#fff;overflow:hidden;position:relative;top:50%;left:50%;margin-left:-516px;margin-top:-250px;border:2px solid #3f9673;'>
+            <div class="zwindow_titleBar" style="height: 40px;"><div class="zwindow_titleButtonBar"><div class="zwindow_action_button zwindow_close"></div></div><div class="zwindow_title titleText">TEST</div></div>
+            <div style="height:460px;overflow-x:hidden;overflow-y:auto;">
+
+            </div>
+                                               
+        </div></div>
+
+    
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $(".red_info").mouseover(function () {
+                var text = $(this).attr("_title");
+                var top = $(this).offset().top;
+                var left = $(this).offset().left;
+                $("#_title").html(text).css({"top":top+30,"left":left,"display":"block"});
+            });
+            $(".red_info").mouseout(function () {
+                $("#_title").css({ "display": "none" });
+            });
+
+            $(".edit_div").live("click", function () {
+                var ht = $(document).height();
+                var wd = $(document).width();
+                $("#lookItemPic").css({"width":wd,"height":ht,"display":"block"});
+            });
+        });
+
+        $(".Tools12").click(function () {
+            modifyBank();
+        });
+        function modifyBank() {
+            var selector = "#popupWin";
+            $(selector).window({
+                width: 660,
+                height: 680,
+                modal: true,
+                shadow: false,
+                border: false,
+                noheader: true
+            });
+            $(selector).window('open');
+
+            $(selector).window('refresh', 'file:///D:/我的酷盘/rtmm/rtmm/TestHTML/item-p52-panel2.html');
+
+            window.windowSelector = selector;
+        }
+        $('#i1').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-总公司",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i2').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i3').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i4').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i5').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i6').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i7').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i8').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i9').combobox({
+            //url: 'combobox_data.json',
+            width: 90,
+            height:20,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-正常",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i10').combobox({
+            //url: 'combobox_data.json',
+            width: 100,
+            height: 20,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-正常",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i11').combobox({
+            //url: 'combobox_data.json',
+            width: 100,
+            height: 20,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-正常",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+
+        $(".pie").click(function () {
+            $(".chart").css({ "display": "block" });
+        });
+    </script>
+
+    <div id="_title" style="display:none;padding:10px;height:auto;width:250px;position:absolute;background:#fff;border:1px solid #000;">
+
+    </div>
+
+    <div class="chart" style="position:absolute;top:0;left:0; width:100%;height:100%;background:#cccccc;display:none;">
+        <div class="pie_chart" style="height:600px;width:1000px;margin:0 auto;background:#f6f0f0;">
+
+        </div>
+    </div>
+<script>
+    $(function () {
+        $('.pie_chart').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: true
+        },
+        title: {
+            style: {"display":"none"}
+            //text: 'Browser market shares at a specific website, 2014'
+        },
+        credits:{
+            enabled:false // 禁用版权信息
+        },
+        tooltip: {
+    	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: false,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b style="color:#f00">{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            data: [
+                ['Firefox',   45.0],
+                ['IE',       26.8],
+                {
+                    name: 'Chrome',
+                    y: 12.8,
+                    sliced: false,
+                    selected: false
+                },
+                ['Safari',    8.5],
+                ['Opera',     6.2],
+                ['Others',   0.7]
+            ]
+        }]
+    });
+    });
+</script>
+</body>
+</html>

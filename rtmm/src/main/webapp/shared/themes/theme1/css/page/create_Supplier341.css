@@ -1,0 +1,61 @@
+.CInfo {
+	background-color: #eeeeee;
+	background-image: url(../../images/s341.jpg);
+	background-repeat: no-repeat;
+}
+
+.f_div {
+	height: 242px;
+	margin-top: 5px;
+}
+
+.f_div1,.f_div2 {
+	width: 50%;
+	float: left;
+	height: 100%;
+}
+
+.f_div21 {
+	height: 150px;
+}
+
+.f_div22 {
+	height: 90px;
+	margin-top: 2px;
+}
+
+.div1 {
+	width: 35%;
+	float: left;
+}
+
+.div11 {
+	width: 20%;
+	float: left;
+}
+
+.div2 {
+	width: 43%;
+	float: left;
+	margin-left: 3px;
+}
+
+.div3 {
+	width: 40%;
+	float: left;
+	margin-left: 3px;
+}
+
+.select1 {
+	width: 35%;
+	float: left;
+}
+
+.select2 {
+	width: 30%;
+	float: left;
+}
+/*input¶ÔÆë*/
+.w91_s232,.twoinput22,.twoinput23,.twoinput24,.twoinput25,.twoinput26,.twoinput27,.twoinput28 {
+	background:#fff;
+}

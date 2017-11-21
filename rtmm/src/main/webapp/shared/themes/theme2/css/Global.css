@@ -1,0 +1,396 @@
+html,body{
+    padding:0px;
+	margin: 0px auto;
+	width: 1240px;
+	height: 700px;
+	font-family:'Microsoft YaHei';
+	font-size: 12px;
+	color: #333333;
+}
+a {
+    border:0;
+    display:block;
+    text-decoration:none;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    overflow: hidden;
+}
+p{
+    margin: 0px;
+    padding: 0px;
+}
+img{border:0;}
+ol, ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+    width:100%;
+}
+table {
+    padding:0;
+}
+/*input ,*/select{
+    border:1px solid #999999;
+}
+/*��ɫ*/
+.White {
+    color:#FFFFFF;
+}
+.Green {
+    color:#3F9673;
+}
+/*�ߴ�*/
+/* 100%*30 100%*40 */
+.HPAndThirty {
+    width:100%;
+    height:30px;
+}
+.HPAndForty {
+    width:100%;
+    height:40px;
+}
+.Height1 {
+    height:20px;
+}
+.Height2 {
+    height:30px;
+}
+.Height2 {
+    height:100%;
+}
+.Width0 {
+    width:15%;   
+}
+.Width1 {
+    width:20%;   
+}
+.Width2 {
+    width:30%;
+}
+.Width3 {
+    width:50%;
+}
+.Width4 {
+    width:80%;
+}
+.Border {
+    border:1px solid #999999;
+}
+/*λ�� ״̬*/
+.FloatLeft {
+    float:left;
+}
+.FloatRight {
+    float:right;
+}
+.MarginLeft7 {
+    margin-left:7px;
+}
+.MarginLeft10 {
+    margin-left:10px;
+}
+.MarginLeft15 {
+    margin-left:17px;
+}
+.MarginLeft33 {
+    margin-left:33px;
+}
+.MarginLeft43 {
+    margin-left:43px;
+}
+.MarginRight10 {
+    margin-right:10px;
+}
+.MarginRight20 {
+    margin-right:20px;
+}
+.MarginTop5 {
+    margin-top:5px;
+}
+.TextAlginCenter {
+    text-align:center ;
+}
+.TextAlginLeft {
+    text-align:left ;
+}
+.TextAlginRight {
+    text-align:right ;
+}
+.DisplayYes {
+    display:block;
+}
+.DisplayNo {
+    display:none;
+}
+.BottomLine {
+    border-bottom:1px solid #999999;
+}
+.Pointer {
+    cursor:pointer;
+}
+/*����ͼ��/��ɫ*/
+.Grey1 {
+    background:#F9F9F9;
+}
+.Grey2 {
+    background:#EEEEEE;
+}
+.Grey3 {
+    background:#E0E0E0;
+}
+.Grey5 {
+    background:#F5F5F5;
+}
+.Grey4 {
+    background:#999999;
+}
+.GreencColor {
+    background:#3F9673;
+}
+.WhiteColor {
+    background:#FFFFFF;
+}
+.LightGreenColor {
+    background:#b4decd;
+}
+.Icon {
+    background-image:url(../images/Icon.png);
+}
+/* .Logo{	
+	background-position:-130px -154px;
+} */
+.Catelog1 {
+    background-repeat:no-repeat;
+	background-position:-217px -173px;
+	/*vertical-align:middle;*/
+}
+.Catelog3 {
+    background-repeat:no-repeat;
+	background-position:-255px -173px;
+	/*vertical-align:middle;*/
+}
+.Catelog {
+    background-repeat:no-repeat;
+	background-position:-13px -105px;
+	/*vertical-align:middle;*/
+}
+.Manufacture {
+    background-repeat:no-repeat;
+	background-position:-313px -104px;
+}
+.Goods {
+    background-repeat:no-repeat;
+	background-position:-341px -104px;
+}
+.Order {
+    background-repeat:no-repeat;
+	background-position:-374px -104px;
+}
+.Sales {
+    background-repeat:no-repeat;
+	background-position:-410px -105px;
+}
+.Results {
+    background-repeat:no-repeat;
+	background-position:-457px -102px;
+}
+.Parameter {
+    background-repeat:no-repeat;
+	background-position:-490px -101px;
+}
+.Daily {
+    background-repeat:no-repeat;
+	background-position:-520px -102px;
+}
+.Workstation {
+    background-repeat:no-repeat;
+	background-position:-547px -100px;
+}
+.Collapse {
+    background-repeat:no-repeat;
+	background-position:-116px -105px;
+}
+.Expand {
+    background-repeat:no-repeat;
+	background-position:-95px -105px;
+}
+.Hidden {
+    background-repeat:no-repeat;
+	background-position:-60px -105px;
+}
+.LeftMenuBg {
+    background-repeat:no-repeat;
+	background-position:-880px -109px;
+}
+.lineAAAAA {
+	background-position:-792px -32px;
+}
+.Love1 {
+    background-repeat:no-repeat;
+	background-position:-146px -105px;
+}
+.Love2 {
+    background-repeat:no-repeat;
+	background-position:-183px -105px;
+}
+.Expanded {
+    background-repeat:no-repeat;
+	background-position:-220px -110px;
+}
+.Expandable {
+    background-repeat:no-repeat;
+	background-position:-222px -142px;
+}
+.Line333333 {
+    background-repeat:no-repeat;
+	background-position:-41px -18px;
+}
+.Select {
+    background-repeat:no-repeat;
+	background-position:-13px -20px;
+}
+.Save {
+    background-repeat:no-repeat;
+	background-position:-60px -20px;
+}
+.Printer {
+    background-repeat:no-repeat;
+	background-position:-95px -20px;
+}
+.Excel {
+    background-repeat:no-repeat;
+	background-position:-130px -20px;
+}
+.SelectRuslt {
+    background-repeat:no-repeat;
+	background-position:-220px -20px;
+}
+.Rubber {
+    background-repeat:no-repeat;
+	background-position:-158px -20px;
+}
+.New {
+    background-repeat:no-repeat;
+	background-position:-375px -20px;
+}
+.Delete {
+    background-repeat:no-repeat;
+	background-position:-340px -20px;
+}
+.Edit {
+    background-repeat:no-repeat;
+	background-position:-410px -20px;
+}
+.First {
+    background-repeat:no-repeat;
+	background-position:-462px -20px;
+}
+.Previous {
+    background-repeat:no-repeat;
+	background-position:-490px -20px;
+}
+.Next {
+    background-repeat:no-repeat;
+	background-position:-514px -20px;
+}
+.Last {
+    background-repeat:no-repeat;
+	background-position:-543px -21px;
+}
+.Select2 {
+    background-repeat:no-repeat;
+	background-position:-13px -60px;
+}
+.Save2 {
+    background-repeat:no-repeat;
+	background-position:-60px -60px;
+}
+.Printer2 {
+    background-repeat:no-repeat;
+	background-position:-95px -60px;
+}
+.Excel2 {
+    background-repeat:no-repeat;
+	background-position:-130px -60px;
+}
+.SelectRuslt2 {
+    background-repeat:no-repeat;
+	background-position:-220px -60px;
+}
+.Rubber2 {
+    background-repeat:no-repeat;
+	background-position:-158px -60px;
+}
+.New2 {
+    background-repeat:no-repeat;
+	background-position:-375px -60px;
+}
+.Delete2 {
+    background-repeat:no-repeat;
+	background-position:-340px -60px;
+}
+.Edit2 {
+    background-repeat:no-repeat;
+	background-position:-410px -60px;
+}
+.First2 {
+    background-repeat:no-repeat;
+	background-position:-462px -60px;
+}
+.Privious2 {
+    background-repeat:no-repeat;
+	background-position:-490px -60px;
+}
+.Next2 {
+    background-repeat:no-repeat;
+	background-position:-514px -60px;
+}
+.Last2 {
+    background-repeat:no-repeat;
+	background-position:-543px -60px;
+}
+
+.ChangList {
+    background-repeat:no-repeat;
+	background-position:-698px -97px;
+}
+.ChangContent {
+    background-repeat:no-repeat;
+	background-position:-731px -97px;
+}
+.ChangList2 {
+    background-repeat:no-repeat;
+	background-position:-547px -130px;
+}
+.ChangContent2 {
+    background-repeat:no-repeat;
+	background-position:-580px -130px;
+}
+.Tag {
+    background-image:url(../images/Tag.png);
+    background-position:bottom;
+    background-repeat:no-repeat;
+}
+.CircleClose {
+    background-repeat:no-repeat;
+	background-position:-321px -140px;
+}
+.Canlendar {
+    background-repeat:no-repeat;
+	background-position:-791px -61px;
+}
+.ContentBar {
+    width: 20px;
+    height: 100%;
+    background:#3F9673;
+    color: #FFF;
+    float: left;
+}
+td, tr {
+    height:30px;
+    line-height:30px;
+}
+.TdSpan {
+    float:right;
+    margin-right:10px;
+}

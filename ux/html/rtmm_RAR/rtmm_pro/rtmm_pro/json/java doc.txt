@@ -1,0 +1,1 @@
+用管理员权限运行dos :  mklink /d D:\Java\jboss-5.0.1.GA\server\default\deploy\rtmm.war D:\Java\workspace\ntt-auchan\rtmm\src\main\webapp

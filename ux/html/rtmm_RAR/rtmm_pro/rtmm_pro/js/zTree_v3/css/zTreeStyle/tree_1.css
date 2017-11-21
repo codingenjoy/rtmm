@@ -1,0 +1,22 @@
+﻿        .ztree li span.button.ico_docu {
+            background-image:none;
+        }
+        .ztree li span.button.ico_open ,.ztree li span.button.ico_close{
+            background-image:none;
+        }
+.ztree li span.button {
+    width:5px;
+}
+
+/*hover style*/
+.curSelectedNode .roots_close ,.curSelectedNode .root_close ,
+.curSelectedNode .center_close {
+    background-position: -23px -23px !important;
+}
+.curSelectedNode .bottom_close{
+    background-position: -22px -23px !important;
+}
+.curSelectedNode .roots_open ,.curSelectedNode .root_open ,
+.curSelectedNode .center_open ,.curSelectedNode .bottom_open{
+    background-position: -22px -4px !important;
+}

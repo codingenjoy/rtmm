@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/default.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/iframeContent.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/rtmm.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/My97DatePicker/WdatePicker.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3"></td>
+                        <td></td>
+                        <td class="Tools4"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td id="tools11" class="Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12   testAdd"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+<!--                        <td class="Line-1"></td>
+                        <td class="Tools5"></td>
+                        <td></td>
+                        <td class="Tools7"></td>
+                        <td></td>
+                        <td class="Tools8"></td>
+                        <td></td>
+                        <td class="Tools9"></td>
+                        <td></td>
+                        <td class="Tools13"></td>
+                        <td></td>
+                        <td class="Tools14"></td>
+                        <td></td>
+                        <td class="Tools15"></td>-->
+                        <td class="Line-1"></td>
+                        <td class="Tools23"></td>
+                        <td></td>
+                        <td class="Tools24"></td>
+                        <td></td>
+                        <td class="Tools25"></td>
+                        <td></td>
+                        <td class="Tools26"></td>
+                        <td></td>
+                        <td class="Tools27"></td>
+                        <td></td>
+                        <td class="Tools28"></td>
+                        <td></td>
+                        <td class="Tools29"></td>
+                        <td></td>
+                        <td class="Tools30"></td>
+                        <td></td>
+                        <td class="Tools31"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Tools22 Icon-size1 " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                            <!--第一个-->
+                            <div class="tags1_left tags1_left_on"></div>
+                            <div class="tagsM tagsM_on">全国性DM期数与主题</div>
+                            <div class="tags tags_left_on"></div>
+                            <!--最后一个-->
+                            <div class="tagsM">全国性及门店DM期数与主题</div>
+                            <div class="tags tags3_r_off"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Search Bar_on" ><!-- Bar_on-->
+                    <div class="SearchTop">
+                        <span>查询条件</span>
+                        <div class="Icon-size1 CircleClose C-id" onclick="DispOrHid('C-id')"></div>
+                    </div>
+                    <div class="SMiddle">
+                        <table class="SearchTable" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="ST_td1"><span>档期</span></td>
+                                <td><input class="w65 inputText" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ST_td1"><span>主题</span></td>
+                                <td><input class="w85 inputText" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>开始日</span></td>
+                                <td><!--<div class="iconPut w65 fl_left">
+                                            <input type="text" class="w80" />
+                                            <div class="Calendar"></div>
+                                        </div>-->
+                                    <input type="text" class="Wdate w65" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>&nbsp;-
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>&nbsp;</span></td>
+                                <td><input type="text" class="Wdate w65" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>结束日</span></td>
+                                <td><input type="text" class="Wdate w65" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>&nbsp;-
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>&nbsp;</span></td>
+                                <td><input type="text" class="Wdate w65" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>计划起日</span></td>
+                                <td><input type="text" class="Wdate w65" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>&nbsp;</span></td>
+                                <td><input type="text" class="Wdate w65" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>计划迄日</span></td>
+                                <td><input type="text" class="Wdate w65" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>&nbsp;-
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>&nbsp;</span></td>
+                                <td><input type="text" class="Wdate w65" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>套系</span></td>
+                                <td><input type="text" class="Wdate w65" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>&nbsp;</span></td>
+                                <td>
+                                    <input class="w85 inputText" type="text" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SearchFooter">
+                        <div class="Icon-size1 Tools20"></div>
+                        <div class="Icon-size1 Tools6"></div>
+                    </div>
+                </div>
+                <div class="Content" style="width:74%;">
+                    <div class="htable_div">
+                        <table>
+                            <thead>
+                            <tr>
+                                <td><div class="t_cols align_center" style="width:30px;">&nbsp;</div></td>
+                                <td><div class="t_cols" style="width:70px;">档期<!--<div style="display:inline-block;width:10px;height:20px;"></div>--></div></td>
+                                <td><div class="t_cols" style="width:150px;">主题</div></td>
+                                <td><div class="t_cols" style="width:80px;">开始日</div></td>
+                                <td><div class="t_cols" style="width:80px;">结束日</div></td>
+                                <td><div class="t_cols" style="width:80px;">计划起日</div></td>
+                                <td><div class="t_cols" style="width:80px;">计划迄日</div></td>
+                                <td><div class="t_cols" style="width:100px;">套系</div></td>
+                                <td><div class="t_cols" style="width:70px;">上档中</div></td>
+                                <td><div style="width:16px;">&nbsp;</div></td>
+                            </tr>
+                        </thead>
+	                    </table>
+                    </div>
+                    <div class="btable_div" style="height:510px;">
+                        <table  class="single_tb w100"><!--multi_tb为多选 width:1001px;-->
+                            <tr style="color:#ff6a00">
+                                <td class="align_center tr_close" style="width:30px;"></td>
+                                <td style="width:71px;">123456</td>
+                                <td style="width:151px;">世界杯</td>
+                                <td style="width:81px;">XXXXX有限公司</td>
+                                <td style="width:81px;">P&GXXXXX有限公司世界杯世界杯</td>
+                                <td style="width:81px;">123456</td>
+                                <td style="width:81px;">XXXXX有限公司</td>
+                                <td style="width:101px;">123456</td>
+                                <td style="width:71px;">上档中</td>
+                                <td style="width:auto">&nbsp;</td>
+                            </tr>
+                            <tr class="trSpecial Bar_off" style="height:auto;">
+                                <td class="align_center" style="width:30px;"></td>
+                                <td colspan="9" style="white-space:normal;">
+                                    <div class="htable_div" style="height:30px;">
+                                        <table>
+                                            <thead>
+                                            <tr style="background:none;color:#333;">
+                                                <td><div class="t_cols" style="width:70px;">编号<!--<div style="display:inline-block;width:10px;height:20px;"></div>--></div></td>
+                                                <td><div class="t_cols" style="width:232px;">主题</div></td>
+                                                <td><div class="t_cols" style="width:80px;">渠道</div></td>
+                                                <td><div class="t_cols" style="width:262px;">参与组别</div></td>
+                                                <td><div style="width:16px;">&nbsp;</div></td>
+                                            </tr>
+                                        </thead>
+	                                    </table>
+                                    </div>
+                                    <div class="btable_div" style="height:60px;overflow:auto;">
+                                        <table width="100%">
+                                            <tr>
+                                                <td style="width:71px;">data1</td>
+                                                <td style="width:233px;">data2</td>
+                                                <td style="width:81px;">data3</td>
+                                                <td style="width:263px;">data4</td>
+                                                <td style="width:auto;">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>data1</td>
+                                                <td>data2</td>
+                                                <td>data3</td>
+                                                <td>data4</td>
+                                                <td style="width:auto;">&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!--<tr>
+                                <td class="align_center tr_open" style="width:30px;"></td>
+                                <td style="width:91px;">123456</td>
+                                <td style="width:101px;">世界杯</td>
+                                <td style="width:91px;">XXXXX有限公司</td>
+                                <td style="width:131px;">P&GXXXXX有限公司世界杯世界杯</td>
+                                <td style="width:136px;">123456</td>
+                                <td style="width:81px;">XXXXX有限公司</td>
+                                <td style="width:101px;">123456</td>
+                                <td style="width:71px;">上档中</td>
+                                <td style="width:auto">&nbsp;</td>
+                            </tr>-->
+                            <tr>
+                                <td class="align_center tr_open"></td>
+                                <td>123456</td>
+                                <td>世界杯</td>
+                                <td>XXXXX有限公司</td>
+                                <td>P&GXXXXX有限公司世界杯世界杯</td>
+                                <td>123456</td>
+                                <td>XXXXX有限公司</td>
+                                <td>123456</td>
+                                <td>上档中</td>
+                                <td style="width:auto">&nbsp;</td>
+                            </tr>
+                            <tr class="trSpecial">
+                                <td class="align_center" style="width:30px;"></td>
+                                <td colspan="9" >厂商名称输入有误。厂商合同标准与失效日期错误。门店课别信息中的采购范围输入有误。其他信息有误。</td>
+                            </tr>
+                            <!--<tr>
+                                <td class="align_center tr_close" style="width:30px;"></td>
+                                <td style="width:91px;">123456</td>
+                                <td style="width:101px;">世界杯</td>
+                                <td style="width:91px;">XXXXX有限公司</td>
+                                <td style="width:131px;">P&GXXXXX有限公司世界杯世界杯</td>
+                                <td style="width:136px;">123456</td>
+                                <td style="width:81px;">XXXXX有限公司</td>
+                                <td style="width:101px;">123456</td>
+                                <td style="width:71px;">上档中</td>
+                                <td style="width:auto">&nbsp;</td>
+                            </tr>-->
+                            <tr>
+                                <td class="align_center tr_open"></td>
+                                <td>123456</td>
+                                <td>世界杯</td>
+                                <td>XXXXX有限公司</td>
+                                <td>P&GXXXXX有限公司世界杯世界杯</td>
+                                <td>123456</td>
+                                <td>XXXXX有限公司</td>
+                                <td>123456</td>
+                                <td>上档中</td>
+                                <td style="width:auto">&nbsp;</td>
+                            </tr>
+                        </table>    
+                    </div>
+                    <div class="paging">
+	                    <div class="fl_left">
+		                    第1-20项,共 5 项&nbsp;&nbsp;|&nbsp;每页显示 <select>
+			                    <option value="10">10</option>
+			                    <option value="20" selected="selected">20</option>
+			                    <option value="30">30</option>
+		                    </select> 项
+	                    </div>
+	                    <div class="fl_right page_list">
+                            <span class="fl_right" style="margin-right:10px;">&nbsp;&nbsp;&nbsp;到第 <input name="pageNo" id="goto_page" class="page_no_input" maxlength="5" type="text"/> 页 <input value="go"  type="button"/></span>
+                                <a class="page_end_block" title="尾页"></a>
+                                <a class="page_next_block" title="下一页"></a>
+                                <a title="6" class="num">999999</a>
+                                <a style="cursor:default;">...</a>
+                                <a title="2" class="num">3</a>
+                                <a title="2" class="num">2</a>
+                                <a title="1" class="num">1</a>
+                                <a title="上一页" class="page_prev_block_off"></a>
+                                <a title="首页" class="page_first_block_off"></a>  
+	                    </div>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>

@@ -1,0 +1,590 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="css/G.css" rel="Stylesheet" />
+    <script src="js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/jump.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/easyUI/jquery.easyui.min.js" charset="utf-8" type="text/javascript"></script>
+    <link type="text/css" href="css/easyUI/datagrid.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/combo.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/calendar.css" rel="Stylesheet" />
+    <style type="text/css">
+        /*.my-datagrid-cell-check {
+            width:5%;
+        }
+        .my-datagrid-cell-c1-no {
+            width:20%;
+        }
+        .my-datagrid-cell-c1-name {
+            width:25%;
+        }
+        .my-datagrid-cell-c1-en_name {
+            width:30%;
+        }
+        .my-datagrid-cell-c1-date {
+            width:20%;
+        }*/
+        /*.my-head-td-ck {
+            width:5%;
+        }
+        .my-head-td-no {
+            width:20%;
+        }
+        .my-head-td-name {
+            width:25%;
+        }
+        .my-head-td-en_name {
+            width:30%;
+        }
+        .my-head-td-date {
+            width:auto;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="TopMenu">
+        <div class="Logo"></div>
+        <ol class="MainMenu">
+            <li><a class="catalogue_management" title="分类管理" href="Catelog-11.html"><span class="longText">分类管理</span></a></li>
+            <li><a class="supplier_management supplier_management_on" title="厂商管理" href="Supplier-11.html"><span class="longText">厂商管理</span></a></li>
+            <li><a class="item_management" title="商品管理"><span class="longText">商品管理</span></a></li>
+            <li><a class="order_management" title="订单管理"><span class="longText">订单管理</span></a></li>
+            <li><a class="promotion_management" title="促销管理"><span class="longText">促销管理</span></a></li>
+            <li><a class="achievement_analysis" title="业绩分析"><span class="longText">业绩分析</span></a></li>
+            <li><a class="parameter_management" title="参数管理" href="Param-11.html"><span class="longText">参数管理</span></a></li>
+            <li><a class="day-end_management" title="日结管理"><span class="longText">日结管理</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">我的工作台</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">ToBeAGood Programer!</span></a></li>
+        </ol>
+<ol class="RMenu">
+            <li class="MenuDrop"><a class="RM4"></a>
+                <ol class="FavDrop">
+                            <li class="FavDrop1"><div class="RM1"></div>
+                                <span>我的收藏</span>
+                            </li>
+                            <li class="FavDrop2"><div class="RM3"></div>
+                                <span>语言设置</span></li>
+                            <li class="FavDrop3"><div class="RM2"></div>
+                                <span>密码设置</span></li>
+                            <li class="FavDrop5"><div class="RM5"></div><span>退出帐号</span></li>
+                 </ol>
+            </li>
+            <li class="RMenu_Text"><div class="longText">欢迎，Java.管理员 Csharp Dot</div></li> 
+        </ol>
+        <ol class="MyFav" style="display:none;">
+            <li><a>我的收藏1</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏2</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏3</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏4</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏5</a><div class="Closediv CircleClose"></div></li>
+        </ol>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="1www" class="Sub" href="Supplier-11.html"><span class="L1_No"></span>
+                           <span class="SubText">集团信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                    <li>
+                        <a id="1ee" class="Sub" href="Supplier-21.html"><span class="L1_No"></span>
+                           <span class="SubText">公司信息</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a id="fff1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">厂商管理</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg" class="Sub Sub_on" href="Supplier-31.html"><span class="L2_No"></span>
+                                   <span class="SubText">厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub" href="Supplier-41.html"><span class="L2_No"></span>
+                                   <span class="SubText">未生效厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3_disable"></td>
+                        <td></td>
+                        <td class="Tools23_disable"></td>
+                        <td></td>
+                        <td class="Tools23"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td class="sh_newMac Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools24"></td>
+                        <td></td>
+                        <td class="Tools25"></td>
+                        <td></td>
+                        <td class="Tools26"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27"></td>
+                        <td></td>
+                        <td class="Tools28"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools22" title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                <div class="tagx tagL"></div>
+                <div id="wsx_tags1" class="tag tagM">厂商总览</div>
+                <div class="tagx tagR"></div>
+
+                <div class="tagx tagL_off"></div>
+                <div id="wsx_tags2" class="tag tagM_off">厂商财务信息</div>
+                <div class="tagx tagR_off"></div>
+
+                <div class="tagx tagL_off"></div>
+                <div id="wsx_tags3" class="tag tagM_off">厂商供应区域</div>
+                <div class="tagx tagR_off"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Search"><!-- Bar_on-->
+                    <div class="SearchTop">
+                        <span>查询条件</span>
+                        <div class="Icon-size1 CircleClose C-id" onclick="DispOrHid('C-id')"></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SMiddle">
+                        <table class="SearchTable" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="ST_td1"><span>集团编号</span></td>
+                                <td class="ST_td2"><input type="text" class="inputText w80" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>公司</span></td>
+                                <td><div class="iconPut w55"><input type="text" class="w75" /><div class="ListWin"></div> </div></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><input type="text" class="inputText w80 Black" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>厂商种类</span></td>
+                                
+                                <td><input id="sel1" name="dept" data-options="editable:false,panelHeight:'auto'"/></td>
+                            </tr>
+                            <tr>
+                                <td><span>供货方式</span></td>
+                                
+                                <td><input id="sel2" name="dept" data-options="editable:false,panelHeight:'auto'"/></td>
+                            </tr>
+                            <tr>
+                                <td><span>商品供应特性</span></td>
+                                
+                                <td><input id="sel3" name="dept" data-options="editable:false,panelHeight:'auto'"/></td>
+                            </tr>
+                            <tr>
+                                <td><span>合同标准</span></td>
+                                
+                                <td><input id="sel4" name="dept" data-options="editable:false,panelHeight:'auto'"/></td>
+                            </tr>
+                            <tr>
+                                <td><span>门店</span></td>
+                                
+                                <td><input id="sel5" name="dept" data-options="editable:false,panelHeight:'auto'"/></td>
+                            </tr>
+                            <tr>
+                                <td><span>课别</span></td>
+                                <td><div class="iconPut w55"><input type="text" class="w75" /><div class="ListWin"></div> </div></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><input type="text" class="inputText w80 Black" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>可否退货</span></td>
+                                
+                                <td><input id="sel6" name="dept" data-options="editable:false,panelHeight:'auto'"/></td>
+                            </tr>
+                            <tr>
+                                <td><span>付款状态</span></td>
+                                
+                                <td><input id="sel7" name="dept" data-options="editable:false,panelHeight:'auto'"/></td>
+                            </tr>
+                            <tr>
+                                <td><span>门店课别状态</span></td>
+                                
+                                <td><input id="sel8" name="dept" data-options="editable:false,panelHeight:'auto'"/></td>
+                            </tr>
+                            <tr>
+                                <td><span>应付余额</span></td>
+                                <td>
+                                    <input type="text" class="w35 inputText"/>元-
+                                    <input type="text" class="w35 inputText"/>元
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SearchFooter">
+                        <div class="Icon-size1 Tools20"></div>
+                        <div class="Icon-size1 Tools6"></div>
+                    </div>
+                </div>
+
+                <div class="Content" style="width:74%;">
+	                <table id="dg" style="height:440px;width:1031px;"></table>
+                    <div style="height:120px;margin-top:10px;">
+                        <div class="CM-bar" style="height:120px;"><div>选中项其他信息</div></div>
+                        <div class="CM-div">
+                        <table class="CM_table">
+                            <tr>
+                                <td class="w20"><span>门店课别状态</span></td>
+                                <td class="w35"><input type="text" class="inputText w35 fl_left" /><span>进价折扣</span></td>
+                                <td class="w20"><input type="text" class="inputText w80 fl_left" />%</td>
+                                <td class="w20">&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span>应付余额</span></td>
+                                <td><input type="text" class="inputText w35 fl_left" /><span>发票折扣</span></td>
+                                <td><input type="text" class="inputText w80 fl_left" />%</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span>一年折扣率</span></td>
+                                <td><input type="text" class="inputText w35 fl_left" /><span>其他折扣</span></td>
+                                <td><input type="text" class="inputText w80 fl_left" />%</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    <div id="date_div" style="width:160px;height:180px;display:none;position:absolute;z-index:9999;"></div>
+    <script type="text/javascript">
+        $('#dg').datagrid({
+            rownumbers: false,
+            //singleSelect: false,
+            pagination: true,
+            pageSize: 20,
+            url: 'json/datagrid_data10.json',
+            columns: [[
+            { field: 'ck', checkbox: true, },
+            { field: 'no', title: '任务编号', sortable: true, },
+            { field: 'menu', title: '任务所属菜单', sortable: true, },
+            { field: 'sp_no', title: '待审批对象编号', },
+            { field: 'type', title: '任务类型', },
+            { field: 'status', title: '任务状态', },
+            { field: 'creater', title: '创建人', },
+            { field: 'date', title: '任务创建日期', },
+            { field: 'sh_user', title: '审核人', },
+            { field: 'icon', title: ' ', }
+            ]]
+        });
+
+        //日历
+        $('#date_div').calendar({
+            current: new Date()
+        });
+        $('#sel1').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-华北",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#sel2').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-华北",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#sel3').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-华北",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#sel4').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-华北",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#sel5').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-华北",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#sel6').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-华北",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#sel7').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-华北",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#sel8').combobox({
+            //url: 'combobox_data.json',
+            width: 120,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-华北",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                alert(rec.id + "....." + rec.text);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+.tree {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.tree li {
+  white-space: nowrap;
+}
+.tree li ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.tree-node {
+  height: 30px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.tree-node span {
+    margin-top:5px;
+    margin-left:5px;
+}
+.tree-hit {
+  cursor: pointer;
+}
+.my-tree1,
+.tree-expanded,
+.tree-collapsed,
+.tree-folder,
+.tree-file,
+.tree-checkbox,
+.tree-indent {
+  display: inline-block;
+  width: 16px;
+  height: 18px;
+  vertical-align: top;
+  overflow: hidden;
+}
+.tree-expanded {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -16px 0px;
+}
+.tree-expanded-hover {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -47px 0px;
+}
+.tree-collapsed {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat 2px 0px;
+}
+.tree-collapsed-hover {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -32px 0px;
+}
+.tree-lines .tree-expanded,
+.tree-lines .tree-root-first .tree-expanded {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -144px 0;
+}
+.tree-lines .tree-collapsed,
+.tree-lines .tree-root-first .tree-collapsed {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -128px 0;
+}
+.tree-lines .tree-node-last .tree-expanded,
+.tree-lines .tree-root-one .tree-expanded {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -80px 0;
+}
+.tree-lines .tree-node-last .tree-collapsed,
+.tree-lines .tree-root-one .tree-collapsed {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -64px 0;
+}
+.tree-line {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -176px 0;
+}
+.tree-join {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -192px 0;
+}
+.tree-joinbottom {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -160px 0;
+}
+.tree-folder {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -208px 0;
+}
+.tree-file {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -295px -19px;
+}
+.tree-loading {
+  background: url('../../images/easyUI/loading.gif') no-repeat center center;
+}
+.tree-checkbox0 {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -208px -18px;
+}
+.tree-checkbox1 {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -224px -18px;
+}
+.tree-checkbox2 {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -240px -18px;
+}
+.tree-dnd-yes {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -256px 0;
+}
+.tree-dnd-no {
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -256px -18px;
+}
+
+
+.tree-title {
+  font-size: 12px;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+  padding: 0 2px;
+  height: 18px;
+  line-height: 18px;
+}
+.tree-node-proxy {
+  font-size: 12px;
+  line-height: 20px;
+  padding: 0 2px 0 20px;
+  border-width: 1px;
+  border-style: solid;
+  z-index: 9900000;
+}
+.tree-dnd-icon {
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 18px;
+  left: 2px;
+  top: 50%;
+  margin-top: -9px;
+}
+
+.tree-node-top {
+  border-top: 1px dotted red;
+}
+.tree-node-bottom {
+  border-bottom: 1px dotted red;
+}
+.tree-node-append .tree-title {
+  border: 1px dotted red;
+}
+.tree-editor {
+  border: 1px solid #ccc;
+  font-size: 12px;
+  height: 14px !important;
+  height: 18px;
+  line-height: 14px;
+  padding: 1px 2px;
+  width: 80px;
+  position: absolute;
+  top: 0;
+}
+.tree-node-proxy {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #95B8E7;
+}
+.tree-node-selected{
+  background: #3f9673;
+  color: #fff;
+}
+.tree-node-hover {
+  background: #99cc66;
+  color: #fff;
+}
+    .tree-node-hover .tree-file, .tree-node-selected .tree-file {
+        background: url('../../images/easyUI/tree_icons-1.png') no-repeat -278px -19px;
+    }
+.tree-node-hover .tree-folder,.tree-node-selected .tree-folder{
+  background: url('../../images/easyUI/tree_icons-1.png') no-repeat -277px 0;
+}
+.RowBg_hasChild {
+    background:#e5e5e5;
+}

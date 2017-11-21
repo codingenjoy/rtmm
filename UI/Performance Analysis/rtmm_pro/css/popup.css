@@ -1,0 +1,107 @@
+﻿body{
+    padding:0px;margin:0px auto;
+    font-family:'Microsoft YaHei';
+    font-size:12px;
+}
+/*Panel*/
+        
+.Panel {
+    border:2px solid #3F9673;
+    background:#fff;
+}
+.Panel_top {
+    height:40px;background:#3F9673;
+}
+.alert_top {
+    height:30px;background:#3F9673;
+}
+    .alert_top span {
+        line-height:28px;margin-left:10px;color:#fff;
+    }
+    .alert_top .PanelClose {
+        margin-top:0px;
+        margin-right: 3px;
+    }
+.alert_body {
+    height:100%;margin-top:10px;
+}
+.alert_b1 {
+    height:100%;width:60px;float:left;
+}
+.alert_text {
+    line-height:20px;width:70%;height:100%; float:left;margin-left:30px;word-break:break-all;
+}
+.Panel_footer {
+    height:40px;background:#f9f9f9;overflow: hidden;text-align:center;
+}
+.PanelBtn {
+    width: 175px;
+    height: 32px;
+    margin: 5px auto;
+}
+.pt_div{
+    width: 78px;
+    height: 30px;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    display:inline-block;
+    margin-top:5px;
+}
+.PanelBtn1 ,.btn1{
+    background: none repeat scroll 0% 0% #F37864;
+    border: 1px solid #F37864;
+}
+.PanelBtn2,.cancel {
+    background: none repeat scroll 0% 0% #999;
+    border: 1px solid #999;
+}
+.PanelBtn div:hover {
+    border:1px solid #3F9673;
+}
+.btn1 {
+    width: 78px;
+    height: 30px;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    margin:4px auto;
+}
+.Panel_top span {
+    margin-left: 20px;
+    line-height: 40px;
+    float: left;
+}
+.PanelClose,.loadingClose {
+    width: 32px;
+    height: 29px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    background:url(../images/icon0402.png) -57px -11px no-repeat;
+}
+.loadingClose:hover {
+    background:url(../images/icon0402.png) -524px 0px no-repeat;
+}
+.PanelClose:hover {
+    background:url(../images/icon0402.png) -494px -11px no-repeat;
+}
+.Panel_top, .Panel_footer {
+    color: #FFF;
+}
+.gou {
+    background:url(../images/gou.jpg) no-repeat right center;
+}
+.cha {
+    background:url(../images/cha.jpg) no-repeat right center;
+}
+.warn {
+    background:url(../images/warn.jpg) no-repeat right center;
+}
+.alert_info {
+    background:url(../images/alert_info.jpg) no-repeat right center;
+}
+.alert_comfirm {
+    background:url(../images/comfirm.jpg) no-repeat right center;
+}

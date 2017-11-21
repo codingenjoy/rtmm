@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/page/sh_Supplier442.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="../js/jump.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            zz();
+        });
+        function zz() {
+            $(".list_ex .list_ex0_on").each(function () {
+                var top = $(this).find(".list_ex2").offset().top;
+                var left = $(this).find(".list_ex2").offset().left;
+                $(this).find(".list_ex2").find(".zhezhao").css({ "top": top, "left": left });
+            });
+        }
+        $(".ssuo").live("click", function () {
+            $(this).parent().parent().toggleClass("list_ex0_on");
+            zz();
+        });
+        $(".list_ex14").live("click", function () {
+            $(this).parent().parent().remove();
+        });
+        $(".list_ex13").live("click", function () {
+            $(this).parent().parent().find(".zhezhao").css("display", "none");
+        });
+
+        $(".ct1").live("click", function () {
+            $("#t1").css("display", "block");
+            $("#t2").css("display", "none");
+            $(this).addClass("GreenBg");
+            $(".ct2").removeClass("GreenBg");
+        });
+        $(".ct2").live("click", function () {
+            $("#t2").css("display", "block");
+            $("#t1").css("display", "none");
+            $(this).addClass("GreenBg");
+            $(".ct1").removeClass("GreenBg");
+        });
+    </script>
+</head>
+<body>
+   <div class="TopMenu">
+        <div class="Logo"></div>
+        <ol class="MainMenu">
+            <li><a class="catalogue_management" title="分类管理" href="Catelog-11.html"><span class="longText">分类管理</span></a></li>
+            <li><a class="supplier_management" title="厂商管理" href="Supplier-11.html"><span class="longText">厂商管理</span></a></li>
+            <li><a class="item_management" title="商品管理"><span class="longText">商品管理</span></a></li>
+            <li><a class="order_management" title="订单管理"><span class="longText">订单管理</span></a></li>
+            <li><a class="promotion_management" title="促销管理"><span class="longText">促销管理</span></a></li>
+            <li><a class="achievement_analysis" title="业绩分析"><span class="longText">业绩分析</span></a></li>
+            <li><a class="parameter_management" title="参数管理" href="Param-11.html"><span class="longText">参数管理</span></a></li>
+            <li><a class="day-end_management" title="日结管理"><span class="longText">日结管理</span></a></li>
+            <li><a class="workspace_overview workspace_overview_on" title="我的工作台"><span class="longText">我的工作台</span></a></li>
+        </ol>
+<ol class="RMenu">
+            <li class="MenuDrop"><a class="RM4"></a>
+                <ol class="FavDrop">
+                            <li class="FavDrop1"><div class="RM1"></div>
+                                <span>我的收藏</span>
+                            </li>
+                            <li class="FavDrop2"><div class="RM3"></div>
+                                <span>语言设置</span></li>
+                            <li class="FavDrop3"><div class="RM2"></div>
+                                <span>密码设置</span></li>
+                            <li class="FavDrop5"><div class="RM5"></div><span>退出帐号</span></li>
+                 </ol>
+            </li>
+            <li class="RMenu_Text"><div class="longText">欢迎，Java.管理员 Csharp Dot</div></li> 
+        </ol>
+        <ol class="MyFav" style="display:none;">
+            <li><a>我的收藏1</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏2</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏3</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏4</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏5</a><div class="Closediv CircleClose"></div></li>
+        </ol>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="fff1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">我的草稿箱</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">厂商管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">商品管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A4" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">订单管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A5" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">促销管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="A1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">待办事项</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="A2" class="Sub Sub_on"><span class="L2_No qipao"></span>
+                                   <span class="SubText">我的待办</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A3" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">办理查询</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="A6" class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">公告信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3_disable"></td>
+                        <td></td>
+                        <td class="Tools23_disable"></td>
+                        <td></td>
+                        <td class="Tools23_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td></td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11_disable"></td>
+                        <td></td>
+                        <td class="Tools10_disable"></td>
+                        <td></td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td></td>
+                        <td class="Tools17_disable"></td>
+                        <td></td>
+                        <td class="Tools19_disable"></td>
+                        <td></td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools24_disable"></td>
+                        <td></td>
+                        <td class="s441_next Tools25"></td>
+                        <td></td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools33_on lightBlue"></td>
+                        <td class="Line-1"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools22" title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                <div class="tags1_left"></div>
+                            <div class="tagsM">我的代办总览</div>
+                            <div class="tags tags_right_on"></div>
+
+                             <!--中间-->
+                            <div class="tagsM  tagsM_on">审批详情</div>
+                            <div class="tags tags_left_on"></div>
+                <!--中间-->
+                            <div class="tagsM">基本信息及流程图</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">处理历史</div>
+                            <div class="tags"></div>
+                            <!--最后一个-->
+                            <div class="tagsM">操作日志</div>
+                            <div class="tags tags3_r_off"></div>
+            </div>
+            <div class="Container-1">
+                <!--<div class="Search" style="display:none;"></div>-->
+                <div class="Content" style="width:99%;"><!--width:74%;-->
+	                <div class="CInfo"></div>
+                    
+                    <!--539-->
+                    <div class="t_div2 CM">
+                        <div class="GreenBg td2_1">107-学生及办公用品</div>
+                        <div class="td2_2">106-桌上用品及厨具</div>
+                        <div class="td2_3">113-箱包</div>
+                        
+                    </div>
+
+                    <div class="CM fx_div1">
+                            <div class="CM-bar"><div>公共</div></div>
+                            <div class="CM-div">
+                            <table class="CM_table">
+                                <tr>
+                                    <td class="w10"><span>*采购范围</span></td>
+                                    <td style="width:30%"><input type="text"  class="inputText w80"/></td>
+                                    <td style="width:10%;"><span>备注</span></td>
+                                    <td style="width:30%"><input type="text"  class="inputText w80"/></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+                            </div>
+                        </div>
+
+                    <div class="f_div">
+                        <div class="CM f_div1">
+                            <div class="CM-bar"><div>下传区域</div></div>
+                            <div class="list_ex">
+                                <div class="list_ex0 list_ex0_on">
+                                    <div class="list_ex1">
+                                        <div class="ssuo list_ex11 Icon-size1"></div>
+                                        <div class="longText list_ex12">上海、苏州、杭州、苏州、上海、苏州、上海、苏州、上海、苏州</div> 
+                                        <div class="Icon-size2 Tools12 list_ex13"></div>
+                                        <div class="list_ex14 Icon-size2 Tools10"></div>
+                                    </div>
+                                    <div class="list_ex2">
+                                        <textarea  class="list_ex21"></textarea>
+                                        <div class="zhezhao"></div><!--遮罩-->
+                                    </div>
+                                </div>
+                                <div class="list_ex0">
+                                    <div class="list_ex1">
+                                        <div class="ssuo list_ex11 Icon-size1"></div>
+                                        <div class="longText list_ex12">上海、苏州、杭州、苏州、上海、苏州、上海、苏州、上海、苏州</div> 
+                                        <div class="Icon-size2 Tools12 list_ex13"></div>
+                                        <div class="list_ex14 Icon-size2 Tools10"></div>
+                                    </div>
+                                    <div class="list_ex2">
+                                        <textarea  class="list_ex21"></textarea>
+                                        <div class="zhezhao"></div><!--遮罩-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="height:30px;width:85%;margin:0 auto;">
+                                <div class="Icon-size2 Tools11 fl_left" ></div>
+                                <span class="fl_left" style="line-height:20px;">&nbsp;&nbsp;新增下传区域</span>
+                            </div>
+                        </div>
+                    <div class="f_div2">
+                            <div class="f_div21 CM ">
+                                <div class="CM-bar"><div>订单信息</div></div>
+                                <div class="CM-div">
+                                <table class="CM_table">
+                                    <tr>
+                                            <td class="w25"><span>*最低订购(MOC)</span></td>
+                                            <td class="w15">
+                                                <input type="text" class="inputText w78"/>元
+                                            </td>
+                                            <td class="w50" rowspan="3">
+                                                <div class="schedule">
+                                                    <div style="height:25px;">
+                                                        <div class="wtitle">&nbsp;</div>
+                                                        <div class="week">
+                                                            <div>一</div>
+                                                            <div>二</div>
+                                                            <div>三</div>
+                                                            <div>四</div>
+                                                            <div>五</div>
+                                                            <div>六</div>
+                                                            <div>日</div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="height:1px;background:#999999;overflow:hidden;width:85%;"></div>
+                                                    <div style="height:25px;">
+                                                        <div class="wtitle"><span>*OPL订货行程</span></div>
+                                                        <div class="week">
+                                                            <div style="background-color:#B4DECD;"></div>
+                                                            <div></div>
+                                                            <div style="background-color:#B4DECD;"></div>
+                                                            <div style="background-color:#B4DECD;"></div>
+                                                            <div></div>
+                                                            <div style="background-color:#B4DECD;"></div>
+                                                            <div></div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="height:25px;">
+                                                        <div class="wtitle"><span>*送货行程</span></div>
+                                                        <div class="week">
+                                                            <div></div>
+                                                            <div></div>
+                                                            <div style="background-color:#B4DECD;"></div>
+                                                            <div></div>
+                                                            <div style="background-color:#B4DECD;"></div>
+                                                            <div></div>
+                                                            <div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>*准备天数</span></td>
+                                        <td><input type="text" class="inputText w78" />天</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>*可否退货</span></td>
+                                        <td><select class="w87"><option>1-可以</option></select></td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                            <div class="f_div22 CM ">
+                                <div class="CM-bar"><div>订货退货地址</div></div>
+                                <div class="CM-div">
+                                <table class="CM_table">
+                                    <tr>
+                                        <td colspan="2" style="line-height:18px;">
+                                            <div class="cmt1 GreenBg">订货地址</div>
+                                            <div class="cmt1">退货地址</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="height:10px;overflow:hidden;"><div class="line"></div></td>
+                                    </tr>
+                                    <tr>
+                                    <td style="width:20%;"><span>地址</span></td>
+                                    <td>
+                                        <div class="iconPut icondiv11"><input type="text"/>
+                                            <div>省</div></div>
+                                        <div class="iconPut icondiv12">
+                                            <input type="text"/><div style="color:#999999;">市</div></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td><input type="text" class="inputText w91_s232" /></td>
+                                </tr>
+                                <tr>
+                                    <td><span>邮政编码</span></td>
+                                    <td><input type="text" class="inputText twoinput25"/>
+                                            <span style="float:left;margin:0;">&nbsp;&nbsp;&nbsp;联系人&nbsp;</span>
+                                            <input type="text" class="inputText twoinput25"/><span style="float:left;margin:0;">&nbsp;&nbsp;&nbsp;传真&nbsp;</span>
+                                        <input type="text" class="inputText twoinput22"/><span style="float:left;margin:0;">-</span>
+                                            <input type="text" class="inputText twoinput23"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span>电话号码</span></td>
+                                    <td><input type="text" class="inputText twoinput22"/><span style="float:left;margin:0;">-</span>
+                                            <input type="text" class="inputText twoinput26"/>
+                                            <span style="float:left;margin:0;">&nbsp;&nbsp;手机</span>
+                                            <input type="text" class="inputText twoinput27"/>
+                                            <span style="float:left;margin:0;">&nbsp;&nbsp;邮箱</span>
+                                            <input type="text" class="inputText twoinput28"/>
+                                    </td>
+                                </tr>
+                                </table>
+                                </div>
+                            </div>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

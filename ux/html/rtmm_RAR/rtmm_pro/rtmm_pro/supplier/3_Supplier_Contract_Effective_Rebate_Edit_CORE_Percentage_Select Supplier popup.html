@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" type="text/javascript"></script>
+    <style type="text/css">
+        .Panel {
+            width:862px;
+        }
+        .Table_Panel {
+            overflow:hidden;
+        }
+        .ListIcon {
+             float: left; 
+             margin-top:auto; 
+             margin-right:auto; 
+        }
+        .part1, .part2 {
+            float:left;
+        }
+        .part1 {
+            width:550px;margin-top:15px;margin-bottom: 15px;padding: 0px 15px;border-right:1px dashed #999;height:96%;
+        }
+        .part2 {
+            width:250px;height:433px;padding:15px 15px 0;
+        }
+        .CM-div {
+            background:#fff;border:1px solid #999;height:363px;width:248px;overflow-y:auto;
+        }
+        .item {
+            padding:0 10px;line-height:25px;
+        }
+        .paging .page_list {
+            width:auto;
+        }
+        .ig {
+            line-height:30px;padding-left:10px;
+        }
+        .ckbox {
+            margin-right:5px;margin-top:8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="Panel">
+        <div class="Panel_top">
+            <span>选择需要修改的商品</span>
+            <div class="PanelClose" style="margin-right:0;"></div>
+        </div>
+        <div class="Table_Panel">
+            <div class="part1">
+                <div class="ig GrayBg">
+                    <div class="Icon-div">
+                        <input type="text" class="IS_input"/>
+                        <div class="cbankIcon"></div>
+                    </div>
+                </div>
+                <div class="search_tb_p">
+                   <!-- <table id="update_items" style="height:400px;"></table>-->
+                    <div class="htable_div">
+                        <table>
+                        <thead>
+                            <tr>
+                                <td><div class="t_cols" style="width:30px;">&nbsp;</div></td>
+                                <td><div class="t_cols" style="width:100px;">厂编</div></td>
+                                <td><div class="t_cols" style="width:250px;">公司名称</div></td>
+                                <td><div class="t_cols" style="width:80px;">状态</div></td>
+
+                                <td><div style="width:16px;">&nbsp;</div></td>
+                            </tr>
+                        </thead>
+	                </table>
+                    </div>
+                    <div class="btable_div" style="height:340px;">
+                        <table  class="single_tb w100"><!--multi_tb为多选 width:1001px;-->
+                            <tr>
+                                <td style="width:30px;">&nbsp;</td>
+                                <td style="width:101px;">123456</td>
+                                <td style="width:251px;">XXXXX有限公司世界杯世界杯世界杯</td>
+                                <td style="width:81px;">1-普通，AC</td>
+                                <td style="width:auto"><div class="ListIcon"></div></td>
+                            </tr>
+                            <tr>
+                                <td class="align_center" style="width:30px;">&nbsp;</td>
+                                <td>123456</td>
+                                <td>XXXXX有限公司世界杯世界杯世界杯</td>
+                                <td>1-普通，AC</td>
+
+                                <td style="width:auto"><div class="ListIcon"></div></td>
+                            </tr>
+                        </table>    
+                    </div> 
+                    <div class="paging">
+	                    <div class="fl_left">
+		                    第1-20项,共 5 项&nbsp;&nbsp;|&nbsp;每页显示 <select>
+			                    <option value="10">10</option>
+			                    <option value="20" selected="selected">20</option>
+			                    <option value="30">30</option>
+		                    </select> 项
+	                    </div>
+	                    <div class="fl_right page_list">
+                            <span class="fl_right" style="margin-right:10px;">&nbsp;&nbsp;&nbsp;到第 <input name="pageNo" id="goto_page" class="page_no_input" maxlength="5" type="text"/> 页 <input value="go"  type="button"/></span>
+                                <a class="page_end_block" title="尾页"></a>
+                                <a class="page_next_block" title="下一页"></a>
+                                <a title="6" class="num">999999</a>
+                                <a style="cursor:default;">...</a>
+                                <a title="2" class="num">3</a>
+                                <a title="2" class="num">2</a>
+                                <a title="1" class="num">1</a>
+                                <a title="上一页" class="page_prev_block_off"></a>
+                                <a title="首页" class="page_first_block_off"></a>  
+	                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="part2">
+                <div class="ig">
+                    <input type="checkbox" class="ckbox" />
+                    同步修改与原主厂商关联的所有厂商
+                </div>
+                <div class="GrayBg ig">
+                    关联原主厂商的厂商列表
+                </div>
+                <div class="CM-div">
+                    <div class="item">123234567-苏州保洁有限公司</div>
+                    <div class="item">123234567-苏州保洁有限公司</div>
+                    <div class="item">123234567-苏州保洁有限公司</div>
+                    <div class="item">123234567-苏州保洁有限公司</div>
+                </div>
+            </div>
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">保持</div>
+                <div class="PanelBtn2">取消</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

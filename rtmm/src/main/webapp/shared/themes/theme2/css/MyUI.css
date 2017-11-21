@@ -1,0 +1,9 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+#LeftMenuSelectable .ui-selected {
+    background:url(../images/icon.png);
+    background-repeat:no-repeat;
+	background-position:-880px -109px;
+    color:#3F9673;
+}

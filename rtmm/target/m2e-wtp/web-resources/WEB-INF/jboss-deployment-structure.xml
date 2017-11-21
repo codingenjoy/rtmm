@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+	<ear-subdeployments-isolated>false</ear-subdeployments-isolated>
+	<deployment>
+		<dependencies>
+			<module name="com.auchan.zoofanatics" optional="true">
+				<imports>
+					<include path="META-INF**" />
+					<include path="org**" />
+				</imports>
+			</module>
+			<module name="com.auchan.common">
+			</module>
+			<module name="com.auchan.rtmm" />
+			<!-- <module name="deployment.auchan-startup.sar"/> -->
+			
+			<module name="org.apache.cxf.impl">
+				<imports>
+					<include path="META-INF" />
+					<include path="META-INF/cxf" />
+				</imports>
+			</module>
+
+		</dependencies>
+		<resources>
+		</resources>
+	</deployment>
+</jboss-deployment-structure>

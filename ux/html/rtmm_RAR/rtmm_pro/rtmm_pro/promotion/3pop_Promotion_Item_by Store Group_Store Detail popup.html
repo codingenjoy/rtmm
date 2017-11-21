@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <style type="text/css">
+        /*overwrite*/
+        .cbankIcon {
+            float:right;
+            margin-right:1px;
+        }
+        .Panel {
+            width:1200px;
+        }
+        .Table_Panel {
+            height:450px;
+            overflow:hidden;
+        }
+        .Table_Panel td{
+            height:30px;
+        }
+    </style>
+    <script type="text/javascript">
+        //data table
+        //table 单行选中 多行选中
+        $(".multi_tb tr").live("click", function () {
+            $(this).toggleClass("btable_checked");
+        });
+        $(".single_tb tr").live("click", function () {
+            if ($(this).parents("table").attr("class") != "" && $(this).parents("table").attr("class") != undefined) {
+                $(this).parents("table").find(".btable_checked").removeClass("btable_checked");
+                $(this).toggleClass("btable_checked");
+            } else {
+                return false;
+            }
+        });
+        $(document).ready(function () {
+            $(".btable_div").scroll(function () {
+                var left = $(this).scrollLeft();
+                //alert(left);
+                $(".htable_div").scrollLeft(left);
+            });
+            $(".tr_close").live("click", function () {
+                var $borther = $(this).parent().next(".trSpecial");
+                if ($borther.length < 1) {
+                    alert("当前数据行没有隐藏的子行！");
+                    return false;
+                }
+                $(this).addClass("tr_open");
+                $(this).removeClass("tr_close");
+                $borther.removeClass("Bar_off");
+            });
+            $(".tr_open").live("click", function () {
+                var $borther = $(this).parent().next(".trSpecial");
+
+                $(this).addClass("tr_close");
+                $(this).removeClass("tr_open");
+                $borther.addClass("Bar_off");
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="Panel">
+        <div class="Panel_top">
+            <span>选择需要修改的商品</span>
+            <div class="PanelClose" style="margin-right:0;"></div>
+        </div>
+        <div class="Table_Panel">
+            <div style="margin:15px auto 0px auto;width:97%;">
+                <div class="ig">
+                    <span>货号</span>
+                    <input type="text" class="w10 inputText Black" />&nbsp;<input type="text" class="Black w15 inputText" />
+                </div>
+                <div class="IconDiv_bg">
+                    <div class="Icon-div">
+                        <div class="w95 Icon-div2">
+                            <input type="text" class="w100 input_propt_color" value="输入套系编号或名称"/>
+                        </div>
+                        <div class="cbankIcon"></div>
+                    </div>
+                </div>
+                <div class="search_tb_p">
+                   <!-- <table id="update_items" style="height:400px;"></table>-->
+                    <div class="htable_div">
+                        <table>
+                        <thead>
+                            <tr>
+                                <td><div class="t_cols align_center" style="width:30px;"><input type="checkbox" name="tck"/></div></td>
+                                <td><div class="t_cols" style="width:130px;">店号<!--<div style="display:inline-block;width:10px;height:20px;"></div>--></div></td>
+                                <td><div class="t_cols" style="width:130px;">门店厂商</div></td>
+                                <td><div class="t_cols" style="width:130px;">商品状态</div></td>
+                                <td><div class="t_cols" style="width:130px;">正常进价(元)</div></td>
+                                <td><div class="t_cols" style="width:130px;">促销进价(元)</div></td>
+                                <td><div class="t_cols" style="width:130px;">正常售价(元)</div></td>
+                                <td><div class="t_cols" style="width:130px;">促销售价(元)</div></td>
+                                <td><div class="t_cols" style="width:130px;">降价幅度(%)</div></td>
+                                <td><div class="t_cols" style="width:130px;">促销价毛利(%)</div></td>
+                                <td><div class="t_cols" style="width:130px;">预估销量</div></td>
+                                <td><div class="t_cols" style="width:130px;">陈列</div></td>
+                                <td><div class="t_cols" style="width:130px;">计划进程</div></td>
+                                <td><div style="width:16px;">&nbsp;</div></td>
+                            </tr>
+                        </thead>
+	                </table>
+                    </div>
+                    <div class="btable_div" style="height:300px;">
+                        <table  class="single_tb w100"><!--multi_tb为多选 width:1001px;-->
+                            <tr>
+                                <td class="align_center" style="width:30px;"><input type="checkbox" name="tck"/></td>
+                                <td style="width:131px;">123456</td>
+                                <td style="width:131px;">XXXXX有限公司世界杯世界杯世界杯</td>
+                                <td style="width:131px;">1-普通，AC</td>
+                                <td style="width:131px;">1-普通，AC</td>
+                                <td style="width:131px;">1-普通，AC</td>
+                                <td style="width:131px;">1-普通，AC</td>
+                                <td style="width:131px;">1-普通，AC</td>
+                                <td style="width:131px;">1-普通，AC</td>
+                                <td style="width:131px;">1-普通，AC</td>
+                                <td style="width:131px;">1-普通，AC</td>
+                                <td style="width:131px;">1-普通，AC</td>
+                                <td style="width:131px;">1-普通，AC</td>
+                                <td style="width:auto">&nbsp;</td>
+                            </tr>
+
+                        </table>    
+                    </div> 
+                    <div class="paging">
+	                    <div class="fl_left">
+		                    第1-20项,共 5 项&nbsp;&nbsp;|&nbsp;每页显示 <select>
+			                    <option value="10">10</option>
+			                    <option value="20" selected="selected">20</option>
+			                    <option value="30">30</option>
+		                    </select> 项
+	                    </div>
+	                    <div class="fl_right page_list" style="width:350px;">
+                            <span class="fl_right" style="margin-right:10px;">&nbsp;&nbsp;&nbsp;到第 <input name="pageNo" id="goto_page" class="page_no_input" maxlength="5" type="text"/> 页 <input value="go"  type="button"/></span>
+                                <a class="page_end_block" title="尾页"></a>
+                                <a class="page_next_block" title="下一页"></a>
+                                <a title="6" class="num">999999</a>
+                                <a style="cursor:default;">...</a>
+                                <a title="2" class="num">3</a>
+                                <a title="2" class="num">2</a>
+                                <a title="1" class="num">1</a>
+                                <a title="上一页" class="page_prev_block_off"></a>
+                                <a title="首页" class="page_first_block_off"></a>  
+	                    </div>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+        <div class="Panel_footer">
+            <div class="btn1">取消</div>
+        </div>
+    </div>
+</body>
+</html>

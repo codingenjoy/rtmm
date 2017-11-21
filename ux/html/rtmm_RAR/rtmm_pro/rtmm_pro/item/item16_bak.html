@@ -1,0 +1,338 @@
+﻿s<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="css/G.css" rel="Stylesheet" />
+    <script src="js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="js/easyUI/jquery.easyui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/easyUI/combo.css"/>
+    <style type="text/css">
+        .CInfo .combo,.CInfo input{
+            background-color:#cccccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="TopMenu"></div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a class="Sub Sub_on"><span class="L1_No"></span>
+                           <span class="SubText">商品基本资料</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                    <li>
+                        <a class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">系列商品管理</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">商品厂商查询</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                                        <li>
+                        <a class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">季节性商品信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                    <li>
+                        <a class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">进销存查询</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">异常查询</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">商品异动查询</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools3_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools23_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools32_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools10_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools17_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools19_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools24_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools25_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools28_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29_disable"></td>
+                    </tr>
+                </table>
+                <div class="RightTool ToolsBg">
+                    <div class="Tools22 Icon-size1 Tools22_on " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                <!--第一个-->
+                            <div class="tags1_left"></div>
+                            <div class="tagsM">商品总览</div>
+                            <div class="tags"></div>
+
+                             <!--中间-->
+                            <div class="tagsM">商品变价</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品变价</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品条码</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">改包装设定</div>
+                            <div class="tags tags_right_on"></div>
+                <!--中间-->
+                            <div class="tagsM tagsM_on">商品厂商</div>
+                            <div class="tags tags_left_on"></div>
+                <!--中间-->
+                            <div class="tagsM">商品陈列信息</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品进销存</div>
+                            <div class="tags"></div>
+
+                            <!--最后一个-->
+                            <div class="tagsM">DC商品</div>
+                            <div class="tags tags3_r_off"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Search Bar_off" ><!-- Bar_on-->
+                    <div class="SearchTop">
+                        <span>查询条件</span>
+                        <div class="Icon-size1 CircleClose C-id" onclick="DispOrHid('C-id')"></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SMiddle">
+                        <table class="SearchTable" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="ST_td1"><span>商品</span></td>
+                                <td class="ST_td2">
+                                    <div class="iconPut" style="width:55%;float:left;"><input type="text" style="width:78%"/><div class="ListWin"></div></div>
+                                         &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span>&nbsp;</span></td>
+                                <td><input type="text" class="inputText w80 Black" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>厂商</span></td>
+                                <td>
+                                    <div class="iconPut" style="width:55%;float:left;"><input type="text" style="width:78%"/><div class="ListWin"></div></div>
+                                         &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span>&nbsp;</span></td>
+                                <td><input type="text" class="inputText w80 Black" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>厂商货号</span></td>
+                                <td><input type="text" class="inputText w80" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>进价税率</span></td>
+                                <td><input id="i1" data-options="editable:false,panelHeight:'auto'"/></td>
+                            </tr>
+                            <tr>
+                                <td><span>主厂商</span></td>
+                                <td><input id="i2" data-options="editable:false,panelHeight:'auto'"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SearchFooter">
+                        <div class="Icon-size1 Tools20"></div>
+                        <div class="Icon-size1 Tools6"></div>
+                    </div>
+                </div>
+                <div class="Content">
+                    <div class="htable_div">
+                    <table>
+                            <tr>
+                                <td style="width:5%;"><div class="t_check"><input type="checkbox" /></div></td>
+                                <td style="width:20%;"><div class="t_cols">商品</div></td>
+                                <td style="width:30%;"><div class="t_cols">厂商</div></td>
+                                <td style="width:15%;"><div class="t_cols">厂商货号</div></td>
+                                <td style="width:15%;"><div class="t_cols">进价税率</div></td>
+                                <td style="width:15%;"><div>是否主厂商</div></td>
+                            </tr>
+	                </table>
+                    </div>
+                    <div class="btable_div" style="height:510px;">
+                    <table  class="single_tb"><!--multi_tb为多选-->
+                           <tr class="btable_checked">
+                                <td style="width:5%;"><div><input type="checkbox" /></div></td>
+                                <td style="width:20%;"><div>dddddddddddddddd商品</div></td>
+                                <td style="width:30%;"><div>ddddd厂商ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div></td>
+                                <td style="width:15%;"><div>dddddddd厂商货号</div></td>
+                                <td style="width:15%;"><div>ddddddd进价税率</div></td>
+                                <td style="width:15%;"><div>ddddddddd是否主厂商</div></td>
+                            </tr>
+                            <tr>
+                                <td  class="align_center"><input type="checkbox" /></td>
+                                <td>123456</td>
+                                <td>XXXXX有限公司</td>
+                                <td>XXXXX有限公司</td>
+                                <td>P&G</td>
+                                <td>2014-02-12</td>
+                            </tr>
+                            <tr>
+                                <td  class="align_center"><input type="checkbox" /></td>
+                                <td>123456</td>
+                                <td>XXXXX有限公司</td>
+                                <td>P&G</td><td>XXXXX有限公司xxxxxxxxxxxxxxxxxxxxxx</td>
+                                <td>2014-02-12</td>
+                            </tr>
+                    </table>    
+                    </div> 
+                    <div class="paging">
+	                    <div class="fl_left">
+		                    第1-20项,共 5 项&nbsp;&nbsp;|&nbsp;每页显示 <select>
+			                    <option value="10">10</option>
+			                    <option value="20" selected="selected">20</option>
+			                    <option value="30">30</option>
+		                    </select> 项
+	                    </div>
+	                    <div class="fl_right page_list">
+                            <span class="fl_right" style="margin-right:10px;">&nbsp;&nbsp;&nbsp;到第 <input name="pageNo" id="goto_page" class="page_no_input" maxlength="5" type="text"/> 页 <input value="go"  type="button"/></span>
+                                <a class="page_end_block" title="尾页"></a>
+                                <a class="page_next_block" title="下一页"></a>
+                    <!--            <a title="6" class="num">6</a>
+                                <a title="5" class="num">5</a>
+                                <a style="cursor:default;">...</a>
+                                <a title="2" class="num">3</a>
+                                <a title="2" class="num">2</a>-->
+                                <a title="1" class="num">1</a>
+                                <a title="上一页" class="page_prev_block"></a>
+                                <a title="首页" class="page_first_block"></a>  
+	                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('#i1').combobox({
+            //url: 'combobox_data.json',
+            width: 140,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-总公司",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i2').combobox({
+            //url: 'combobox_data.json',
+            width: 140,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-textile",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+    </script>
+</body>
+</html>

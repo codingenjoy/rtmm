@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/paging.css" rel="Stylesheet" />
+    <style type="text/css">
+body{
+    padding:0px;margin:0px auto;
+    width:1240px;
+    height:690px;
+    color:#333333; 
+}
+body,table,span {
+    font-family:'Microsoft YaHei';
+    font-size:12px;
+}
+        .fl_left {
+            float:left;
+        }
+        .fl_right {
+            float:right;
+        }
+        a {
+            cursor:pointer;
+        }
+        input {
+            border:0;
+        }
+        /**pagenation*/
+
+    </style>
+</head>
+<body>
+    <div class="paging">
+	    <div class="fl_left">
+		    第1-20项,共 5 项&nbsp;&nbsp;|&nbsp;每页显示 <select>
+			    <option value="10">10</option>
+			    <option value="20" selected="selected">20</option>
+			    <option value="30">30</option>
+		    </select> 项
+	    </div>
+	    <div class="fl_right page_list2">
+            <a title="首页" class="page_first_block_off"></a> 
+            <a title="上一页" class="page_prev_block_off"></a>
+            <a title="1" class="num">1</a>
+            <a title="2" class="num">2</a>
+            <a title="3" class="num">3</a>
+            <a style="cursor:default;" class="num">...</a>
+            <a title="99999" class="num">999999</a>
+            <a class="page_next_block" title="下一页"></a>
+            <a class="page_end_block" title="尾页"></a>
+
+            <span style="margin-right:10px;">&nbsp;&nbsp;&nbsp;到第 <input name="pageNo" id="goto_page" class="page_no_input2" maxlength="5" type="text"/> 页 <input value="go"  type="button"/></span>
+                
+                
+                
+	    </div>
+    </div>
+</body>
+</html>

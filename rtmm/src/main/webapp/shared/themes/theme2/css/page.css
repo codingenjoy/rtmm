@@ -1,0 +1,369 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/**sysIcon*/
+.sysIcon {
+    width:16px;
+    height:16px;
+    float:left;
+    background-repeat:no-repeat;
+    margin:12px 0px auto 10px;
+    
+}
+#searchIcon {
+	background-image:url(../images/tool_1.gif);
+    cursor:pointer;
+}
+#saveIcon {
+    background-image:url(../images/tool_2.gif);
+    cursor:pointer;
+}
+#printerIcon {
+    background-image:url(../images/tool_3.gif);
+    cursor:pointer;
+}
+#excelIcon {
+    background-image:url(../images/tool_4.gif);
+    cursor:pointer;
+}
+#tool5Icon {
+    background-image:url(../images/tool_6.gif);
+    cursor:pointer;
+}
+#tool6Icon {
+    background-image:url(../images/tool_param_6.gif);
+    cursor:pointer;
+}
+#addIcon {
+    background-image:url(../images/tool_10.gif);
+    cursor:pointer;
+}
+#trashIcon {
+    background-image:url(../images/tool_9.gif);
+    cursor:pointer;
+}
+#editIcon {
+    background-image:url(../images/tool_19.gif);
+    cursor:pointer;
+}
+#firstIcon {
+    background-image:url(../images/tool_12.gif);
+    cursor:pointer;
+}
+#priviousIcon {
+    background-image:url(../images/tool_13.gif);
+    cursor:pointer;
+}
+#nextIcon {
+    background-image:url(../images/tool_14.gif);
+    cursor:pointer;
+}
+#endIcon {
+    background-image:url(../images/tool_15.gif);
+    cursor:pointer;
+}
+#bigIcon {
+    background-image:url(../images/tool_3.gif);
+    cursor:pointer;
+    float:right;
+    margin-right:10px;
+}
+#smallIcon {
+    background-image:url(../images/tool_3.gif);
+    cursor:pointer;
+    float:right;
+    
+}
+.line {
+    background-image:url(../images/line1.gif);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.line2 {
+    background-image:url(../images/param_line.gif);
+    height:3px;
+    width:100%;
+    background-repeat:no-repeat;
+}
+
+/**LeftPanelTitle **/
+.LeftPanelTitle{
+	width:100%;
+	height:40px;
+}
+.LeftPanelTitle div{
+	width:16px;
+	height:16px;
+    margin-top:12px;
+	cursor:pointer;
+	}
+.LPT1{
+	background:url(../images/++.gif);
+    float:left;
+    margin-left:10px;
+}
+.LPT2{
+	background:url(../images/--.gif);
+    float:left;
+    margin-left:5px;
+}
+.LPT3{
+	background:url(../images/Button_HideSubMenu.png);
+    float:right;
+    margin-right:10px;
+}
+
+
+/**paramRightPanel  PRP_Left**/
+.PRP_Left ,.userLeft{
+    width: 2%;
+    height: 569px;
+    float:left;
+    background-image:url(../images/parameterRight4.jpg);
+}
+.PRP_Right,.userRight {
+    width:98%;
+    height:569px;
+    float:left;
+}
+/**paramRightPanel  PRP_right**/
+.PRP_Right1 {
+    width:100%;
+    height:30px;
+}
+.PRP_Right1 div{
+    width:70px;
+    height:20px;
+    float:left;
+    color:#fff;
+    line-height:20px;
+    margin:5px 0px ;
+    text-align:center;
+    cursor:pointer;
+}
+#PRP_Right_1 {
+    color:#3f9673;
+    background:#fff;
+}
+.PRP_Right2 {
+    width:99%;
+    height:530px;
+
+}
+/**paramRightPanel  PRP_right PRP_right_1_1 **/
+.PRP_Right_F {
+    width:100%;
+    height:100%;
+}
+#PRP_Right_1_1 {
+   background:#fff;
+   overflow:scroll;
+   overflow-x:hidden;
+}
+.F_Level1 {
+    width:100%;
+    height:30px;
+    background-color:#E5E5E5;
+}
+.F_Level2 {
+    background-color:#F5F5F5;
+}
+.F_Level3 {
+    background:#fff;
+}
+.F_Level1 div {
+    margin:5px auto auto 10px;
+    float:left;
+}
+.F_Level11 {
+   width:16px;height:18px;
+   background-repeat:no-repeat;
+   background:url(../images/SubMenuExpandArrow.png);
+   background-position:center bottom;
+
+}
+.F_Level111 {
+    background:url(../images/placeholder.gif);
+}
+.F_Level13 {
+    width:17px; height:16px;
+    background-repeat:no-repeat;
+    background-image:url(../images/F3.gif);
+    vertical-align:middle;
+}
+.F_Level14 {
+    line-height:20px;
+}
+
+.placeholderDiv {
+    width:18px; height:20px;float:left;
+}
+.placeholderDiv2 {
+    width:70px; height:20px;float:left;
+}
+/**paramRightPanel  PRP_right PRP_right_1_2 **/
+
+.FLeft_param {
+    width:20%;height:100%;
+    float:left;
+    background:#fff;
+}
+.FMiddle_param {
+    width:54%;
+    height:100%;
+    float:left;
+    margin-left:3px;
+    background:#fff;
+}
+.FRight_param {
+    width:25%;
+    height:100%;
+    float:right;
+    background:#fff;
+}
+.FLeft_param div {
+    width:100%;
+    height:30px;
+    line-height:30px;
+}
+.FLeft_param span {
+    margin-left:10px;
+}
+.FRight_param div {
+    width:100%;
+    height:30px;
+    line-height:30px;
+}
+.FRight_param span {
+    margin-left:10px;
+}
+/**paramRightPanel  PRP_right PRP_right_1_2 **/
+#PRP_Right_1_3 {
+    background:#fff;
+}
+
+/**用户管理*/
+
+/*ParamLeftPanel**/
+.PLeftPanelTitle {
+    height:30px; 
+	line-height:30px;
+}
+.PLeftPanelTitleText{
+    width:195px;
+    height:20px;
+}
+.PLeftPanelTitle lable {
+    float:left;
+}
+.userLeft1 {
+    width:100%;
+    height:30px;
+}
+.userLeft11bg {
+    background-image:url(../images/SubMenuExpandArrow.png);
+}
+.userLeft12bg {
+    background-image:url(../images/Icon_Store_unselected.png);
+}
+.userLeft11 {
+    width:16px;
+    height:30px;
+    background-color:#fff; 
+    background-position:center;
+    background-repeat:no-repeat;
+    float:left;
+}
+.userLeft12 {
+    width:16px;
+    height:30px;
+    float:left;
+    margin-left:10px;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.userLeft13 {
+    float:left;
+    width:150px;
+    height:30px;
+    line-height:30px;
+    margin-left:10px;
+}
+.userLeft21bg {
+    background-image:url(../images/SubMenuExpandArrow.png);
+}
+.userLeft22bg {
+    background-image:url(../images/Icon_Department_unselected.png);
+}
+.userLeft32bg {
+    background-image:url(../images/Icon_Section_unselected.png);
+}
+.userPlaceholder1 {
+    width:26px; height:30px; float:left;background-color:#fff;
+}
+
+/*用户管理 用户列表*/
+.userList {
+    width:100%; height:30px;
+    line-height:30px;
+    color:#fff;
+}
+
+.userListContainer {
+    height:530px;
+    width:99%;
+    background-color:#fff;
+    margin:0 5px 9px 0px;
+    vertical-align:middle;
+}
+
+.userListTop {
+    height:30px;width:100%;
+}
+.userListTop1 {
+    width:170px;
+    height:30px;
+    margin-left:5px;
+    float:left;
+}
+.userListTop2 {
+    width:150px;
+    height:30px;
+    margin-left:5px;
+    float:left;
+}
+.userListTop3 {
+    width:240px;
+    height:20px;
+    float:right;
+    margin:5px 5px auto auto;
+    border:1px solid #CCCCCC;
+}
+.userListTop1 input,.userListTop2 input,.userListTop2 span,.userListTop1 span {
+    margin-top:5px;
+}
+.userListText {
+    width:218px;
+    height:18px;
+    border:0;
+}
+
+}
+.TagBg2{
+	width:87px; 
+	background:url(../images/Tag2.jpg);
+	}
+.TagBg{
+	width:100px;
+	background:url(../images/Tag.png);
+}
+
+.roleContentBar:hover{
+	background:#3F9673;
+}
+.roleContentBar:hover input{
+	display:block;
+}
+
+
+

@@ -1,0 +1,43 @@
+﻿
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="css/page/role_Param11_2.css" rel="Stylesheet" /><!--这个放最后-->
+</head>
+<body>
+
+                                <div class="pr21">
+                                    <div class="pr21_1">
+                                        <div class="item"><span>店经理</span><div class="ListIcon"></div></div>
+                                        <div class="item"><span>店经理</span><div class="ListIcon"></div></div>
+                                        <div class="item"><span>店经理</span><div class="ListIcon"></div></div>
+                                    </div>
+                                    <div class="pr21_2">
+
+                                    </div>
+                                </div>
+                                
+                                <div class="pr22">
+                                        <ul id="opera_tree"></ul>
+                                </div>
+
+                                <div class="pr23">
+                                    <div class="pr23_1"><label style="vertical-align:middle;"><input type="checkbox" /></label>&nbsp;全选</div>
+                                    <div><label style="vertical-align:middle;"><input type="checkbox" /></label>&nbsp;查看</div>
+                                    <div><label style="vertical-align:middle;"><input type="checkbox" /></label>&nbsp;添加</div>
+                                    <div><label style="vertical-align:middle;"><input type="checkbox" /></label>&nbsp;删除</div>
+                                    <div><label style="vertical-align:middle;"><input type="checkbox" /></label>&nbsp;修改</div>
+                                    <div><label style="vertical-align:middle;"><input type="checkbox" /></label>&nbsp;导出</div>
+                                    <div><label style="vertical-align:middle;"><input type="checkbox" /></label>&nbsp;打印</div>
+                                </div>
+
+    <script type="text/javascript">
+
+        $('#opera_tree').tree({
+            checkbox: false,
+            url: 'json/tree_data2.json'
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/page/commons/taglibs.jsp"%>
+	<input type="hidden" id="pageNo" name="pageNo" value="${page.pageNo}">
+	<input type="hidden" id="pageSize" name="pageSize" value="${page.pageSize}">
+<div class="htable_div">
+	<table>
+		<thead>
+			<tr>
+				<td>
+					<div class="t_cols align_center" style="width: 5px;">&nbsp;</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">序号</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">科目组编号</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 100px;">中文名称</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 100px;">英文名称</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">缩写</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">状态</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">扣款单位</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">扣款周期</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">目标单位</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">是否关联主厂商</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">递增条件</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">使用范围</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">组别</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">扣款计算方式</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">费用类型</div>
+				</td>
+				<td>
+					<div class="t_cols" style="width: 80px;">发票抬头类型</div>
+				</td>
+				<td>
+					<div style="width: 16px;">&nbsp;</div>
+				</td>
+			</tr>
+		</thead>
+	</table>
+</div>
+<div class="btable_div" style="height: 509px;">
+	<table class="single_tb w100">
+		<c:forEach items="${page.result}" var="grpAccount">
+			<!--multi_tb为多选 width:1001px;-->
+			<tr>
+				<td class="align_center" style="width: 5px;"></td>
+				<td style="width: 81px;" align="right" title="">${grpAccount.grpAcctId }&nbsp;</td>
+				<td style="width: 81px;" align="right">${grpAccount.grpAcctSeqNo }&nbsp;</td>
+				<td style="width: 101px;" title="">${grpAccount.grpAcctName }</td>
+				<td style="width: 101px;" title="">${grpAccount.grpAcctEnName}</td>
+				<td style="width: 81px;">${grpAccount.grpAcctAbbr}</td>
+				<td style="width: 81px;">
+					<auchan:getDictValue code='${grpAccount.status}' mdgroup='CONTRIBUTION_GRP_ACCOUNT_STATUS' />
+				</td>
+				<td style="width: 81px;">
+					<c:choose>
+						<c:when test="${grpAccount.condValType=='A'}">
+							A-金额
+						</c:when>
+						<c:when test="${grpAccount.condValType=='P'}">
+							P-百分比
+						</c:when>
+						<c:otherwise>
+							A,P-金额和百分比
+						</c:otherwise>
+					</c:choose>
+				</td>
+				<td style="width: 81px;">
+					<auchan:getDictValue code='${grpAccount.dedctFreq}' mdgroup='CONTRIBUTION_GRP_ACCOUNT_DEDCT_FREQ' />
+				</td>
+				<td style="width: 81px;" align="right">
+					<c:choose>
+						<c:when test="${grpAccount.condValType=='A'}">
+							A-金额
+						</c:when>
+						<c:when test="${grpAccount.condValType=='P'}">
+							P-百分比
+						</c:when>
+						<c:otherwise>
+							A,P-金额和百分比
+						</c:otherwise>
+					</c:choose>
+					&nbsp;
+				</td>
+				<td style="width: 81px;">
+					<c:choose>
+						<c:when test="${grpAccount.linkMainSupInd=='1'}">
+							1-是
+						</c:when>
+						<c:when test="${grpAccount.linkMainSupInd=='0'}">
+							0-否
+						</c:when>
+					</c:choose>
+				</td>
+				<td style="width: 81px;">
+					<c:choose>
+						<c:when test="${grpAccount.degeeCondInd=='1'}">
+							1-是
+						</c:when>
+						<c:when test="${grpAccount.degeeCondInd=='0'}">
+							0-否
+						</c:when>
+					</c:choose>
+				</td>
+				<td style="width: 81px;">
+					<auchan:getDictValue code='${grpAccount.usedForType}' mdgroup='CONTRIBUTION_GRP_ACCOUNT_USED_FOR_TYPE' />
+				</td>
+				<td style="width: 81px;">
+					<auchan:getDictValue code='${grpAccount.feeType}' mdgroup='CONTRIBUTION_GRP_ACCOUNT_FEE_TYPE' />
+				</td>
+				<td style="width: 81px;">
+					<auchan:getDictValue code='${grpAccount.invTitle}' mdgroup='CONTRACT_TMPL_INV_TITLE' />
+				</td>
+				<td style="width: auto">&nbsp;</td>
+			</tr>
+		</c:forEach>
+
+		<!--multi_tb为多选 width:1001px;-->
+		<!-- <tbody>
+			<tr>
+				<td class="align_center" style="width: 30px;">&nbsp;</td>
+				<td style="width: 101px;">123456</td>
+				<td style="width: 81px;">世界杯</td>
+				<td style="width: 101px;">XXXXX有限公司</td>
+				<td style="width: 201px;">P&amp;GXXXXX有限公司世界杯世界杯</td>
+				<td style="width: 101px;">123456</td>
+				<td style="width: 101px;">123456</td>
+				<td style="width: 101px;">123456</td>
+				<td style="width: 101px;">上档中</td>
+
+				<td style="width: auto">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="align_center">&nbsp;</td>
+				<td>123456</td>
+				<td>世界杯</td>
+				<td>XXXXX有限公司</td>
+				<td>P&amp;GXXXXX有限公司世界杯世界杯</td>
+				<td>123456</td>
+				<td>123456</td>
+				<td>123456</td>
+				<td>上档中</td>
+
+				<td style="width: auto">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="align_center">&nbsp;</td>
+				<td>123456</td>
+				<td>世界杯</td>
+				<td>XXXXX有限公司</td>
+				<td>P&amp;GXXXXX有限公司世界杯世界杯</td>
+				<td>123456</td>
+				<td>XXXXX有限公司</td>
+				<td>123456</td>
+				<td>上档中</td>
+
+				<td style="width: auto">&nbsp;</td>
+			</tr>
+		</tbody> -->
+	</table>
+</div>
+<jsp:include page="/page/commons/pageSet.jsp"></jsp:include>
+

@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/login.css" rel="stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        
+    </style>
+</head>
+<body style="font-size:12px;font-family:'Microsoft YaHei'">
+<div>successfully!</div>
+    <div class="Panel">
+        <div class="alert_top">
+            <span class="alert_title">Succefully!</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <div class="alert_body">
+                <div class="alert_b1 gou"></div>
+                <div class="alert_text">Successfully!Successfully！Successfully！Successfully！Successfully！Successfully！</div>
+            </div>
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">确定</div>
+                <div class="cancel">取消</div>
+            </div>
+        </div>
+    </div>
+<div>Error!</div>
+    <div class="Panel">
+        <div class="alert_top">
+            <span class="alert_title">Error!</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <div class="alert_body">
+                <div class="alert_b1 cha"></div>
+                <div class="alert_text">Error！</div>
+            </div>
+        </div>
+        <div class="Panel_footer">
+                <div class="btn1">确定</div>
+        </div>
+    </div>
+<div>Warning!</div>
+    <div class="Panel" style="width:400px;">
+        <div class="alert_top">
+            <span class="alert_title">提示!</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel" style="height:80px;">
+            <div class="alert_body">
+                <div class="alert_text">Sheet 1, Column B, Row 28 信息不存在。<br />
+
+点击“重试”，尝试再次导入。<br />
+点击“终止”，终止导入。</div>
+            </div>
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">重试</div>
+                <div class="cancel">终止</div>
+            </div>
+        </div>
+    </div>
+<div>Message!</div>
+    <div class="Panel">
+        <div class="alert_top">
+            <span class="alert_title">Message！</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <div class="alert_body">
+                <div class="alert_b1 alert_info "></div>
+                <div class="alert_text">Message！</div>
+            </div>
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">确定</div>
+                <div class="cancel">取消</div>
+            </div>
+        </div>
+    </div>
+<div style="margin-top:500px;">弹窗实例</div>
+<script type="text/javascript">
+
+    function commonAlert(msg, width, height, title) {
+        //确定
+
+    }
+    
+    function errorAlert(msg, width, height, title) {
+        //确定
+    }
+    function successAlert(msg, width, height, title) {
+        //确定
+    }
+    function warnAlert(msg, width, height, title) {
+        //确定
+    }
+    function confirmWindow(msg, width, height, title) {
+        //确定 取消
+    }
+    function openPoup(divId, width, height) {
+
+    }
+    function closePoup(divId) {
+
+    }
+
+    function alert_window(params) {
+        var defaults = {
+            name: 'success',
+            title: 'Successfully!',
+            text: 'Operat Successfully!',
+            width: '500',
+            height: '60',
+            display: 'block'
+        }
+        var params = $.extend(defaults, params);
+        var pop_selector = "#" + params.name;
+        var title_selector = pop_selector + " " + ".alert_title";
+        var text_selector = pop_selector + " " + ".alert_text";
+
+        if (defaults.width != "500px") {
+            $(".Panel").css("width", params.width);//没有考虑百分比情况
+        }
+        if (defaults.height != "60px") {
+            $(".Table_Panel").css("height", params.height);
+        }
+        $(title_selector).html(params.title);
+        $(text_selector).html(params.text);
+
+        var win_x = ($(window).width() - params.width) / 2;//随着浏览器的变化而变化，而且不计算滚动条
+        var win_y = $(window).scrollTop() + ($(window).height() - params.height) / 2;
+        $(pop_selector).css({ "display": params.display, "top": win_y, "left": win_x, "position": "absolute", "z-index": "111" });
+    }
+    $(document).ready(function () {
+        $(".PanelBtn1").click(function () {
+            var t = $("#title").val();
+            var m = $("#msg").val();
+            var n = $(this).val();
+            var w = $("#w").val();
+            var h = $("#h").val();
+            if (w != null && w != undefined) {
+                w = 500;
+            }
+            if (h != null && h != undefined) {
+                h = 60;
+            }
+            alert_window({
+                "name":n,
+                "title": t,
+                "text": m,
+                "width": w,
+                "height":h
+            });
+        });
+    });
+    //$(".Panel").delegate(".PanelClose,.cancel", "click", function () {
+    $(".PanelClose,.cancel").live("click", function () {
+        var name = $(this).parents(".Panel").attr("id");
+        alert_window({
+            name: name,
+            title: '',                                                                                                                      
+            text: '',
+            width: '500',
+            height: '60',
+            display: 'none',
+            mask:'none'
+        });
+    });
+</script>
+<div>
+    <div class="ig">
+        <div class="msg_txt">Title:</div><input id="title" type="text" class="inputText" />
+    </div>
+    <div class="ig">
+        <div class="msg_txt">Msg:</div><input id="msg" type="text" class="inputText" />
+    </div>
+        <div class="ig">
+    <div class="msg_txt">width:</div><input id="w" type="text" class="inputText" /><span>默认值为500</span>
+    </div>
+    <div class="ig">
+        <div class="msg_txt">height:</div><input id="h" type="text" class="inputText" /><span>默认值为60，这里额高度值得是显示内容区域的高度，不算弹窗的title和foot</span>
+    </div>
+    <div class="ig">
+        <input type="button" value="success" class="PanelBtn1" id="success_btn"/>
+        <input type="button" value="error" class="PanelBtn1" id="error_btn"/>
+        <input type="button" value="warn" class="PanelBtn1" id="warn_btn"/>
+        <input type="button" value="popt" class="PanelBtn1" id="msg_btn"/>
+    </div>
+</div>
+<div style="height:800px;"></div>
+<div><!--successfully!--></div>
+<div id="success" class="Panel" style="display:none;">
+        <div class="alert_top">
+            <span class="alert_title"></span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <div class="alert_body">
+                <div class="alert_b1 gou"></div>
+                <div class="alert_text"></div>
+            </div>
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">确定</div>
+                <div class="cancel">取消</div>
+            </div>
+        </div>
+    </div>
+<div id="error" class="Panel" style="display:none;">
+        <div class="alert_top">
+            <span class="alert_title">Error!</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <div class="alert_body">
+                <div class="alert_b1 cha"></div>
+                <div class="alert_text">Error！</div>
+            </div>
+        </div>
+        <div class="Panel_footer">
+                <div class="btn1">确定</div>
+        </div>
+    </div>
+<div id="warn" class="Panel" style="display:none;">
+        <div class="alert_top">
+            <span class="alert_title">Warning!</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <div class="alert_body">
+                <div class="alert_b1 warn"></div>
+                <div class="alert_text">Warning!</div>
+            </div>
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">确定</div>
+                <div class="cancel">取消</div>
+            </div>
+        </div>
+    </div>
+<div id="popt" class="Panel" style="display:none;">
+        <div class="alert_top">
+            <span class="alert_title">Message！</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <div class="alert_body">
+                <div class="alert_b1 alert_info "></div>
+                <div class="alert_text">Message！</div>
+            </div>
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">确定</div>
+                <div class="cancel">取消</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

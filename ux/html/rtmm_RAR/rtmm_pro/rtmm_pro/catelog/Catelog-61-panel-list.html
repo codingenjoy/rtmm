@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/Componet.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/easyUI/window.css" rel="Stylesheet" />
+    <style type="text/css">
+        .Table_Panel {
+            height:450px;
+            overflow:hidden;
+        }
+        .Table_Panel td{
+            height:30px;
+        }
+        .SearchList {
+            height:30px;background-color:#f5f5f5;width:100%;float:left;
+        }
+        .SearchList input{
+            width:95%;float:left;height:20px;margin:5px 5px;
+        }
+        .SearchList div {
+            width:16px; height:21px;margin-top:5px;float:left;
+        }
+        .Item {
+            height:30px;
+        }
+            .Item span {
+                float:left;
+                line-height:30px;
+                margin-left: 20px;
+            }
+        .GouIcon {
+            float: right;
+            height: 16px;
+            margin-right: 5px;
+            margin-top: 7px;
+            width: 16px;
+        }
+        .Item_on {
+            background-color:#3F9673;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="Panel">
+        <div class="Panel_top">
+            <span>创建中分类</span>
+            <div class="PanelClose" style="margin-right:0;"></div>
+        </div>
+        <div class="Table_Panel">
+            <div style="margin:15px auto;width:97%;height:100%;">
+                <!--<div style="height:30px;width:100%;">
+                    <div class="SearchList">
+                            <input type="text"/>
+                            <div class="Tools6"></div>
+                    </div>
+                </div>-->
+
+                <div style="height:30px;background:#CCC;">
+
+                    <div class="Icon-div">
+                        <input type="text" class="IS_input" value="输入分类号或名称" />
+                        <div class="cbankIcon"></div>
+                    </div>
+
+                </div>
+                <div style="height:403px;overflow-x:hidden;overflow-y:scroll;border-left:2px solid #f9f9f9;border-bottom:2px solid #f9f9f9;">
+                    <div id="随便取id1" class="Item Item_on">
+                        <span>00002 央行国库局</span>
+                        <div class="GouIcon"></div>
+                    </div>
+                    <div id="Div1" class="Item">
+                        <span>00002 央行国库局</span>
+                        <div class="GouIcon"></div>
+                    </div>
+                    <div id="Div2" class="Item">
+                        <span>00002 央行国库局</span>
+                        <div class="GouIcon"></div>
+                    </div>
+                    <div id="Div3" class="Item">
+                        <span>00002 央行国库局</span>
+                        <div class="GouIcon"></div>
+                    </div>
+                    <div id="Div4" class="Item Item_on">
+                        <span>00002 央行国库局</span>
+                        <div class="GouIcon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">保持</div>
+                <div class="PanelBtn2">取消</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/Componet.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/easyUI/datagrid.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/easyUI/pagination.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/easyUI/calendar.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="../js/jump.js" charset="utf-8" type="text/javascript"></script>
+    <script src="../js/easyUI/jquery.easyui.min.js" charset="utf-8" type="text/javascript"></script>
+
+    <style type="text/css">
+
+    </style>
+
+</head>
+<body>
+    <div class="TopMenu">
+        <div class="Logo"></div>
+        <ol class="MainMenu">
+            <li><a class="catalogue_management" title="分类管理" href="Catelog-11.html"><span class="longText">分类管理</span></a></li>
+            <li><a class="supplier_management supplier_management_on" title="厂商管理" href="Supplier-11.html"><span class="longText">厂商管理</span></a></li>
+            <li><a class="item_management" title="商品管理"><span class="longText">商品管理</span></a></li>
+            <li><a class="order_management" title="订单管理"><span class="longText">订单管理</span></a></li>
+            <li><a class="promotion_management" title="促销管理"><span class="longText">促销管理</span></a></li>
+            <li><a class="achievement_analysis" title="业绩分析"><span class="longText">业绩分析</span></a></li>
+            <li><a class="parameter_management" title="参数管理" href="Param-11.html"><span class="longText">参数管理</span></a></li>
+            <li><a class="day-end_management" title="日结管理"><span class="longText">日结管理</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">我的工作台</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">ToBeAGood Programer!</span></a></li>
+        </ol>
+<ol class="RMenu">
+            <li class="MenuDrop"><a class="RM4"></a>
+                <ol class="FavDrop">
+                            <li class="FavDrop1"><div class="RM1"></div>
+                                <span>我的收藏</span>
+                            </li>
+                            <li class="FavDrop2"><div class="RM3"></div>
+                                <span>语言设置</span></li>
+                            <li class="FavDrop3"><div class="RM2"></div>
+                                <span>密码设置</span></li>
+                            <li class="FavDrop5"><div class="RM5"></div><span>退出帐号</span></li>
+                 </ol>
+            </li>
+            <li class="RMenu_Text"><div class="longText">欢迎，Java.管理员 Csharp Dot</div></li> 
+        </ol>
+        <ol class="MyFav" style="display:none;">
+            <li><a>我的收藏1</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏2</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏3</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏4</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏5</a><div class="Closediv CircleClose"></div></li>
+        </ol>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="1www" class="Sub" href="Supplier-11.html"><span class="L1_No"></span>
+                           <span class="SubText">集团信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+
+                    <li>
+                        <a id="1ee" class="Sub  Sub_on" href="Supplier-21.html"><span class="L1_No"></span>
+                           <span class="SubText">公司信息</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a id="fff1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">厂商管理</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg" class="Sub" href="Supplier-31.html"><span class="L2_No"></span>
+                                   <span class="SubText">厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub" href="Supplier-41.html"><span class="L2_No"></span>
+                                   <span class="SubText">未生效厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3_disable"></td>
+                        <td></td>
+                        <td class="Tools23_disable"></td>
+                        <td></td>
+                        <td class="Tools32"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools24"></td>
+                        <td></td>
+                        <td class="Tools25"></td>
+                        <td></td>
+                        <td class="Tools26"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27"></td>
+                        <td></td>
+                        <td class="Tools28"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools22" title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                <div class="tags1_left"></div>
+                <div id="gs_tags1" class="tagsM">公司总览</div>
+                <div class="tags"></div>
+
+                <div id="gs_tags2"  class="tagsM">订货退货地址</div>
+                <div class="tags tags3 tags_right_on"></div>
+                
+                <!--一定不要忘了tag3-->
+                            <!--add-->
+                            <div class="tagsM_q  tagsM_on">编辑图片</div>
+                            <div class="tags3_close_on">
+                                <div class="tags_close"></div>
+                            </div>
+                
+            </div>
+            <div class="Container-1">
+                <script type="text/javascript">
+                    $(".photo").live("mouseover", function () {
+                        var t = $(this).offset().top;
+                        var l = $(this).offset().left;
+                        $("#_photo").css({ "top": t, "left": l, "display": "block" });
+                        $("#_photo").attr("x",$(this).attr("id"));
+                    });
+                    $("#p1").live('click', function () {
+                        $(".photo").find("img").attr("dz", "0");
+                        var tx = "#" + $(this).parent().attr("x");
+                        $(tx).find("img").attr("dz", "1");
+                        var t = $(this).offset().top;
+                        var l = $(this).offset().left;
+                        $("#dz1").css({ "top": t, "left": l, "display": "block" });
+                    });
+                    $("#p2").live("click", function () {
+                        var tx = "#" + $(this).parent().attr("x");
+                        var list = new Array();
+                        list = $(".Content").find("img");
+                        //debugger;
+                        //for (var i = 0; i < list.length; i++) {
+                        //    alert($(list[i]).attr("src"));
+                        //}
+                        $("#_p").css({ "top": 0, "left": 0, "display": "block", "width": screen.width, "height": "690px" });
+                    });
+                    $("#p3").live("click", function () {
+                        var tx = "#"+$(this).parent().attr("x");
+                        $(tx).remove();
+                        $("#_photo").css("display", "none");
+                    });
+                    $("#dz1").live('click', function () {
+                        $(".photo").find("img").attr("dz", "0");
+                        $(this).css("display", "none");
+                    });
+                    $("#pp11_2").live("click", function () {
+                        $("#_p").css("display", "none");
+                    });
+                    $("#prev_brower").live("mouseover", function () {
+                        $(this).addClass("prev_brower_bg");
+                    });
+                    $("#prev_brower").live("mouseout", function () {
+                        $(this).removeClass("prev_brower_bg");
+                    });
+                    $("#next_brower").live("mouseover", function () {
+                        $(this).addClass("next_brower_bg");
+                    });
+                    $("#next_brower").live("mouseout", function () {
+                        $(this).removeClass("next_brower_bg");
+                    });
+                    $("#prev_brower").live("click", function () {
+                        prev();
+                    });
+                    function next() {
+
+                    }
+                    function prev() {
+
+                    }
+                </script>
+                <div class="Content">
+	                <div id="tx1" class="photo">
+                        <img src="images/photo/1.jpg" alt=""/>
+	                </div>
+                    <div id="tx2" class="photo">
+                        <img src="images/photo/1.jpg" alt=""/>
+	                </div>
+                    <div id="tx3" class="photo">
+                        <img src="images/photo/1.jpg" alt=""/>
+	                </div>
+                    <div id="tx4" class="photo">
+                        <img src="images/photo/1.jpg" alt=""/>
+	                </div>
+                    <div id="tx5" class="photo">
+                        <img src="images/photo/1.jpg" alt=""/>
+	                </div>
+                    <div id="tx6" class="photo">
+                        <img src="images/photo/1.jpg" alt=""/>
+	                </div>
+                    <div id="tx7" class="progess">
+
+	                </div>
+                    <div id="add_photo" class="add_photo">
+
+	                </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    <div id="date_div" style="width:160px;height:180px;display:none;position:absolute;z-index:9999;"></div>
+    <div id="_photo">
+        <div id="p1"></div>
+        <div id="p2"></div>
+        <div id="p3"></div>
+    </div>
+    
+    <div id="dz1"></div>
+    
+    <div id="_p" class="_p">
+        <div id="p_brower" class="p_brower">
+            <div id="prev_brower" class="prev_brower"></div>
+            <div id="pp" class="pp">
+                <div id="pp1" class="pp1">
+                    <div id="pp11" class="pp11">
+                        <div id="pp11_1" class="pp11_1"></div>
+                        <span id="pp11_2" class="pp11_2">Close</span>
+                    </div>
+                </div>
+                <img src="images/crole.jpg" id="pp2" class="pp2" alt=""/>
+                <div id="pp3" class="pp3"></div>
+            </div>
+            <div id="next_brower" class="next_brower"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#dg').datagrid({
+            rownumbers: false,
+            //singleSelect: false,
+            pagination: true,
+            pageSize: 20,
+            url: 'json/datagrid_data4.json',
+            columns: [[
+            { field: 'ck', checkbox: true, },
+            { field: 'no', title: '编号', sortable: true, },
+            { field: 'type', title: '地址类型', sortable: true, },
+            { field: 'city', title: '省份城市', sortable: true, },
+            { field: 'addr', title: '地址', },
+            { field: 'linkman', title: '联系人', },
+            { field: 'post', title: '邮编', },
+            { field: 'mobile', title: '移动电话', },
+            { field: 'phone', title: '固定电话', },
+            { field: 'fax', title: '传真号码', },
+            { field: 'email', title: '电子邮箱', }
+            ]]
+        });
+
+        //日历
+        $('#date_div').calendar({
+            current: new Date()
+        });
+
+    </script>
+</body>
+</html>

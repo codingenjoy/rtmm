@@ -1,0 +1,14 @@
+﻿        .ztree li span.button.ico_docu {
+            background-image: url("img/icon_ztree.png");
+            background-position: -4px -63px;
+        }
+        .ztree li span.button.ico_open ,.ztree li span.button.ico_close{
+            background-image: url("img/icon_ztree.png");
+            background-position: -3px -43px;
+        }
+.ztree li span.button.center_docu {
+    background-position: -56px -18px;
+}
+.root_icon {
+
+}

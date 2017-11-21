@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="../js/tempScript.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/easyUI/jquery.easyui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../css/easyUI/combo.css"/>
+    <style type="text/css">
+        .CInfo .combo,.CInfo input{
+            background-color:#cccccc;
+        }
+        .ListWin {
+            height: 20px;
+            width: 20px;
+            margin-top: 5px;
+            margin-left: 3px;
+        }
+        /*这个样式请程序员不要复制 start*/
+        .SubMenu {
+            width:198px;
+            height:610px;
+        }
+        /*这个样式请程序员不要复制 end*/
+    </style>
+</head>
+<body>
+    <div style="height:40px;">
+    <iframe class="TopMenu" src="../maintop.html" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <iframe class="SubMenu" src="leftMenu.html" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools3_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools23_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools32_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools10_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools17_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools19_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools24_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools25_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools28_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29_disable"></td>
+                    </tr>
+                </table>
+                <div class="RightTool ToolsBg">
+                    <div class="Tools22 Icon-size1 Tools22_on " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                <!--这里面的id都是演示所用，程序员可以删除-->
+                <!--第一个-->
+                            <div class="tags1_left"></div>
+                            <div id="overview" class="tagsM">商品总览</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="changePrice" class="tagsM">商品变价</div>
+                            <div class="tags tags_right_on"></div>
+                <!--中间-->
+                            <div id="guige" class="tagsM tagsM_on">商品规格</div>
+                            <div class="tags tags_left_on"></div>
+                <!--中间-->
+                            <div id="tiaoma" class="tagsM">商品条码</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="guanlian" class="tagsM">商品关联</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="i_changshang" class="tagsM">商品厂商</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="chenlie" class="tagsM">商品陈列</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div id="jinxiaocun" class="tagsM">商品进销存</div>
+                            <div class="tags"></div>
+
+                <!--最后一个-->
+                            <div id="dc_info" class="tagsM">DC信息</div>
+                            <div class="tags tags3_r_off"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+	                <div class="CInfo">
+                        <span>项</span>
+                        <span>10，000</span>
+                        <span>/</span>
+                        <span>1</span>
+                        <span>第</span>
+                        <span>|</span>
+                        <span>张三</span>
+                        <span>修改人</span>
+                        <span>2014-03-03</span>
+                        <span>修改日期</span>
+                        <span>李四</span>
+                        <span>建档人</span>
+                        <span>2014-02-02</span>
+                        <span>创建日期</span>
+                    </div>
+
+                    <div style="height:60px;" class="CM">
+                        <div class="CM-bar"><div>货号</div></div>
+                        <div class="CM-div">
+                            <div class="hh_item">
+                                 <div class="icol_text w7"><span>主场商</span></div>
+                                 <div class="iconPut iq" style="width:13%;"><input style="width:83%" type="text"/><div class="ListWin"></div></div>
+                                 <input class="inputText iq " style="width:20%;" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:300px;margin-top:2px;">
+                        <div class="tb50">
+                            <div style="height:105px;" class="CM">
+                                <div class="CM-bar"><div>基本信息</div></div>
+                                <div class="CM-div">
+                                    <div class="ig" style="margin-top:15px;">
+                                        <div class="msg_txt">
+                                            商品规格
+                                        </div>
+                                        <input type="text" class="inputText w70"/>
+                                    </div>
+                                    <div class="ig">
+                                        <div class="msg_txt">
+                                            等级
+                                        </div>
+                                        <input id="i1" data-options="editable:false,panelHeight:'auto'"/>
+                                        <span>&nbsp;&nbsp;型号&nbsp;&nbsp;</span>
+                                        <input type="text" class="inputText w36"/>
+                                    </div>
+                                    <div class="ig">
+                                        <div class="msg_txt">长</div>
+                                        <input type="text" class="inputText w10" />
+                                        <span>&nbsp;cm&nbsp;&nbsp;&nbsp;&nbsp;宽</span>
+                                        <input type="text" class="inputText w10" />
+                                        <span>&nbsp;cm&nbsp;&nbsp;&nbsp;&nbsp;高</span>
+                                        <input type="text" class="inputText w10" />
+                                        <span>&nbsp;cm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="height:205px;margin-top:2px;" class="CM">
+                                <div class="CM-bar"><div>其他信息</div></div>
+                                <div class="CM-div">
+                                    <div class="ig"  style="margin-top:10px;">
+                                        <div class="msg_txt">保存方式</div>
+                                        <input class="inputText w20" />
+                                        <span>&nbsp;&nbsp;&nbsp;保质期标注方式&nbsp;</span>
+                                        <input type="text" class="inputText w15" />
+                                    </div>
+                                    <div class="ig">
+                                        <div class="msg_txt">保质期</div>
+                                        <input type="text" class="w15 inputText fl_left" />
+                                        <div class="fl_left" style="width:70px;margin-left:5px;" ><input id="i3" data-options="editable:false,panelHeight:'auto'" style="height:20px;"/></div>
+                                        <span>或</span>
+                                        <input type="text" class="w10  inputText" />
+                                        <span>天</span>
+                                    </div>
+                                    <div class="ig">
+                                        <div class="msg_txt">健康食品</div>
+                                        <input type="text" class="inputText w15 fl_left" />
+                                        <input class="inputText iq " type="text" style="width:20%;margin-left:3px;" />
+                                    </div>
+                                    <div class="ig">
+                                        <div class="msg_txt">
+                                            食用方法
+                                        </div>
+                                        <input type="text" class="inputText w70"/>
+                                    </div>
+                                    <div style="height:60px;">
+                                        <div class="msg_txt">
+                                            <div>成分说明</div>
+                                        </div>
+                                        <textarea class="w70 txtarea" rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tb50">
+                            <div style="height:90px;" class="CM">
+                                <div class="CM-bar"><div>包装信息</div></div>
+                                <div class="CM-div">
+                                    <div style="margin-top:15px;" class="ig bz_info">
+                                        <div><span class="bz_1">计量单位</span>
+                                            <span class="bz_2">单位含量（容量）</span>
+                                            <span class="bz_3">包装单位</span>
+                                            <span class="bz_4">包装计数</span></div>
+                                    </div>
+                                    <div class="ig">
+                                        <span class="jksp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;</span>
+                                        <input class="inputText iq " type="text" style="width:10%;"/>
+                                        <span class="jksp">&nbsp;=&nbsp;</span>
+                                        <input class="inputText iq" type="text" style="width:10%;" />
+                                        <div class="iconPut iq fl_left" style="width:10%;">
+                                            <input type="text" style="width:55%" />
+                                            <div class="ListWin"></div>
+                                        </div>
+                                        <span class="fl_left">&nbsp;x&nbsp;</span>
+                                        <input class="inputText iq" type="text" style="width:20%;" />
+                                        <div class="iconPut iq fl_left" style="width:10%;">
+                                            <input type="text" style="width:55%" />
+                                            <div class="ListWin"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="height:60px; margin-top:2px;" class="CM">
+                                <div class="CM-bar"><div>广告语</div></div>
+                                <div class="CM-div">
+                                    <div class="ig"  style="margin-top:15px;">
+                                        <div class="msg_txt">广告语</div>
+                                        <input type="text" class="inputText w70" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="height:145px;margin-top:2px;" class="CM">
+                                <div class="CM-bar"><div>课别属性</div></div>
+                                <div class="CM-div">
+                                    <div class="ig"  style="margin-top:15px;">
+                                        <div class="msg_txt">属性1</div>
+                                        <input class="inputText iq " type="text" style="width:20%;" />
+                                        <div class="iconPut iq fl_left" style="width:13%;">
+                                            <input type="text" style="width:60%" />
+                                            <div class="ListWin"></div>
+                                        </div>
+                                        <input class="inputText iq " type="text" style="width:20%;" />
+                                    </div>
+                                    <div class="ig">
+                                        <div class="msg_txt">属性2</div>
+                                        <input class="inputText iq " type="text" style="width:20%;" />
+                                        <div class="iconPut iq fl_left" style="width:13%;">
+                                            <input type="text" style="width:60%" />
+                                            <div class="ListWin"></div>
+                                        </div>
+                                        <input class="inputText iq " type="text" style="width:20%;" />
+                                    </div>
+                                    <div class="ig">
+                                        <div class="msg_txt">属性3</div>
+                                        <input class="inputText iq " type="text" style="width:20%;" />
+                                        <div class="iconPut iq fl_left" style="width:13%;">
+                                            <input type="text" style="width:60%" />
+                                            <div class="ListWin"></div>
+                                        </div>
+                                        <input class="inputText iq " type="text" style="width:20%;" />
+                                    </div>
+                                    <div class="ig">
+                                        <div class="msg_txt">属性4</div>
+                                        <input class="inputText iq " type="text" style="width:20%;" />
+                                        <div class="iconPut iq fl_left " style="width:13%;">
+                                            <input type="text" style="width:60%" class=""/>
+                                            <div class="ListWin"></div>
+                                        </div>
+                                        <input class="inputText iq " type="text" style="width:20%;" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:140px;margin-top:2px;" class="CM">
+                        <div class="CM-bar"><div>证照信息</div></div>
+                        <div class="CM-div">
+                            <div class="zz_info">
+                                <div class="zz_1">
+                                    <span class="zz_11">证件类型</span>
+                                    <span class="zz_12">证件号码</span>
+                                    <span class="zz_13">发证机关</span>
+                                    <span class="zz_14">截止日期</span>
+                                    <span class="zz_15">起始日期</span>
+                                </div>
+                                <div class="zz_2">
+                                    <div class="ig" style="margin-top:5px;margin-left:10px;">
+                                        <div class="license1 fl_left">
+                                            <div class="license2"></div>
+                                        </div>
+                                        <input type="text" class="w17 inputText " />
+                                        <input type="text" class="w20 inputText" />
+                                        <input type="text" class="w17 inputText" />
+                                        <input type="text" class="w17 inputText" />
+                                        <input type="text" class="w17 inputText" />
+                                    </div>
+                                    <div class="ig" style="margin-left:10px;">
+                                        <div class="license1 fl_left">
+                                            <div class="license2"></div>
+                                        </div>
+                                        <input type="text" class="w17 inputText" />
+                                        <input type="text" class="w20 inputText" />
+                                        <input type="text" class="w17 inputText" />
+                                        <input type="text" class="w17 inputText" />
+                                        <input type="text" class="w17 inputText" />
+                                    </div>
+                                </div>
+<!--                                <div class="ig" style="margin-left:10px;">
+                                        
+                                            <div class="ListWin"></div>
+                                       
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('#i1').combobox({
+            //url: 'combobox_data.json',
+            width: 100,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-总公司",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#i3').combobox({
+            //url: 'combobox_data.json',
+            width: 60,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "年",
+                "selected": true
+            }, {
+                "id": 2,
+                "text": "月"
+            }, {
+                "id": 3,
+                "text": "天"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                //alert(rec.id + "....." + rec.text);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+﻿.tabs {
+    position:relative;
+}
+.spanner {
+    width: 100%;
+    height: 30px;
+    background: #999999;
+    position: relative;
+    overflow:hidden;
+}
+.spannerTabs {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+.tabBtn,.liChecked,.closeable,
+.firstTab,.middleTab,.tabEnd,.newTab {
+    background-image: url(./images/tab.png);
+    background-repeat: no-repeat;
+}
+.tabBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 30px;   
+    background-position: 10px -253px;
+    cursor: pointer;
+    background-color: #999;
+    display:none;
+}
+    .tabBtn:hover {
+        background-color:#ccc;
+    }
+.tabList {
+    width: 290px;
+    max-height: 650px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid #999;
+    position: absolute;z-index:666;
+    top: -80px;
+    right: -1px;
+    background: #fff;
+}
+.tabList li {
+    width: 265px;
+    padding-left: 25px;
+    height: 30px;
+    line-height: 30px;
+}
+.tabList li:hover {
+    background-color:#66CC99;
+    color:#fff;
+}
+.liChecked {
+    background-color: #3F9673;
+    background-position: -230px -1px;
+    color: #fff;
+}
+.firstTab ,.middleTab,.newTab{
+    margin-top:3px;height:27px;min-width:50px;max-width:200px;line-height:25px;float:left;
+}
+.firstTab {
+    background-position:0 -163px;background-color:#ccc;
+    padding-left:10px;
+    cursor:pointer;
+}
+.middleTab {
+    background-position:0 -67px;background-color:#ccc;
+    padding-left:25px;
+    cursor:pointer;
+}
+.tabEnd {
+    margin-top:3px;height:27px;width:42px;
+    background-position:0 -194px;float:left;
+}
+.newTab {
+    background-position:0 -99px;background-color:#fff;
+    padding-left:25px;cursor:default;
+}
+.firstChecked{
+    background-position:0 -3px;background-color:#fff;cursor:default;
+}
+.firstChecked+.middleTab,.middleChecked + .middleTab{
+    background-position:0 -34px;
+}
+.middleChecked {
+    background-position:0 -99px;background-color:#fff;cursor:default;
+}
+.firstChecked + .tabEnd,.middleChecked + .tabEnd ,.newTab+ .tabEnd{
+        background-position:-21px -130px;
+}
+.tabText, .closeable {
+    float:left;
+}
+.closeable {
+    display:inline-block;width:24px;height:16px;margin-top: 4px;cursor:pointer;
+    background-position:-18px -234px;
+}
+.firstChecked .closeable, .middleChecked .closeable , .newTab .closeable {
+    background-position:3px -234px;
+}

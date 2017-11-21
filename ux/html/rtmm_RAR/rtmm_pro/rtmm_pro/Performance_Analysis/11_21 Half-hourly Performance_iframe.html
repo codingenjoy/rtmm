@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/default.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/iframeContent.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="../js/iframeContent.js"></script>
+    <link type="text/css" href="../js/freezenColums/f.css" rel="Stylesheet" />
+    <script type="text/javascript" src="../js/freezenColums/f.js"></script>
+
+    <script type="text/javascript" src="../js/My97DatePicker/WdatePicker.js"></script>
+    <link type="text/css" href="../js/My97DatePicker/skin/default/datepicker.css" rel="Stylesheet" />
+
+    <script type="text/javascript" src="../js/Highcharts-4.0.3/js/highcharts.js"></script>
+    <style type="text/css">
+        /*overwrite*/
+        .CInfo {
+            border:0;
+        }
+        .CInfo span {
+            margin:0;
+        }
+        .CInfo .fl_left {
+            margin-left:2px;
+        }
+        .w50 {
+            float:left;
+            height:100%;
+        }
+        
+        .td2_1,.td2_2 {
+            cursor:pointer;margin:15px 5px;
+            height:20px;
+            line-height:20px;padding:0 20px;
+            display:inline-block;float:left;
+        }
+        .td2_2 {
+            float:right;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            var i = 0;
+            $(".bigM1").delegate(".td2_1", "click", function (e) {
+                $et = $(e.target);
+                if (!$et.hasClass("GreenBg")) {
+                    $(".td2_1").removeClass("GreenBg");
+                    $et.addClass("GreenBg");
+                    
+                    $("#yye").toggle();
+                    $("#lks").toggle();
+                    
+                    if ($("#lks").css("display") == "block"&&i==0) {
+                        lks($("#lks"));
+                        i = 1;
+                    }
+                    
+                }
+            });
+
+
+            $('#yye').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Monthly Average Rainfall'
+                },
+                subtitle: {
+                    text: 'Source: WorldClimate.com'
+                },
+                xAxis: {
+                    categories: [
+                        'Jan',
+                        'Feb',
+                        'Mar',
+                        'Apr',
+                        'May',
+                        'Jun',
+                        'Jul',
+                        'Aug',
+                        'Sep',
+                        'Oct',
+                        'Nov',
+                        'Dec'
+                    ]
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Rainfall (mm)'
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                        '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: [{
+                    name: 'Tokyo',
+                    data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+
+                }, {
+                    name: 'New York',
+                    data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
+
+                }, {
+                    name: 'London',
+                    data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
+
+                }, {
+                    name: 'Berlin',
+                    data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+
+                }]
+            });
+
+        });
+
+        function lks($selector) {
+            /*$('#lks')*/
+            $selector.highcharts({
+                title: {
+                    text: 'Monthly Average Temperature',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'Source: WorldClimate.com',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Temperature (°C)'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '°C'
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'Tokyo',
+                    data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+                }, {
+                    name: 'New York',
+                    data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+                }, {
+                    name: 'Berlin',
+                    data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+                }, {
+                    name: 'London',
+                    data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+                }]
+            });
+
+        }
+	</script>
+</head>
+<body>
+<div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3"></td>
+                        <td></td>
+                        <td class="Tools4"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td id="tools11" class="Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12   testAdd"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+<!--                        <td class="Line-1"></td>
+                        <td class="Tools5"></td>
+                        <td></td>
+                        <td class="Tools7"></td>
+                        <td></td>
+                        <td class="Tools8"></td>
+                        <td></td>
+                        <td class="Tools9"></td>
+                        <td></td>
+                        <td class="Tools13"></td>
+                        <td></td>
+                        <td class="Tools14"></td>
+                        <td></td>
+                        <td class="Tools15"></td>-->
+                        <td class="Line-1"></td>
+                        <td class="Tools23"></td>
+                        <td></td>
+                        <td class="Tools24"></td>
+                        <td></td>
+                        <td class="Tools25"></td>
+                        <td></td>
+                        <td class="Tools26"></td>
+                        <td></td>
+                        <td class="Tools27"></td>
+                        <td></td>
+                        <td class="Tools28"></td>
+                        <td></td>
+                        <td class="Tools29"></td>
+                        <td></td>
+                        <td class="Tools30"></td>
+                        <td></td>
+                        <td class="Tools31"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Tools22 Icon-size1 " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                            <!--第一个-->
+                            <div class="tags1_left tags1_left_on"></div>
+                            <div class="tagsM tagsM_on">时点业绩查询</div>
+                            <div class="tags tags3_r_on"></div>
+            </div>
+            <div class="Container-1">
+
+                <div class="Content">
+                    <div class="CInfo">
+                        <div class="w50">
+                            <div class="icol_text">店号&nbsp;</div>
+                            <select class="w20 fl_left"><option></option></select>
+                            <div class="icol_text">&nbsp;&nbsp;&nbsp;星期&nbsp;</div>
+                            <input type="text" class="Wdate w20 fl_left" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>
+                            <input class="inputText Black w25 fl_left" />
+                            <br class="clearBoth" />
+                        </div>
+                        <div class="w50">
+                            <div class="icol_text">店号&nbsp;</div>
+                            <select class="w20 fl_left"><option></option></select>
+                            <div class="icol_text">&nbsp;&nbsp;&nbsp;星期&nbsp;</div>
+                            <input type="text" class="Wdate w20 fl_left" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>
+                            <input class="inputText Black w25 fl_left" />
+                            <div class="RightTool2">
+                                <div class="Icon-size1 Tools21"></div>
+                            </div>
+<!--                            <div class="RightTool3">
+                                <div class="arraw arraw1"></div>
+                            </div>-->
+                            <br class="clearBoth" />
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="bigM1">
+                        
+                        <span class="td2_1 GreenBg">营业额</span>
+                        <span class="td2_1">来客数</span>
+                        <span class="td2_2">
+                            <input type ="checkbox" />
+                            显示累计数值
+                        </span>
+                    </div>
+                    <div class="bigM2" id="lks" style="display:none;">
+                        lks
+                    </div>
+                    <div class="bigM2" id="yye" style="display:block;">
+                        yye
+                    </div>
+                </div>
+            </div>
+<script type="text/javascript">
+    //$(function () {
+    //    $("body").click(function () {
+    //        top.openCharts_2();
+    //    });
+    //});
+    
+</script>
+
+</body>
+</html>

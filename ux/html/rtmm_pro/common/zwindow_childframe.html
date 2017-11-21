@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/default.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/iframeContent.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../jquery-zwindow/js/zWindow_bak.js" type="text/javascript"></script>
+	<link type="text/css" href="../jquery-zwindow/css/default/zWindow.css" rel="Stylesheet" />
+</head>
+<body>
+<!--#grid_layer-->
+<script type="text/javascript">
+    /* 创建添加弹窗 */
+    function createIframeDialog() {
+        $.fn.zWindow({
+            width: 600,
+            height: 390,
+            titleable: true,
+            title: '敏感客户',
+            moveable: true,
+            windowBtn: ['close'],
+            windowType: 'iframe',
+            windowSrc: 'zwindow_iframe.html',
+            resizeable: false,
+            /* 关闭后执行的事件 */
+            afterClose: function (data) {
+                alert('关闭回调事件')
+            },
+            isMode: true
+        });
+    }
+    function createIframeDialog_do() {
+        top.window.$.fn.zWindow({
+            width: 600,
+            height: 390,
+            titleable: true,
+            title: '敏感客户',
+            moveable: true,
+            windowBtn: ['close'],
+            windowType: 'iframe',
+            windowSrc: 'zwindow_iframe.html',
+            resizeable: false,
+            /* 关闭后执行的事件 */
+            afterClose: function (data) {
+                alert('关闭回调事件')
+            },
+            footerBtn:true,
+            isMode: true
+        });
+    }
+</script>
+<div>
+ddd
+</div>
+<div>
+   <a onclick="createIframeDialog()">测试iframe弹出框</a>
+</div>
+    <div>
+   <a onclick="createIframeDialog_do()">测试do_iframe弹出框</a>
+</div>
+</body>
+</html>

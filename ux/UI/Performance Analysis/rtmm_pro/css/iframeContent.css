@@ -1,0 +1,1466 @@
+﻿/*Panel Window*/
+.Panel {
+    background:#fff;
+    /*border: 2px solid #3f9673;*/
+    width: 600px;
+}
+.Panel_top, .Panel_footer {
+    color: #fff;
+}
+.Panel_top {
+    background: none repeat scroll 0 0 #3f9673;
+    height: 40px;
+}
+.Panel_top span {
+    float: left;
+    line-height: 40px;
+    margin-left: 20px;
+}
+.PanelClose {
+    background: url("../images/icon0402.png") no-repeat -57px -11px;
+    cursor: pointer;
+    float: right;
+    height: 29px;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 32px;
+}
+.Panel_footer {
+    background: none repeat scroll 0 0 #f9f9f9;
+    height: 40px;
+    overflow: hidden;
+    text-align:center;
+}
+
+.PanelBtn1,.PanelBtn2,.pt_div{
+    width: 78px;
+    height: 30px;
+    margin-left: 5px;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    display:inline-block;
+    margin-top:4px;
+}
+.PanelBtn1 ,.btn1{
+    background: none repeat scroll 0% 0% #F37864;
+}
+.PanelBtn2,.cancel {
+    background: none repeat scroll 0% 0% #999;
+}
+.btn1 {
+    width: 78px;
+    height: 30px;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    margin:4px auto;
+}
+.PanelClose:hover {
+    background:url(../images/icon0402.png) -494px -11px no-repeat;
+}
+.Icon-div {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #999;
+    float: left;
+    height: 20px;
+    margin: 4px auto auto 4px;
+    width: 98%;
+}
+.Icon-div2 {
+    height:18px;margin-top:1px;float:left;
+}
+.IconDiv_bg{
+    height:30px;background:#CCC;
+}
+.cbankIcon {
+    margin-top: 2px;
+    margin-left: 2px;
+    width: 16px;
+    height: 16px;
+    float: left;
+    background: url('../images/toolIcons.png') -207px -4px no-repeat !important;
+    cursor:pointer;
+}
+.item_gou {
+    float: right;
+    margin-right: 10px;
+    background: url('../images/icon0401.png') no-repeat -11px -476px;
+    height: 16px;
+    width: 16px;
+}
+.input_propt_color {
+    color:#CCCCCC;
+}
+/*end Panel Window*/
+/*ToolBar*/
+.Tools1 {
+    background-image: url('../images/toolIcons.png');
+    background-position: 0px -4px;
+    background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools2 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-47px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools3 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-82px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools4 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-117px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools5 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-171px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools6 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-207px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools7 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-242px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools8 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-276px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools9 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-300px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools10 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-327px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools11 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-362px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools12 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-397px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools13 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-424px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools14 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-556px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools15 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-586px -2px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools16 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-449px -1px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools17 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-477px -1px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools18 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-530px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools19 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-503px -1px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools20 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-612px -2px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools21 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-733px -4px;background-repeat:no-repeat;
+        cursor:pointer;
+}
+.Tools22 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-757px -4px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools23 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-1047px -2px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools24 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-829px -2px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools25 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-859px -2px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools26 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-889px -2px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools27 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-918px -2px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools28 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-948px -2px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools29 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-973px -2px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools30 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-1002px -2px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools31 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-1026px -2px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools32 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-1077px -2px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools1_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:0px -32px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools2_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-47px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools3_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-82px -30px;background-repeat:no-repeat;
+    cursor:text;
+}
+.Tools4_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-117px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools5_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-171px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools6_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-207px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools7_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-242px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools8_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-276px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools9_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-302px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools10_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-327px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools11_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-362px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools12_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-397px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools13_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-424px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools14_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-556px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools15_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-586px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools16_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-449px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools17_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-477px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools18_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-530px -31px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools19_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-503px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools20_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-612px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools21_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-757px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools22_disable{
+    background-image: url('../images/toolIcons.png');
+    background-position:-733px -30px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools21_on{
+    background-image: url('../images/toolIcons.png');
+    background-position:-803px -30px;background-repeat:no-repeat;
+    /*cursor:no-drop;*/
+}
+.Tools22_on{
+    background-image: url('../images/toolIcons.png');
+    background-position:-780px -30px;background-repeat:no-repeat;
+    /*cursor:no-drop;*/
+}
+.Tools23_disable {
+    background-image: url('../images/toolIcons.png');
+    background-position:-1047px -26px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools24_disable {
+    background-image: url('../images/toolIcons.png');
+    background-position:-829px -26px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools25_disable {
+    background-image: url('../images/toolIcons.png');
+    background-position:-859px -26px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools26_disable {
+    background-image: url('../images/toolIcons.png');
+    background-position:-889px -26px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools27_disable {
+    background-image: url('../images/toolIcons.png');
+    background-position:-918px -26px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools28_disable {
+    background-image: url('../images/toolIcons.png');
+    background-position:-948px -26px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools29_disable {
+    background-image: url('../images/toolIcons.png');
+    background-position:-973px -26px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools30_disable {
+    background-image: url('../images/toolIcons.png');
+    background-position:-1002px -26px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools31_disable {
+    background-image: url('../images/toolIcons.png');
+    background-position:-1026px -26px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.Tools32_disable {
+    background-image: url('../images/toolIcons.png');
+    background-position:-1077px -29px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools33 {
+    background-image: url('../images/toolIcons.png');
+    background-position:-1151px -0px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools33_on {
+    background-image: url('../images/toolIcons.png');
+    background-position:-1149px -25px;background-repeat:no-repeat;
+    cursor:pointer;
+}
+.Tools33_disable {
+    background-image: url('../images/toolIcons.png');
+    background-position:-1173px -1px;background-repeat:no-repeat;
+    cursor:no-drop;
+}
+.SearchTool {
+    width:40px;height:40px;float:left;
+}
+.SearchTool div{
+    margin:12px 12px;
+}
+.ToolBar table {
+    margin-top:10px;
+    float:left;
+}
+.Icon-size1 {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+}
+.Line-1 {
+    background-image: url("../images/toolIcons.png");
+    background-position: -674px -2px;
+    background-repeat: no-repeat;
+}
+.ToolBar td {
+    height:21px;
+    width:20px;
+}
+.RightTool {
+    float:right;height:40px;width:30px;
+}
+.RightTool div {
+    margin:12px auto;
+}
+
+/*.Tools1:hover,*/.Tools1_over{ 
+    background-image: url('../images/toolIcons.png');
+    background-position:-226px -20px;background-repeat:no-repeat;
+}
+.Tools1Parent_bg {
+    background:#42bb8f;
+}
+.Tools1_on{ 
+    background-image: url('../images/toolIcons.png');
+    background-position:-188px -19px;background-repeat:no-repeat;
+}
+.Tools21_hover {
+    background-image: url('../images/toolIcons.png');
+    background-position:-805px -4px;background-repeat:no-repeat;
+}
+.Tools22_hover {
+    background-image: url('../images/toolIcons.png');
+    background-position:-24px -30px;background-repeat:no-repeat;
+}
+.ToolsBg {
+    background:#42bb8f;
+}
+.Tools21_on{
+    background-image: url('../images/toolIcons.png');
+    background-position:-803px -30px;background-repeat:no-repeat;
+    /*cursor:no-drop;*/
+}
+.Tools22_on {
+    background-image: url('../images/toolIcons.png');
+    background-position:-780px -30px;background-repeat:no-repeat;
+    /*cursor:no-drop;*/
+}
+.ToolBar {
+    width:100%;
+    height:40px;
+    background:#F9F9F9;
+}
+.CTitle {
+    width:100%;
+    height:30px;
+    background:#999999;
+}
+.tags1_left {
+    width:10px;height:30px;float:left;background:url(../images/tags.png) -16px 0px no-repeat;
+}
+.tagsM ,.tagsM_q{
+    line-height:27px;
+    white-space:nowrap;
+    word-break: normal; 
+    min-width:65px;max-width:500px;float:left;
+    background:#cccccc;
+    margin-top:3px;
+    cursor:pointer;
+}
+.tagsM_on {
+    background:#fff;
+    cursor:default;
+}
+.tags {
+    width:25px;height:30px;float:left;background:url(../images/tags.png) -162px 0px no-repeat;
+}
+.tags1_left_on {
+    background:url(../images/tags.png) 0px 0px no-repeat;
+}
+/*.tags1_left_off {
+    background:url(../images/tags.png) -16px 0px no-repeat;
+}*/
+.tags_left_on {
+    background:url(../images/tags.png) -128px 0px no-repeat;
+}
+.tags_right_on{
+    background:url(../images/tags.png) -98px 0px no-repeat;
+}
+/*.tags_off{
+    background:url(../images/tags.png) -162px 0px no-repeat;
+}*/
+.tags3_r_on {
+    background:url(../images/tags.png) -72px 0px no-repeat;
+}
+.tags3_r_off {
+    background:url(../images/tags.png) -28px 0px no-repeat;
+}
+.tags3_close_on {
+    width:42px;
+    float:left;
+    height:30px;
+    background:url(../images/tags.png) -55px 0px no-repeat;
+}
+.tags_close {
+    cursor: pointer;
+    width:20px;height:30px;margin-left:3px;
+    background:url(../images/icon0402.png) -62px -8px no-repeat;
+}
+.tags_close:hover {
+    background:url(../images/icon0402.png) -530px -23px no-repeat;
+}
+/**检索框***/
+.Search {
+    width:25%;
+    height:580px;
+    float:left;
+    background:#F5F5F5;
+    margin-top:10px;
+}
+.SearchTop{
+    height: 30px;
+    width: 100%;
+    border-bottom:1px solid #cccccc;
+}
+.SearchTop span{
+    line-height:30px;
+    margin-left:5px;
+    float:left;
+}
+.SearchTop div{
+    float: right;
+    margin:8px 4px auto auto;
+}
+.SearchTop div:hover{
+    background-position:-10px -253px;
+}
+.SMiddle {
+    height:509px;overflow-x:auto;
+}
+.SearchFooter {
+    height:30px;border-top: 1px solid #ccc;
+}
+.SearchFooter div{
+    float:right;
+    margin:2px 10px auto auto;
+    height:21px;
+}
+.SearchTable {
+    width: 100%;
+}
+.SearchTable td{
+    height:30px;
+}
+.ST_td1{
+    width:35%;
+}
+.ST_td2{
+    width:65%;
+}
+.SearchTable span {
+    float:right;
+    margin-right:10px;
+    height: 17px;
+}
+.CircleClose {
+    background: url("../images/icon0401.png") repeat scroll -10px -222px rgba(0, 0, 0, 0);
+}
+/**End 检索框***/
+.CInfo{
+    height: 30px;
+    border-bottom:1px solid #999;
+}
+.CInfo span {
+    float: right;
+    margin: 5px 10px auto auto;
+}
+.cinfo_div {
+    float: left;
+    height: 30px;
+    line-height: 28px;
+    width: 30px;
+}
+/*Icon 输入框组件*/
+.iconPut,.icon_put {
+    height:20px !important;border:1px solid #999999 !important;/*background:#fff;*/
+    overflow:hidden;
+}
+.icon_put {
+    float:left;
+}
+.iconPut div{
+    height:16px;width:16px;float:right;margin-top:2px; margin-right:2px;
+    cursor:pointer;
+}
+.iconPut input ,.pro_NUM{
+    height:18px;line-height:20px;float:left;margin-left:0px !important;margin-top:1px !important;
+}
+.Calendar{
+    background-image:url(../images/icon0402.png);
+    background-position:-335px -18px;
+}
+.ListWin {
+    background:url(../images/icon0401.png);
+    background-position: -2px -154px;
+}
+.listIcon {
+    width:20px;height:20px;
+    display:inline-block;
+    background:url("../images/icon0401.png") no-repeat 0px -152px;
+    cursor:pointer;
+}
+.listIcon_green {
+    width:20px;height:20px;
+    display:inline-block;
+    background:url("../images/green_list.png") center no-repeat;
+    cursor:pointer;
+}
+.listIcon_off{
+    width:20px;height:20px;
+    display:inline-block;
+    background:url("../images/icon0401.png") no-repeat -8px -571px;
+    cursor:no-drop;
+}
+.icol_text {
+    float: left;
+    height: 30px;
+    line-height: 25px;
+}
+.icol_text span {
+    float: right;
+    margin-right: 5px;
+}
+/*end 组件*/
+.CM_table span {
+	float: right;
+	margin-right: 10px;
+	line-height: 25px;
+}
+.CM td {
+	height: 30px;
+}
+.Icon-size2 {
+	width: 16px;
+	height: 21px;
+}
+/*content*/
+.Content {
+    float: right;
+    height: 570px;
+    margin-right: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+    width: 99%;
+}
+/** table div*/
+.htable_div {
+    width:100%;overflow:hidden;background:#F5F5F5;border-bottom:1px solid #ccc;height:26px;
+    text-align:center;padding-top:4px;
+}
+.btable_div {
+    width:100%;overflow-y:scroll;overflow-x:auto;border-bottom:1px solid #ccc;
+}
+/*.htable_div table {
+    width:98.3%;
+}*/
+    .btable_div table{
+        table-layout:fixed;
+    }
+.t_cols {
+    border-right:1px solid #ccc !important;
+    line-height:20px;
+    height:20px;
+}
+    .t_cols input[type="checkbox"] {
+        margin-top:4px;
+    }
+.btable_div tr, .htable_div tr {cursor:pointer;line-height:23px;}
+.btable_div td{
+    height:29px;
+    font-weight:normal;
+}
+.btable_div tr {
+    border-bottom:1px solid #fff;
+}
+        .s1_col {
+            width:78px;
+        }
+        .t2_col {
+            width:157px;
+        }
+.btable_div tr:hover,.btable_hover {
+    background:#99cc66;
+    color:#fff;
+}
+.btable_checked {
+    background:#3F9673;
+    color:#fff;
+}
+.btable_div td div {
+    height:23px;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    /*word-break: keep-all;*/
+    text-overflow: ellipsis;
+}
+.btable_div td{    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    /*word-break: keep-all;*/
+    text-overflow: ellipsis;}
+.tr_special1 {
+    background:#eee !important;
+    color:#333 !important;
+}
+.trSpecial {
+    background:none !important;
+    color:#333 !important;
+}
+.tr_close {
+    background:url(../images/close_tr.png) no-repeat center;
+}
+.tr_open {
+    background:url(../images/open_tr.png) no-repeat center;
+}
+/**pagenation*/
+.paging {
+    font-size: 12px;
+    color: #575757;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    vertical-align: middle;
+}
+.paging .page_list {
+    width: 420px;
+    font-size: 12px;
+    color: #575757;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    vertical-align: middle;
+}
+.page_list a {
+    margin-top: 5px;
+}
+.paging a {
+    float: right;
+    min-width: 16px;
+    max-width:80px;
+    height: 16px;
+    line-height: 16px;
+    margin-left:3px;
+}
+.num {
+    background:#EEEEEE;
+}
+.page_first_block {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png') -1108px -7px no-repeat;
+    margin-right: 2px;
+}
+.page_first_block_off {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png') -449px -32px no-repeat;
+    margin-right: 2px;
+}
+.page_prev_block {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png') -1131px -6px no-repeat;
+    margin-right: 2px;
+}
+.page_prev_block_off {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png') -477px -32px no-repeat;
+    margin-right: 2px;
+}
+/*.click_block {
+    color: #FFF;
+    background-color: #3F9673;
+}*/
+.page_next_block {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png')  -1125px -30px no-repeat;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+.page_next_block_off {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png')  -503px -32px no-repeat;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+.page_end_block {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png') -1102px -31px no-repeat;
+    margin-right: 2px;
+}
+.page_end_block_off {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png') -530px -33px no-repeat;
+    margin-right: 2px;
+}
+.page_list #goto_page {
+    width: 30px;
+    border: 1px solid #808080;
+}
+/**pagenation end*/
+/*form cm-bar style*/
+.CM {
+    background:#f9f9f9;
+    overflow: hidden;
+}
+.inner_half {
+    width:50%;
+    *width:49%;
+    height:100%;
+    float:left;
+}
+.CM-bar,.CM-bar-en {
+    background: none repeat scroll 0 0 #3f9673;
+    color: #ffffff;
+    float: left;
+    height: 100%;
+    line-height: 14px;
+    width: 20px;
+}
+.CM-bar div{
+    padding-top:10px;
+    margin-left:3px;word-wrap: break-word;
+}
+    .CM-bar-en div {
+        padding-top:10px;text-align:center;word-wrap:break-word;
+    }
+.CM-div {
+    float: left;
+    height: 100%;
+    width: 95%;
+}
+.ig {
+    height:30px;
+}
+.ig_top20 {
+    height:30px;
+    margin-top:20px;
+}
+.ig_top10 {
+    height:30px;
+    margin-top:10px;
+}
+.ig_bottom15 {
+    height:30px;
+    margin-bottom:15px;
+}
+.ig_padding {
+    padding-top:8px;
+}
+.msg_txt {
+    float: left;
+    height: 100%;
+    line-height: 25px;
+    margin-right: 10px;
+    text-align: right;
+    width: 18%;
+}
+/*end form cm-bar style*/
+/*new toolbar*/
+.lineToolbar {
+    background: none repeat scroll 0 0 #333;
+    float: left;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 1px;
+}
+.createNewBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -359px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+.createNewBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -359px -30px;
+            background-repeat: no-repeat;
+            cursor: no-drop;
+        }
+.deleteBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -325px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+.deleteBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -325px -30px;
+            background-repeat: no-repeat;
+            cursor: no-drop;
+}
+.editBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -395px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+.searchBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -205px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+.searchBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -205px -30px;
+            background-repeat: no-repeat;
+            cursor:  no-drop;
+        }
+.copyBar {
+    width:20px;
+    height:20px;
+    background:url(../images/copy.png) no-repeat 3px 2px;
+    cursor:pointer;
+}
+.copyBar_off {
+    width:20px;
+    height:20px;
+    background:url(../images/copy_off.png) no-repeat 3px 2px;
+    cursor:no-drop;
+}
+.listBar {
+    background:url(../images/listBar.png) 0 0 no-repeat;
+    width:20px;
+    height:20px;cursor:pointer;
+}
+.listBar_off {
+    background:url(../images/listBar.png) 0 -20px no-repeat;
+    width:20px;
+    height:20px;cursor:no-drop;
+}
+/*end new toolbar*/
+/*01 Promotion_Store Group*/
+.Con_tb {
+    float: left;
+    height: 549px;
+    margin-top: 0;
+    width: 29%;
+}
+.Point_L {
+    background: url("../images/pCheck.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: left;
+    height: 99%;
+    width: 3%;
+}
+.Point_L div {
+    height: 30px;
+    width: 14px;
+}
+.Point_L2 {
+    background: url("../images/pCheck_2.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.Point_R {
+    border-bottom: 1px solid #3f9673;
+    border-right: 1px solid #3f9673;
+    border-top: 1px solid #3f9673;
+    float: left;
+    height: 98%;
+    width: 96.5%;
+}
+.SearchTopx {
+    height: 30px;
+    width: 100%;
+}
+.SearchTopx span,.h30 span{
+    float: left;
+    line-height: 30px;
+    margin-left: 5px;
+}
+.SearchTopx div ,.h30 div{
+    float: right;
+    margin: 4px 2px;
+}
+.con_title {
+    background: #eeeeee;
+    height: 30px;
+    overflow: hidden;
+}
+.con_title table {
+    margin-top: 6px;
+}
+.tbx ,.tbx2{
+    height: 508px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-bottom:1px solid #ccc;
+}
+    .tbx .w25,.tbx2 .w25 {
+        padding-left:2px;
+    }
+    .tbx .longText,.tbx2 .longText {
+        padding-left:6px;
+    }
+.tbx tr {
+    cursor: pointer;
+}
+.tbx td ,.tbx2 td{
+    height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+.tbx .longText ,.tbx2 .longText{
+    width: 180px;
+}
+.tr_even {
+    background:#f5f5f5;
+}
+.item_on2 {
+    background: #3f9673 !important;
+    color: #fff;
+}
+
+.Con_R {
+    float: right;
+    height: 580px;
+    width: 71%;
+}
+.group_list {
+    width:49%;
+    float:left;
+}
+    .group_list .tbx ,.group_list .tbx2{
+        height:498px;
+
+    }
+    .group_list .tbx .w25,.group_list .tbx2 w25{
+        text-align:right;
+    }
+.store_list {
+    width:48%;
+    float:right;
+    margin-right:13px;
+    height:559px;
+}
+.h30 {
+    height:30px;
+    background:#eee;
+}
+.storeListItem {
+    height:527px;
+    border:1px solid #ccc;
+}
+.storeListItem .item{
+    padding-left:5px;
+    line-height:30px;
+}
+.item,.item_tr ,.item_next{
+    cursor:pointer;   
+}
+/*Promotion_Issue_Form_by Set*/
+.zt_db {
+    width:98%;float:right;height:100%;overflow: hidden;
+}
+.ztdb_tb {
+    height:210px;border-bottom:1px solid #ccc;border-top:1px solid #ccc;overflow-y:scroll;
+}
+.zt_title1 {
+    margin-left:40px;
+}
+.zt_title2 {
+    margin-left:135px;
+}
+.zt_title3 {
+    margin-left:135px;
+}
+.zt_title4 {
+    margin-left:130px;
+}
+.zt_title5 {
+    margin-left:130px;
+}
+.zt_title6 {
+    margin-left:70px;
+}
+.first_ztdb {
+    margin-left:15px;
+}
+/*end Promotion_Issue_Form_by Set*/
+/*promotion 固定列表左侧*/
+.fixed_div2 {
+            background: #e0e0e0;
+            float: left;
+            height: 24px;
+            position: fixed;
+            width: 23%;
+        }
+.fixed_div {
+            width:23%;float:left;position:fixed;background:#f9f9f9;
+        }
+.fixed_div3 {
+            background: #fff;
+            float: left;
+            height: 24px;
+            position: fixed;
+            width: 23%;
+        }
+/*end 固定列表*/
+.pro_up {
+    height:8px;width:16px;background:url(../images/updown.png) 0 0 no-repeat;cursor:pointer;
+}
+.pro_down {
+    height:8px;width:16px;background:url(../images/updown.png) 0 -8px no-repeat;cursor:pointer;
+}
+.pro_div {
+    margin-top:2px;margin-right:1px;height:16px;float:right;width:16px;
+}
+.left_icon_off {
+    width:30px;height:100%;float:left;background:url(../images/rightORleft.png) 0 0 no-repeat;cursor:no-drop;
+}
+.left_icon {
+    width:30px;height:100%;float:left;background:url(../images/rightORleft.png) 0 -50px no-repeat;cursor:pointer;
+}
+.right_icon_off {
+    width:30px;height:100%;float:right;background:url(../images/rightORleft.png) -30px -50px no-repeat;cursor:no-drop;
+}
+.right_icon {
+    width:30px;height:100%;float:right;background:url(../images/rightORleft.png) -30px 0 no-repeat;cursor:pointer;
+}
+.middle_bar {
+    height:100%;float:left;width:94%;overflow:hidden;
+}
+    .middle_bar .middle_item {
+        margin:15px 10px;float:left;
+    }
+.middle_item {
+    height:20px;width:80px;text-align:center;cursor:pointer;
+}
+.middbar {
+    width:1500px;height:50px;position:relative;z-index:80;
+}
+.sh_status {
+    width:20px;height:20px;float:left;margin-top:1px;margin-left:5px;
+}
+.sh_status_off {
+    background:url(../images/icon0402.png) -530px -3px no-repeat;
+}
+.sh_status_wait {
+    background:url(../images/icon0402.png) -305px -29px no-repeat;
+}
+/*promotion management menu 2*/
+.pro_store_item {
+    width:98%;float:right;height:100%;
+}
+.pro_store_item1{
+    float:left;width:26%;height:100%;
+}
+.pro_store_item2{
+    float:right;width:72%;height:100%;overflow:hidden;
+}
+.pro_store_items {
+    border:1px solid #CCC;
+    height:80%;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+    .pro_store_items .item {
+        display:table;height:35px;width:100%;
+    }
+    .pro_store_tb_edit .item:hover,.pro_store_tb_edit .item_next:hover  {
+        background:#9FCAB9;color:#fff;
+    }
+    .pro_store_items .item:hover{
+        background-color:#9FCAB9;color:#fff;
+        /*background-image:url(../images/white_del.png);
+        background-repeat:no-repeat;
+        background-position:right;*/
+    }
+.pro_store_tb ,.pro_store_tb_edit {
+    height:80%;border-bottom:1px solid #ccc;
+    border-top:1px solid #ccc;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+.pro_store_tb_edit {
+    overflow-x:auto;
+}
+.pstb_del {
+    width:20px;height:20px;float:left;
+}
+.pstb_1 {
+    display:table-cell;width:auto;padding-left:10px;vertical-align:middle;
+}
+.pstb_del2 {
+    display:table-cell;height:35px;width:24px;
+}
+.pro_store_tb_edit {
+    height:60%;
+}
+    .pro_store_tb_edit .item:hover .pstb_del ,.pro_store_tb_edit .item_next:hover .pstb_del ,.pro_store_items .item:hover  .pstb_del2{
+        background:url(../images/white_del.png) no-repeat center;
+    }
+    .ck {
+        margin-top:4px;margin-right:5px !important;
+        }
+.fu_div {
+    height:26px;padding-top:4px;background:#e0e0e0;border-top:1px solid #ccc;
+}
+.pro_store_tb_edit .item:hover .listIcon {
+    width:20px;height:20px;
+    display:inline-block;
+    background:url("../images/icon0401.png") no-repeat -6px -571px;
+    cursor:no-drop;
+}
+.item_on .listIcon {
+    width:20px;height:20px;
+    display:inline-block;
+    background:url("../images/icon0401.png") no-repeat -6px -599px;
+    cursor:no-drop;
+}
+.span_right {
+    line-height: 15px;
+    text-align: right;
+}
+/*end promotion management menu 2*/
+/*order*/
+        .downExcel {
+            width:20px;height:20px;
+            background:url(../images/downItem.png) center no-repeat;cursor:pointer;
+        }
+        .lookExcel {
+            width:20px;height:20px;
+            background:url(../images/lookItem.png) center no-repeat;cursor:pointer;
+        }
+.stb {
+    display:inline-block;height:40px;width:40px;float:right;
+}
+.stb11 {
+    height:20px;width:20px;display:block;
+    background:url(../images/stb.png) -20px 0 no-repeat;cursor:pointer;
+}
+.stb22 {
+    height: 20px;
+    width: 20px;
+    display: block;
+    background: url(../images/stb.png) -20px -20px no-repeat;cursor:pointer;
+}
+.stb .stb11, .stb .stb22 {
+    margin:11px auto;
+}
+.stb_on {
+    background:#B4DECD;
+}
+.stb_on .stb11 {
+    background: url(../images/stb.png) 0 0 no-repeat;
+}
+.stb_on .stb22 {
+    background: url(../images/stb.png) 0 -20px no-repeat;
+}
+.buy_bg, .sale_bg {
+    display:inline-block;height:12px;width:12px;vertical-align:middle;
+}
+.buy_bg {
+    background:#3F9673;
+}
+.sale_bg {
+    background:#F37864;
+}
+.buy_sale_tit{
+    height:40px;line-height:40px;border-bottom:1px solid #ccc;
+}
+.buy_sale_dh {
+    width:125px;float:left;text-align:center;
+    height:100%;
+}
+.probar_tit {
+    width:815px;float:left;
+    height:100%;
+}
+.brit {
+            border-right:1px dashed #ccc;
+        }
+.date_rq {
+    width:20px;float:left;text-align:center;
+}
+
+.d_28days {
+    width:560px;height:100%;float:left;
+}
+.d_29days {
+   width: 580px;height:100%;float:left;
+}
+.d_30days {
+    width:600px;height:100%;float:left;
+}
+.d_31days {
+    width:620px;height:100%;float:left;
+}
+.mbody_row {
+    width:100%;
+}
+.m_row {
+    height:25px;padding-top:5px;
+}
+.m_row_1 {
+    height:10px;background:#3F9673;
+}
+.m_row_2 {
+    height:10px;background:#F37864;
+}
+/*Analysis**/
+        .analysisIcon {
+            display:block;height:30px;width:30px;background-image:url(../images/analysisIcon.png) ;background-position:5px 7px;background-repeat:no-repeat;background-color:#B4DECD;
+        }
+        .analysis_part1 {
+            height:238px;
+            width:100%;background:#f9f9f9;
+        }
+        .check_area {
+            width:12%;
+            height:100%;float:left;
+        }
+        .analysis_img {
+            height:100%;
+            width:22%;float:left;
+        }
+        .carea {
+            margin-left:15px;margin-right:15px;margin-top:15px;
+            height:auto;
+        }
+        .carea_color {
+            display:inline-block;float:right;width:15px;height:15px;
+        }
+        .ca_div {
+            padding-bottom:10px;
+        }
+        .ca_div_s {
+            padding-top:10px;border-top:1px solid #ccc;
+        }
+        .c1 {
+            background:#B4DECD;
+        }
+        .c2 {
+            background:#1D8281;
+        }
+        .c3 {
+            background:#DB634F;
+        }
+        .c4 {
+            background:#FF9999;
+        }
+        .c5 {
+            background:#FBD258;
+        }
+        .c6 {
+            background:#F29A3F;
+        }
+        .c7 {
+            background:#44BF87;
+        }
+        .an_block {
+            height:207px;
+        }
+        .an_tit {
+            text-align:center;height:30px;line-height:30px;
+        }
+        .bk1 {
+            background:#ccc;
+        }
+        .bk2 {
+            background:#eee;
+        }
+        .antd_icon {
+            width:30px;
+            height:30px;
+            background:url(../images/tq/yunzq.png) center no-repeat;
+        }
+        .tr_hover .antd_icon,.tr_click_on .antd_icon {
+            background:url(../images/tq/yunzq_w.png) center no-repeat;
+        }

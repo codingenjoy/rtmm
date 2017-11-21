@@ -1,0 +1,38 @@
+﻿/*404*/
+.p_404 {
+    height:100%;
+    width:100%;
+    background:url(/help/images/other/404.jpg) no-repeat;
+}
+.p404_right {
+    padding-left:48px;
+    /*440-48*/
+    width:392px;
+    height:100%;
+    position:relative;float:right;
+    color:#fff;overflow:hidden;
+}
+.p404_logo {
+    height:64px;width:64px;background:url(/help/images/other/other_logo.png) no-repeat;position:absolute;top:195px;left:48px;z-index:99;
+}
+.p404_tit {
+    font-size:16px;font-weight:bold;margin-top:280px;
+}
+.p404_link {
+    margin-top:20px;
+}
+/*end 404*/
+/* nr */
+.p_nr {
+    height:100%;
+    width:100%;
+    background:url(/help/images/other/NR_bg.jpg) no-repeat;
+}
+.nr_left {
+    width:571px;
+    height:307px;
+    position:relative;z-index:200;display:inline-block;
+    top:200px;left:120px;color:#fff;overflow:hidden;
+    background:url(/help/images/other/nr_flash.gif) no-repeat;
+}
+/* nr end */

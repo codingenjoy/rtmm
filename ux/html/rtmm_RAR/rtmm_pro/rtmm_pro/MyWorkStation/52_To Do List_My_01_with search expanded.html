@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/easyUI/jquery.easyui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../css/easyUI/datagrid.css"/>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <div class="TopMenu"></div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="fff1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">我的草稿箱</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">厂商管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">商品管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A4" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">订单管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A5" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">促销管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="A1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">待办事项</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="A2" class="Sub Sub_on"><span class="L2_No qipao"></span>
+                                   <span class="SubText">我的待办</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A3" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">办理查询</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="A6" class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">公告信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                </ol>
+            </div>
+
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools3_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools23_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools32_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools10_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools17_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools19_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools24_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools25_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools28_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29_disable"></td>
+                    </tr>
+                </table>
+                <div class="RightTool ToolsBg">
+                    <div class="Tools22 Icon-size1 Tools22_on " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                <!--第一个-->
+                            <div class="tags1_left"></div>
+                            <div class="tagsM">我的待办总览</div>
+                            <div class="tags  tags_right_on"></div>
+
+
+                            <!--最后一个-->
+                            <div class="tagsM  tagsM_on">我的待办-创建新厂商</div>
+                            <div class="tags tags3_r_on"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Search Bar_on" ><!-- Bar_on-->
+                    <div class="SearchTop">
+                        <span>查询条件</span>
+                        <div class="Icon-size1 CircleClose C-id" onclick="DispOrHid('C-id')"></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SMiddle">
+                        <table class="SearchTable" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td><span>流程编号</span></td>
+                                <td>
+                                    <input type="text" class="inputText w80" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ST_td1"><span>任务类型</span></td>
+                                <td><div class="iconPut fl_left w80">
+                                    <input class="w82" type="text" />
+                                    <div class="ListWin"></div>
+                                </div></td>
+                            </tr>
+                            <tr>
+                                <td><span>流程创建时间</span></td>
+                                <td><div class="iconPut fl_left w80">
+                                    <input class="w82" type="text" />
+                                    <div class="clock"></div>
+                                </div>-
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>&nbsp;</span></td>
+                                <td><div class="iconPut fl_left w80">
+                                    <input class="w82" type="text" />
+                                    <div class="clock"></div>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ST_td1"><span>流程版本</span></td>
+                                <td><select class="w80"><option></option></select></td>
+                            </tr>
+                            <tr>
+                                <td class="ST_td1"><span>流程节点</span></td>
+                                <td><select class="w80"><option></option></select></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="align_center sp_store_off">--------------------------------------------</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>打印编号</span></td>
+                                <td>
+                                    <input type="text" class="inputText w80" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>采购厂编</span></td>
+                                <td>
+                                    <input type="text" class="inputText w80" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>公司名称</span></td>
+                                <td>
+                                    <input type="text" class="inputText w80" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SearchFooter">
+                        <div class="Icon-size1 Tools20"></div>
+                        <div class="Icon-size1 Tools6"></div>
+                    </div>
+                </div>
+                <div class="Content" style="width:74%;">
+                    <div class="htable_div">
+                        <table>
+                        <thead>
+                            <tr>
+                                <td><div class="t_cols align_center" style="width:30px;"><input type="checkbox" name="tck"/></div></td>
+                                <td><div class="t_cols" style="width:100px;">流程编号<!--<div style="display:inline-block;width:10px;height:20px;"></div>--></div></td>
+                                <td><div class="t_cols" style="width:250px;">任务类型</div></td>
+                                <td><div class="t_cols" style="width:150px;">流程创建时间</div></td>
+                                <td><div class="t_cols" style="width:100px;">节点名称</div></td>
+                                <td><div class="t_cols" style="width:100px;">上一处理人</div></td>
+                                <td><div class="t_cols" style="width:100px;">当前处理人</div></td>
+                                <td><div style="width:16px;">&nbsp;</div></td>
+                            </tr>
+                        </thead>
+	                </table>
+                    </div>
+                    <div class="btable_div" style="height:510px;">
+                        <table  class="single_tb w100"><!--multi_tb为多选 width:1001px;-->
+                            <tr>
+                                <td class="align_center" style="width:30px;"><input type="checkbox" name="tck"/></td>
+                                <td style="width:101px;">123456</td>
+                                <td style="width:251px;">XXXXX有限公司世界杯世界杯世界杯</td>
+                                <td style="width:151px;">123456</td>
+                                <td style="width:101px;">XXXXX有限公司</td>
+                                <td style="width:101px;">P&G</td>
+                                <td style="width:101px;">123456</td>
+                                <td style="width:auto">&nbsp;</td>
+                            </tr>
+                        </table>    
+                    </div> 
+                    <div class="paging">
+	                    <div class="fl_left">
+		                    第1-20项,共 5 项&nbsp;&nbsp;|&nbsp;每页显示 <select>
+			                    <option value="10">10</option>
+			                    <option value="20" selected="selected">20</option>
+			                    <option value="30">30</option>
+		                    </select> 项
+	                    </div>
+	                    <div class="fl_right page_list">
+                            <span class="fl_right" style="margin-right:10px;">&nbsp;&nbsp;&nbsp;到第 <input name="pageNo" id="goto_page" class="page_no_input" maxlength="5" type="text"/> 页 <input value="go"  type="button"/></span>
+                                <a class="page_end_block" title="尾页"></a>
+                                <a class="page_next_block" title="下一页"></a>
+                                <a title="6" class="num">999999</a>
+                                <a style="cursor:default;">...</a>
+                                <a title="2" class="num">3</a>
+                                <a title="2" class="num">2</a>
+                                <a title="1" class="num">1</a>
+                                <a title="上一页" class="page_prev_block_off"></a>
+                                <a title="首页" class="page_first_block_off"></a>  
+	                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        $('#dg').datagrid({
+            rownumbers: false,
+            //singleSelect: false,
+            pagination: true,
+            pageSize: 20,
+            url: 'json/datagrid_data5.json',
+            columns: [[
+            { field: 'ck', checkbox: true },
+            { field: 'no', title: '公司编号', sortable: true, align: 'right', halign: 'center' ,width:100},
+            { field: 'name', title: '公司名称', sortable: true, halign: 'center', width: 200 },
+            { field: 'type', title: '公司类型', halign: 'center', width: 130 },
+            { field: 'status', title: '状态', halign: 'center', width: 80 },
+            { field: 'status', title: '税号', halign: 'center', width: 80 },
+            { field: 'city', title: '注册城市', halign: 'center', width: 80 },
+            { field: 'temp', title: ' ', halign: 'center', width:38 }
+
+            ]],
+            onClickRow: function (rowIndex, rowData) {
+                var no = rowData.no;
+                //alert('公司编号:' + no);
+                $(".datagrid-row").each(function () {
+                    var _no = $(this).find(".datagrid-cell-c1-no").text();
+                    //alert(_no);
+                    if (no == _no) {
+                        $(this).find("input").attr("checked", "checked");
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

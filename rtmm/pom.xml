@@ -1,0 +1,428 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>auchan.rtmm</groupId>
+	<artifactId>rtmm</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>Auchan RTMM module</name>
+	<properties>
+		<cxf.version>3.0.1</cxf.version>
+		<!-- maven库路径配置,会自动从setting.xml中读取localRepository配置 -->
+		<mvn.repository.path>${settings.localRepository}</mvn.repository.path>
+		<!-- jboss路径配置,需要设置环境变量JBOSS_HOME,比如D:\javatools\jboss-eap-6.2 -->
+		<jboss.path>${env.JBOSS_HOME}</jboss.path>
+		<!-- jboss6业务相关模块配 -->
+		<auchan.model.path>\modules\com\auchan\common\main</auchan.model.path>
+		<rtmm.model.path>\modules\com\auchan\rtmm\main</rtmm.model.path>
+		<!-- jboss5业务相关模块 -->
+		<!-- <auchan.model.path>\server\default\lib</auchan.model.path> <rtmm.model.path>\server\default\lib</rtmm.model.path> -->
+	</properties>
+	<dependencies>
+		<!-- 业务依赖包 开始 -->
+		<dependency>
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-web-common</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-web-plugins</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-web-catalog</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-web-supplier</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-web-items</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency> 
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-web-promotion</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency> 
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-web-contract</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency> 
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-web-rp</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency> 
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-web-contract</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-web-orders</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-web-users</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-web-report</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>auchan</groupId>
+			<artifactId>auchan-common-webtag</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Compiler -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+			<!-- Resources -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<!-- War -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<webResources>
+						<resource>
+							<directory>src/main/webapp/WEB-INF</directory>
+							<filtering>true</filtering>
+							<targetPath>WEB-INF</targetPath>
+						</resource>
+					</webResources>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.1</version>
+				<configuration>
+					<sources>
+						<source>src/main/java</source>
+						<source>src/main/resources</source>
+					</sources>
+				</configuration>
+			</plugin>
+
+			<!-- copy ext lib -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<id>prepare-dependencies-repackage-copy</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo
+									message="********************copy ext lib begin*************************" />
+								<!-- <property name="mvn_path" value="D:\Application\mavenfile\.m2\repository" 
+									/> <property name="jboss_path" value="C:\Applications\jboss-eap-6.2" /> -->
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-codetable\0.1-SNAPSHOT\auchan-common-codetable-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-codetable-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-cache\0.1-SNAPSHOT\auchan-common-cache-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-cache-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-cartridge-idgen\0.1-SNAPSHOT\auchan-common-cartridge-idgen-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-cartridge-idgen-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-cartridge-spring\0.1-SNAPSHOT\auchan-common-cartridge-spring-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-cartridge-spring-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-core-messagingutil\0.1-SNAPSHOT\auchan-common-core-messagingutil-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-core-messagingutil-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-core-startup\0.1-SNAPSHOT\auchan-common-core-startup-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-core-startup-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-core-systemconfig\0.1-SNAPSHOT\auchan-common-core-systemconfig-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-core-systemconfig-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-core-typelib\0.1-SNAPSHOT\auchan-common-core-typelib-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-core-typelib-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-logging\0.1-SNAPSHOT\auchan-common-logging-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-logging-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-security-common\0.1-SNAPSHOT\auchan-common-security-common-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-security-common-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-security-core\0.1-SNAPSHOT\auchan-common-security-core-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-security-core-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<!-- <copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-report-typelib\0.1-SNAPSHOT\auchan-common-report-typelib-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-report-typelib-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-reportservice\0.1-SNAPSHOT\auchan-common-reportservice-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-reportservice-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-report-plugin\0.1-SNAPSHOT\rtmm-report-plugin-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\rtmm-report-plugin-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-export-fileservice-plugin\0.1-SNAPSHOT\rtmm-export-fileservice-plugin-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\rtmm-export-fileservice-plugin-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-socket\0.1-SNAPSHOT\auchan-common-socket-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-socket-0.1-SNAPSHOT.jar"
+									overwrite="true" /> -->
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-users-common\0.1-SNAPSHOT\rtmm-users-common-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-users-common-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-users-core\0.1-SNAPSHOT\rtmm-users-core-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-users-core-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-catalogue-common\0.1-SNAPSHOT\rtmm-catalogue-common-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-catalogue-common-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-catalogue-core\0.1-SNAPSHOT\rtmm-catalogue-core-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-catalogue-core-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-ho-entity-common\0.1-SNAPSHOT\rtmm-ho-entity-common-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-ho-entity-common-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-ho-entity-core\0.1-SNAPSHOT\rtmm-ho-entity-core-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-ho-entity-core-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-supplier-common\0.1-SNAPSHOT\rtmm-supplier-common-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-supplier-common-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-supplier-core\0.1-SNAPSHOT\rtmm-supplier-core-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-supplier-core-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-items-core\0.1-SNAPSHOT\rtmm-items-core-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-items-core-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-items-common\0.1-SNAPSHOT\rtmm-items-common-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-items-common-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-common-core\0.1-SNAPSHOT\rtmm-common-core-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-common-core-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-common-common\0.1-SNAPSHOT\rtmm-common-common-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-common-common-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-promotion-core\0.1-SNAPSHOT\rtmm-promotion-core-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-promotion-core-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-promotion-common\0.1-SNAPSHOT\rtmm-promotion-common-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-promotion-common-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-orders-core\0.1-SNAPSHOT\rtmm-orders-core-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-orders-core-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-orders-common\0.1-SNAPSHOT\rtmm-orders-common-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-orders-common-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-contract-core\0.1-SNAPSHOT\rtmm-contract-core-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-contract-core-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-contract-common\0.1-SNAPSHOT\rtmm-contract-common-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-contract-common-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+																	<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-rp-core\0.1-SNAPSHOT\rtmm-rp-core-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-rp-core-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-rp-common\0.1-SNAPSHOT\rtmm-rp-common-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-rp-common-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<!-- <copy
+									file="${mvn.repository.path}\auchan\auchan-common-schedule\0.1-SNAPSHOT\auchan-common-schedule-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${auchan.model.path}\auchan-common-schedule-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-nr-web\0.1-SNAPSHOT\rtmm-nr-web-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\rtmm-nr-web-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-nr-core\0.1-SNAPSHOT\rtmm-nr-core-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-nr-core-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-nr-common\0.1-SNAPSHOT\rtmm-nr-common-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}${rtmm.model.path}\rtmm-nr-common-0.1-SNAPSHOT.jar"
+									overwrite="true" /> -->
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\auchan-common-webtag\0.1-SNAPSHOT\auchan-common-webtag-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\auchan-common-webtag-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-web-common\0.1-SNAPSHOT\rtmm-web-common-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\rtmm-web-common-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-web-catalog\0.1-SNAPSHOT\rtmm-web-catalog-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\rtmm-web-catalog-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-web-items\0.1-SNAPSHOT\rtmm-web-items-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\rtmm-web-itmes-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-web-supplier\0.1-SNAPSHOT\rtmm-web-supplier-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\rtmm-web-supplier-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-web-orders\0.1-SNAPSHOT\rtmm-web-orders-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\rtmm-web-orders-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+									
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-web-orders\0.1-SNAPSHOT\rtmm-web-orders-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\rtmm-web-orders-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-web-promotion\0.1-SNAPSHOT\rtmm-web-promotion-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\rtmm-web-promotion-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-web-users\0.1-SNAPSHOT\rtmm-web-users-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\rtmm-web-users-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-web-ws\0.1-SNAPSHOT\rtmm-web-ws-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\rtmm-web-ws-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+										
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-web-plugins\0.1-SNAPSHOT\rtmm-web-plugins-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\rtmm-web-plugins-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+									
+								 <copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-web-contract\0.1-SNAPSHOT\rtmm-web-contract-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\rtmm-web-contract-0.1-SNAPSHOT.jar"
+									overwrite="true" /> 
+									
+								<copy verbose="on"
+									file="${mvn.repository.path}\auchan\rtmm\rtmm-web-rp\0.1-SNAPSHOT\rtmm-web-rp-0.1-SNAPSHOT.jar"
+									tofile="${jboss.path}\standalone\deployments\rtmm.war\WEB-INF\lib\rtmm-web-rp-0.1-SNAPSHOT.jar"
+									overwrite="true" />
+								<echo
+									message="********************copy ext lib end*************************" />
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.maven.plugins
+										</groupId>
+										<artifactId>
+											maven-antrun-plugin
+										</artifactId>
+										<versionRange>
+											[1.6,)
+										</versionRange>
+										<goals>
+											<goal>run</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

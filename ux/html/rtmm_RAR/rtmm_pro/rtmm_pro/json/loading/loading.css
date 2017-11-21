@@ -1,0 +1,31 @@
+﻿#grid_layer{
+    background: url("../images/role_bg.png") repeat;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 10000;
+}
+#g_loading {
+    width:200px;
+    height:200px;
+    background:url(../images/easyUI/loading.gif) no-repeat center;
+    cursor:pointer;
+}
+#loadingClose {
+    width: 32px;
+    height: 29px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    background:url(../images/icon0402.png) -57px -11px no-repeat;
+    display:none;
+}
+#loadingClose:hover {
+    background:url(../images/icon0402.png) -524px 0px no-repeat;
+}
+
+    #g_loading:hover #loadingClose{
+        display:block;
+    }

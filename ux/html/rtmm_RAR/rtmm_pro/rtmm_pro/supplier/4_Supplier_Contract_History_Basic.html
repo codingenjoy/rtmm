@@ -1,0 +1,457 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/My97DatePicker/WdatePicker.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $(".mpbtn").click(function (e) {
+                $ets = $(e.target);
+                if (!$ets.hasClass("item_on")) {
+                    $("."+$(".gyBlock .item_on").prop("id")).toggle();
+                    $("." + $ets.prop("id")).toggle();
+                }
+            });
+
+        });
+    </script>
+
+    <style type="text/css">
+        .fl_left {
+            margin-right:3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="TopMenu">
+        <div class="Logo"></div>
+        <ol class="MainMenu">
+            <li><a class="catalogue_management" title="分类管理"><span class="longText">分类管理</span></a></li>
+            <li><a class="supplier_management" title="厂商管理"><span class="longText">厂商管理</span></a></li>
+            <li><a class="item_management" title="商品管理"><span class="longText">商品管理</span></a></li>
+            <li><a class="order_management" title="订单管理"><span class="longText">订单管理</span></a></li>
+            <li><a class="promotion_management promotion_management_on" title="促销管理"><span class="longText">促销管理</span></a></li>
+            <li><a class="achievement_analysis" title="业绩分析"><span class="longText">业绩分析</span></a></li>
+            <li><a class="parameter_management" title="参数管理"><span class="longText">参数管理</span></a></li>
+            <li><a class="day-end_management" title="日结管理"><span class="longText">日结管理</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">我的工作台</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">ToBeAGood Programer!</span></a></li>
+        </ol>
+        <ol class="RMenu">
+            <li class="MenuDrop"><a class="RM4"></a>
+                <ol class="FavDrop">
+                    <li class="FavDrop1">
+                        <div class="RM1"></div>
+                        <span>我的收藏</span>
+                    </li>
+                    <li class="FavDrop2">
+                        <div class="RM3"></div>
+                        <span>语言设置</span></li>
+                    <li class="FavDrop3">
+                        <div class="RM2"></div>
+                        <span>密码设置</span></li>
+                    <li class="FavDrop5">
+                        <div class="RM5"></div>
+                        <span>退出帐号</span></li>
+                </ol>
+            </li>
+            <li class="RMenu_Text">
+                <div class="longText">欢迎，Java.管理员 Csharp Dot</div>
+            </li>
+        </ol>
+        <ol class="MyFav" style="display: none;">
+            <li><a>我的收藏1</a><div class="Closediv CircleClose"></div>
+            </li>
+            <li><a>我的收藏2</a><div class="Closediv CircleClose"></div>
+            </li>
+            <li><a>我的收藏3</a><div class="Closediv CircleClose"></div>
+            </li>
+            <li><a>我的收藏4</a><div class="Closediv CircleClose"></div>
+            </li>
+            <li><a>我的收藏5</a><div class="Closediv CircleClose"></div>
+            </li>
+        </ol>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')">
+                <div class="SideBarText">公司信息</div>
+            </div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="1www" class="Sub" href="Supplier-11.html"><span class="L1_No"></span>
+                            <span class="SubText">集团信息</span>
+                            <span class="Fav"></span></a>
+                        <!-- Fav_On-->
+                    </li>
+                    <li>
+                        <a id="1ee" class="Sub" href="Supplier-21.html"><span class="L1_No"></span>
+                            <span class="SubText">公司信息</span>
+                            <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a id="A1" class="Sub"><span class="L1_Yes"></span>
+                            <span class="SubText">合同管理</span>
+                            <span class="Fav"></span></a>
+                        <ol style="display: block;">
+                            <li>
+                                <a id="A2" class="Sub" href="#"><span class="L2_No"></span>
+                                    <span class="SubText">本年度合同管理</span>
+                                    <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a id="A3" class="Sub Sub_on" href="#"><span class="L2_No"></span>
+                                    <span class="SubText">历史合同查询</span>
+                                    <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a id="A4" class="Sub" href="#"><span class="L2_No"></span>
+                                    <span class="SubText">赞助科目查询</span>
+                                    <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a id="A5" class="Sub" href="#"><span class="L2_No"></span>
+                                    <span class="SubText">系统界面模板</span>
+                                    <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a id="A6" class="Sub" href="#"><span class="L2_No"></span>
+                                    <span class="SubText">纸板合同模板</span>
+                                    <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="fff1" class="Sub"><span class="L1_Yes"></span>
+                            <span class="SubText">厂商管理</span>
+                            <span class="Fav"></span></a>
+                        <ol style="display: block;">
+                            <li>
+                                <a id="ggg" class="Sub" href="Supplier-31.html"><span class="L2_No"></span>
+                                    <span class="SubText">厂商信息</span>
+                                    <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a id="dsa" class="Sub" href="Supplier-41.html"><span class="L2_No"></span>
+                                    <span class="SubText">未生效厂商信息</span>
+                                    <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')"></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3"></td>
+                        <td></td>
+                        <td class="Tools4"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td id="tools11" class="Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12   testAdd"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools23"></td>
+                        <td></td>
+                        <td class="Tools24"></td>
+                        <td></td>
+                        <td class="Tools25"></td>
+                        <td></td>
+                        <td class="Tools26"></td>
+                        <td></td>
+                        <td class="Tools27"></td>
+                        <td></td>
+                        <td class="Tools28"></td>
+                        <td></td>
+                        <td class="Tools29"></td>
+                        <td></td>
+                        <td class="Tools30"></td>
+                        <td></td>
+                        <td class="Tools31"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Tools22 Icon-size1 " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                <!--第一个-->
+                <div class="tags1_left"></div>
+                <div class="tagsM">已生效合同</div>
+
+                <div class="tags tags3 tags_right_on"></div>
+                <!--一定不要忘了tag3-->
+                <!--add-->
+                <div class="tagsM_q  tagsM_on">创建新合同</div>
+                <div class="tags3_close_on">
+                    <div class="tags_close"></div>
+                </div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+                    <div class="CInfo">
+                        <span>项</span>
+                        <span>10，000</span>
+                        <span>/</span>
+                        <span>1</span>
+                        <span>第</span>
+                        <span>|</span>
+                        <span>张三</span>
+                        <span>修改人</span>
+                        <span>2014-03-03</span>
+                        <span>修改日期</span>
+                        <span>李四</span>
+                        <span>建档人</span>
+                        <span>2014-02-02</span>
+                        <span>创建日期</span>
+                    </div>
+
+                    <div class="CM" style="height: 180px;">
+                        <div class="inner_half">
+                            <div class="CM-bar">
+                                <div>合同基本信息</div>
+                            </div>
+                            <div class="CM-div">
+                                    <div class="ig_top20">
+                                        <div class="icol_text w14"><span>订单号码</span></div>
+                                        <input type="text" class="inputText w20 Black fl_left"/>
+                                        <div class="icol_text w7"><span>年份</span></div>
+                                        <input type="text" class="inputText w10 fl_left"/>
+                                        <div class="icol_text w14"><span>合同状态</span></div>
+                                        <input type="text" class="inputText w15 Black fl_left"/>
+                                    </div>
+                                    <div class="ig">
+                                        <div class="icol_text w14"><span>厂编</span></div>
+                                        <div class="iconPut w20 fl_left">
+                                            <input class="w80" type="text"/>
+                                            <div class="ListWin"></div>
+                                        </div>
+                                        <input type="text" class="inputText w47 fl_left Black"/>
+                                    </div>
+                                    <div class="ig">
+                                        <div class="icol_text w14"><span>税号</span></div>
+                                        <input type="text" class="inputText w40 Black fl_left"/>
+                                        <div class="icol_text w7"><span>税率</span></div>
+                                        <input type="text" class="inputText w20 fl_left"/>
+                                    </div>
+                                <div class="ig">
+                                        <div class="icol_text w14"><span>预估营业额</span></div>
+                                        <input type="text" class="inputText w20 fl_left"/>
+                                        <div class="icol_text"><span>&nbsp;元&nbsp;&nbsp;预估毛利率</span></div>
+                                        <input type="text" class="inputText w20 fl_left"/>
+                                        <div class="icol_text"><span>%</span></div>
+                                    </div>
+                                <div class="ig">
+                                        <div class="icol_text w14"><span>备注</span></div>
+                                        <input type="text" class="inputText w68 fl_left"/>
+                                        
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="inner_half">
+                            <div class="ig_top20">
+                                        <div class="icol_text w14"><span>课别</span></div>
+                                        <div class="iconPut w15 fl_left">
+                                            <input class="w70" type="text"/>
+                                            <div class="ListWin"></div>
+                                        </div>
+                                        <input type="text" class="inputText w20 fl_left Black"/>
+                                        <div class="icol_text w7"><span>采购</span></div>
+                                        <input type="text" class="inputText w15"/>
+                             </div>
+                            <div class="ig">
+                                        <div class="icol_text w14"><span>厂商种类</span></div>
+                                        <input type="text" class="inputText w30 Black fl_left"/>
+                                        <div class="icol_text">&nbsp;合同标准&nbsp;</div>
+                                        <input type="text" class="inputText w12_5 Black fl_left"/>
+                                        <div class="icol_text">&nbsp;采购方式&nbsp;</div>
+                                        <input type="text" class="inputText w12_5 Black fl_left"/>
+                                    </div>
+                            <div class="ig">
+                                        <div class="icol_text w14"><span>有效期间</span></div>
+                                        <input class="Wdate w20 fl_left" type="text" onclick="WdatePicker({ isShowClear: false, readOnly: true })" />
+                                        <div class="icol_text">&nbsp;-&nbsp;</div>
+                                        <input class="Wdate w20 fl_left" type="text" onclick="WdatePicker({ isShowClear: false, readOnly: true })" />
+                                        <input type="checkbox" class="fl_left" style="margin:6px auto auto 7px;" />
+                                        <div class="icol_text">&nbsp;自动续约&nbsp;</div>
+                                    </div>
+                            <div class="ig">
+                                        <div class="icol_text w14"><span>付款天数</span></div>
+                                        <input type="text" class="inputText w30 Black fl_left"/>
+                                        <div class="icol_text">&nbsp;天&nbsp;&nbsp;付款周期&nbsp;</div>
+                                        <select class="w20"><option></option></select>
+                                    </div>
+                            <div class="ig">
+                                        <div class="icol_text w14"><span>凭证</span></div>
+                                        <select class="w30"><option></option></select>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="gyBlock">
+                        <span class="mpbtn item item_on" id="jbtk">基本条款</span>
+                        <span class="mpbtn item" id="fltk">返利条款</span>
+                        <span class="mpbtn item " id="jdtk">阶段条款</span>
+                    </div>
+                    <div class="contract jbtk">
+                        <div class="CM" style="height:100%">
+                            <div class="CM-bar"></div>
+                            <div class="CM-div">
+                                <table class="tkhead">
+                                    <tr>
+                                        <td style="width:55px;">编号</td>
+                                        <td style="width:155px;">科目名称</td>
+                                        <td style="width:105px;">英文名称</td>
+                                        <td style="width:105px;">支付方式</td>
+                                        <!--<td style="width:105px;">期间始</td>
+                                        <td style="width:105px;">期间末</td>
+                                        <td style="width:125px;">达到(元/%)</td>
+                                        <td style="width:35px;"></td>-->
+                                        <td style="width:105px;">扣款(元/%)</td>
+                                        <td style="width:33px;"></td>
+                                        <td style="width:105px;">扣款频率</td>
+                                        <td style="width:105px;">计算方式</td>
+                                    </tr>
+                                </table>  
+                                <div class="tkbody" >
+                                    <div class="ig">
+                                        <input type="text" class="inputText fl_left" style="width:50px;" />
+                                        <input type="text" class="inputText fl_left" style="width:150px;" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <!--<input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <input type="text" class="inputText fl_left" style="width:120px;" />
+                                        <input type="text" class="inputText fl_left" style="width:30px;" value="元" />-->
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <input type="text" class="inputText fl_left" style="width:30px;" value="元" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                    </div>
+                                    
+                                </div> 
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="contract fltk" style="display:none;">
+                        <div class="CM" style="height:100%">
+                            <div class="CM-bar"></div>
+                            <div class="CM-div">
+                                <table class="tkhead">
+                                    <tr>
+                                        <td style="width:55px;">编号</td>
+                                        <td style="width:155px;">科目名称</td>
+                                        <td style="width:105px;">英文名称</td>
+                                        <td style="width:105px;">支付方式</td>
+                                        <!--<td style="width:105px;">期间始</td>
+                                        <td style="width:105px;">期间末</td>-->
+                                        <td style="width:125px;">达到(元/%)</td>
+                                        <td style="width:35px;"></td>
+                                        <td style="width:105px;">扣款(元/%)</td>
+                                        <td style="width:33px;"></td>
+                                    </tr>
+                                </table>  
+                                <div class="tkbody" >
+                                    <div class="ig">
+                                        <input type="text" class="inputText fl_left" style="width:50px;" />
+                                        <input type="text" class="inputText fl_left" style="width:150px;" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <!--<input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />-->
+                                        <input type="text" class="inputText fl_left" style="width:120px;" />
+                                        <input type="text" class="inputText fl_left" style="width:30px;" value="元" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <input type="text" class="inputText fl_left" style="width:30px;" value="元" />
+                                    </div>
+                                    
+                                </div> 
+                            </div>
+                        </div>
+                        <!--////////////////////////-->
+                    </div>
+
+                    <div class="contract jdtk" style="display:none;">
+                        <div class="CM" style="height:100%">
+                            <div class="CM-bar"></div>
+                            <div class="CM-div">
+                                <table class="tkhead">
+                                    <tr>
+                                        <td style="width:55px;">编号</td>
+                                        <td style="width:155px;">科目名称</td>
+                                        <td style="width:105px;">英文名称</td>
+                                        <td style="width:105px;">支付方式</td>
+                                        <td style="width:105px;">期间始</td>
+                                        <td style="width:105px;">期间末</td>
+                                        <td style="width:125px;">达到(元/%)</td>
+                                        <td style="width:35px;"></td>
+                                        <td style="width:105px;">扣款(元/%)</td>
+                                        <td style="width:33px;"></td>
+                                    </tr>
+                                </table>  
+                                <div class="tkbody" >
+                                    <div class="ig">
+                                        <input type="text" class="inputText fl_left" style="width:50px;" />
+                                        <input type="text" class="inputText fl_left" style="width:150px;" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <input type="text" class="inputText fl_left" style="width:120px;" />
+                                        <input type="text" class="inputText fl_left" style="width:30px;" value="元" />
+                                        <input type="text" class="inputText fl_left" style="width:100px;" />
+                                        <input type="text" class="inputText fl_left" style="width:30px;" value="元" />
+                                    </div>
+                                    
+                                </div> 
+                            </div>
+                        </div>
+                        <!--////////////////////////-->
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

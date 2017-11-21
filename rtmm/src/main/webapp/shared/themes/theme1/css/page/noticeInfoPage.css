@@ -1,0 +1,75 @@
+.notice {
+	height: 545px;
+	overflow-y: auto;
+	float: left;
+	width: 100%
+}
+
+.notice_each {
+	max-height: 170px;
+	overflow-y: auto;
+	margin-bottom: 20px;
+}
+
+.notice_banner {
+	background: #EEEEEE;
+	height: 30px;
+	border-left: 17px solid #3F9673;
+	color: grey;
+}
+
+.notice_title {
+	margin-top: 5px;
+	padding-left: 25px;
+	height: 20px;
+	float: left;
+	color: #333333;
+}
+
+.notice_content {
+	padding: 10px;
+	clear: both;
+	color: #333333;
+}
+
+.r_btn,.r_btn_hide,.r_btn_show {
+	height: 20px;
+	margin-right: 10px;
+	background: #EEEEEE;
+	margin-top: 5px;
+	color: grey;
+	text-align: center;
+	line-height: 20px;
+}
+
+.r_btn {
+	width: 70px;
+	margin-right: 10px;
+}
+
+.r_btn_hide,.r_btn_show {
+	color: #333333;
+	cursor: pointer;
+	width: 70px;
+	margin-left: 10px;
+}
+
+.r_btn_hide {
+	background: url("../../images/SubMenuExpandArrow.png");
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.r_btn_show {
+	background: url("../../images/SubMenuExpandArrow_1.png");
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.f_l {
+	float: left;
+}
+
+.f_r {
+	float: right;
+}

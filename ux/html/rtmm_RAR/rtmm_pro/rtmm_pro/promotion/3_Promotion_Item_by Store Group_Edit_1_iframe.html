@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/default.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/iframeContent.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/My97DatePicker/WdatePicker.js" charset="utf-8"></script>
+    <link href="../js/freezenColums/f.css" rel="stylesheet" type="text/css" />
+    <script src="../js/freezenColums/f.js" type="text/javascript"></script>
+    <style type="text/css">
+        /*overwrite*/
+        .CInfo {
+            height:40px;
+            background-image:url(../images/promotion_33.jpg);
+            background-repeat:no-repeat;
+        }
+        .fl_left {
+            margin-right:3px;
+        }
+        .lineToolbar {
+            margin-top:0;
+        }
+
+        input[type="checkbox"] {
+            vertical-align:initial;
+        }
+        .listIcon,.listIcon_off {
+            margin-top:3px;
+            float:left;
+        }
+
+         /*frozen table*/
+        .frozen_div {
+            height: 190px;
+            overflow: hidden;
+            border-bottom: 1px solid #ccc;
+        }
+        #frozen_cols {
+            height:100%;
+            width:240px;
+        }
+        #move_cols {
+            height:100%;/* equals #frozen_cols.height */
+            width:720px;
+        }
+        #f_cols_head, #m_cols_head {
+            height: 61px;
+            border-bottom: 1px solid #808080;
+        }
+        #f_cols_body,#m_cols_body {
+            height:122px;/* equals #frozen_cols.height - #f_cols_head.height(default value is 40px) */
+        }
+    </style>
+</head>
+<body>
+<div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3"></td>
+                        <td></td>
+                        <td class="Tools4"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td id="tools11" class="Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12   testAdd"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools23"></td>
+                        <td></td>
+                        <td class="Tools24"></td>
+                        <td></td>
+                        <td class="Tools25"></td>
+                        <td></td>
+                        <td class="Tools26"></td>
+                        <td></td>
+                        <td class="Tools27"></td>
+                        <td></td>
+                        <td class="Tools28"></td>
+                        <td></td>
+                        <td class="Tools29"></td>
+                        <td></td>
+                        <td class="Tools30"></td>
+                        <td></td>
+                        <td class="Tools31"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Tools22 Icon-size1 " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                            <!--第一个-->
+                            <div class="tags1_left"></div>
+                            <div class="tagsM">DM期数与商品-按组别查询</div>
+                            <div class="tags tags3 tags_right_on"></div>
+                            <!--一定不要忘了tag3-->
+                            <!--add-->
+                            <div class="tagsM_q  tagsM_on">修改促销商品</div>
+                            <div class="tags3_close_on">
+                                <div class="tags_close"></div>
+                            </div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+                    <div class="CInfo"></div>
+                    <div class="CM" style="height:50px;">
+                        <div class="CM-bar"><div>档期</div></div>
+                        <div class="CM-div">
+                            <div class="ig top15">
+                                <div class="icol_text w7"><span>档期</span></div>
+                                <input type="text" class="inputText w10 Black" />&nbsp;&nbsp;&nbsp;主题&nbsp;
+                                <input type="text" class="inputText w23 Black" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="CM" style="height:140px;margin-top:2px;">
+                        <div class="CM-bar"><div>促销商品基本信息</div></div>
+                        <div class="CM-div">
+                            <div class="inner_half">
+                                <div class="ig_top20">
+                                    <div class="icol_text w14"><span>课别</span></div>
+                                    <input type="text" class="inputText w15 Black" />
+                                    &nbsp;<input type="text" class="inputText Black w25" />
+                                </div>
+                                <div class="ig">
+                                    <div class="icol_text w14"><span>代号类别</span></div>
+                                    <input type="text" class="inputText w20 Black" />
+                                </div>
+                                <div class="ig">
+                                    <div class="icol_text w14"><span>代号</span></div>
+                                    <input type="text" class="inputText w20 Black" />
+                                    &nbsp;<input type="text" class="inputText Black w53" />
+                                </div>
+                                <div class="ig">
+                                        <div class="icol_text w14"><span>备注</span></div>
+                                        <input type="text" class="inputText w75" />
+                                    </div>
+                            </div>
+                            <div class="inner_half">
+                                <div class="ig_top20">
+                                    <div class="icol_text w14"><span>DM状态</span></div>
+                                    <select class="w15"><option>rrr</option></select>
+                                </div>
+                                <div class="ig">
+                                    <div class="icol_text w14"><span>参与组别</span></div>
+                                    <input type="text" class="inputText w60 Black" />
+                                </div>
+                                <div class="ig">
+                                    <div class="icol_text w14"><span>显示名称</span></div>
+                                    <input type="text" class="inputText w60" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="CM" style="height:230px;margin-top:2px;">
+                        <div class="CM-bar"><div>商品信息</div></div>
+                        <div class="CM-div">
+                            <div class="zt_db">
+                                
+                                <div class="frozen_div">
+                                    <!--left frozen parts of a table-->
+                                    <div id="frozen_cols">
+                                        <!--frozen top head parts-->
+                                        <div id="f_cols_head">
+                                            <div class="f_head_1">
+                                                <table cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td><div style="width:30px;">&nbsp;</div></td>
+                                                        <td><div style="width:80px;">货号</div></td>
+                                                        <td><div style="width:130px;">品名</div></td>
+                                                    </tr>
+                                                    <tr style="border-top:1px solid #808080;background:#ccc;">
+                                                        <td><div style="width:30px;">&nbsp;</div></td>
+                                                        <td><div style="width:80px;">&nbsp;</div></td>
+                                                        <td><div style="width:130px;">&nbsp;</div></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!--frozen body parts-->
+                                        <div id="f_cols_body">
+                                            <table cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="width:30px;"><input type="checkbox" /></td>
+                                                    <td><div style="width:80px;"><input type="text" class="inputText w95 Black" /></div></td>
+                                                    <td><div style="width:130px;"><input type="text" class="inputText w95 Black" /></div></td>
+                                               </tr>
+                                                
+
+                                                <!--占位行-->
+                                                <tr>
+                                                    <td  style="width:30px;"><div style="width:30px;">&nbsp;</div></td>
+                                                    <td><div style="width:80px;">&nbsp;</div></td>
+                                                    <td><div style="width:130px;">&nbsp;</div></td>
+                                               </tr>
+                                           </table>
+                                        </div>
+                                    </div>
+                                    <!--right parts that can scroll-->
+                                    <div id="move_cols">
+                                        <!--frozen top head parts when drag the y-scroll -->
+                                        <div id="m_cols_head">
+                                             <table cellpadding="0" cellspacing="0">
+                                                  <tr>
+                                                      <td><div style="width:110px;">商品状态 </div></td>
+                                                      <td><div style="width:100px;">促销类型</div></td>
+                                                      <td><div style="width:100px;">促销进价(元)</div></td>
+                                                      <td><div style="width:100px;">促销售价(元)</div></td>
+
+                                                      <td><div style="width:110px;">供货量</div></td>
+
+                                                      <td><div style="width:160px;">供货量分配方式</div></td>
+                                                      <td><div style="width:110px;">陈列</div></td>
+
+                      
+                                                      <td><div style="width:90px;">&nbsp;</div></td><!--占位-->
+                                                  </tr>
+                                                  <tr style="border-top:1px solid #808080;background:#ccc;">
+                                                      <td><div style="width:110px;">&nbsp;</div></td>
+                                                      <td><div style="width:100px;"><select class="inputText w95"><option></option></select></div></td>
+                                                      <td><div style="width:100px;"><input type="text" class="inputText w95" /></div></td>
+                                                      <td><div style="width:100px;"><input type="text" class="inputText w95" /></div></td>
+                                                      <td><div style="width:110px;"><input type="text" class="inputText w95" /></div></td>
+                                                      <td><div style="width:160px;"><input type="text" class="inputText w95" /></div></td>
+                                                      <td><div style="width:110px;"><select class="inputText w95"><option></option></select></div></td>
+
+                                                      <td><div style="width:90px;">&nbsp;</div></td><!--占位-->
+                                                  </tr>
+                                              </table>
+                                        </div>
+                                        <!--this parts can be scrolled all the time-->
+                                        <div id="m_cols_body">
+                                            <table cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td><div style="width:110px;"><input type="text" class="inputText w93 Black" /></div></td>
+                                                    <td><div style="width:100px;"><input type="text" class="inputText w95" /></div></td>
+                                                    <td><div style="width:100px;"><input type="text" class="inputText w95" /></div></td>
+                                                    <td><div style="width:100px;"><input type="text" class="inputText w95" /></div></td>
+                                                    <td><div style="width:110px;"><input type="text" class="inputText w95" /></div></td>
+                                                    <td><div style="width:160px;"><input type="text" class="inputText w95" /></div></td>
+                                                    <td><div style="width:110px;"><select class="inputText w95"><option></option></select></div></td>
+                                                </tr>
+                                                
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="top10">
+                                    <input type="checkbox" class="fl_left top3"/>
+                                    <div class="deleteBar_off fl_left"></div>
+                                    <div class="lineToolbar fl_left"></div>
+                                    <div class="createNewBar fl_left"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="CM" style="height:90px;margin-top:2px;">
+                        
+                        <div class="CM-div">
+                            <div class="inner_half">
+                                <div class="CM-bar"><div>进价促销</div></div>
+                                <div class="CM-div">
+                                    <div class="ig top15">
+                                        <div class="icol_text w14"><span>进价期间</span></div>
+                                        <input type="text" class="Wdate w20" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>&nbsp;-&nbsp;
+                                        <input type="text" class="Wdate w20" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner_half">
+                                <div class="CM-bar"><div>售价促销</div></div>
+                                <div class="CM-div">
+                                    <div class="ig top15">
+                                        <div class="icol_text w14"><span>售价期间</span></div>
+                                        <input type="text" class="Wdate w20" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>&nbsp;-&nbsp;
+                                        <input type="text" class="Wdate w20" onclick="WdatePicker({ isShowClear: false, readOnly: true })"/>
+                                    </div>
+                                    <div class="ig">
+                                        <div class="icol_text w14"><span>组合促销</span></div>
+                                        <div class="lineToolbar" style="margin-top:3px;"></div><div class="listIcon_off top3"></div>
+                                        <div class="icol_text w14">&nbsp;&nbsp;&nbsp;促销提示</div>
+                                        <select class="w20 fl_left"><option></option></select>
+                                        <input type="text" class="w35 inputText" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>

@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="css/G.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Componet.css" rel="Stylesheet" />
+    <link type="text/css" href="css/page/sh_Supplier441.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/datagrid.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/pagination.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/calendar.css" rel="Stylesheet" />
+    <script src="js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/jump.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/easyUI/jquery.easyui.min.js" charset="utf-8" type="text/javascript"></script>
+
+</head>
+<body>
+    <div class="TopMenu">
+        <div class="Logo"></div>
+        <ol class="MainMenu">
+            <li><a class="catalogue_management" title="分类管理" href="Catelog-11.html"><span class="longText">分类管理</span></a></li>
+            <li><a class="supplier_management supplier_management_on" title="厂商管理" href="Supplier-11.html"><span class="longText">厂商管理</span></a></li>
+            <li><a class="item_management" title="商品管理"><span class="longText">商品管理</span></a></li>
+            <li><a class="order_management" title="订单管理"><span class="longText">订单管理</span></a></li>
+            <li><a class="promotion_management" title="促销管理"><span class="longText">促销管理</span></a></li>
+            <li><a class="achievement_analysis" title="业绩分析"><span class="longText">业绩分析</span></a></li>
+            <li><a class="parameter_management" title="参数管理" href="Param-11.html"><span class="longText">参数管理</span></a></li>
+            <li><a class="day-end_management" title="日结管理"><span class="longText">日结管理</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">我的工作台</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">ToBeAGood Programer!</span></a></li>
+        </ol>
+<ol class="RMenu">
+            <li class="MenuDrop"><a class="RM4"></a>
+                <ol class="FavDrop">
+                            <li class="FavDrop1"><div class="RM1"></div>
+                                <span>我的收藏</span>
+                            </li>
+                            <li class="FavDrop2"><div class="RM3"></div>
+                                <span>语言设置</span></li>
+                            <li class="FavDrop3"><div class="RM2"></div>
+                                <span>密码设置</span></li>
+                            <li class="FavDrop5"><div class="RM5"></div><span>退出帐号</span></li>
+                 </ol>
+            </li>
+            <li class="RMenu_Text"><div class="longText">欢迎，Java.管理员 Csharp Dot</div></li> 
+        </ol>
+        <ol class="MyFav" style="display:none;">
+            <li><a>我的收藏1</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏2</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏3</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏4</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏5</a><div class="Closediv CircleClose"></div></li>
+        </ol>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="1www" class="Sub" href="Supplier-11.html"><span class="L1_No"></span>
+                           <span class="SubText">集团信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                    <li>
+                        <a id="1ee" class="Sub" href="Supplier-21.html"><span class="L1_No"></span>
+                           <span class="SubText">公司信息</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a id="fff1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">厂商管理</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg" class="Sub" href="Supplier-31.html"><span class="L2_No"></span>
+                                   <span class="SubText">厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A1" class="Sub" href="Supplier-41.html"><span class="L2_No"></span>
+                                   <span class="SubText">未生效厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A2" class="Sub" href="Supplier-61.html"><span class="L2_No"></span>
+                                   <span class="SubText">内部厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub Sub_on" href="Supplier-71.html"><span class="L2_No"></span>
+                                   <span class="SubText">DC厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2_disable"></td>
+                        <td></td>
+                        <td class="Tools3"></td>
+                        <td></td>
+                        <td class="Tools23_disable"></td>
+                        <td></td>
+                        <td class="Tools23_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td></td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="create_NewMac Tools11"></td>
+                        <td></td>
+                        <td class="Tools10_disable"></td>
+                        <td></td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td></td>
+                        <td class="Tools17_disable"></td>
+                        <td></td>
+                        <td class="Tools19_disable"></td>
+                        <td></td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools24_disable"></td>
+                        <td></td>
+                        <td class="s441_next Tools25"></td>
+                        <td></td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27"></td>
+                        <td></td>
+                        <td class="Tools28"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29"></td>
+                        
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools22" title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                <!--第一个-->
+                            <div class="tags1_left"></div>
+                            <div id="wsx_tags1" class="tagsM">厂商总览</div>
+                            <div class="tags"></div>
+                             <!--中间-->
+                            <div id="wsx_tags2" class="tagsM">厂商财务信息</div>
+                            <div class="tags"></div>
+                            <!--最后一个-->
+                            <div id="wsx_tags3" class="tagsM">厂商供应区域</div>
+                            <div class="tags tags3 tags_right_on"></div>
+                            <!--一定不要忘了tag3-->
+                            <!--add-->
+                            <div class="tagsM_q  tagsM_on">审核新厂商</div>
+                            <div class="tags3_close_on">
+                                <div class="tags_close"></div>
+                            </div>
+                <div  class="Icon-size1 s74">
+
+                </div>
+            </div>
+            <div class="Container-1">
+                <!--<div class="Search" style="display:none;">
+                    <div class="SearchTop">
+                        <span>查询条件</span>
+                        <div class="Icon-size1 CircleClose C-id" onclick="DispOrHid('C-id')"></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SMiddle">
+                        <table class="SearchTable" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="ST_td1"><span>集团</span></td>
+                                <td class="ST_td2"><div class="iconPut w80"><input type="text" class="w85" /><div class="ListWin"></div> </div></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><input type="text" class="inputText w80 Black" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>品牌编号</span></td>
+                                <td><input type="text" class="inputText w80" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>品牌名称</span></td>
+                                <td><input type="text" class="inputText w80" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>品牌英文名称</span></td>
+                                <td><input type="text" class="inputText w80" /></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><span>创建日期</span></td>
+                                
+                                <td><div class="iconPut w80"><input type="text" class="w85" /><div class="C_Func Calendar"></div> </div></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SearchFooter">
+                        <div class="Icon-size1 Tools20"></div>
+                        <div class="Icon-size1 Tools6"></div>
+                    </div>
+                </div>-->
+                <div class="Content" style="width:99%;"><!--width:74%;-->
+	                <div class="CInfo"></div>
+                    <!--539-->
+                    <div class="t_div1">
+                        <div class="CM t_div1_1">
+                            <div class="CM-bar"><div>基本信息</div></div>
+                            <div class="CM-div">
+                            <table class="CM_table">
+                                <tr>
+                                    <td style="width:25%;"><span>采购厂编</span></td>
+                                    <td><input type="text" class="inputText twoInput1" value="12"/>
+                                            <span style="float:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;厂商状态</span>
+                                            <input type="text" class="inputText twoInput2" value=""/></td>
+                                </tr>
+                                <tr>
+                                    <td><span>公司编号</span></td>
+                                    <td><input type="text" class="inputText twoInput1"/>
+                                        <input type="text" class="inputText input50"/><div class="info"></div></td>
+                                </tr>
+                                <tr>
+                                    <td><span>集团</span></td>
+                                    <td><input type="text" class="inputText twoInput1"/>
+                                        <input type="text" class="inputText jt"/></td>
+                                </tr>
+                                <tr>
+                                    <td><span>厂商种类</span></td>
+                                    <td><input type="text" class="inputText cstype" value="12"/>
+                                            <span style="float:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;供货方式</span>
+                                            <input type="text" class="inputText twoInput2" value=""/></td>
+                                </tr>
+                                <tr>
+                                    <td><span>供应商品特性</span></td>
+                                    <td><input type="text" class="inputText twoInput1" value="12"/>
+                                            <span style="float:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TXT 厂编</span>
+                                            <input type="text" class="inputText twoInput2" value=""/></td>
+                                </tr>
+                                <tr>
+                                    <td><span>合同标准</span></td>
+                                    <td><input type="text" class="inputText twoInput1" value="12"/>
+                                            <span style="float:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;失效日期</span>
+                                            <input type="text" class="inputText twoInput2" value=""/></td>
+                                </tr>
+                                <tr>
+                                    <td><span>合约课别</span></td>
+                                    <td><input type="text" class="inputText" style="width:78%" /></td>
+                                </tr>
+                            </table></div>
+                        </div>
+                        <div class="t_div1_2">
+                            <div class="CM" style="height:150px;">
+                                <div class="CM-bar"><div>联系方式</div></div>
+                                <div class="CM-div">
+                                <table class="CM_table">
+                                <tr>
+                                    <td style="width:20%;"><span>地址</span></td>
+                                    <td>
+                                        <div class="iconPut icondiv11"><input type="text"/>
+                                            <div>省</div></div>
+                                        <div class="iconPut icondiv12">
+                                            <input type="text"/><div style="color:#999999;">市</div></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td><input type="text" class="inputText w91_s232" /></td>
+                                </tr>
+                                <tr>
+                                    <td><span>邮政编码</span></td>
+                                    <td><input type="text" class="inputText twoinput25"/>
+                                            <span style="float:left;margin:0;">&nbsp;&nbsp;&nbsp;联系人&nbsp;</span>
+                                            <input type="text" class="inputText twoinput25"/><span style="float:left;margin:0;">&nbsp;&nbsp;&nbsp;传真&nbsp;</span>
+                                        <input type="text" class="inputText twoinput22"/><span style="float:left;margin:0;">-</span>
+                                            <input type="text" class="inputText twoinput23"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span>电话号码</span></td>
+                                    <td><input type="text" class="inputText twoinput22"/><span style="float:left;margin:0;">-</span>
+                                            <input type="text" class="inputText twoinput26"/>
+                                            <span style="float:left;margin:0;">&nbsp;&nbsp;手机</span>
+                                            <input type="text" class="inputText twoinput27"/>
+                                            <span style="float:left;margin:0;">&nbsp;&nbsp;邮箱</span>
+                                            <input type="text" class="inputText twoinput28"/>
+                                    </td>
+                                </tr>
+                            </table></div>
+                            </div>
+                            <div class="CM" style="height:88px;margin-top:2px;">
+                                <div class="CM-bar"><div>额外信息</div></div>
+                                <div class="CM-div">
+                                <table class="CM_table">
+                                    <tr>
+                                        <td class="w25"><span>订单发送方式</span></td>
+                                        <td><input type="text" class="inputText twoInput1" value="12"/>
+                                                <span style="float:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首订单量</span>
+                                                <input type="text" class="inputText twoInput2" value=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>网上对账级别</span></td>
+                                        <td><input type="text" class="inputText" style="width:78%" /></td>
+                                    </tr>
+                                </table></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:287px;margin-top:2px;">
+                        <div class="t_div1_2">
+                            <div class="CM" style="height:150px;">
+                                <div class="CM-bar" style="background:#999999;"><div>公司信息</div></div>
+                                <div class="CM-div">
+                                <table class="CM_table">
+                                    <tr>
+                                        <td><span>公司类型</span></td>
+                                        <td><input type="text" class="inputText twoInput1"/>
+                                            <span style="float:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;法人代表</span>
+                                            <input type="text" class="inputText twoInput2"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>税号</span></td>
+                                        <td><input type="text" class="inputText twoInput1" value="12"/>
+                                                <span style="float:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;状态</span>
+                                                <input type="text" class="inputText twoInput2" value=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>成立日期</span></td>
+                                        <td><input type="text" class="inputText twoInput1" value="12"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w25"><span>公司注册地址</span></td>
+                                        <td><input type="text" class="inputText twoInput1 w35"/>
+                                            <input type="text" class="inputText twoInput2 w55"/>
+                                        </td>
+                                    </tr>
+                                </table></div>
+                            </div>
+                            <div class="CM" style="height:135px;margin-top:2px;">
+                                <div class="CM-bar" style="background:#999999;"><div>发票送达地址</div></div>
+                                <div class="CM-div">
+                                <table class="CM_table">
+                                    <tr>
+                                    <td style="width:20%;"><span>地址</span></td>
+                                    <td>
+                                        <div class="iconPut" style="width:20%;float:left;"><input type="text" style="width:72%;"/>
+                                            <div style="color:#999999;">省</div></div>
+                                        <div class="iconPut icondiv12">
+                                            <input type="text"/><div style="color:#999999;">市</div></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td><input type="text" class="inputText w91_s232" /></td>
+                                </tr>
+                                <tr>
+                                    <td><span>邮政编码</span></td>
+                                    <td><input type="text" class="inputText twoinput25"/>
+                                            <span style="float:left;margin:0;">&nbsp;&nbsp;&nbsp;联系人&nbsp;</span>
+                                            <input type="text" class="inputText twoinput25"/><span style="float:left;margin:0;">&nbsp;&nbsp;&nbsp;传真&nbsp;</span>
+                                        <input type="text" class="inputText twoinput22"/><span style="float:left;margin:0;">-</span>
+                                            <input type="text" class="inputText twoinput23"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span>电话号码</span></td>
+                                    <td><input type="text" class="inputText twoinput22"/><span style="float:left;margin:0;">-</span>
+                                            <input type="text" class="inputText twoinput26"/>
+                                            <span style="float:left;margin:0;">&nbsp;&nbsp;手机</span>
+                                            <input type="text" class="inputText twoinput27"/>
+                                            <span style="float:left;margin:0;">&nbsp;&nbsp;邮箱</span>
+                                            <input type="text" class="inputText twoinput28"/>
+                                    </td>
+                                </tr>
+                            </table></div>
+                            </div>
+                        </div>
+
+                        <div class="CM t_div1_1">
+                            <div class="CM-bar" style="background:#999999;"><div>公司证件</div></div>
+                            <div class="CM-div">
+                            <table class="CM_table" style="width:92%;margin-left:10px;">
+                                <tr>
+                                    <td>
+                                        <div class="t2_title">
+                                            <div>证件类型</div>
+                                            <div>证件号</div>
+                                            <div>截止日期</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr><td class="line"></td></tr>
+                                <tr>
+                                    <td style="height:230px;">
+                                        <div style="height:100%;overflow-x:hidden;overflow-y:scroll;">
+                                            <table style="width:100%;height:55px; overflow:scroll">
+                                                <tr>
+                                                    <td style="width:5%;"><input type="checkbox" /> </td>
+                                                    <td style="width:7%;">
+                                                        <div style="height:20px;width:20px;border:1px solid #999999;" class="license1">
+                                                            <div style="height:20px;width:20px;" class="license2"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td style="width:28%;"><select style="width:90%;"><option></option></select></td>
+                                                    <td style="width:35%;"><input type="text" style="width:90%;" class="inputText" /></td>
+                                                    <td style="width:25%;"><div class="iconPut w80"><input type="text" style="width:79%" /><div class="C_Func Calendar"></div> </div></td>
+                                                </tr>
+                                            
+                                                <tr>
+                                                    <td><input type="checkbox" /></td>
+                                                    <td>
+                                                        <div style="height:20px;width:20px;border:1px solid #999999;" class="license1">
+                                                            <div style="height:20px;width:20px;" class="license2"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td><select style="width:90%;"><option></option></select></td>
+                                                    <td><input type="text" style="width:90%;" class="inputText" /></td>
+                                                    <td><div class="iconPut w80"><input type="text" style="width:79%" /><div class="C_Func Calendar"></div> </div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width:5%;"><input type="checkbox" /> </td>
+                                                    <td style="width:7%;">
+                                                        <div style="height:20px;width:20px;border:1px solid #999999;" class="license1">
+                                                            <div style="height:20px;width:20px;" class="license2"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td style="width:28%;"><select style="width:90%;"><option></option></select></td>
+                                                    <td style="width:35%;"><input type="text" style="width:90%;" class="inputText" /></td>
+                                                    <td style="width:25%;"><div class="iconPut w80"><input type="text" style="width:79%" /><div class="C_Func Calendar"></div> </div></td>
+                                                </tr>
+                                            
+                                                <tr>
+                                                    <td><input type="checkbox" /></td>
+                                                    <td>
+                                                        <div style="height:20px;width:20px;border:1px solid #999999;" class="license1">
+                                                            <div style="height:20px;width:20px;" class="license2"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td><select style="width:90%;"><option></option></select></td>
+                                                    <td><input type="text" style="width:90%;" class="inputText" /></td>
+                                                    <td><div class="iconPut w80"><input type="text" style="width:79%" /><div class="C_Func Calendar"></div> </div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width:5%;"><input type="checkbox" /> </td>
+                                                    <td style="width:7%;">
+                                                        <div style="height:20px;width:20px;border:1px solid #999999;" class="license1">
+                                                            <div style="height:20px;width:20px;" class="license2"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td style="width:28%;"><select style="width:90%;"><option></option></select></td>
+                                                    <td style="width:35%;"><input type="text" style="width:90%;" class="inputText" /></td>
+                                                    <td style="width:25%;"><div class="iconPut w80"><input type="text" style="width:79%" /><div class="C_Func Calendar"></div> </div></td>
+                                                </tr>
+                                            
+                                                <tr>
+                                                    <td><input type="checkbox" /></td>
+                                                    <td>
+                                                        <div style="height:20px;width:20px;border:1px solid #999999;" class="license1">
+                                                            <div style="height:20px;width:20px;" class="license2"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td><select style="width:90%;"><option></option></select></td>
+                                                    <td><input type="text" style="width:90%;" class="inputText" /></td>
+                                                    <td><div class="iconPut w80"><input type="text" style="width:79%" /><div class="C_Func Calendar"></div> </div></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr><td class="line"></td></tr>
+                            </table></div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    <div id="date_div" style="width:160px;height:180px;display:none;position:absolute;z-index:9999;"></div>
+    <div class="flow">
+        <div class="flow_s74_1">
+            <div class="flow_s741 Icon-size1"></div>
+        </div>
+        <div class="flow_s74_2"></div>
+        <div class="flow_s74_3">
+            <div class="flow_s742 Icon-size1"></div>
+        </div>
+        <div class="flow_s74_4"></div>
+        <div class="flow_s74_5">
+            <div class="Icon-size1 flow_s743"></div>
+            <div class="Icon-size1 flow_s744"></div>
+        </div>
+        <div class="flow_s74_6"></div>
+        <div class="flow_s74_7">
+            <div class="flow_s745 Icon-size1"></div>
+        </div>
+       
+    </div>
+    <script type="text/javascript">
+        //日历
+        $('#date_div').calendar({
+            current: new Date()
+        });
+        $(".s74").live("click", function () {
+            var top = $(this).offset().top+20;
+            var left = $(this).offset().left-195;
+            $(".flow").css({"left":left,"top":top});
+            $(".flow").toggle();
+        });
+    </script>
+</body>
+</html>

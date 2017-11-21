@@ -1,0 +1,112 @@
+﻿        .tbx {
+            height:507px;
+            overflow:auto;
+            border-top:1px solid #cccccc;
+            border-bottom:1px solid #cccccc;
+        }
+        .tbx td{
+            height:30px;
+        }
+            .tbx tr {
+                cursor:pointer;
+            }
+            .tbx tr:hover {
+                background:#3F9673;
+            }
+        .Con_tb {
+            width:25%;margin-top:0px;height:549px;float:left;
+        }
+        .Con_R {
+            width:75%;float:right;height:580px;
+        }
+        .Point_R1 {
+            height:30px; line-height:28px;
+        }
+        .Point_R2 {
+            /*height:538px;width:746px;*/
+            height:93%;width:99%;
+            border-top:1px solid #cccccc;
+            background:#f9f9f9;
+        }
+        .pr_place {
+            width:1%;
+        }
+        .pr21 {
+            width:30%;
+            background:#fff;
+        }
+        .pr22 {
+            width:28%;
+        }
+        .pr23 {
+            width:12%;
+            overflow:hidden;
+        }
+        .pr23_1 {
+            width:80px;
+            height:100%;
+            margin:0 auto;
+            overflow:hidden;
+        }
+        .pr24 {
+            width:28%;
+        }
+        .pr21,.pr22,.pr23,.pr24,.pr_place{
+            height:100%;float:left;
+        }
+        .pr_title {
+            height:30px;line-height:28px;
+        }
+        .pr_list {
+            height:497px;border:1px solid #cccccc;
+            background:#fff;
+            overflow:auto;
+        }
+        .item,.item2,.item3 {
+                height: 30px;line-height: 28px;
+                cursor:pointer;
+                border-bottom:1px solid #fff;
+            }
+                .item div,.item2 div,.item3 div{
+                    float:right;margin-right:10px;
+                }
+            .item span,.item2 span,.item3 span{
+                float: left;
+                margin-left: 10px;
+            }
+        
+             .item_on {
+                background: none repeat scroll 0 0 #3F9673;
+                color:#fff;
+            }
+            .item:hover,.item2:hover,.item3:hover {
+                background: none repeat scroll 0 0 #99cc66;
+                color:#fff;
+            }
+        .pr_btn1,.pr_btn2{
+            height:30px;
+            cursor:pointer;
+            color:#fff;
+            text-align:center;
+            line-height:30px;
+        }
+        .pr_btn1 {
+            background:#F37864;
+            margin-top:240px;
+        }
+        .pr_btn2 {
+            background:#999999;
+            margin-top:10px;
+        }
+    .tree-file {
+      background: url('../../images/easyUI/tree_icons-1.png') no-repeat -358px 2px;
+    }
+    .tree-node-hover .tree-file, .tree-node-selected .tree-file {
+        background: url('../../images/easyUI/tree_icons-1.png') no-repeat -297px 2px;
+    }
+    .tree-folder {
+      background: url('../../images/easyUI/tree_icons-1.png') no-repeat -339px -1px;
+    }
+    .tree-node-hover .tree-folder,.tree-node-selected .tree-folder{
+      background: url('../../images/easyUI/tree_icons-1.png') no-repeat -339px -19px;
+    }

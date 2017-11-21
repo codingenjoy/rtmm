@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/default.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/iframeContent.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/My97DatePicker/WdatePicker.js" charset="utf-8"></script>
+    <script src="../js/iframeContent.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".pro_store_tb").scroll(function () {
+                var left = $(this).scrollLeft();
+                //alert(left);
+                $(".zt_tit").scrollLeft(left);
+            });
+        })
+    </script>
+    <style type="text/css">
+        .pro1 {
+            margin-left:60px;
+        }
+        .pro2 {
+            margin-left:172px;
+        }
+        .pro3 {
+            margin-left:60px;
+        }
+        .pro4 {
+            margin-left:230px;
+        }
+        .pro5 {
+            margin-left:40px;
+        }
+        .pro6 {
+            margin-left:40px;
+        }
+        .pro7 {
+            margin-left:40px;
+        }
+        .pro8 {
+            margin-left:32px;
+        }
+        .pro9 {
+            margin-left:40px;
+        }
+        
+        .zt_top15 {
+            height:20px;width:1300px;margin-top:15px;
+        }
+        .cx_tj {
+            background:#e0e0e0;width:1300px;
+        }
+        .cx_tj_inner {
+            width: 1200px;
+            height: 26px;
+            padding-top:4px;
+        }
+        /*overwrite*/
+        .item {
+            height:25px;padding-top:3px;
+        }
+        /*.iconPut {
+            background:#fff;
+        }
+        .fl_left {margin-right:3px;
+        }*/
+        .lineToolbar {
+            margin-top:3px;
+        }
+        .pro_store_tb {
+            overflow-x:auto;
+        }
+        .pro_ig {
+            padding-top:10px;
+            width:1200px;
+        }
+        .fixed_div3,.fixed_div2,.fixed_div {
+            width: 12.5%;
+        }
+    </style>
+</head>
+<body>
+<div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3"></td>
+                        <td></td>
+                        <td class="Tools4"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td id="tools11" class="Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12   testAdd"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools23"></td>
+                        <td></td>
+                        <td class="Tools24"></td>
+                        <td></td>
+                        <td class="Tools25"></td>
+                        <td></td>
+                        <td class="Tools26"></td>
+                        <td></td>
+                        <td class="Tools27"></td>
+                        <td></td>
+                        <td class="Tools28"></td>
+                        <td></td>
+                        <td class="Tools29"></td>
+                        <td></td>
+                        <td class="Tools30"></td>
+                        <td></td>
+                        <td class="Tools31"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Tools22 Icon-size1 " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                            <!--第一个-->
+                            <div class="tags1_left tags1_left_on"></div>
+                            <div class="tagsM tagsM_on">ART促销</div>
+                            <div class="tags tags3_r_on"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+                    <div class="CInfo">
+                        <span>项</span>
+                        <span>10，000</span>
+                        <span>/</span>
+                        <span>1</span>
+                        <span>第</span>
+                        <span>|</span>
+                        <span>张三</span>
+                        <span>修改人</span>
+                        <span>2014-03-03</span>
+                        <span>修改日期</span>
+                        <span>李四</span>
+                        <span>建档人</span>
+                        <span>2014-02-02</span>
+                        <span>创建日期</span>
+                    </div>
+                    <div class="CM" style="height:150px;">
+                         <div class="inner_half">
+                                <div class="CM-bar"><div>促销期数基本信息</div></div>
+                                <div class="CM-div">
+                                    <div class="ig_top20">
+                                        <div class="icol_text w14"><span>促销期数</span></div>
+                                        <input type="text" class="inputText w20" />
+                                    </div>
+                                    <div class="ig">
+                                        <div class="icol_text w14"><span>主题</span></div>
+                                        <input type="text" class="inputText w50" />
+                                    </div>
+                                    <div class="ig">
+                                        <div class="icol_text w14"><span>采购期间</span></div>
+                                        <input type="text" class="inputText w20" />&nbsp;-&nbsp;<input type="text" class="inputText w20" />
+                                    </div>
+                                    <div class="ig">
+                                        <div class="icol_text w14"><span>促销期间</span></div>
+                                        <input type="text" class="inputText w20" />&nbsp;-&nbsp;<input type="text" class="inputText w20" />
+                                    </div>
+                                </div>
+                            </div>
+                         <div class="inner_half">
+                             <div class="CM-bar"><div>促销商品基本信息</div></div>
+                              <div class="CM-div">
+                                    <div class="ig_top20">
+                                        <div class="icol_text w14"><span>课别</span></div>
+                                        <input type="text" class="inputText w15" />&nbsp;<input type="text" class="inputText w25" />
+                                    </div>
+                                  <div class="ig">
+                                      <div class="icol_text w14"><span>代号类别</span></div>
+                                      <input type="text" class="inputText w25" />
+                                  </div>
+                                    <div class="ig">
+                                        <div class="icol_text w14"><span>代号</span></div>
+                                        <input type="text" class="inputText w15" />&nbsp;<input type="text" class="inputText w25" />
+                                    </div>
+                                  <div class="ig">
+                                      <div class="icol_text w14"><span>促销类型</span></div>
+                                      <input type="text" class="inputText w25 fl_left" />
+                                      <div class="msg_txt">组合促销</div>
+                                        <div class="lineToolbar"></div>
+                                        <div class="listIcon top3"></div>
+                                  </div>
+                                </div>
+                         </div>      
+                    </div>
+
+                    <div class="CM" style="height:380px;margin-top:2px;">
+                        <div class="CM-bar"><div>促销商品门店信息</div></div>
+                        <div class="CM-div">
+                            <div class="pro_store_item">
+                                <div class="pro_store_item1">
+                                    <div class="top15">所选商品</div>
+                                    <div class="pro_store_items" style="height:80%;">
+                                        <div class="item">12456789-五芳斋鲜肉粽100g×2<div class="pstb_del2"></div></div>
+                                        <div class="item">12456789-五芳斋鲜肉粽100g×2<div class="pstb_del2"></div></div>
+                                        <div class="item">12456789-五芳斋鲜肉粽100g×2<div class="pstb_del2"></div></div>
+                                        <div class="item">12456789-五芳斋鲜肉粽100g×2<div class="pstb_del2"></div></div>
+                                    </div>
+
+                                </div>
+                                <div class="pro_store_item2">
+                                    <div class="zt_tit" style="overflow:hidden;">
+                                        <div class="zt_top15">
+                                            <div class="fixed_div">
+                                                <span class="pro1">门店</span>
+                                            </div>
+                                            <span class="pro2">厂商</span>
+                                            <span class="pro3">商品状态</span>
+                                            <span class="pro4">正常进价(元)</span>
+                                            <span class="pro5">促销进价(元)</span>
+                                            <span class="pro6">正常售价(元)</span>
+                                            <span class="pro7">促销售价(元)</span>
+                                            <span class="pro8">降价幅度(%)</span>
+                                            <span class="pro9">净毛利(%)</span>
+                                            
+                                        </div>
+                                        <div class="cx_tj">
+                                            <div class="cx_tj_inner">
+                                                <div class="fixed_div2"></div>
+                                                <input type="text" class="inputText w12_5" style="margin-left: 700px;"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pro_store_tb" style="height:71%;">
+                                        <div class="pro_ig">
+                                            <div class="fixed_div3">
+                                                <input type="text" class="inputText w85 first_ztdb" />
+                                            </div>
+                                            <input type="text" class="inputText w8 " style="margin-left:132px;"/>
+                                            <input type="text" class="inputText w8 " />
+                                            <input type="text" class="inputText w15" />
+                                            <input type="text" class="inputText w9 " />
+                                            <input type="text" class="inputText w9 " />
+                                            <input type="text" class="inputText w9 " />
+                                            <input type="text" class="inputText w8 " />
+                                            <input type="text" class="inputText w8 " />
+                                            <input type="text" class="inputText w8 " />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+</body>
+</html>

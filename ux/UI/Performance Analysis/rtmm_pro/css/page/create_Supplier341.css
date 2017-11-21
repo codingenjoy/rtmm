@@ -1,0 +1,63 @@
+﻿.CInfo {
+    background-color:#eeeeee;
+    background-image:url(../../images/s341.jpg);
+    background-repeat:no-repeat;
+}
+        .f_div {
+            height:242px;margin-top:5px;
+        }
+        .f_div1 ,.f_div2{
+            width:50%;float:left;height:100%;
+        }
+        .f_div21 {
+            height:150px;
+        }
+        .f_div22 {
+            height:90px;margin-top:2px;
+        }
+        .div1 {
+            width:35%;float:left;
+        }
+        .div11 {
+            width:20%;float:left;
+        }
+        .div2 {
+            width:43%;float:left;margin-left:3px;
+        }
+        .div3 {
+            width:40%;float:left;margin-left:3px;
+        }
+        .select1 {
+            width:35%;float:left;
+        }
+        .select2 {
+            width:30%;float:left;
+        }
+        /*input对齐*/
+        .w91_s232 {
+            width:91%;width/*\**/:92%\9;*width:92%;
+        }
+        .twoinput22 {
+            width: 10%;
+            float: left;
+        }
+        .twoinput23 {
+            width: 26.5%;
+            float: left;
+        }
+        .twoinput25 {
+            width: 14.5%;
+            float: left;
+        }
+        .twoinput26 {
+            width: 16%;
+            float: left;
+        }
+        .twoinput27 {
+            width: 25%;
+            float: left;
+        }
+        .twoinput28 {
+            width: 21%;width/*\**/:21.5%\9;*width:21.5%;
+            float: left;
+        }

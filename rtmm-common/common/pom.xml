@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>auchan.rtmm</groupId>
+        <artifactId>rtmm-common</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>rtmm-common-common</artifactId>
+    <packaging>jar</packaging>
+    <name>Auchan RTMM common Common</name>
+    <dependencies>
+    	<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+		</dependency>
+    	<dependency>
+			<groupId>auchan</groupId>
+			<artifactId>auchan-common-codetable</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>auchan</groupId>
+			<artifactId>auchan-common-core-messagingutil</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>rtmm-common-mda</artifactId>
+            <version>${project.version}</version>
+            <type>pom</type>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+        </dependency>
+        <dependency>
+			  <groupId>org.jbarcode</groupId>
+			  <artifactId>jbarcode</artifactId>
+		</dependency>
+    </dependencies>
+    <build>
+        <!-- To change from default src/main/java and src/test/java - doesn't work for Cobertura>
+        <sourceDirectory>src</sourceDirectory>
+        <testSourceDirectory>src-test</testSourceDirectory -->
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

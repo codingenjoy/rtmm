@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="css/G.css" rel="Stylesheet" />
+    <script src="js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/jump.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/easyUI/jquery.easyui.min.js" charset="utf-8" type="text/javascript"></script>
+    <link type="text/css" href="css/easyUI/datagrid.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/calendar.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/combo.css" rel="Stylesheet" />
+    <style type="text/css">
+        .tb_bar {
+            height:160px;width:100%;margin-top:10px;background:#f9f9f9;float:left;
+        }
+        .temp div {
+            display:none;
+        }
+        .temp {
+            width:1px;
+        }
+        .datagrid-body {
+            overflow:auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="TopMenu">
+        <div class="Logo"></div>
+        <ol class="MainMenu">
+            <li><a class="catalogue_management catalogue_management_on" title="分类管理" href="Catelog-11.html"><span class="longText">分类管理</span></a></li>
+            <li><a class="supplier_management" title="厂商管理" href="Supplier-11.html"><span class="longText">厂商管理</span></a></li>
+            <li><a class="item_management" title="商品管理"><span class="longText">商品管理</span></a></li>
+            <li><a class="order_management" title="订单管理"><span class="longText">订单管理</span></a></li>
+            <li><a class="promotion_management" title="促销管理"><span class="longText">促销管理</span></a></li>
+            <li><a class="achievement_analysis" title="业绩分析"><span class="longText">业绩分析</span></a></li>
+            <li><a class="parameter_management" title="参数管理" href="Param-11.html"><span class="longText">参数管理</span></a></li>
+            <li><a class="day-end_management" title="日结管理"><span class="longText">日结管理</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">我的工作台</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">ToBeAGood Programer!</span></a></li>
+        </ol>
+<ol class="RMenu">
+            <li class="MenuDrop"><a class="RM4"></a>
+                <ol class="FavDrop">
+                            <li class="FavDrop1"><div class="RM1"></div>
+                                <span>我的收藏</span>
+                            </li>
+                            <li class="FavDrop2"><div class="RM3"></div>
+                                <span>语言设置</span></li>
+                            <li class="FavDrop3"><div class="RM2"></div>
+                                <span>密码设置</span></li>
+                            <li class="FavDrop5"><div class="RM5"></div><span>退出帐号</span></li>
+                 </ol>
+            </li>
+            <li class="RMenu_Text"><div class="longText">欢迎，Java.管理员 Csharp Dot</div></li> 
+        </ol>
+        <ol class="MyFav" style="display:none;">
+            <li><a>我的收藏1</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏2</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏3</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏4</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏5</a><div class="Closediv CircleClose"></div></li>
+        </ol>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+            <ol class="SubList">
+                    <li>
+                        <a id="1www" class="Sub"  href="Catelog-11.html"><span class="L1_No"></span>
+                           <span class="SubText">公司信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                    <li>
+                        <a id="1ee" class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">分店管理</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="A1" class="Sub" href="Catelog-21.html"><span class="L2_No"></span>
+                                   <span class="SubText">分店信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A2" class="Sub" href="Catelog-31.html"><span class="L2_No"></span>
+                                   <span class="SubText">仓库信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="fff1"  class="Sub" href="Catelog-41.html"><span class="L1_No"></span>
+                           <span class="SubText">处课信息</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a id="1fff"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">大中小分类信息</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg"  class="Sub" href="Catelog-51.html"><span class="L2_No"></span>
+                                   <span class="SubText">大分类</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub" href="Catelog-61.html"><span class="L2_No"></span>
+                                   <span class="SubText">中分类</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a id="asa" class="Sub Sub_on" href="Catelog-71.html"><span class="L2_No"></span>
+                                   <span class="SubText">小分类</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                   
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3_disable"></td>
+                        <td></td>
+                        <td class="Tools4_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td class="addLarge Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools5"></td>
+                        <td></td>
+                        <td class="Tools7"></td>
+                        <td></td>
+                        <td class="Tools8"></td>
+                        <td></td>
+                        <td class="Tools9"></td>
+                        <td></td>
+                        <td class="Tools13"></td>
+                        <td></td>
+                        <td class="Tools14"></td>
+                        <td></td>
+                        <td class="Tools15"></td>
+                        <td class="Line-1"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools22" title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                            <!--第一个-->
+                            <div class="tags1_left"></div>
+                            <div class="tagsM">小分类</div>
+                            <div class="tags tags_right_on"></div>
+
+                             <!--中间-->
+                            <div class="tagsM  tagsM_on">神州分类目标设定</div>
+                            <div class="tags tags_left_on"></div>
+
+
+                            <!--最后一个-->
+                            <div class="tagsM">神州分类结果查询</div>
+                            <div class="tags tags3_r_off"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Search B" ><!-- Bar_on-->
+                    <div class="SearchTop">
+                        <span>查询条件</span>
+                        <div class="Icon-size1 CircleClose C-id" onclick="DispOrHid('C-id')"></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SMiddle">
+                        <table class="SearchTable" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="w35"><span>大分类</span></td>
+                                <td>
+                                    <div class="iconPut" style="width:35%;float:left;"><input type="text" style="width:65%"/><div class="ListWin"></div></div>
+                                         <input type="text" class="inputText twoInput2" style="width:45%;"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w35"><span>状态</span></td>
+                                <td>
+                                    <div class="iconPut" style="width:35%;float:left;"><input type="text" style="width:65%"/><div class="ListWin"></div></div>
+                                         <input type="text" class="inputText twoInput2" style="width:45%;"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w35"><span>处别</span></td>
+                                <td>
+                                    <div class="iconPut" style="width:35%;float:left;"><input type="text" style="width:65%"/><div class="ListWin"></div></div>
+                                         <input type="text"class="inputText twoInput2" style="width:45%;"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w35"><span>课别</span></td>
+                                <td>
+                                    <div class="iconPut" style="width:35%;float:left;"><input type="text" class="w65"/><div class="ListWin"></div></div>
+                                         <input type="text"class="inputText twoInput2" style="width:45%;"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w35"><span>定位</span></td>
+                                <td>
+                                    <input id="dd" name="dept" data-options="editable:false,panelHeight:'auto'"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w35"><span>B</span></td>
+                                <td>
+                                    <input type="text"class="inputText w45"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w35"><span>N</span></td>
+                                <td><input type="text"class="inputText w45"/></td>
+                            </tr>
+                            <tr>
+                                <td class="w35"><span>O</span></td>
+                                <td><input type="text"class="inputText w45"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SearchFooter">
+                        <div class="Icon-size1 Tools20"></div>
+                        <div class="Icon-size1 Tools6"></div>
+                    </div>
+                </div>
+
+                <div class="Content" style="width:74%;">
+                    <div style="height:30px;line-height:18px;">
+                        <span>区域</span>
+                        <input id="cc" name="dept" data-options="editable:false,panelHeight:'auto'"/>
+                    </div>
+	                <table id="dg" style="height:540px;"></table>
+                </div>
+        </div>
+    </div>
+    </div>
+    <!--<div id="popWin" style="display:block;position:absolute;left:0;top:0; z-index:9999;height:20px"></div>-->
+    <div id="date_div" style="width:160px;height:180px;display:none;position:absolute;z-index:9999;"></div>
+    <script type="text/javascript">
+        $('#dg').datagrid({
+            rownumbers: false,
+            //singleSelect: false,
+            pagination: true,
+            pageSize: 20,
+            url: 'json/datagrid_data12.json',
+            columns: [[
+            { field: 'ck', checkbox: true, width: 30 },
+            { field: 'no', title: '店号', width: 115 },
+            { field: 'chu', title: '处别', width: 115 },
+            { field: 'dep', title: '课别', width: 120 },
+            { field: 'type1', title: '大分类', sortable: true, width: 130 },
+            { field: 'type2', title: '中分类', sortable: true, width: 130 },
+            { field: 'type3', title: '小分类', sortable: true, width: 100 },
+            { field: 'B', title: 'B', width: 70 },
+            { field: 'N', title: 'N', width: 70 },
+            { field: 'O', title: 'O', width: 70 },
+            { field: 'temp', title: '', width: 20 }
+            ]]
+        });
+        //日历
+        $('#date_div').calendar({
+            current: new Date()
+        });
+        $('#cc').combobox({
+            //url: 'combobox_data.json',
+            width: 100,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-华北",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                alert(rec.id + "....." + rec.text);
+            }
+        });
+        $('#dd').combobox({
+            //url: 'combobox_data.json',
+            width: 100,
+            readonly: false,
+            data: [{
+                "id": 1,
+                "text": "text1"
+            }, {
+                "id": 2,
+                "text": "text2"
+            }, {
+                "id": 3,
+                "text": "1-华北",
+                "selected": true
+            }, {
+                "id": 4,
+                "text": "text4"
+            }, {
+                "id": 5,
+                "text": "text5"
+            }],
+            valueField: 'id',
+            textField: 'text',
+            //onSelect: function(rec){
+            //var url = 'get_data2.php?id='+rec.id;
+            //$('#cc2').combobox('reload', url);
+            //}
+            onSelect: function (rec) {
+                alert(rec.id + "....." + rec.text);
+            }
+        });
+    </script>
+</body>
+</html>

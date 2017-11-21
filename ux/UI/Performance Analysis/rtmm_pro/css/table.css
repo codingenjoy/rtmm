@@ -1,0 +1,30 @@
+﻿.bt_div {
+    width:100%;overflow-y:scroll;overflow-x:auto;border-bottom:1px solid #ccc;
+}
+    .bt_div table{
+        width:100%;
+    }
+.bt_div tr, .htable_div tr {cursor:pointer;line-height:23px;}
+.bt_div td{
+    height:29px;
+    font-weight:normal;
+}
+.bt_div tr {
+    border-bottom:1px solid #fff;
+}
+.bt_div td div {
+    height:23px;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+}
+.tr_head {
+    background:#f5f5f5;color:#333 !important;text-align:center;
+}
+.t_cols {
+    border-right:1px solid #ccc !important;
+}
+.bt_div input[type="checkbox"] {
+    margin-top:5px;
+}

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Implementation-Title: rtmm-rp Common
+Implementation-Version: 0.1-SNAPSHOT
+Built-By: ndc-pc169
+Class-Path: commons-lang-2.6.jar commons-beanutils-1.8.3.jar commons-l
+ ogging-1.1.1.jar
+Specification-Vendor: 
+Created-By: Maven Integration for Eclipse
+url: http://www.andromda.org/rtmm-rp-common/
+Implementation-Vendor: 
+Implementation-Vendor-Id: auchan.rtmm
+Build-Jdk: 1.6.0_45
+Specification-Title: rtmm-rp Common
+Specification-Version: 0.1-SNAPSHOT
+Implementation-Build: 
+

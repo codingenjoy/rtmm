@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <link type="text/css" href="../js/freezenColums/f.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="../js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="../js/freezenColums/f.js"></script>
+</head>
+<body>
+    <style type="text/css">
+        .Table_Panel {
+            margin:15px;
+        }
+        .fl_left {
+            margin-right:3px;
+        }
+
+        /*table*/
+        .pop_updetex .move_cols {
+            height: 100%;
+            width: 90%;
+            overflow: hidden;
+            margin-left:25px;
+        }
+        .pop_updetex  .m_cols_head {
+            height: 61px;
+        }
+         .pop_updetex .m_cols_body {
+            height:120px;
+            overflow-x:hidden;
+            overflow-y:auto;
+        }
+        .pop_updetex .m_cols_head div{
+            border-right: 0;
+            }
+    </style>
+    <div class="Panel">
+        <div class="Panel_top">
+            <span>创建新地址</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <div class="ig">
+                <div class="icol_text">小分类&nbsp;&nbsp;</div>
+                <div class="iconPut w20 fl_left Black">
+                     <input class="w80 Black" type="text"/>
+                     <div class="ListWin"></div>
+                </div>
+                <input type="text" class="w35 inputText Black" />
+            </div>
+
+              <div class="CM" style="height:190px;">
+                        <div class="CM-bar"><div>价格段信息</div></div>
+                        <div class="CM-div pop_updetex">
+                            <div class="move_cols">
+                                        <!--frozen top head parts when drag the y-scroll -->
+                                        <div class="m_cols_head">
+                                             <table cellpadding="0" cellspacing="0">
+                                                  <tr>
+                                                      <td><div>&nbsp;</div></td>
+
+                                                      <td><div>T1起始值</div></td>
+      
+
+                                                      <td><div>T2起始值</div></td>
+                                                      <td><div>T3起始值</div></td>
+                                                      <td><div>T3结束值</div></td>
+
+                                                      <td><div class="wh_90">&nbsp;</div></td><!--占位-->
+                                                  </tr>
+                                                  <tr style="border-top:1px solid #ccc;" class="GrayBg">
+                                                    <td><div class="wh_40">&nbsp;</div></td>
+                                                    <td><div class="wh_103"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div class="wh_103"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div class="wh_103"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div class="wh_103"><input type="text" class="wh_100 inputText" /></div></td>
+
+                                                    <td><div class="wh_90">&nbsp;</div></td><!--占位-->
+                                                  </tr>
+                                              </table>
+                                        </div>
+                                        <!--this parts can be scrolled all the time-->
+                                        <div class="m_cols_body">
+                                            <table cellpadding="0" cellspacing="0">
+                                                <tr class="t0" _index="t0">
+                                                    <td><div class="wh_40">&nbsp;&nbsp;华东</div></td>
+                                                    <td><div class="wh_103"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div class="wh_103"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div class="wh_103"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div class="wh_150"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    
+                                                </tr>
+                                                <tr class="t1" _index="t1">
+                                                    <td><div class="wh_40">&nbsp;&nbsp;华南</div></td>
+                                                    <td><div style="width:103px;"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div style="width:103px;"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div style="width:103px;"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div style="width:153px;"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    
+                                                </tr>
+                                                <tr class="t2" _index="t2">
+                                                    <td><div class="wh_40">&nbsp;&nbsp;华北</div></td>
+                                                    <td><div style="width:103px;"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div style="width:103px;"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div style="width:103px;"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div style="width:153px;"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    
+                                                </tr>
+                                                <tr class="t3" _index="t3">
+                                                    <td><div class="wh_40">&nbsp;&nbsp;西南</div></td>
+                                                    <td><div style="width:103px;"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div style="width:103px;"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div style="width:103px;"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    <td><div style="width:153px;"><input type="text" class="wh_100 inputText" /></div></td>
+                                                    
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">保存</div>
+                <div class="PanelBtn2">取消</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

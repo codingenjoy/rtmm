@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="../js/tempScript.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/easyUI/jquery.easyui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../css/easyUI/combo.css"/>
+    <style type="text/css">
+        /*这个样式请程序员不要复制 start*/
+        .SubMenu {
+            width:198px;
+            height:610px;
+        }
+        /*这个样式请程序员不要复制 end*/
+        /*.iq {
+            margin-left:3px;
+        }*/
+    </style>
+</head>
+<body>
+    <div style="height:40px;">
+    <iframe class="TopMenu" src="../maintop.html" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="fff1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">我的草稿箱</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">厂商管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">商品管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A4" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">订单管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A5" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">促销管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="A1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">待办事项</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="A2" class="Sub Sub_on"><span class="L2_No qipao"></span>
+                                   <span class="SubText">我的待办</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A3" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">办理查询</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="A6" class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">公告信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools3_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools23_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools32_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools10_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools17_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools19_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools24_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools25_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools28_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29_disable"></td>
+                    </tr>
+                </table>
+                <div class="RightTool ToolsBg">
+                    <div class="Tools22 Icon-size1 Tools22_on " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                <div class="tags1_left"></div>
+                            <div class="tagsM">我的代办总览</div>
+                            <div class="tags"></div>
+
+                             <!--中间-->
+                            <div class="tagsM ">审批详情</div>
+                            <div class="tags tags_right_on"></div>
+                <!--中间-->
+                            <div class="tagsM tagsM_on">基本信息及流程图</div>
+                            <div class="tags tags_left_on"></div>
+                <!--中间-->
+                            <div class="tagsM">处理历史</div>
+                            <div class="tags"></div>
+                            <!--最后一个-->
+                            <div class="tagsM">操作日志</div>
+                            <div class="tags tags3_r_off"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+                    <div style="height:150px;" class="CM">
+                        <div class="CM-bar"><div>基本信息</div></div>
+                        <div class="CM-div">
+                            <div class="inner_half">
+                                <div class="ig" style="margin-top:15px;">
+                                    <div class="msg_txt">流程编号</div>
+                                    <input class="inputText iq" type="text" />
+                                </div>
+                                <div class="ig">
+                                    <div class="msg_txt">任务类型</div>
+                                    <input type="text" class="inputText w60" />
+                                </div>
+                                <div style="height:60px;">
+                                    <div class="msg_txt">任务请求说明</div>
+                                    <textarea class="txtarea w60"></textarea>
+                                </div>
+                            </div>
+                            <div class="inner_half">
+                                <div class="ig" style="margin-top:15px;">
+                                    <div class="msg_txt">流程状态</div>
+                                    <input type="text" class="inputText w20" />
+                                    <span>&nbsp;&nbsp;&nbsp;流转次数&nbsp;</span>
+                                    <input type="text" class="w15 inputText" />
+                                </div>
+                                <div class="ig">
+                                    <div class="msg_txt">流程创建时间</div>
+                                    <input class="inputText iq" type="text" />
+                                </div>
+                                <div class="ig">
+                                        <div class="msg_txt">流程完成时间</div>
+                                        <input class="inputText iq" type="text" />
+                                    </div>
+                                <div class="ig">
+                                        <div class="msg_txt">最终审批结果</div>
+                                        <input class="inputText iq" type="text" />
+                                    </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div style="height:410px;margin-top:2px;" class="CM">
+                        <div class="CM-bar">
+                            <div>流程图</div>
+                            <div class="workstation_refresh Icon-size2"></div>
+                        </div>
+                        <div class="CM-div">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,392 @@
+.datagrid .panel-body {
+  overflow: hidden;
+  position: relative;
+}
+.datagrid-view {
+  position: relative;
+  overflow: hidden;
+}
+.datagrid-view1,
+.datagrid-view2 {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+}
+.datagrid-view1 {
+  left: 0;
+}
+.datagrid-view2 {
+  right: 0;
+}
+.datagrid-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  display: none;
+}
+.datagrid-mask-msg {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  padding: 12px 5px 10px 30px;
+  width: auto;
+  height: 16px;
+  border: 0px;
+  display: none;
+}
+.datagrid-sort-icon {
+  padding: 0;
+}
+.datagrid-toolbar {
+  height: auto;
+  padding: 1px 2px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+}
+.datagrid-btn-separator {
+  float: left;
+  height: 24px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #fff;
+  margin: 2px 1px;
+}
+.datagrid .datagrid-pager {
+  margin: 0;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+}
+.datagrid .datagrid-pager-top {
+  border-width: 0 0 1px 0;
+}
+.datagrid-header {
+  overflow: hidden;
+  cursor: default;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+}
+.datagrid-header-inner {
+  float: left;
+  width: 100%;
+}
+.datagrid-header-row,
+.datagrid-row {
+  height: 29px;
+  border-top:1px solid #fff;
+}
+.datagrid-header td,
+.datagrid-body td,
+.datagrid-footer td {
+  /*border-width: 0 1px 1px 0;
+  border-style: dotted; 去除td的列表线条*/
+  margin: 0;
+  padding: 0;
+}
+.datagrid-cell,
+.datagrid-cell-group,
+.datagrid-header-rownumber,
+.datagrid-cell-rownumber {
+  margin: 0;
+  /*padding: 0 4px; 每次翻页刷新，文字都会动一下，这就是根源*/
+  padding: 0;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+  text-overflow: ellipsis;
+}
+.datagrid-header .datagrid-cell {
+  height: auto;
+}
+.datagrid-header .datagrid-cell span {
+  font-size: 12px;
+}
+.datagrid-cell-group {
+  text-align: center;
+}
+.datagrid-header-rownumber,
+.datagrid-cell-rownumber {
+  width: 25px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.datagrid-body {
+  margin: 0;
+  padding: 0;
+  overflow-x:hidden;/*设置table的滚动条*/
+  overflow-y: scroll;
+  zoom: 1;
+}
+.datagrid-view1 .datagrid-body-inner {
+  padding-bottom: 20px;
+}
+.datagrid-view1 .datagrid-body {
+  overflow: hidden;
+}
+.datagrid-footer {
+  overflow: hidden;
+}
+.datagrid-footer-inner {
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  width: 10000px;
+  float: left;
+}
+.datagrid-row-editing .datagrid-cell {
+  height: auto;
+}
+.datagrid-header-check,
+.datagrid-cell-check {
+  padding: 0;
+  /*width: 27px;*/
+  height: 18px;
+  font-size: 1px;
+  text-align: center;
+  overflow: hidden;
+}
+.datagrid-header-check input,
+.datagrid-cell-check input {
+  margin: 0;
+  padding: 0;
+  width: 15px;
+  height: 18px;
+}
+.datagrid-resize-proxy {
+  position: absolute;
+  width: 1px;
+  height: 10000px;
+  top: 0;
+  cursor: e-resize;
+  display: none;
+}
+.datagrid-body .datagrid-editable {
+  margin: 0;
+  padding: 0;
+}
+.datagrid-body .datagrid-editable table {
+  width: 100%;
+  height: 100%;
+}
+.datagrid-body .datagrid-editable td {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.datagrid-body td {
+    overflow:hidden;
+}
+.datagrid-body .datagrid-editable .datagrid-editable-input {
+  margin: 0;
+  padding: 2px;
+  border-width: 1px;
+  border-style: solid;
+}
+.datagrid-sort-desc .datagrid-sort-icon {
+  padding: 0 13px 0 0;
+  background: url('../../images/easyUI/datagrid_icons.png') no-repeat -16px center;
+}
+.datagrid-sort-asc .datagrid-sort-icon {
+  padding: 0 13px 0 0;
+  background: url('../../images/easyUI/datagrid_icons.png') no-repeat 0px center;
+}
+.datagrid-row-collapse {
+  background: url('../../images/easyUI/datagrid_icons.png') no-repeat -48px center;
+}
+.datagrid-row-expand {
+  background: url('../../images/easyUI/datagrid_icons.png') no-repeat -32px center;
+}
+.datagrid-header,
+.datagrid-td-rownumber {
+  background-color: #efefef;
+  background: -webkit-linear-gradient(top,#F9F9F9 0,#efefef 100%);
+  background: -moz-linear-gradient(top,#F9F9F9 0,#efefef 100%);
+  background: -o-linear-gradient(top,#F9F9F9 0,#efefef 100%);
+  background: linear-gradient(to bottom,#F9F9F9 0,#efefef 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F9F9F9,endColorstr=#efefef,GradientType=0);
+}
+.datagrid-cell-rownumber {
+  color: #000000;
+}
+.datagrid-resize-proxy {
+  background: #aac5e7;
+}
+.datagrid-mask {
+  background: #ccc;
+}
+/*.datagrid-mask-msg {
+  width:75px;
+  height:70px;
+  background:url('../../images/easyUI/loading.gif') no-repeat scroll 5px center;
+}*/
+.datagrid-toolbar,
+.datagrid-pager {
+  background: #F4F4F4;
+}
+.datagrid-header,
+.datagrid-toolbar,
+.datagrid-pager,
+.datagrid-footer-inner {
+  border-color: #dddddd;
+}
+.datagrid-header td,
+.datagrid-body td,
+.datagrid-footer td {
+  border-color: #ccc;
+}
+.datagrid-htable,
+.datagrid-btable,
+.datagrid-ftable {
+  color: #000000;
+}
+.datagrid-row-alt {
+  background: #fafafa;
+}
+/*.datagrid-header td.datagrid-header-over*/
+.datagrid-row-over{
+	background:#99cc66;
+}
+.datagrid-row-selected {
+  background:#3F9673;/*背景色*/
+  color: #fff;
+  cursor: default;
+}
+.datagrid-cell{
+    border-right-style:solid;
+    border-right-width:1px;
+}
+.datagrid-htable .datagrid-cell {
+    border-right-color:#ccc;
+}
+.datagrid-btable .datagrid-cell {
+    border-right-color:#fff;
+}
+.datagrid-row-over .datagrid-cell{
+	border-right-color:#99cc66 !important;
+}
+.datagrid-row-selected .datagrid-cell{
+  border-right-color:#3F9673;
+}
+/*.datagrid-row-selected {
+  background: #FBEC88;
+  color: #000000;
+}*/
+.datagrid-body .datagrid-editable .datagrid-editable-input {
+  border-color: #95B8E7;
+}
+/*add*/
+.datagrid-header-inner table,.datagrid-body table,
+.datagrid-header-inner table tr,.datagrid-body table tr {
+    width:100%;
+}
+.panel-header {
+    display:none;
+}
+.datagrid-view input{
+border:0px;
+float:left;
+margin-left:3px;
+}
+/*.datagrid-header-check input{
+    display:none;
+}*/
+/***   Pagnation   ***/
+.pagination {
+  zoom: 1;
+}
+.pagination table {
+  /*float: left;
+  height: 30px;    修改页码2-1*/
+  float: right;
+  height: 30px;
+  margin-right:10px;
+}
+.pagination td {
+  border: 0;
+}
+.pagination-btn-separator {
+  float: left;
+  height: 24px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #fff;
+  margin: 3px 1px;
+}
+.pagination .pagination-num {
+  border-width: 1px;
+  border-style: solid;
+  margin: 0 2px;
+  padding: 2px;
+  width: 2em;
+  height: auto;
+}
+.pagination-page-list {
+  margin: 0px 6px;
+  padding: 1px 2px;
+  width: auto;
+  height: auto;
+  border-width: 1px;
+  border-style: solid;
+}
+.pagination-info,.my-pagination-info {
+  /*float: right;
+  margin: 0 6px 0 0;
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;    修改页码2-2*/
+  float: left;
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+}
+.myPageSize {
+    margin-top:4px;
+}
+.pagination span {
+  font-size: 12px;
+}
+/*无法显示图标，添加下面的代码*/
+.pagination span  span span{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 16px;
+    height:16px;
+}
+.pagination-first {
+  background: url('../../images/easyUI/pagination_icons.png') no-repeat 0 0;
+}
+.pagination-prev {
+  background: url('../../images/easyUI/pagination_icons.png') no-repeat -16px 0;
+}
+.pagination-next {
+  background: url('../../images/easyUI/pagination_icons.png') no-repeat -32px 0;
+}
+.pagination-last {
+  background: url('../../images/easyUI/pagination_icons.png') no-repeat -48px 0;
+}
+.pagination-load {
+  background: url('../../images/easyUI/pagination_icons.png') no-repeat -64px 0;
+}
+.pagination-loading {
+  background: url('../../images/easyUI/loading.gif') no-repeat;
+}
+.pagination-page-list,
+.pagination .pagination-num {
+  border-color: #95B8E7;
+}
+.pagination select {
+    float:left;
+    margin-top:3px;
+}
+.datagrid-htable .datagrid-cell{margin:0 auto;}
+.temp,.temp div{display:none;}
+
+.scroll_bar{overflow-x:auto;}
+.window{border:0;}

@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/easyUI/jquery.easyui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../css/easyUI/combo.css"/>
+    <style type="text/css">
+        .CInfo .combo,.CInfo input{
+            background-color:#cccccc;
+        }
+        .is_col0 {
+            width:15px;
+        }
+        .his_col0 {
+            width:33px;
+        }
+        .iq {
+            width:95%;
+        }
+        .htable_div div {
+            border-right:solid 1px #ccc;
+        }
+        .btable_checked  div {
+            border-right:1px solid #3F9673;
+        }
+    </style>
+</head>
+<body>
+    <div class="TopMenu"></div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a class="Sub Sub_on"><span class="L1_No"></span>
+                           <span class="SubText">商品基本资料</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                    <li>
+                        <a class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">系列商品管理</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">商品厂商查询</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                                        <li>
+                        <a class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">季节性商品信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                    <li>
+                        <a class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">进销存查询</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">异常查询</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">商品异动查询</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools3_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools23_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools32_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools10_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools17_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools19_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools24_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools25_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools28_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29_disable"></td>
+                    </tr>
+                </table>
+                <div class="RightTool ToolsBg">
+                    <div class="Tools22 Icon-size1 Tools22_on " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                <!--第一个-->
+                            <div class="tags1_left"></div>
+                            <div class="tagsM">商品总览</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品变价</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品变价</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品条码</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">改包装设定</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品厂商</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品陈列信息</div>
+                            <div class="tags"></div>
+                <!--中间-->
+                            <div class="tagsM">商品进销存</div>
+                            <div class="tags"></div>
+
+                            <!--最后一个-->
+                            <div class="tagsM">DC商品</div>
+                            <div class="tags tags3 tags_right_on"></div>
+                            <!--一定不要忘了tag3-->
+                            <!--add-->
+                            <div class="tagsM_q  tagsM_on">修改商品门店信息</div>
+                            <div class="tags3_close_on">
+                                <div class="tags_close"></div>
+                            </div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+                    <div class="htable_div">
+                    <table>
+                        <thead>
+                            <tr class="tr_special1">
+                                <!--<td><div class="t_check align_center" style="width:30px;"><input type="checkbox" name="tck"/></div></td>-->
+                                <td><div class="t2_col">货号</div></td>
+                                <td><div class="t2_col">店号</div></td>
+                                <td colspan="2"><div class="t2_col">买价限制(元)</div></td>
+                                <td colspan="2"><div class="t2_col">门店变价</div></td>
+                                <td colspan="2"><div class="t2_col">DC属性</div></td>
+                                <td colspan="2"><div class="t2_col">箱含量</div></td>
+                                <td colspan="2"><div class="t2_col">允收天数</div></td>
+                                <td><div class="his_col0"></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="t2_col">&nbsp;</div></td>
+                                <td><div class="t2_col">&nbsp;</div></td>
+                                <td><div class="s1_col">旧</div></td>
+                                <td><div class="s1_col">新</div></td>
+                                <td><div class="s1_col">旧</div></td>
+                                <td><div class="s1_col">新</div></td>
+                                <td><div class="s1_col">旧</div></td>
+                                <td><div class="s1_col">新</div></td>
+                                <td><div class="s1_col">旧</div></td>
+                                <td><div class="s1_col">新</div></td>
+                                <td><div class="s1_col">旧</div></td>
+                                <td><div class="s1_col">新</div></td>
+                                <td><div class="s1_col">&nbsp;</div></td>
+                            </tr>
+                        </thead>
+	                </table>
+                    </div>
+                    <div class="btable_div" style="height:500px;">
+                    <table  class="single_tb"><!--multi_tb为多选-->
+                            <tr>
+                                <td><div class="t2_col">12345678-大码男大码男wwwwwwwwwwwwwwwwwwwwwww</div></td>
+                                <td><div class="t2_col">12345678-大码男大码男</div></td>
+                                <td><div class="s1_col">123.00</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="s1_col">1-是</div></td>
+                                <td><div class="s1_col"><select class="w95"><option></option></select></div></td>
+                                <td><div class="s1_col">1-DCStock</div></td>
+                                <td><div class="s1_col"><select class="w95"><option></option></select></div></td>
+                                <td><div class="s1_col">1234</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="s1_col">375</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="is_col0">&nbsp;</div></td>
+                            </tr>
+                        <tr>
+                                <td><div class="t2_col">12345678-大码男大码男wwwwwwwwwwwwwwwwwwwwwww</div></td>
+                                <td><div class="t2_col">12345678-大码男大码男</div></td>
+                                <td><div class="s1_col">123.00</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="s1_col">1-是</div></td>
+                                <td><div class="s1_col"><select class="w95"><option></option></select></div></td>
+                                <td><div class="s1_col">1-DCStock</div></td>
+                                <td><div class="s1_col"><select class="w95"><option></option></select></div></td>
+                                <td><div class="s1_col">1234</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="s1_col">375</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="is_col0">&nbsp;</div></td>
+                            </tr>
+                        <tr>
+                                <td><div class="t2_col">12345678-大码男大码男wwwwwwwwwwwwwwwwwwwwwww</div></td>
+                                <td><div class="t2_col">12345678-大码男大码男</div></td>
+                                <td><div class="s1_col">123.00</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="s1_col">1-是</div></td>
+                                <td><div class="s1_col"><select class="w95"><option></option></select></div></td>
+                                <td><div class="s1_col">1-DCStock</div></td>
+                                <td><div class="s1_col"><select class="w95"><option></option></select></div></td>
+                                <td><div class="s1_col">1234</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="s1_col">375</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="is_col0">&nbsp;</div></td>
+                            </tr>
+                        <tr>
+                                <td><div class="t2_col">12345678-大码男大码男wwwwwwwwwwwwwwwwwwwwwww</div></td>
+                                <td><div class="t2_col">12345678-大码男大码男</div></td>
+                                <td><div class="s1_col">123.00</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="s1_col">1-是</div></td>
+                                <td><div class="s1_col"><select class="w95"><option></option></select></div></td>
+                                <td><div class="s1_col">1-DCStock</div></td>
+                                <td><div class="s1_col"><select class="w95"><option></option></select></div></td>
+                                <td><div class="s1_col">1234</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="s1_col">375</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="is_col0">&nbsp;</div></td>
+                            </tr>
+                        <tr>
+                                <td><div class="t2_col">12345678-大码男大码男wwwwwwwwwwwwwwwwwwwwwww</div></td>
+                                <td><div class="t2_col">12345678-大码男大码男</div></td>
+                                <td><div class="s1_col">123.00</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="s1_col">1-是</div></td>
+                                <td><div class="s1_col"><select class="w95"><option></option></select></div></td>
+                                <td><div class="s1_col">1-DCStock</div></td>
+                                <td><div class="s1_col"><select class="w95"><option></option></select></div></td>
+                                <td><div class="s1_col">1234</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="s1_col">375</div></td>
+                                <td><div class="s1_col"><input type="text" class="w95 inputText" /></div></td>
+                                <td><div class="is_col0">&nbsp;</div></td>
+                            </tr>
+                    </table>    
+                    </div>
+                    <div class="paging">
+	                    <div class="fl_left">
+		                    第1-20项,共 5 项&nbsp;&nbsp;|&nbsp;每页显示 <select>
+			                    <option value="10">10</option>
+			                    <option value="20" selected="selected">20</option>
+			                    <option value="30">30</option>
+		                    </select> 项
+	                    </div>
+	                    <div class="fl_right page_list">
+                            <span class="fl_right" style="margin-right:10px;">&nbsp;&nbsp;&nbsp;到第 <input name="pageNo" id="goto_page" class="page_no_input" maxlength="5" type="text"/> 页 <input value="go"  type="button"/></span>
+                                <a class="page_end_block" title="尾页"></a>
+                                <a class="page_next_block" title="下一页"></a>
+                                <a title="6" class="num">6</a>
+                                <a title="5" class="num">5</a>
+                                <a style="cursor:default;">...</a>
+                                <a title="2" class="num">3</a>
+                                <a title="2" class="num">2</a>
+                                <a title="1" class="num">1</a>
+                                <a title="上一页" class="page_prev_block"></a>
+                                <a title="首页" class="page_first_block"></a>  
+	                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

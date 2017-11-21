@@ -1,0 +1,735 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <style type="text/css">
+        .ToolBar {
+            width: 100%;
+            height: 40px;
+            background: #F9F9F9;
+        }
+        .SearchTool {
+            width: 40px;
+            height: 40px;
+            float: left;
+            text-align:center;
+        }
+        .searchToolBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: 2px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .searchToolBar_hover .searchToolBar{
+            background-position: -21px -4px;
+        }
+        .searchToolBar_selected,.listView_selected,.formView_selected {
+            background:#42BB8F;
+        }
+        .searchToolBar_selected .searchToolBar{
+            background-position: -778px -2px;
+        }
+        .searchToolBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: 2px -29px;
+            background-repeat: no-repeat;
+            cursor: no-drop;
+        }
+        .normalTools {
+            margin-top:10px;
+            float:left;
+            margin-right:10px;
+        }
+        .lineToolbar {
+            margin-top:10px;
+            float:left;
+            height:20px;
+            width:1px;
+            background:#333;
+            margin-right:10px;
+        }
+        .saveBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -45px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .printBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -80px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools4 {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -115px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .searchBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -205px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .clearBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -608px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .createNewBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -359px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .deleteBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -325px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .editBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -395px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .firstPageBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -446px -1px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .prevPageBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -474px -1px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .nextPageBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -501px -1px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .endPageBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -528px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .prevStepBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -827px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .nextStepBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -857px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .submitBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -887px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .approveBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -915px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .disapproveBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -944px -3px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .commentBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -971px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .importBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1048px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools31 {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1024px -3px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools30 {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1000px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools33 {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1149px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .RightTool {
+            float: right;
+            height: 40px;
+            width: 40px;
+            text-align:center;
+        }
+            .RightTool .listView, .RightTool .formView,.SearchTool .searchToolBar  {
+                display:inline-block;vertical-align:-80%;
+            }
+        .listView {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -731px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .formView {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -755px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .saveBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -45px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .printBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -80px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools4_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -115px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .searchBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -205px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .clearBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -608px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .createNewBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -359px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .deleteBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -325px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .editBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -395px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .firstPageBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -446px -29px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .prevPageBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -474px -29px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .nextPageBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -501px -29px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .endPageBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -528px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .prevStepBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -827px -27px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .nextStepBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -857px -27px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .submitBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -887px -28px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .approveBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -915px -27px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .disapproveBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -944px -28px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .commentBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -971px -28px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .importBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1048px -27px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools31_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1024px -27px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools30_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1000px -27px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools33_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position:-1171px -2px;
+            background-repeat: no-repeat;
+            cursor: no-drop;
+        }
+        .formView_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -731px -28px;
+            background-repeat: no-repeat;
+            cursor: no-drop;
+        }
+        .listView_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -755px -28px;
+            background-repeat: no-repeat;
+            cursor: no-drop;
+        }
+        .listView_selected .listView{
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -801px -28px;
+            background-repeat: no-repeat;
+        }
+        .formView_selected .formView{
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -778px -28px;
+            background-repeat: no-repeat;
+        }
+        .stopBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/stopIcon.png');
+            background-position:0 -20px;
+            background-repeat: no-repeat;
+            cursor: no-drop;
+        }
+        .stopBar{
+            width:20px;
+            height:20px;
+            background-image: url('../images/stopIcon.png');
+            background-position:0 0;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .exportBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1077px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .exportBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1077px -26px;
+            background-repeat: no-repeat;
+            cursor: no-drop;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ToolBar">
+        <div class="SearchTool">
+            <div class="searchToolBar B-id" title="检索"></div>
+        </div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools saveBar" title="保存"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools printBar" title="打印"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools importBar" title="导入"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools searchBar" title="检索"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools clearBar" title="清除"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools createNewBar" title="创建新项"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools deleteBar" title="删除"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools editBar" title="编辑"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools firstPageBar" title="转至首页"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools prevPageBar" title="转至上一页"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools nextPageBar" title="转至下一页"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools endPageBar" title="转至末页"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools prevStepBar" title="转至上一步"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools nextStepBar" title="转至下一步"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools submitBar" title="提交"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools approveBar" title="审核通过"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools disapproveBar" title="审核不通过"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools commentBar" title="评论"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools Tools4" title="Tools4"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools Tools31" title="Tools31"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools Tools30" title="Tools30"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools Tools33" title="Tools33"></div>
+        <div class="lineToolbar"></div>
+
+        <div class="RightTool">
+            <div class="formView" title="表单视窗"></div>
+        </div>
+        <div class="RightTool">
+            <div class="listView" title="列表视窗"></div>
+        </div>
+    </div>
+    //////
+    <div class="ToolBar">
+        <div class="SearchTool searchToolBar_hover">
+            <div class="searchToolBar B-id" title="检索"></div>
+        </div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools saveBar" title="保存"></div>
+
+        <div class="normalTools printBar" title="打印"></div>
+
+        <div class="normalTools importBar" title="导入"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools searchBar" title="检索"></div>
+
+        <div class="normalTools clearBar" title="清除"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools createNewBar" title="创建新项"></div>
+
+        <div class="normalTools deleteBar" title="删除"></div>
+
+        <div class="normalTools editBar" title="编辑"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools firstPageBar" title="转至首页"></div>
+
+        <div class="normalTools prevPageBar" title="转至上一页"></div>
+
+        <div class="normalTools nextPageBar" title="转至下一页"></div>
+
+        <div class="normalTools endPageBar" title="转至末页"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools prevStepBar" title="转至上一步"></div>
+
+        <div class="normalTools nextStepBar" title="转至下一步"></div>
+
+        <div class="normalTools submitBar" title="提交"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools approveBar" title="审核通过"></div>
+
+        <div class="normalTools disapproveBar" title="审核不通过"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools commentBar" title="评论"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools Tools4" title="Tools4"></div>
+       
+        <div class="normalTools Tools31" title="Tools31"></div>
+        
+        <div class="normalTools Tools30" title="Tools30"></div>
+        
+        <div class="normalTools Tools33" title="Tools33"></div>
+        
+
+        <div class="RightTool">
+            <div class="formView formView_off"></div>
+        </div>
+        <div class="RightTool">
+            <div class="listView listView_off"></div>
+        </div>
+    </div>
+    /////
+    <div class="ToolBar">
+        <div class="SearchTool searchToolBar_selected">
+            <div class="searchToolBar B-id" title="检索"></div>
+        </div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools saveBar" title="保存"></div>
+
+        <div class="normalTools printBar_off" title="打印"></div>
+
+        <div class="normalTools importBar_off" title="导入"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools searchBar_off" title="检索"></div>
+
+        <div class="normalTools clearBar_off" title="清除"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools createNewBar_off" title="创建新项"></div>
+
+        <div class="normalTools deleteBar_off" title="删除"></div>
+
+        <div class="normalTools editBar_off" title="编辑"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools firstPageBar_off" title="转至首页"></div>
+
+        <div class="normalTools prevPageBar_off" title="转至上一页"></div>
+
+        <div class="normalTools nextPageBar_off" title="转至下一页"></div>
+
+        <div class="normalTools endPageBar_off" title="转至末页"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools prevStepBar_off" title="转至上一步"></div>
+
+        <div class="normalTools nextStepBar_off" title="转至下一步"></div>
+
+        <div class="normalTools submitBar_off" title="提交"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools approveBar_off" title="审核通过"></div>
+
+        <div class="normalTools disapproveBar_off" title="审核不通过"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools commentBar_off" title="评论"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools Tools4_off" title="Tools4"></div>
+       
+        <div class="normalTools Tools31_off" title="Tools31"></div>
+        
+        <div class="normalTools Tools30_off" title="Tools30"></div>
+        
+        <div class="normalTools Tools33_off" title="Tools33"></div>
+        
+
+        <div class="RightTool formView_selected">
+            <div class="formView" title="表单视窗"></div>
+        </div>
+        <div class="RightTool">
+            <div class="listView" title="列表视窗"></div>
+        </div>
+    </div>
+    /////
+    <div class="ToolBar">
+        <div class="SearchTool">
+            <div class="searchToolBar B-id searchToolBar_off" title="检索"></div>
+        </div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools saveBar_off" title="保存"></div>
+
+        <div class="normalTools printBar" title="打印"></div>
+
+        <div class="normalTools importBar_off" title="导入"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools searchBar_off" title="检索"></div>
+
+        <div class="normalTools clearBar" title="清除"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools createNewBar_off" title="创建新项"></div>
+
+        <div class="normalTools deleteBar" title="删除"></div>
+
+        <div class="normalTools editBar" title="编辑"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools firstPageBar_off" title="转至首页"></div>
+
+        <div class="normalTools prevPageBar" title="转至上一页"></div>
+
+        <div class="normalTools nextPageBar" title="转至下一页"></div>
+
+        <div class="normalTools endPageBar_off" title="转至末页"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools prevStepBar_off" title="转至上一步"></div>
+
+        <div class="normalTools nextStepBar" title="转至下一步"></div>
+
+        <div class="normalTools submitBar_off" title="提交"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools approveBar" title="审核通过"></div>
+
+        <div class="normalTools disapproveBar" title="审核不通过"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools commentBar_off" title="评论"></div>
+        <div class="lineToolbar"></div>
+        <div class="normalTools Tools4" title="Tools4"></div>
+       
+        <div class="normalTools Tools31_off" title="Tools31"></div>
+        
+        <div class="normalTools Tools30" title="Tools30"></div>
+        
+        <div class="normalTools Tools33_off" title="Tools33"></div>
+        
+        <div class="normalTools stopBar_off" title="终止"></div>
+        <div class="normalTools stopBar" title="终止"></div>
+        <div class="normalTools exportBar_off" title="终止"></div>
+        <div class="normalTools exportBar" title="终止"></div>
+        <div class="RightTool">
+            <div class="formView" title="表单视窗"></div>
+        </div>
+        <div class="RightTool listView_selected">
+            <div class="listView" title="列表视窗"></div>
+        </div>
+    </div>
+</body>
+</html>

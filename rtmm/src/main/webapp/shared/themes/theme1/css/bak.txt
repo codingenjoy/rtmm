@@ -1,0 +1,48 @@
+<!--    <div id="selectable" class="TopMenu HPAndForty GreencColor White">
+        <div class="TopMenuLogo Icon Logo"></div>
+        <div id="TopMenu1" class="TopMenuBlock Pointer ui-widget-content">
+            <span class="TopMenuIcon Icon Catelog1 MarginLeft10"></span>
+            <span class="TopMenuText MarginLeft7">分类管理</span>
+        </div>
+        <div id="TopMenu2" class="TopMenuBlock ui-widget-content">
+            <span class="TopMenuIcon Icon Manufacture MarginLeft10"></span>
+            <span class="TopMenuText MarginLeft7">厂商管理</span>
+        </div>
+        <div id="TopMenu3" class="TopMenuBlock Pointer ui-widget-content">
+            <span class="TopMenuIcon Icon Goods MarginLeft10"></span>
+            <span class="TopMenuText MarginLeft7">商品管理</span>
+        </div>
+        <div id="TopMenu4" class="TopMenuBlock Pointer ui-widget-content">
+            <span class="TopMenuIcon Icon Order MarginLeft10"></span>
+            <span class="TopMenuText MarginLeft7">订单管理</span>
+        </div>
+        <div id="TopMenu5" class="TopMenuBlock Pointer ui-widget-content">
+            <span class="TopMenuIcon Icon Sales MarginLeft10"></span>
+            <span class="TopMenuText MarginLeft7">促销管理</span>
+        </div>
+        <div id="TopMenu6" class="TopMenuBlock Pointer ui-widget-content">
+            <span class="TopMenuIcon Icon Results MarginLeft10"></span>
+            <span class="TopMenuText MarginLeft7">业绩分析</span>
+        </div>
+        <div id="TopMenu7" class="TopMenuBlock Pointer ui-widget-content">
+            <span class="TopMenuIcon Icon Parameter MarginLeft10"></span>
+            <span class="TopMenuText MarginLeft7">参数管理</span>
+        </div>
+        <div id="TopMenu8" class="TopMenuBlock Pointer ui-widget-content">
+            <span class="TopMenuIcon Icon Daily MarginLeft10"></span>
+            <span class="TopMenuText MarginLeft7">日结管理</span>
+        </div>
+        <div id="TopMenu9" class="TopMenuBlock Pointer ui-widget-content">
+            <span class="TopMenuIcon Icon Workstation MarginLeft10"></span>
+            <span class="TopMenuText MarginLeft7">我的工作台</span>
+        </div>
+        <div class="TopMenuBlock FloatRight">
+
+        </div>
+    </div>-->
+
+.menu div 的优先级比 直接在DIV中引用class高
+一般情况下少用 .menu div 这种方式 会影响 menu div 下面的div
+
+不要直接引用有特殊意义的class，比如在内容里面引用。menu 样式 ，但是可以这样 .menu ,.content {}
+

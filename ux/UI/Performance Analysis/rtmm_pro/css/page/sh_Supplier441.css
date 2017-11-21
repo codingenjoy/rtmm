@@ -1,0 +1,32 @@
+﻿        .t_div1 {
+            height:240px;margin-top:5px;
+        }
+
+        .t_div1_1 ,.t_div1_2{
+            width:50%;height:100%; float:left;
+        }
+
+        .t2_title {
+            line-height:25px;
+        }
+        .t2_title div {
+            width:70px;float:left;margin-left:75px;
+        }
+.CInfo {
+    background-color:#eeeeee;
+    background-image:url(../../images/s441.jpg);
+    background-repeat:no-repeat;
+}
+.info {
+    width:16px;
+    height:17px;
+    background:url(../../images/icon0403.png) -68px -2px no-repeat;
+    float:left;
+    margin:5px auto auto 5px;
+    cursor:pointer;
+}
+.input50 {
+    width:50%;
+    float: left;
+    margin-left: 3px;
+}

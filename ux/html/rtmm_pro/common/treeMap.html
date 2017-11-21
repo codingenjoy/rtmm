@@ -1,0 +1,948 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+<!--    <script src="../js/easyUI/jquery.easyui.min.js" charset="utf-8" type="text/javascript"></script>-->
+        <link type="text/css" href="../jquery-ui-1.11.0.custom/jquery-ui.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../jquery-ui-1.11.0.custom/jquery-ui.min.js"></script>
+    <style type="text/css">
+        .fx_div1{
+            height:60px;
+        }
+        .fx_div2 {
+            height:465px;margin-top:2px;
+        }
+        .fx_div21 {
+            height:20px;
+        }
+        .fx_div21_1 {
+            height:20px;width:80px;text-align:center;cursor:pointer;margin-left:20px;float:left;
+        }
+        .fx_div21_2 {
+            height:20px;width:80px;text-align:center;cursor:pointer;margin-left:5px;float:left;
+        }
+        .fx_div21_3 {
+            height:20px;width:80px;text-align:center;cursor:pointer;margin-left:5px;float:left;
+        }
+        .fx_div22 {
+            margin-top:10px;margin-right:10px; width :96%;float:right; height:416px;border-top:1px solid #808080;overflow:auto;
+        }
+        .fx22_1{
+            width:35.4%;height:100%;float:left; height:30px;padding-left:10px;line-height:30px;background:#eeeeee;
+        }
+        .fx221_2 {
+            height:350px;overflow-y:auto;overflow-x:hidden;background:#fff;border:1px solid #808080;
+        }
+        .tree-icon {
+            display:none;
+        }
+        .datagrid-btable .datagrid-cell {
+            border:1px solid #cccccc;margin-right:10px;
+        }
+        .datagrid-row-selected .datagrid-cell,.datagrid-row-over .datagrid-cell {
+            border:1px solid #fff;color:#fff;
+        }
+
+        /*<!-- treemap -->*/
+        .treeMap {
+            width:960px;margin:5px auto;background:#fff;
+        }
+        .fengGeHang {
+            height:10px;border-left:1px solid #ccc;
+        }
+        .fengGeHang1 {
+            height:10px;border-left:1px solid #fff;
+        }
+        .fengGeHang2 {
+            height:10px;width:5px;border-right:1px solid #ccc;
+        }
+        .blockSize {
+            width:94px;height:28px;float:left;
+        }
+        .blockText{
+            line-height:26px;margin-left:5px;
+        }
+        .signExp {
+            margin-left:5px;width:16px;height:30px;float:left;cursor:pointer;
+        }
+        .signJiaBg {
+            background:url(../images/jia.jpg) no-repeat center;
+        }
+        .signJianBg {
+            background:url(../images/jian.jpg) no-repeat center;
+        }
+        .blockGrayBg {
+            border:1px solid #ccc;border-left:5px solid #ccc;
+        }
+        .blockGreenBg {
+            border:1px solid #ccc;border-left:5px solid #00CC99;
+        }
+        .blockRedBg {
+            border:1px solid #ccc;border-left:5px solid #f00;
+        }
+        .blockYellowBg {
+            border:1px solid #ccc;border-left:5px solid #ffd800;
+        }
+        .branchS {
+            width: 6px;
+            height: 30px;
+            float: left;
+        }
+        .branchS_line {
+           background:url(../images/tree_line.png) 0px -39px no-repeat;
+        }
+        .branchM {
+            height:30px;width:6px;float:left;background:url(../images/tree_line.png) 0px 0px;
+        }
+        .branchEnd{
+            height:30px;width:6px;float:left;background:url(../images/tree_line.png) 0px -70px no-repeat;
+        }
+        .branch {
+            width:130px;min-height:30px;float:left;
+        }
+        .tq_xiaoyu {
+            background:url(../images/tq/xiaoyu.jpg) no-repeat center right;
+        }
+        .tq_yunzq {
+            background:url(../images/tq/yunzq.jpg) no-repeat center right;
+        }
+        .tq_zhongyu {
+            background:url(../images/tq/zhongyu.jpg) no-repeat center right;
+        }
+        .tq_leiyu {
+            background:url(../images/tq/leiyu.jpg) no-repeat center right;
+        }
+        .tq_sun {
+            background:url(../images/tq/sun.jpg) no-repeat center right;
+        }
+        .treeMap_body .branch {
+            margin-left:5px;
+        }
+        #autocomplete {
+            float:right;
+        }
+    </style>
+
+    <script type="text/javascript">
+        //selector 点击选中的div的name属性
+        //switchor 要进行隐藏 显示却换的div  class 就是selector的name
+        //function hiddenSonDiv(selectorName) {
+        //    var $switchor = $("." + selectorName);
+        //    $switchor.toggle();
+        //}
+        //selector 点击选中的div的选择器
+        function hiddenSonDiv($selector) {
+
+            if ($selector.hasClass("signJiaBg")) {
+                $selector.addClass("signJianBg");
+                $selector.removeClass("signJiaBg");
+            } else {
+                $selector.addClass("signJiaBg");
+                $selector.removeClass("signJianBg");
+            }
+
+            var selectorName = $selector.attr("name");
+
+            var $switchor = $("." + selectorName);
+
+            $switchor.toggle();
+        }
+
+        $(".signExp").live("click", function () {
+            hiddenSonDiv($(this));
+        });
+    </script>
+</head>
+<body>
+    <div class="TopMenu"></div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div>////1</div>
+            <div>
+                <div class="blockSize blockGrayBg">
+                    <span class="blockText">华北(14)</span>
+                </div>
+                <div class="signExp signJiaBg"></div>
+                <div  style="clear:both;"></div>
+            </div>
+            <div>////2</div>
+            <div style="height:150px;background:#fff;">
+                <div class="branchM"></div>
+                <br /><div>////3</div>
+                <div class="shu_10_1"></div>
+                <div class="shu_10_2"></div>
+                <div>////4</div>
+                <div class="branchEnd"></div>
+                <div>////5</div>
+                <div class="branchS"></div>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">TooLs</div>
+            <div class="CTitle"></div>
+            <div class="Container-1">
+                <div class="Content" style="width:99%;"><!--width:74%;-->
+	                <div class="CInfo">
+                        <span>项</span>
+                        <span>10，000</span>
+                        <span>/</span>
+                        <span>1</span>
+                        <span>第</span>
+                        <span>|</span>
+                        <span>张三</span>
+                        <span>修改人</span>
+                        <span>2014-03-03</span>
+                        <span>修改日期</span>
+                        <span>李四</span>
+                        <span>建档人</span>
+                        <span>2014-02-02</span>
+                        <span>创建日期</span>
+                    </div>
+                    
+                    <!--539-->
+                    <div class="CM fx_div1">
+                            <div class="CM-bar"><div>厂编</div></div>
+                            <div class="CM-div">
+                            <table class="CM_table">
+                                <tr>
+                                    <td style="width:10%;"><span>*采购厂编</span></td>
+                                    <td><input type="text"  class="inputText w20"/></td>
+                                </tr>
+                            </table></div>
+                        </div>
+
+                    <div class="CM fx_div2">
+                            <div class="CM-bar"><div>业态和区域</div></div>
+                            <div class="fx_div21">
+                                <div class="fx_div21_1 item item_on">物流中心</div>
+                                <div class="fx_div21_2 item">加工中心</div>
+                                <div class="fx_div21_3 item">大卖场</div>
+                            </div>
+                        <div class="fx_div22">
+                            <div class="treeMap">
+                                <div style="height:30px;">
+                                    <div style="height:30px;width:125px;margin-left:430px;display:inline-block;">
+                                        <div class="blockSize blockGrayBg">
+                                             <span class="blockText">全国</span>
+                                        </div>
+                                        <div class="signExp signJianBg" name="quanguo"></div>
+                                    </div>
+                                    <input id="autocomplete" class="inputText fl_right" readonly="readonly"/>
+                                    <script>
+                                        //$("#autocomplete").autocomplete({
+                                        //    source: ["c++", "java", "php", "coldfusion", "javascript", "asp", "ruby"]
+                                        //});
+                                        var availableTags = [
+
+                                            "Scheme"
+                                        ];
+                                        $("#autocomplete").autocomplete({ source: availableTags }, { minLength: 0 }).click(function () {
+                                            $(this).autocomplete("search", "");
+                                        });
+                                    </script>
+                                </div>
+                                <div class="treeMap_body quanguo">
+                                    <div style="height:55px;width:812px;margin:0 auto;background:url(../images/tree_head.jpg);"></div>
+                                    <div class="branch">
+                                        <div class="ig">
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">华东(20)</span>
+                                            </div>
+                                            <div class="signExp signJianBg" name="huadong"></div>
+                                        </div>
+                                        <div class="huadong">
+                                            <div class="fengGeHang"></div>
+                                            <div class="ig">
+                                                <div class="branchM"></div>
+                                                <div class="blockSize blockGrayBg">
+                                                    <span class="blockText">上海市 (5)</span>
+                                                </div>
+                                                <div class="signExp signJianBg" name="shanghai"></div>
+                                            </div>
+                                            <div class="shanghai">
+                                                <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                                <div class="ig">
+                                                    <div class="branchS branchS_line"></div>
+                                                    <div class="branchEnd"></div>
+                                                    <div class="blockSize blockYellowBg tq_yunzq">
+                                                        <span class="blockText">上海市</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fengGeHang"></div>
+                                            <div class="ig">
+                                                    <div class="branchM"></div>
+                                                    <div class="blockSize blockGrayBg">
+                                                        <span class="blockText">江苏省 (8)</span>
+                                                    </div>
+                                                    <div class="signExp signJianBg" name="jiangsu"></div>
+                                                </div>
+                                            <div class="jiangsu">
+                                                <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                                <div class="ig">
+                                                    <div class="branchS branchS_line"></div>
+                                                    <div class="branchM"></div>
+                                                    <div class="blockSize blockRedBg tq_leiyu">
+                                                        <span class="blockText">苏州</span>
+                                                    </div>
+                                                </div>
+                                                <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                                <div class="ig">
+                                                    <div class="branchS branchS_line"></div>
+                                                    <div class="branchM"></div>
+                                                    <div class="blockSize blockRedBg tq_sun">
+                                                        <span class="blockText">南京</span>
+                                                    </div>
+                                                </div>
+                                                <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                                <div class="ig">
+                                                    <div class="branchS branchS_line"></div>
+                                                    <div class="branchM"></div>
+                                                    <div class="blockSize blockGreenBg tq_zhongyu">
+                                                        <span class="blockText">常州</span>
+                                                    </div>
+                                                </div>
+                                                <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                                <div class="ig">
+                                                    <div class="branchS branchS_line"></div>
+                                                    <div class="branchM"></div>
+                                                    <div class="blockSize blockGrayBg tq_yunzq">
+                                                        <span class="blockText">南通</span>
+                                                    </div>
+                                                </div>
+                                                <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                                <div class="ig">
+                                                    <div class="branchS branchS_line"></div>
+                                                    <div class="branchEnd"></div>
+                                                    <div class="blockSize blockGrayBg tq_xiaoyu">
+                                                        <span class="blockText">南通</span>
+                                                    </div>
+                                                </div>                                               
+                                                <div style="clear:both;"></div>
+                                            </div>
+                                            <div class="fengGeHang"></div>
+                                            <div class="ig">
+                                                 <div class="branchEnd"></div>
+                                                 <div class="blockSize blockGrayBg">
+                                                      <span class="blockText">浙江 (8)</span>
+                                                 </div>
+                                                 <div class="signExp signJianBg" name="zhejiang"></div>
+                                            </div>
+                                            <div class="zhejiang">
+                                                <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                                <div class="ig">
+                                                    <div class="branchS"></div>
+                                                    <div class="branchM"></div>
+                                                    <div class="blockSize blockGrayBg tq_yunzq">
+                                                        <span class="blockText">宁波</span>
+                                                    </div>
+                                                </div>
+                                                <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                                <div class="ig">
+                                                    <div class="branchS"></div>
+                                                    <div class="branchEnd"></div>
+                                                    <div class="blockSize blockGrayBg tq_yunzq">
+                                                        <span class="blockText">NBo</span>
+                                                    </div>
+                                                </div>
+                                                <div style="clear:both;"></div>
+                                            </div>
+                                            <div style="clear:both;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="branch">
+                                        <div class="ig">
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">华东(20)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">上海市 (5)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_xiaoyu">
+                                                <span class="blockText">上海市</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">江苏省 (8)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">苏州</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南京</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">常州</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南通</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南通</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">浙江 (8)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">宁波</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">NBo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="branch">
+                                        <div class="ig">
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">华东(20)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">上海市 (5)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">上海市</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">江苏省 (8)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">苏州</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南京</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">常州</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南通</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南通</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">浙江 (8)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">宁波</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">NBo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="branch">
+                                        <div class="ig">
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">华东(20)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">上海市 (5)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">上海市</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">江苏省 (8)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">苏州</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南京</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">常州</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南通</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南通</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">浙江 (8)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">宁波</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">NBo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="branch">
+                                        <div class="ig">
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">华东(20)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">上海市 (5)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">上海市</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">江苏省 (8)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">苏州</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南京</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">常州</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南通</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南通</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">浙江 (8)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">宁波</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">NBo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="branch">
+                                        <div class="ig">
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">华东(20)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">上海市 (5)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">上海市</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">江苏省 (8)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">苏州</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南京</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">常州</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南通</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南通</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">浙江 (8)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">宁波</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">NBo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="branch">
+                                        <div class="ig">
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">华东(20)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">上海市 (5)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">上海市</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">江苏省 (8)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">苏州</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南京</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">常州</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南通</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS branchS_line"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">南通</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang"></div>
+                                        <div class="ig">
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg">
+                                                <span class="blockText">浙江 (8)</span>
+                                            </div>
+                                            <div class="signExp signJianBg"></div>
+                                        </div>
+                                        <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS"></div>
+                                            <div class="branchM"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">宁波</span>
+                                            </div>
+                                        </div>
+                                        <div class="fengGeHang1"><div class="fengGeHang2"></div></div>
+                                        <div class="ig">
+                                            <div class="branchS"></div>
+                                            <div class="branchEnd"></div>
+                                            <div class="blockSize blockGrayBg tq_yunzq">
+                                                <span class="blockText">NBo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                                </div>
+
+
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

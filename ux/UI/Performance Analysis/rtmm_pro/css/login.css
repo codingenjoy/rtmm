@@ -1,0 +1,78 @@
+﻿body,.bg{
+    padding:0px;margin:0px auto;
+    width:1240px;
+    height:700px;
+    color:#333333;
+}
+a {
+    border:0;
+    display:block;
+    text-decoration:none;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    color:#333333;
+}
+.bg {
+    background:url(../images/loginBg.jpg);
+    overflow:hidden;
+}
+body,table,span {
+    font-family:'Microsoft YaHei';
+    font-size:12px;
+}
+.p {
+    height:50px;
+}
+input,.textDiv {
+    width:220px;
+    padding:0;margin:0;
+    border:0;
+    height:28px;
+    line-height:25px;
+    float:right;
+    background-color:#f5f5f5;
+}
+.textDiv {
+    cursor:text;
+    position:absolute;
+    z-index:999;
+    color:#cccccc;
+}
+.login {
+    width:700px;
+    height:300px;
+    margin:170px auto;
+}
+.lg_div {
+    height:300px;width:350px;float:left;
+}
+.lf {
+    background:url(../images/login1.jpg);
+}
+.rt {
+    background:#fff;
+}
+.in_div,.msg {
+    width:250px;height:30px;
+    border:0;
+    margin-left:50px;
+}
+.msg {
+    color:#f00;
+}
+.name {
+    background:url(../images/login2.jpg) left center no-repeat;
+}
+.pw {
+    background:url(../images/login3.jpg) left center no-repeat;
+    margin-top:10px;
+}
+.btn {
+    background:#6CC3A0;
+    color:#fff;
+    margin-top:20px;
+    font-weight:700;
+    text-align:center;
+    line-height:30px;
+    cursor:pointer;
+}

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="jquery.alerts.css" rel="stylesheet" />
+    <script type="text/javascript" src="../jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="jquery.alerts.js" charset="utf-8"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        $(function () {
+            //top.jConfirm("所有代号要进行重新验证，可能需要等待较长时间，确定要修改时间吗？", '提示消息', function (rt) {
+            //    if (rt) {
+            //        alert("ok");
+            //    } else {
+            //        alert("cancel");
+            //    }
+            //});
+            //top.jAlert("warning","所有代号要进行重新验证，可能需要等待较长时间，确定要修改时间吗？", '提示消息', function (rt) {
+            //    if (rt) {
+            //        alert("ok");
+            //    } else {
+            //        alert("cancel");
+            //    }
+            //});
+            $("#e").click(function () {
+                top.jErrorAlert("Error information!", 'no callback,title');
+            });
+            $("#s").click(function () {
+                top.jSuccessAlert("Success information!", function (rt) { return alert("Success callback"); }, 'new title');
+            });
+            $("#w").click(function () {
+                top.jWarningAlert("Warningr information!", function (rt) { return alert("Warningr callback"); });
+            });
+            $("#c").click(function () {
+                top.jCommonAlert("Common information!", function (rt) { return alert("Common callback"); });
+            });
+        });
+    </script>
+    <h1 id="e">error</h1>
+    <h1 id="s">success</h1>
+    <h1 id="c">common</h1>
+    <h1 id="w">warning</h1>
+</body>
+</html>

@@ -1,0 +1,268 @@
+.CInfo {
+	background-color: #3F9673;
+	background-image: url(../../images/s343.jpg);
+	background-repeat: no-repeat;
+}
+
+.f_div {
+	height: 340px;
+	margin-top: 2px;
+}
+
+.f_div21 {
+	height: 150px;
+}
+
+.f_div22 {
+	height: 188px;
+	margin-top: 2px;
+}
+
+.f_div1,.f_div2 {
+	width: 50%;
+	float: left;
+	height: 100%;
+}
+
+.t_div2 {
+	height: 50px;
+	margin-top: 5px;
+	overflow-x:auot;
+}
+
+.td2_1 {
+	width: 150px;
+	height: 20px;
+	float: left;
+	margin-left: 40px;
+	text-align: center;
+	line-height: 18px;
+	margin-top: 17px;
+	cursor: pointer;
+}
+
+.td2_2 {
+	width: 150px;
+	height: 20px;
+	float: left;
+	text-align: center;
+	line-height: 18px;
+	margin-top: 17px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.td2_3 {
+	width: 85px;
+	height: 20px;
+	float: left;
+	text-align: center;
+	line-height: 18px;
+	margin-top: 17px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.td2_5 {
+	width: 16px;
+	height: 21px;
+	float: right;
+	margin-top: 15px;
+}
+
+.fx_div1 {
+	height: 60px;
+	margin-top: 2px;
+}
+
+.schedule {
+	height: 80px;
+}
+
+.schedule div {
+	height: 25px;
+}
+
+.schedule .icondiv2 {
+	margin: 6px auto auto 2px;
+	cursor: pointer;
+}
+
+.week {
+	width: 51%;
+	float: left;
+}
+
+.week div {
+	height: 15px;
+	width: 15px;
+	float: left;
+	margin: 5px auto auto 2px;
+	cursor: pointer;
+}
+.week20 div {
+	border: 1px solid #F9F9F9;
+}
+
+.week21 div {
+	border: #999999 solid 1px;
+}
+
+.wtitle {
+	width: 35%;
+	float: left;
+}
+
+.cmt1 {
+	width: 80px;
+	height: 20px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 10px;
+	line-height: 20px;
+}
+
+.cmt2 {
+	width: 16px;
+	height: 16px;
+	float: right;
+	margin-top: 4px;
+	margin-right: 8px;
+	cursor: pointer;
+}
+
+.cmt3 {
+	width: 140px;
+	height: 30px;
+	float: right;
+}
+
+.cmt32 {
+	width: 100px;
+	float: left;
+	line-height: 25px;
+	margin: 0;
+}
+
+.list_ex {
+	height: 280px;
+	width: 90%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin: 15px auto 5px auto;
+	border-top: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+}
+
+.list_ex0 {
+	height: auto;
+	margin-top: 10px;
+}
+
+.list_ex1 {
+	height: 30px;
+	background: #fff;
+	border: 1px solid #cccccc;
+}
+
+.list_ex2 {
+	height: 60px;
+	border: 1px solid #cccccc;
+	text-align: center;
+}
+
+.list_ex11 {
+	float: left;
+	margin-top: 7px;
+	margin-left: 5px;
+}
+
+.list_ex12 {
+	height: 16px;
+	width: 50%;
+	float: left;
+	margin-top: 7px;
+}
+
+.list_ex13 {
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+.list_ex14 {
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+.list_ex21 {
+	width: 95%;
+	resize: none;
+	height: 50px;
+	border: 0;
+	font-size: 12px;
+	font-family: 'Microsoft YaHei'
+}
+
+.list_ex0_on .list_ex1 {
+	background: #3F9673;
+}
+
+.list_ex0_on .list_ex11 {
+	background: url(../../images/icon0403.png) no-repeat;
+	background-position: -47px -2px;
+}
+
+.list_ex0_on .list_ex12 {
+	color: #fff;
+}
+
+.list_ex0_on .list_ex13 {
+	background: url(../../images/icon0403.png) no-repeat;
+	background-position: -26px 0px;
+}
+
+.list_ex0_on .list_ex14 {
+	background: url(../../images/icon0403.png) no-repeat;
+	background-position: -5px 0px;
+}
+/*input¶ÔÆë*/
+.w91_s232 {
+	width: 91%;
+	width /*\**/: 92% \9;
+	*width: 92%;
+}
+
+.twoinput22 {
+	width: 10%;
+	float: left;
+}
+
+.twoinput23 {
+	width: 26.5%;
+	float: left;
+}
+
+.twoinput25 {
+	width: 14.5%;
+	float: left;
+}
+
+.twoinput26 {
+	width: 16%;
+	float: left;
+}
+
+.twoinput27 {
+	width: 25%;
+	float: left;
+}
+
+.twoinput28 {
+	width: 21%;
+	width /*\**/: 21.5% \9;
+	*width: 21.5%;
+	float: left;
+}

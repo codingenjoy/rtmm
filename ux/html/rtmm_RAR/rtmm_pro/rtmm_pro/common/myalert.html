@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <link type="text/css" href="../css/default.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/iframeContent.css" rel="Stylesheet" />
+    <style type="text/css">
+        .Table_Panel {
+            height:200px;line-height:22px;
+        }
+        #popup {
+            border:2px solid #3F9673;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("h1").click(function () {
+                popup(20, 374.5);
+            });
+            $(".PanelClose").click(function () {
+                myclose($("#popup"));
+            });
+            $(".PanelBtn1").click(function () {
+                myclose($("#popup"));
+            });
+            function popup(top, left) {
+                $(".panel1").css({"display":"block","top":top+"px","left":left+"px"});
+            }
+            function myclose($selector) {
+                $selector.css("display", "none");
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>点击测试</h1>
+
+
+
+
+    <div id="popup" class="Panel panel1" style="display: none; z-index: 900; position: absolute;">
+        <div class="Panel_top">
+            <span class="alert_title">Message！</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <ol class="mylist">
+                <li>如果你不打算动手编写代码，这个系列教程就别看了，对你无益！</li>
+                <li>如果你不打算动手编写代码，这个系列教程就别看了，对你无益！</li>
+                <li>如果你不打算动手编写代码，这个系列教程就别看了，对你无益！</li>
+                <li>如果你不打算动手编写代码，这个系列教程就别看了，对你无益！</li>
+                <li>如果你不打算动手编写代码，这个系列教程就别看了，对你无益！</li>
+                <li>如果你不打算动手编写代码，这个系列教程就别看了，对你无益！</li>
+                <li>如果你不打算动手编写代码，这个系列教程就别看了，对你无益！</li>
+                <li>如果你不打算动手编写代码，这个系列教程就别看了，对你无益！</li>
+                <li>如果你不打算动手编写代码，这个系列教程就别看了，对你无益！</li>
+                <li>如果你不打算动手编写代码，这个系列教程就别看了，对你无益！</li>
+                <li>如果你不打算动手编写代码，这个系列教程就别看了，对你无益！</li>
+                <li>如果你不打算动手编写代码，这个系列教程就别看了，对你无益！</li>
+            </ol>
+        </div>
+        <div class="Panel_footer">
+            
+            <div class="PanelBtn1">确定</div>
+            
+        </div>
+    </div>
+</body>
+</html>

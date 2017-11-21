@@ -1,0 +1,39 @@
+﻿#grid_layer{
+    background: url("images/role_bg.png") repeat;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 10000;
+}
+#g_loading {
+    width:200px;
+    height:200px;
+    background:url(images/loading.gif) no-repeat center;
+    cursor:pointer;
+}
+.login_loading #g_loading{
+    position:absolute;top:358px;
+    width:200px;
+    height:200px;
+    background:url(images/sign_in_loading.gif) no-repeat top center;
+    background-position-y:30px;
+    cursor:pointer;
+}
+#loadingClose {
+    width: 32px;
+    height: 29px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    background:url(images/close.png) -40px -0px no-repeat;
+    display:none;
+}
+#loadingClose:hover {
+    background:url(images/close.png) -7px -0px no-repeat;  
+}
+
+    #g_loading:hover #loadingClose{
+        display:block;
+    }

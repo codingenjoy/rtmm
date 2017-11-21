@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="rtmm">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="rtmm-web-common-0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/rtmm-web-common/rtmm-web-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="rtmm-web-contract-0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/rtmm-web-contract/rtmm-web-contract">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="rtmm-web-rp-0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/rtmm-web-rp/rtmm-web-rp">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="auchan-common-webtag-0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/auchan-common-webtag/auchan-common-webtag">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="rtmm"/>
+        <property name="java-output-path" value="/rtmm/src/main/webapp/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

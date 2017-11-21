@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="../js/easyUI/jquery.easyui.min.js" charset="utf-8" type="text/javascript"></script>
+    <link type="text/css" href="../css/easyUI/tree.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/page/role_Param11.css" rel="Stylesheet" /><!--这个放最后-->
+</head>
+<body>
+    <div class="TopMenu">
+        <div class="Logo"></div>
+        <ol class="MainMenu">
+            <li><a class="catalogue_management" title="分类管理" href="Catelog-11.html"><span class="longText">分类管理</span></a></li>
+            <li><a class="supplier_management" title="厂商管理" href="Supplier-11.html"><span class="longText">厂商管理</span></a></li>
+            <li><a class="item_management" title="商品管理"><span class="longText">商品管理</span></a></li>
+            <li><a class="order_management" title="订单管理"><span class="longText">订单管理</span></a></li>
+            <li><a class="promotion_management" title="促销管理"><span class="longText">促销管理</span></a></li>
+            <li><a class="achievement_analysis" title="业绩分析"><span class="longText">业绩分析</span></a></li>
+            <li><a class="parameter_management parameter_management_on" title="参数管理" href="Param-11.html"><span class="longText">参数管理</span></a></li>
+            <li><a class="day-end_management" title="日结管理"><span class="longText">日结管理</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">我的工作台</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">ToBeAGood Programer!</span></a></li>
+        </ol>
+        <ol class="RMenu">
+            <li class="MenuDrop"><a class="RM4"></a>
+                <ol class="FavDrop">
+                            <li class="FavDrop1"><div class="RM1"></div>
+                                <span>我的收藏</span>
+                            </li>
+                            <li class="FavDrop2"><div class="RM3"></div>
+                                <span>语言设置</span></li>
+                            <li class="FavDrop3"><div class="RM2"></div>
+                                <span>密码设置</span></li>
+                            <li class="FavDrop5"><div class="RM5"></div><span>退出帐号</span></li>
+                 </ol>
+            </li>
+            <li class="RMenu_Text"><div class="longText">欢迎，Java.管理员 Csharp Dot</div></li> 
+        </ol>
+        <ol class="MyFav" style="display:none;">
+            <li><a>我的收藏1</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏2</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏3</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏4</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏5</a><div class="Closediv CircleClose"></div></li>
+        </ol>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="1fff"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">系统管理</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg"  class="Sub Sub_on" href="Param-11.html"><span class="L2_No"></span>
+                                   <span class="SubText">角色与权限管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub" href="Param-21.html"><span class="L2_No"></span>
+                                   <span class="SubText">职位与角色管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a id="asa" class="Sub" href="Param-32.html"><span class="L2_No"></span>
+                                   <span class="SubText">用户管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3_disable"></td>
+                        <td></td>
+                        <td class="Tools4_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools5"></td>
+                        <td></td>
+                        <td class="Tools7"></td>
+                        <td></td>
+                        <td class="Tools8"></td>
+                        <td></td>
+                        <td class="Tools9"></td>
+                        <td></td>
+                        <td class="Tools13"></td>
+                        <td></td>
+                        <td class="Tools14"></td>
+                        <td></td>
+                        <td class="Tools15"></td>
+                        <td class="Line-1"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools22" title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                <div class="tagx tagL"></div>
+                <div class="tagM" >角色与权限管理</div>
+                <div class="tagx2 tagR2" ></div>
+            </div>
+            <div class="Container-1">
+                
+                <div class="Content">
+                    <div class="Con_tb"><!-- Bar_on-->
+                        <div class="SearchTopx">
+                            <span>角色</span>
+                        </div>
+                        <div class="line" style="width:100%;"></div>
+                        <div class="SearchTopx">
+                            <span><input type="radio" name="a" />总公司</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="a" />门店</span>
+                            <!--<div class="Icon-size2 Tools11" style="margin-top:6px;"></div>-->
+                        </div>
+                        <div class="con_title">
+                            <table class="w100">
+                                <tr>
+                                    <!--<td class="w5 align_center">&nbsp;</td>-->
+                                    <td class="w45 align_center"  style="border-right:1px solid #cccccc;">角色</td>
+                                    <td class="align_center">角色描述</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tbx">
+                            <table class="w100">
+                                <tr class="tbr item_on2">
+                                    <td class="w10 align_center">&nbsp;</td>
+                                    <td class="w40">纺织品</td>
+                                    <td class="w50"><div class="longText">TEXTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="align_center">&nbsp;</td>
+                                    <td>纺织品</td>
+                                    <td><div class="longText">TEXTEEEEEEEEEEEEEEEEEEE</div></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="line"></div>
+                        
+                    </div>
+
+                    <div class="Con_R">
+                        <div class="Point_L"><!--px没有样式，可以随便取-->
+                            <div class="px Point_L2" style="position:relative;z-index:888;top:91px;"></div>
+                        </div>
+                        <div class="Point_R">
+                            <div class="Point_R1"><span class="item item_on" style="margin-left:0px;" id="menu_power">菜单权限</span><span class="item" id="opera_power">操作权限</span><span class="item">审批权限</span> </div>
+                            <div class="Point_R2">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+
+    <script type="text/javascript">
+        $(".tbx tr:even").addClass("tr_even");
+        $(".Point_R2").load("Param-11-1x.html");
+
+        $("#menu_power").live("click", function () {
+            $(".Point_R2").load("Param-11-1x.html");
+        });
+        $("#opera_power").live("click", function () {
+            $(".Point_R2").load("Param-11-2x.html");
+        });
+        
+    </script>
+</body>
+</html>

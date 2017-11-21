@@ -1,0 +1,349 @@
+html,body
+{
+	margin: 0px auto;
+	width: 1240px;
+	height: 700px;
+	font-family:'Microsoft YaHei';
+	font-size: 12px;
+	color: #666666;
+}
+
+p
+{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+img{border:0;}
+/**ªÒ»°icon**/
+
+.SubMenuIcon1{ width:38px; height:24px; 
+				background:url(../images/icon.png); 
+				background-attachment:fixed; 
+			  	background-repeat:no-repeat;
+			}
+
+#MenuBar
+{
+	padding: 0px;
+	margin: 0px;
+	height: 40px;
+	width: auto;
+	background-color:#3f9673;
+	font-size: 12px;
+	color:#ffffff;
+}
+
+#Logo
+{
+	height: 40px;
+	width: 40px;
+	background-color: #F37864;
+	float: left;
+}
+
+#Menu
+{
+	text-align: center;
+	padding: 0px;
+}
+
+#Separator
+{
+	float: left;
+	width: 1px;
+	height:30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	background-color: #FFFFFF;
+}
+
+#PersonalizedMenu
+{
+	float: right;
+	margin-left: 50px;
+}
+
+#SubMenu
+{
+	width: 200px;
+	height: 660px;
+	float:left;
+	background-color: #EEEEEE;
+}
+.RightPanel{width:1040px; height:660px; border:0; float:left; overflow:hidden;}
+#HideShowControl
+{
+	height: 16px;
+	width: 176px;
+	padding-top: 12px;
+	padding-left: 12px;
+	padding-bottom: 12px;
+	padding-right: 12px;
+	background-image:url(../images/Bg_HideShowControl.png);
+}
+
+#ExpandAll
+{
+	background-color: #999999;
+}
+
+#CollapseAll
+{
+	background-color: #999999;
+}
+
+#HideSubMenu
+{
+	float:right;
+}
+
+/*#SubMenuArea
+{
+	font-family: Œ¢»Ì—≈∫⁄;
+	font-size: 12px;
+	color: #666666;
+}*/
+
+.MenuItem
+{
+	text-align: center;
+	height:30px;
+	padding-top:10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	cursor:pointer;
+	float:left;
+}
+
+
+
+.MenuItem a{
+color:#FFFFFF;
+}
+
+.MenuImage
+{
+	float: left;
+	max-height: 20px;
+	max-width: 20px;
+	padding-left: 5px;
+}
+
+.MenuText
+{
+	margin-left: 5px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	padding-right: 5px;
+	padding-top: 2px;
+	float: left;
+}
+
+.PersonalizedMenuIcon
+{
+	float:left;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
+
+.DropDownArrow
+{
+	float:left;
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+}
+
+.ExpandCollapseButton
+{
+	float: left;
+	margin-right: 5px;
+}
+
+.SubMenuLevel1-1
+{
+	background: #eeeeee;
+	padding-left: 26px;
+	padding-right: 10px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+    height: 16px;
+    width: 164px;
+	cursor:pointer;
+}
+
+.SubMenuLevel1-1:hover{
+background-image:url(../images/Bg_SubMenuSelected.png);
+}
+
+.SubMenuLevel2:hover{
+background-image:url(../images/Bg_SubMenuSelected.png);
+cursor:pointer;
+}
+
+.SubMenuLevel1-2
+{
+	background: #eeeeee;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+    height: 16px;
+    width: 180px;
+}
+
+.SubMenuText
+{
+	margin: 0px;
+	padding-left: 10px;
+	float: left;
+	text-decoration:none;
+	color:#000000;
+}
+
+
+
+.SubMenuFavorite
+{
+	float: right;
+}
+
+.SubMenuExpandArrow
+{
+	float: left;
+}
+
+.SubMenuLevel2
+{
+	background-color: #e0e0e0;
+	padding-left: 38px;
+	padding-top: 12px;
+	padding-right: 10px;
+	padding-bottom: 12px;
+	height: 16px;
+	width: 152px;
+}
+
+.SubMenu_S{
+width:40px;
+background-color:#eeeeee;
+display:none;
+height:700px;
+float:left;
+}
+
+.bgcolor{
+background-color:#F9f9f9;
+color:#000000;
+}
+
+
+.tag_paramRole{
+	width:100%; height:30px; 
+	background-image:url(../images/ParamNAV_1.gif);
+    font-family:'Microsoft YaHei';
+    font-size:12px;
+    color:#000000;
+    line-height:28px;
+	}
+
+.paramLeftPanel{
+	width:25%; height:569px; 
+	margin-top:10px; 
+	margin-left:10px; 
+	float:left;
+	overflow:hidden;
+}
+.paramRightPanel,.userLeftPanel{
+	width:73%; 
+	height:569px; 
+	margin-top:10px; 
+	margin-right:6px; 
+	float:right; 
+	background:#3f9673;
+}
+.paramLeftPanel p{
+	height:30px; 
+	line-height:30px;
+	}
+
+.PRightImg1{
+	height:3px; 
+	background-image:url(../images/line_1.gif);
+	 }
+.roleTile{
+	background:#EEEEEE;
+	height:30px;
+	line-height:30px;
+}
+.roleTitleAdd{
+    padding-top:8px;
+	width:16px;
+	height:16px;
+    float:right;
+    margin-right:10px;
+}
+.roleTitle1{
+	width:38px;
+	float:left;
+	}
+.roleTitle1 input{
+	margin-top:8px; margin-left:15px;
+}
+.roleTitle2{
+	width:98px;
+	float:left;
+	text-align:center;
+	background-image:url(../images/line1.gif);
+	background-repeat:no-repeat;
+	background-position:left center;
+	}
+.roleTitle3{
+	width:122px;
+	float:left; 
+	text-align:center;
+	background-image:url(../images/line1.gif);
+	background-repeat:no-repeat;
+	background-position:left center;
+	}
+
+.roleContent,.userContent {
+    width:100%;
+    height:479px;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+.userContent {
+    height:509px;
+}
+.roleContent div{
+    height:30px;
+}
+.roleContentText {
+    line-height:30px;
+}
+.roleContentSingle {
+    background-color:#F9F9F9;
+}
+.roleTitle1 input {
+    display:none;
+}
+.tempImage {
+    width:100%;
+    height:100%;
+    background:url(../images/welcom2-2.jpg);
+}
+.temp1 {
+    width:504px;height:660px;float:left;
+    background:url(../images/welcom2-1.jpg) repeat;
+}
+.temp2 {
+    width:506px;height:660px;float:right;
+    background:url(../images/welcom2-3.jpg);
+}

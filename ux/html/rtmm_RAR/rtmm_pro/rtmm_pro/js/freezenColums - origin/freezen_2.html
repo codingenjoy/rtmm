@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../../css/default.css" rel="stylesheet" />
+    <link href="../../css/iframeContent.css" rel="stylesheet" />
+    <link href="f.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="f.js"></script>
+    <title></title>
+    <style type="text/css">
+
+        #frozen_cols {
+            height:220px;
+            width:140px;
+        }
+        #move_cols {
+            height:220px;/* equals #frozen_cols.height */
+            width:500px;
+        }
+        #f_cols_head, #m_cols_head {
+            height:60px;
+        }
+        #f_cols_body,#m_cols_body {
+            height:160px;/* equals #frozen_cols.height - #f_cols_head.height(default value is 40px) */
+        }
+    </style>
+</head>
+<body>
+<div style="height:220px;overflow:hidden;">
+    <!--left frozen parts of a table-->
+    <div id="frozen_cols">
+        <!--frozen top head parts-->
+        <div id="f_cols_head">
+            <div class="f_head_1">
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td><div style="width:30px;">o</div></td>
+                        <td><div style="width:110px;background:#36649c;">门店</div></td>
+                    </tr>
+                    <tr>
+                        <td><div style="width:30px;">o</div></td>
+                        <td><div style="width:110px;">序列号</div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--frozen body parts-->
+        <div id="f_cols_body" style="background:#cfb3b3;">
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;background:#b6ff00"><input type="text" class="inputText w95" /></div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data2</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data3</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data4</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data5</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data6</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data7</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data8</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data9</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data0</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data1</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data2</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data3</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data4</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data5</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data6</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data7</div></td>
+               </tr>
+                <tr>
+                    <td style="width:30px;"><input type="checkbox" /></td>
+                    <td><div style="width:110px;">data8</div></td>
+               </tr>
+                <tr>
+                    <td  style="width:30px;"><div style="width:30px;">&nbsp;</div></td>
+                    <td><div style="width:110px;background:#f00">temp</div></td>
+               </tr>
+           </table>
+        </div>
+    </div>
+    <!--right parts that can scroll-->
+    <div id="move_cols">
+        <!--frozen top head parts when drag the y-scroll -->
+        <div id="m_cols_head" style="background:#a33636">
+             <table cellpadding="0" cellspacing="0">
+                  <tr>
+                      <td><div style="width:110px;background:#cfcccc">厂商</div></td>
+                      <td><div style="width:100px;">商品状态</div></td>
+                      <td><div style="width:185px;">&nbsp;</div></td>
+                      <td><div style="width:110px;">正常进价(元)</div></td>
+                      <td><div style="width:110px;">促销进价(元)</div></td>
+                      <td><div style="width:110px;">正常售价(元)</div></td>
+                      <td><div style="width:100px;">促销售价(元)</div></td>
+                      <td><div style="width:100px;">降价幅度(%)</div></td>
+                      <td><div style="width:100px;">净毛利(%)</div></td>
+                      
+                      <td><div style="width:90px;background:#b6ff00">&nbsp;</div></td><!--占位-->
+                  </tr>
+                 <tr>
+                      <td>厂商</td>
+                      <td>商品状态</td>
+                      <td>&nbsp;</td>
+                      <td>正常进价(元)</td>
+                      <td>促销进价(元)</td>
+                      <td>正常售价(元)</td>
+                      <td>促销售价(元)</td>
+                      <td>降价幅度(%)</td>
+                      <td>净毛利(%)</td>
+                      
+                      <td>&nbsp;</td><!--占位-->
+                  </tr>
+              </table>
+        </div>
+        <!--this parts can be scrolled all the time-->
+        <div id="m_cols_body" style="background:#6c4949;">
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><div style="width:110px;background:#b6ff00"><input type="text" class="inputText w93" /></div></td>
+                    <td><div style="width:100px;">
+                            <div class="iconPut w95">
+                             <input class="w75" type="text"/>
+                             <div class="ListWin"></div>
+                        </div>
+                        </div>
+                    </td>
+                    <td><div style="width:185px;"><input type="text" class="inputText w95" /></div></td>
+                    <td><div style="width:110px;"><input type="text" class="inputText w95" /></div></td>
+                    <td><div style="width:110px;"><input type="text" class="inputText w95" /></div></td>
+                    <td><div style="width:110px;"><input type="text" class="inputText w95" /></div></td>
+                    <td><div style="width:100px;"><input type="text" class="inputText w95" /></div></td>
+                    <td><div style="width:100px;"><input type="text" class="inputText w95" /></div></td>
+                    <td><div style="width:100px;"><input type="text" class="inputText w95" /></div></td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

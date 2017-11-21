@@ -1,0 +1,8 @@
+﻿
+    /*用户权限专属样式*/
+    .tree-file {
+      background: url('../../images/easyUI/tree_icons-1.png') no-repeat -208px 0;
+    }
+    .tree-node-hover .tree-file, .tree-node-selected .tree-file {
+        background: url('../../images/easyUI/tree_icons-1.png') no-repeat -277px 0;
+    }

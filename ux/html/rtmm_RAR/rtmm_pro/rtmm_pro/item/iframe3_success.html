@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <link href="../window/popup.css" type="text/css" rel="stylesheet" />
+<!--    <style type="text/css">
+        .Panel {
+            width:500px;
+        }
+        .Table_Panel {
+            height:60px;
+            overflow:hidden;
+        }
+    </style>-->
+    <script type="text/javascript">
+        $("#alert_close,.btn1").live("click", function () {
+            var $topWindow = $(window.parent.document);
+            var $alertPop = $topWindow.find("#alertSuccessPop");
+            //$(this).parents(".Panel").remove();
+            $alertPop.css("display", "none");
+            $(window.parent.document).find("#alert_layer").remove();
+        });
+    </script>
+</head>
+<body>
+<div class="Panel">
+    <div class="alert_top">
+        <span id="alert_title" class="alert_title">成功信息提示</span>
+        <div id="alert_close" class="PanelClose"></div>
+    </div>
+    <div id="alert_body" class="Table_Panel">
+        <div class="alert_body">
+            <div class="alert_b1 gou "></div>
+            <div id="alert_text" class="alert_text">这是一个成功消息提示框！</div>
+        </div>
+    </div>
+    <div class="Panel_footer"><div class="btn1">确定</div></div>
+</div>
+</body>
+</html>

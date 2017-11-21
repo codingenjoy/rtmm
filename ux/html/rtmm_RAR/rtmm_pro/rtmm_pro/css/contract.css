@@ -1,0 +1,268 @@
+﻿.w5 {
+    width:5%;
+}
+.w7 {
+    width:7%;
+}
+.w9 {
+    width:9%;
+}
+.w10 {
+    width:10% !important;
+}
+.w11{
+    width:11%;
+}
+.w12_5 {
+    width:12.5%;
+}
+.w14{
+    width:14%;
+}
+.w15{
+    width:15%;
+}
+.w17{
+    width:17%;
+}
+.w20{
+    width:20%;
+}
+.w23{
+    width:23%;
+}
+.w25 {
+    width:25%;
+}
+.w28 {
+    width:28%;
+}
+.w30 {
+    width:30.5%;
+}
+.w35 {
+    width:35%;
+}
+.w36 {
+    width:36%;
+}
+.w37 {
+    width:37%;
+}
+.w40 {
+    width:40%;
+}
+.w44 {
+    width:44%;
+}
+.w45 {
+    width:45%;
+}
+.w47 {
+    width:47%;
+}
+.w50 {
+    width:50%;
+}
+.w55 {
+    width:55%;
+}
+.w58 {
+    width:58%;
+}
+.w60 {
+    width:60%;
+}
+.w62 {
+    width:62%;
+}
+.w63 {
+    width:63%;
+}
+.w64 {
+    width:64%;
+}
+.w65 {
+    width:65%;
+}
+.w68 {
+    width:68%;
+}
+.w70 {
+    width:70%;
+}
+.w71 {
+    width:71%;
+}
+.w75 {
+    width:75%;
+}
+.w76 {
+    width:76%;
+}
+.w78 {
+    width:78%;
+}
+.w80 {
+    width:80%;
+}
+.w82 {
+    width:82%;
+}
+.w83 {
+    width:83%;
+}
+.w85 {
+    width:85%;
+}
+.w86 {
+    width:86%;
+}
+.w87{
+    width:87%;
+}
+.w88{
+    width:88%;
+}
+.w90 {
+    width:90%;
+}
+.w90_5 {
+    width:90.5%;
+}
+.w91 {
+    width:91%;
+}
+.w93 {
+    width:93%;
+}
+.w94 {
+    width:94%;
+}
+.w95 {
+    width:95%;
+}
+.w96 {
+    width:96%;
+}
+.w100{
+    width:100%;
+}
+.fl_left {
+    margin-right: 3px;
+}
+.ig_top20 {
+    height: 30px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.gyBlock {
+    height:50px;margin-top:2px;background:#eee;overflow: hidden;
+}
+.contract {
+    height:302px;border-top:1px solid #999;overflow-x:hidden;overflow-y:auto;
+}
+    .contract .lnht30 {
+        margin-top:2px;position:relative;
+    }
+.contract .CM-div {
+    padding-left:25px;
+}
+.ctrt_down {
+    cursor:pointer;
+    position:absolute;top:5px;right:0;height:20px;width:83px;border-left:1px solid #999;text-align:center;overflow:hidden;line-height:20px;
+}
+        .arraw {
+            height:0;width:0;border-style:solid solid solid solid; border-width:5px;margin-right:5px;display:inline-block;
+        }
+.arraw1 {
+    border-bottom-width:0;
+    border-color:#000 transparent transparent transparent;
+}
+.arraw2 {
+    border-top-width:0;
+    border-color:transparent transparent #000 transparent;
+}
+.arr_txt {
+    display:inline-block;
+}
+.depositx {
+    height:auto;margin:10px 0;
+}
+.depositx  .tb49,.depositx .w71 {
+    border-left:1px #ccc dashed;margin-left:10px;padding-left:5px;
+}
+.depositx .icol_text {
+    line-height:20px;
+}
+.mpbtn {
+    line-height:20px;height:20px;margin:16px 20px;float:left;padding:0 20px;cursor:pointer;
+}
+.depositx .fl_left {
+    margin-right:3px;
+}
+.tkbody {
+    height:230px;width:950px; border-top:1px solid #ccc;border-bottom:1px solid #ccc;padding-top:10px;overflow-y:scroll;
+}
+.tkhead {
+    text-align:center;margin-top:10px;
+}
+.contract_cm {
+    width: 98%;
+    float: right;
+    height: 100%;
+    overflow: hidden;
+}
+.cm_table,.cm_table2,.cm_table3 {
+    border-bottom:1px solid #999;
+    border-top:1px solid #999;
+    overflow-y:scroll;
+}
+    .cm_table .item ,.cm_table2 .item ,.cm_table3 .item {
+        height:25px;padding-top:3px;
+    }
+    .cm_table .fl_left,.cm_table2 .fl_left ,.cm_table3 .fl_left  {
+        margin-right:3px;
+    }
+.cm_table .item:hover,.cm_table2 .item:hover,.cm_table3 .item:hover{
+    background: #9FCAB9;
+    color: #fff;
+}
+.cm_table1 {
+    height:115px;
+}
+.cm_table2 ,.cm_table3{
+    height:190px;
+}
+.contract_cm1, .contract_cm2, .contract_cm3 {
+    height:100%;
+    float:left;
+    overflow:hidden;
+}
+.contract_cm1 {
+    width:620px;
+}
+.contract_cm2 {
+    width:15px;border-right:1px dashed #999;margin-right:14px;
+}
+.contract_cm3 {
+    width:298px;
+}
+.contract_cmx {
+    height:90%;margin-top:15px;
+}
+    .contract_cm .ckbox {
+        margin:5px 8px;
+    }
+.iconPut {
+    background:#fff;
+}
+.contract_cmz {
+    height:90%;border-top:1px solid #999;
+}
+.contract_cm1z {
+    width:750px;
+}
+.contract_cm1z .cm_table2 {
+    height:150px;
+}

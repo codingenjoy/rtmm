@@ -1,0 +1,134 @@
+﻿table,td,tr,input {
+            margin:0;padding:0;
+        }
+body,table {
+            font-size:12px;
+            font-family:'Microsoft YaHei',Arial;
+        }
+td{
+    border:0;
+    height:30px;
+    vertical-align:middle;
+}
+/*input[type="checkbox"] {
+vertical-align:initial;
+}*/
+#frozen_cols,#move_cols
+,.frozen_cols,.move_cols {
+    overflow:hidden;float:left;border:0;
+}
+#f_cols_head ,#m_cols_head,
+.f_cols_head ,.m_cols_head{
+    overflow:hidden;
+    width:100%;
+    height:30px;
+    text-align:center;
+}
+#f_cols_body,.f_cols_body {
+    overflow:hidden;
+    width:100%;
+}
+#m_cols_body,.m_cols_body {
+    overflow:auto;
+    width:100%;
+}
+
+/*.f_cols_head div, .m_cols_head div{
+    border-right:1px solid #ccc;
+}*/
+
+.m_cols_head div ,.f_cols_head div {
+            border-right:1px solid #ccc;
+        }
+
+        .wh_auto {
+            width:auto;
+        }
+        .wh_temp {
+            width:500px;
+        }
+        .wh_30 {
+            width:30px;
+        }
+        .wh_245 {
+            width:245px;
+        }
+        .wh_246 {
+            width:246px;
+        }
+        .wh_450 {
+            width:450px;
+        }
+        .wh_451 {
+            width:451px;
+        }
+.wh_40 {
+    width:40px;
+}
+.wh_90 {
+    width:90px;
+}
+.wh_100 {
+    width:100px;
+}
+.wh_103 {
+    width:103px;
+}
+.wh_150{
+    width:150px;
+}
+.ht30p {
+            height:30px;
+        }
+.default_bg {
+    background-color:#f9f9f9;
+}
+.tr_hover {
+    background:#46983d;color:#fff;
+}
+.tr_click_on {
+    background:#3F9673;color:#fff;
+}
+.m_cols_body td {
+overflow: hidden;
+white-space: nowrap;
+word-wrap: normal;
+text-overflow: ellipsis;
+}
+.m_cols_head {
+            background:#eee;
+        }
+.btable_checked {
+    background: #3F9673;
+    color: #fff;
+}
+/* table 001 */
+        .tabel_001 {
+            height:540px;
+            width:100%;
+        }
+        .tabel_001 .m_cols_body {
+            height:509px;border-bottom:1px solid #ccc;overflow-x:hidden;
+            overflow-y:auto;
+        }
+.tabel_001 ,.tabel_002 {
+    float:none !important;
+}
+/* table 002 */
+        .tabel_002 {
+            height:250px;
+            width:100%;
+        }
+        .tabel_002 .m_cols_body {
+            height:219px;border-bottom:1px solid #ccc;overflow-x:hidden;
+            overflow-y:auto;
+        }
+/* table 003 */
+        .tabel_003 {
+            height:510px;
+            width:100%;
+        }
+        .tabel_003 .m_cols_body {
+            height:478px;border-bottom:1px solid #ccc;overflow-x:hidden;
+            overflow-y:auto;
+        }

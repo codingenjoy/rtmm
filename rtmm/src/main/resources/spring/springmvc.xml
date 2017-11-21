@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/aop 
+     	http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<!-- 默认的注解映射的支持 -->
+	<mvc:annotation-driven />
+	<mvc:default-servlet-handler />
+	<!-- 激活Spring注解方式：自动扫描 -->
+	<context:component-scan base-package="com.auchan.rtmm.action" />
+	<context:component-scan base-package="com.auchan.rtmm.action.*" />
+	<mvc:resources location="/shared/" mapping="/shared/**" />
+	<mvc:resources location="/rtmm.ico" mapping="/rtmm.ico" />
+	
+	<!-- 登录拦截器 -->
+	<!-- 处理类级别上的@RequestMapping注解 -->
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+	</bean>
+
+	<!-- 处理方法级别上的@RequestMapping注解 -->
+	<bean id="annotationMethodHandlerAdapter"
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<bean
+					class="org.springframework.http.converter.StringHttpMessageConverter">
+					<property name="supportedMediaTypes">
+						<list>
+							<value>text/html;charset=UTF-8</value>
+							<value>text/xml;charset=UTF-8</value>
+							<value>text/plain;charset=UTF-8</value>
+						</list>
+					</property>
+				</bean>
+				<!-- 启动JSON格式的配置 -->
+				<bean id="jacksonMessageConverter"
+					class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+					<!-- 解决 HttpMediaTypeNotAcceptableException: Could not find acceptable 
+						representation -->
+					<property name="supportedMediaTypes">
+						<list>
+							<value>text/html;charset=UTF-8</value>
+						</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<!-- MultipartResolver for parsing file uploads, implementation for Commons 
+		FileUpload -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxUploadSize" value="999000000" />
+		<property name="maxInMemorySize" value="10000000" />
+	</bean>
+
+	<!-- <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer"> 
+		<property name="templateLoaderPath" value="/freemarker/"/> <property name="configLocation" 
+		value="classpath:freemarker.properties"></property> </bean> -->
+	<!-- <bean id="freemarkerStaticModelsProps" class="org.springframework.beans.factory.config.PropertiesFactoryBean"> 
+		<property name="location" value="classpath:freemarkerstatic.properties" /> 
+		</bean> <bean id="freemarkerStaticModels" class="com.auchan.rtmm.util.freemarker.FreemarkerStaticModels" 
+		factory-method="getInstance"> <property name="staticModels" ref="freemarkerStaticModelsProps"/> 
+		</bean> -->
+	<!-- 配置 freemarker 视图解析 -->
+	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver"> 
+		<property name="cache" value="true"/> <property name="prefix" value=""/> 
+		<property name="suffix" value=".ftl"/> <property name="order" value="9"/> 
+		<property name="contentType" value="text/html;charset=utf-8"/> <property 
+		name="attributesMap" ref="freemarkerStaticModels"/> </bean> -->
+
+	<!-- 配置 jsp 视图解析 -->
+	<bean id="viewResolverJSP"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/page/" />
+		<property name="suffix" value=".jsp" />
+		<property name="order" value="1" />
+	</bean>
+
+	<bean class="org.springframework.web.servlet.view.XmlViewResolver">
+		<property name="location" value="classpath:/spring/views.xml" />
+		<property name="order" value="0" />
+	</bean>
+
+	<mvc:view-controller path="/" view-name="redirect:/toLogin" />
+
+</beans>

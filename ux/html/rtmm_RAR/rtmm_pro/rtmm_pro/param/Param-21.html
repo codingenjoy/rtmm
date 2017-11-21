@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/Componet.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+<!--    <script src="js/jump.js" charset="utf-8" type="text/javascript"></script>-->
+    <script src="../js/easyUI/jquery.easyui.min.js" charset="utf-8" type="text/javascript"></script>
+<!--    <link type="text/css" href="css/easyUI/datagrid.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/pagination.css" rel="Stylesheet" />-->
+    <link type="text/css" href="../css/easyUI/window.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/easyUI/tree.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/page/role_Param21.css" rel="Stylesheet" />
+</head>
+<body>
+    <div class="TopMenu">
+        <div class="Logo"></div>
+        <ol class="MainMenu">
+            <li><a class="catalogue_management" title="分类管理" href="Catelog-11.html"><span class="longText">分类管理</span></a></li>
+            <li><a class="supplier_management" title="厂商管理" href="Supplier-11.html"><span class="longText">厂商管理</span></a></li>
+            <li><a class="item_management" title="商品管理"><span class="longText">商品管理</span></a></li>
+            <li><a class="order_management" title="订单管理"><span class="longText">订单管理</span></a></li>
+            <li><a class="promotion_management" title="促销管理"><span class="longText">促销管理</span></a></li>
+            <li><a class="achievement_analysis" title="业绩分析"><span class="longText">业绩分析</span></a></li>
+            <li><a class="parameter_management parameter_management_on" title="参数管理" href="Param-11.html"><span class="longText">参数管理</span></a></li>
+            <li><a class="day-end_management" title="日结管理"><span class="longText">日结管理</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">我的工作台</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">ToBeAGood Programer!</span></a></li>
+        </ol>
+        <ol class="RMenu">
+            <li class="MenuDrop"><a class="RM4"></a>
+                <ol class="FavDrop">
+                            <li class="FavDrop1"><div class="RM1"></div>
+                                <span>我的收藏</span>
+                            </li>
+                            <li class="FavDrop2"><div class="RM3"></div>
+                                <span>语言设置</span></li>
+                            <li class="FavDrop3"><div class="RM2"></div>
+                                <span>密码设置</span></li>
+                            <li class="FavDrop5"><div class="RM5"></div><span>退出帐号</span></li>
+                 </ol>
+            </li>
+            <li class="RMenu_Text"><div class="longText">欢迎，Java.管理员 Csharp Dot</div></li> 
+        </ol>
+        <ol class="MyFav" style="display:none;">
+            <li><a>我的收藏1</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏2</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏3</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏4</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏5</a><div class="Closediv CircleClose"></div></li>
+        </ol>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="1fff"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">系统管理</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg"  class="Sub" href="Param-11.html"><span class="L2_No"></span>
+                                   <span class="SubText">角色与权限管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub Sub_on" href="Param-21.html"><span class="L2_No"></span>
+                                   <span class="SubText">职位与角色管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a id="asa" class="Sub" href="Param-32.html"><span class="L2_No"></span>
+                                   <span class="SubText">用户管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2_disable"></td>
+                        <td></td>
+                        <td class="Tools3"></td>
+                        <td></td>
+                        <td class="Tools4"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td></td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="add_position Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td></td>
+                        <td class="Tools17_disable"></td>
+                        <td></td>
+                        <td class="Tools19_disable"></td>
+                        <td></td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools22" title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                <div class="tagx tagL"></div>
+                <div class="tagM">职位与权限管理</div>
+                <div class="tagx2 tagR2"></div>
+            </div>
+            <div class="Container-1">
+                
+                <div class="Content">
+                    <div class="Con_tb"><!-- Bar_on-->
+                        <div class="SearchTopx">
+                            <span>角色</span>
+                        </div>
+                        <div class="line" style="width:100%;"></div>
+                        <div class="SearchTopx">
+                            <span><input type="radio" name="a" />总公司</span>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="a"/>门店</span>
+                        </div>
+                        <div class="tbx">
+                            <ul id="tt"></ul>
+                        </div>
+                        
+                    </div>
+
+                    <div class="Con_R">
+                        <div class="Point_L"><!--px没有样式，可以随便取-->
+                            <div></div><div></div><div class="px"></div>
+                            <div class="px"></div><div class="px"></div><div class="px"></div>
+                            <div class="px Point_L2"></div><div class="px"></div><div class="px"></div>
+                            <div class="px"></div><div class="px"></div><div class="px"></div>
+                            <div class="px"></div><div class="px"></div><div class="px"></div>
+                            <div class="px"></div><div class="px"></div><div class="px"></div>
+                        </div>
+                        <div class="Point_R">
+                            <div class="Point_R1"><span style="margin-left:0px;">职位与角色</span></div>
+                            <div class="Point_R2">
+                                <div class="pr21">
+                                    <div class="pr_title">职位列表</div>
+                                    <div class="pr_list" style="width:93%;">
+                                        <div class="item"><span>店经理</span><div class="ListIcon"></div></div>
+                                        <div class="item"><span>店经理</span><div class="ListIcon"></div></div>
+                                        <div class="item"><span>店经理</span><div class="ListIcon"></div></div>
+                                    </div>
+                                </div>
+                                <div class="pr_place"></div>
+                                <div class="pr22">
+                                    <div class="pr_title">已关联角色</div>
+                                    <div class="pr_list">
+                                        <div class="item2"><span>角色1</span><div class="ListIcon"></div></div>
+                                        <div class="item2"><span>角色1</span><div class="ListIcon"></div></div>
+                                        <div class="item2"><span>角色1</span><div class="ListIcon"></div></div>
+                                    </div>
+                                </div>
+                                <div class="pr23">
+                                    <div class="pr23_1">
+                                        <div class="pr_btn1"><&nbsp;关&nbsp;&nbsp;&nbsp;联</div>
+                                        <div class="pr_btn2">取&nbsp;&nbsp;&nbsp;消&nbsp;></div>
+                                    </div>
+                                </div>
+                                <div class="pr24">
+                                    <div class="pr_title">未关联角色</div>
+                                    <div class="pr_list">
+                                        <div class="item3"><span>角色1</span><div class="ListIcon"></div></div>
+                                        <div class="item3"><span>角色1</span><div class="ListIcon"></div></div>
+                                        <div class="item3"><span>角色1</span><div class="ListIcon"></div></div>
+                                    </div>
+                                </div>
+                                <div class="pr_place"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    <div id="popupWin"></div>
+    <script type="text/javascript">
+        $('#tt').tree({
+            url: 'json/tree_data1.json'
+        });
+        $(".add_position").live("click", function () {
+            var selector = "#popupWin";
+            $(selector).window({
+                width: 610,
+                height: 230,
+                title:" ",
+                draggable:true,
+                modal: true,
+                resizable:false,
+                shadow: false,
+                border: false,
+                //noheader: true
+            });
+            $(selector).window('refresh', 'file:///D:/我的酷盘/rtmm/rtmm/Param-21-panel.html');
+            //$(selector).window('refresh', 'Param-21-panel.html');
+        });
+        $(".PanelBtn2,.PanelClose").live("click", function () {
+            $('#popupWin').window('close');
+        });
+    </script>
+</body>
+</html>

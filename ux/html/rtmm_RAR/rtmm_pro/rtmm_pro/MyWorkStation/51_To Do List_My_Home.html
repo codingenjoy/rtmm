@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/easyUI/jquery.easyui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../css/easyUI/datagrid.css"/>
+    <style type="text/css">
+        .icon_border {
+            margin-top:8px;
+        }
+        .ig {
+            line-height:33px;
+        }
+        .h100 {
+            height:100px;
+        }
+        .wh100, .wh200 {
+            height:100px;
+            float:left;
+            margin-left:2px;
+        }
+        .wh100 {
+            width:107px;
+        }
+        .wh200 {
+            width:200px;
+        }
+        .ws_text {
+            padding:8px;
+            padding-right:0px;
+        }
+        .ws_text2 {
+            padding:8px;
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="TopMenu"></div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="fff1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">我的草稿箱</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="ggg" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">厂商管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">商品管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A4" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">订单管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A5" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">促销管理</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="A1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">待办事项</span>
+                           <span class="Fav"></span></a>
+                        <ol style="display:block;">
+                            <li>
+                                <a  id="A2" class="Sub Sub_on"><span class="L2_No qipao"></span>
+                                   <span class="SubText">我的待办</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A3" class="Sub"><span class="L2_No"></span>
+                                   <span class="SubText">办理查询</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a id="A6" class="Sub"><span class="L1_No"></span>
+                           <span class="SubText">公告信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                </ol>
+            </div>
+
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1_disable B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools3_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools23_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools32_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools20_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools10_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools12_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools17_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools19_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools18_disable"></td>
+                        <td class="Line-1"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools24_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools25_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools26_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27_disable"></td>
+                        <td>&nbsp;</td>
+                        <td class="Tools28_disable"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29_disable"></td>
+                        <td class="stopBar"></td>
+                        <td class="Line-1"></td>
+                        <td class="stopBar_off"></td>
+                        <td class="reviewBar"></td>
+                        <td class="Line-1"></td>
+                        <td class="reviewBar_off"></td>
+
+                    </tr>
+                </table>
+                <div class="RightTool ToolsBg">
+                    <div class="Tools22 Icon-size1 Tools22_on " title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+            </div>
+            <div class="CTitle">
+                <!--第一个-->
+                            <div class="tags1_left tags1_left_on"></div>
+                            <div class="tagsM tagsM_on">我的待办总览</div>
+                            <div class="tags tags3_r_on"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Content">
+                    <div class="ig">
+                        <div class="workst1 icon_border"></div><span>厂商管理</span>
+                    </div>
+                    <div class="h100">
+                        <div class="wh100 GrayBg">
+                            <div class="ws_text">创建新厂商</div>
+                            <div class="ws_text2">0</div>
+                        </div>
+                        <div class="wh200 GrayBg">
+                            <div class="ws_text">新增厂商门店课别信息</div>
+                            <div class="ws_text2">0</div>
+                        </div>
+                        <div class="wh100 GreenBg">
+                            <div class="ws_text">修改厂商</div>
+                            <div class="ws_text2">3</div>
+                        </div>
+                    </div>
+                    <div class="ig">
+                        <div class="workst2 icon_border"></div><span>商品管理</span>
+                    </div>
+                    <div class="h100">
+                        <div class="wh100 GrayBg">
+                            <div class="ws_text">创建新商品</div>
+                            <div class="ws_text2">0</div>
+                        </div>
+                        <div class="wh200 GreenBg">
+                            <div class="ws_text">新增商品下传区域</div>
+                            <div class="ws_text2">15</div>
+                        </div>
+                        <div class="wh200 GreenBg">
+                            <div class="ws_text">修改商品条码信息</div>
+                            <div class="ws_text2">7</div>
+                        </div>
+                        <div class="wh200 GrayBg">
+                            <div class="ws_text">修改商品规格信息</div>
+                            <div class="ws_text2">0</div>
+                        </div>
+                        <div class="wh200 GreenBg">
+                            <div class="ws_text">修改商品陈列信息</div>
+                            <div class="ws_text2">9</div>
+                        </div>
+                        <div class="wh100 GreenBg">
+                            <div class="ws_text">修改商品关联信息</div>
+                            <div class="ws_text2">3</div>
+                        </div>
+                    </div>
+                    <div class="ig">
+                        <div class="workst3 icon_border"></div><span>订单管理</span>
+                    </div>
+                    <div class="h100">
+                        <div class="wh100 GreenBg">
+                            <div class="ws_text">创建新订单</div>
+                            <div class="ws_text2">2</div>
+                        </div>
+                        <div class="wh100 GrayBg">
+                            <div class="ws_text">订单审核模板2</div>
+                            <div class="ws_text2">0</div>
+                        </div>
+                        <div class="wh100 GreenBg">
+                            <div class="ws_text">订单审核模板3</div>
+                            <div class="ws_text2">19</div>
+                        </div>
+                    </div>
+                    <div class="ig">
+                        <div class="workst4 icon_border"></div><span>促销管理</span>
+                    </div>
+                    <div class="h100">
+                        <div class="wh100 GreenBg">
+                            <div class="ws_text">创建新商品</div>
+                            <div class="ws_text2">0</div>
+                        </div>
+                        <div class="wh200 GreenBg">
+                            <div class="ws_text">新增商品下传区域</div>
+                            <div class="ws_text2">15</div>
+                        </div>
+                        <div class="wh200 GrayBg">
+                            <div class="ws_text">促销审核模板3</div>
+                            <div class="ws_text2">0</div>
+                        </div>
+                        <div class="wh200 GrayBg">
+                            <div class="ws_text">促销审核模板4</div>
+                            <div class="ws_text2">0</div>
+                        </div>
+                        <div class="wh200 GrayBg">
+                            <div class="ws_text">促销审核模板5</div>
+                            <div class="ws_text2">0</div>
+                        </div>
+                        <div class="wh100 GreenBg">
+                            <div class="ws_text">修改商品关联信息</div>
+                            <div class="ws_text2">3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

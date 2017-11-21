@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="css/G.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Componet.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/window.css" rel="Stylesheet" />
+    <style type="text/css">
+        .Table_Panel {
+            height:405px;
+            overflow:hidden;
+
+        }
+        .Table_Panel td{
+            height:30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="Panel" style="width:800px;">
+        <div class="Panel_top">
+            <span>创建小分类</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <table class="CM_table" style="width:90%;margin-left:40px;">
+                <tr>
+                    <td class="w20"><span>小分类</span></td>
+                    <td class="w55"><input type="text" class="inputText w35" /></td>
+                    <td class="w25">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><span>中文名称</span></td>
+                    <td><input type="text" class="inputText w35" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><span>英文名称</span></td>
+                    <td><input type="text" class="inputText w55" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><span>处别</span></td>
+                    <td><div class="iconPut w20 fl_left">
+                            <input type="text" class="w75"/>
+                            <div class="ListWin"></div>
+                        </div>
+                        <input class="inputText twoInput2 w55" type="text" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><span>课别</span></td>
+                    <td><div class="iconPut w20 fl_left">
+                            <input type="text" class="w75"/>
+                            <div class="ListWin"></div>
+                        </div>
+                        <input class="inputText twoInput2 w55" type="text" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><span>大分类</span></td>
+                    <td><div class="iconPut w20 fl_left">
+                            <input type="text" class="w75"/>
+                            <div class="ListWin"></div>
+                        </div>
+                        <input class="inputText twoInput2 w55" type="text" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><span>中分类</span></td>
+                    <td><div class="iconPut w20 fl_left">
+                            <input type="text" class="w75"/>
+                            <div class="ListWin"></div>
+                        </div>
+                        <input class="inputText twoInput2 w55" type="text" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><span>状态</span></td>
+                    <td><select class="w35" ><option></option></select></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height:155px;">
+                        <table class="w100">
+                            <tr style="text-align:center;">
+                                <td class="w20">&nbsp;</td>
+                                <td class="w11">华东</td>
+                                <td class="w11">华南</td>
+                                <td class="w11">华北</td>
+                                <td class="w11">华中</td>
+                                <td class="w12">西北</td>
+                                <td class="w12">西南</td>
+                                <td class="w12">东北</td>
+                            </tr>
+                            <tr>
+                                <td><span>B-Basic</span></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>N-National</span></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>O-Optional</span></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>L-Local</span></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                                <td><input type="text"  class="inputText w85" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">保持</div>
+                <div class="PanelBtn2">取消</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

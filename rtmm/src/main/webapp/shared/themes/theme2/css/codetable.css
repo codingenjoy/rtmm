@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+
+select {
+	position: relative;
+	left: -2px;
+	top: -2px;
+	font-size: 12px;
+	width: 183px;
+	line-height: 14px;
+	bo rder: 0px;
+	color: #333333;
+}

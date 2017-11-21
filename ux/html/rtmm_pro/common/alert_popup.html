@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../js/rtmm.js" type="text/javascript"></script>
+    <style type="text/css">
+        .Panel {
+            width:500px;
+        }
+        .Table_Panel {
+            height:60px;
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body>
+<!--#grid_layer-->
+<div style="margin-top:500px;">弹窗实例</div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#common").click(function () {
+            var t = $("#title").val();
+            var m = $("#msg").val();
+            var w = $("#w").val();
+            var h = $("#h").val();
+            commonAlert(m,w,h,t);
+        });
+        $("#error").click(function () {
+            var t = $("#title").val();
+            var m = $("#msg").val();
+            var w = $("#w").val();
+            var h = $("#h").val();
+            errorAlert(m, w, h, t);
+        });
+        $("#success").click(function () {
+            var t = $("#title").val();
+            var m = $("#msg").val();
+            var w = $("#w").val();
+            var h = $("#h").val();
+            successAlert(m, w, h, t);
+        });
+        $("#warn").click(function () {
+            var t = $("#title").val();
+            var m = $("#msg").val();
+            var w = $("#w").val();
+            var h = $("#h").val();
+            warnAlert(m, w, h, t);
+        });
+        $("#confirm").click(function () {
+            var t = $("#title").val();
+            var m = $("#msg").val();
+            var w = $("#w").val();
+            var h = $("#h").val();
+            confirmWindow(m, w, h, t);
+        });
+        $("#warn2").click(function () {
+            var t = $("#title").val();
+            var m = $("#msg").val();
+            var w = $("#w").val();
+            var h = $("#h").val();
+            warnAlert(m, w, h, t);
+        });
+        $("#warn3").click(function () {
+            var t = $("#title").val();
+            var m = $("#msg").val();
+            var w = $("#w").val();
+            var h = $("#h").val();
+            warnAlert(m, w, h, t);
+        });
+    });
+
+
+</script>
+<div>
+    <div class="ig">
+        <div class="msg_txt">Title:</div><input id="title" type="text" class="inputText" />
+    </div>
+    <div class="ig">
+        <div class="msg_txt">Msg:</div><input id="msg" type="text" class="inputText" />
+    </div>
+    <div class="ig">
+    <div class="msg_txt">width:</div><input id="w" type="text" class="inputText" /><span>默认值为500</span>
+    </div>
+    <div class="ig">
+        <div class="msg_txt">height:</div><input id="h" type="text" class="inputText" /><span>默认值为60，这里额高度值得是显示内容区域的高度，不算弹窗的title和foot</span>
+    </div>
+    <div class="ig">
+        <input type="button" value="success" class="PanelBtn1" id="success"/>
+        <input type="button" value="error" class="PanelBtn1" id="error"/>
+        <input type="button" value="warn" class="PanelBtn1" id="warn"/>
+        <input type="button" value="common info" class="PanelBtn1" id="common"/>
+        <input type="button" value="confirm" class="PanelBtn1" id="confirm"/>
+    </div>
+</div>
+<div style="height:800px;"></div>
+</body>
+</html>

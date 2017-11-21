@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link type="text/css" href="../css/g_nr.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/contents.css" rel="Stylesheet" />
+    <link type="text/css" href="../js/freezenColums/f.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script> 
+    <script type="text/javascript" src="../js/g_nr.js"></script>
+    <script type="text/javascript" src="../js/freezenColums/f.js"></script>
+    <title></title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <div class="TopMenu">
+        <div class="Logo"></div>
+        <ol class="MainMenu">
+            <li><a class="catalogue_management" title="分类管理" ><span class="longText">分类管理</span></a></li>
+            <li><a class="supplier_management" title="厂商管理" ><span class="longText">厂商管理</span></a></li>
+            <li><a class="item_management" title="商品管理"><span class="longText">商品管理</span></a></li>
+            <li><a class="order_management" title="订单管理"><span class="longText">订单管理</span></a></li>
+            <li><a class="promotion_management" title="促销管理"><span class="longText">促销管理</span></a></li>
+            <li><a class="achievement_analysis" title="业绩分析"><span class="longText">业绩分析</span></a></li>
+            <li><a class="parameter_management" title="参数管理" ><span class="longText">参数管理</span></a></li>
+            <li><a class="day-end_management day-end_management_on" title="日结管理"><span class="longText">日结管理</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">我的工作台</span></a></li>
+        </ol>
+<ol class="RMenu">
+            <li class="MenuDrop"><a class="RM4"></a>
+                <ol class="FavDrop">
+                            <li class="FavDrop1"><div class="RM1"></div>
+                                <span>我的收藏</span>
+                            </li>
+                            <li class="FavDrop2"><div class="RM3"></div>
+                                <span>语言设置</span></li>
+                            <li class="FavDrop3"><div class="RM2"></div>
+                                <span>密码设置</span></li>
+                            <li class="FavDrop5"><div class="RM5"></div><span>退出帐号</span></li>
+                 </ol>
+            </li>
+            <li class="RMenu_Text"><div class="longText">欢迎，Java.管理员 Csharp Dot</div></li> 
+        </ol>
+        <ol class="MyFav" style="display:none;">
+            <li><a>我的收藏1</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏2</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏3</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏4</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏5</a><div class="Closediv CircleClose"></div></li>
+        </ol>
+    </div>
+
+    <div class="Center">
+        <div class="LeftContainer left_menu">
+            <div class="SideBar off_nr"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a class="Sub" id="a" href="#"><span class="L1_No"></span>
+                           <span class="SubText">日结启动</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a class="Sub Sub_on" href="#" id="b"><span class="L1_No"></span>
+                           <span class="SubText">日结监控</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container_nr">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="searchToolBar" title="检索"></div>
+                </div>
+                <div class="lineToolbar"></div>
+                <div class="normalTools saveBar_off" title="保存"></div>
+
+                <div class="normalTools printBar" title="打印"></div>
+
+                <div class="normalTools importBar_off" title="导入"></div>
+                <div class="normalTools exportBar" title="导出"></div>
+                <div class="lineToolbar"></div>
+                <div class="normalTools searchBar_off" title="检索"></div>
+
+                <div class="normalTools clearBar" title="清除"></div>
+                <div class="lineToolbar"></div>
+                <div class="normalTools createNewBar_off" title="创建新项"></div>
+
+                <div class="normalTools deleteBar" title="删除"></div>
+
+                <div class="normalTools editBar" title="编辑"></div>
+                <div class="lineToolbar"></div>
+                <div class="normalTools firstPageBar_off" title="转至首页"></div>
+
+                <div class="normalTools prevPageBar" title="转至上一页"></div>
+
+                <div class="normalTools nextPageBar" title="转至下一页"></div>
+
+                <div class="normalTools endPageBar_off" title="转至末页"></div>
+                <div class="lineToolbar"></div>
+                <div class="normalTools prevStepBar_off" title="转至上一步"></div>
+
+                <div class="normalTools nextStepBar" title="转至下一步"></div>
+
+                <div class="normalTools submitBar_off" title="提交"></div>
+                <div class="lineToolbar"></div>
+                <div class="normalTools approveBar" title="审核通过"></div>
+
+                <div class="normalTools disapproveBar" title="审核不通过"></div>
+                <div class="lineToolbar"></div>
+                <div class="normalTools commentBar_off" title="评论"></div>
+
+                <div class="RightTool">
+                    <div class="formView" title="表单视窗"></div>
+                </div>
+                <div class="RightTool listView_selected">
+                    <div class="listView" title="列表视窗"></div>
+                </div>
+            </div>
+
+            <div class="CTitle">
+                            <!--第一个-->
+                            <div class="tags1_left tags1_left_on"></div>
+                            <div class="tagsM tagsM_on">日结监控</div>
+
+                            <div class="tags tags3_r_on"></div>
+            </div>
+
+            <div class="Container-1">
+                <div class="search_ctr"><!--off_nr-->
+                    <div class="search_top">
+                        <span>查询条件</span>
+                        <div class="CircleClose"></div>
+                    </div>
+                    <div>
+                        <div class="sh_txt">店号&nbsp;</div>
+                        <div class="sh_opdiv"><select class="w80"><option></option></select></div>
+                    </div>
+                    <div>
+                        <div class="sh_txt">NR状态&nbsp;</div>
+                        <div class="sh_opdiv"><select class="w80"><option></option></select></div>
+                    </div>
+                    <div class="search_bottom">
+                        <div class="normalTools clearBar" title="清除"></div>
+                        <div class="normalTools searchBar_off" title="检索"></div>
+                    </div>
+                </div>
+                <div class="Content_nr search_hap">
+                <div class="move_cols tabel_001">
+                    <!--frozen top head parts when drag the y-scroll -->
+                    <div class="m_cols_head">
+                         <table cellpadding="0" cellspacing="0">
+                              <tbody><tr>
+                                  <td><div class="wh_30">&nbsp;</div></td>
+                                  <td><div class="wh_245">店号</div></td>
+                                  <td><div class="wh_450">NR状态</div></td>
+
+                                  <!--占位，因为table行的宽度可能没比较短，无法占满整行，余下的宽度就由这个td占挤-->
+                                  <td><div class="wh_temp">&nbsp;</div></td>
+                              </tr>
+                          </tbody></table>
+                    </div>
+                    <!--this parts can be scrolled all the time-->
+                    <div class="m_cols_body">
+                        <table cellpadding="0" cellspacing="0" class="single_tb">
+                            <tbody>
+                            <tr class="tr0">
+                                <td><div class="align_center wh_30">&nbsp;</div></td>
+                                <td><div class="longText wh_246">data1data1data1data1data1data1data1data1data1</div></td>
+                                <td><div class="longText wh_451">datata1</div></td>
+                                <td><div class="wh_temp">&nbsp;</div></td>
+                            </tr>
+                            <tr class="tr1">
+                                <td><div class="align_center wh_30">&nbsp;</div></td>
+                                <td><div class="longText wh_246">data1data1data1data1data1data1data1data1data1</div></td>
+                                <td><div class="longText wh_451">datata1</div></td>
+                                <td><div class="wh_temp">&nbsp;</div></td>
+                            </tr>
+                            <tr class="tr1">
+                                <td><div class="align_center wh_30">&nbsp;</div></td>
+                                <td><div class="longText wh_246">data1data1data1</div></td>
+                                <td><div class="longText wh_451 red_color">datata1</div></td>
+                                <td><div class="wh_temp">&nbsp;</div></td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+
+                <div class="paging">
+	                    <div class="fl_left">
+		                    <span class="fl_left">第1-20项,共 5 项&nbsp;&nbsp;|&nbsp;每页显示</span>
+                            <select>
+			                    <option value="10">10</option>
+			                    <option value="20" selected="selected">20</option>
+			                    <option value="30">30</option>
+		                    </select> 项
+	                    </div>
+	                    <div class="fl_right page_list">
+                            <span class="fl_right" style="margin-right:10px;">&nbsp;&nbsp;&nbsp;到第 <input name="pageNo" id="goto_page" class="page_no_input" maxlength="5" type="text"/> 页 <input value="go" type="button"/></span>
+                                <a class="page_end_block" title="尾页"></a>
+                                <a class="page_next_block" title="下一页"></a>
+                                <a title="6" class="num">999999</a>
+                                <a style="cursor:default;">...</a>
+                                <a title="2" class="num">3</a>
+                                <a title="2" class="num">2</a>
+                                <a title="1" class="num">1</a>
+                                <a title="上一页" class="page_prev_block_off"></a>
+                                <a title="首页" class="page_first_block_off"></a>  
+	                    </div>
+                    </div>
+            </div>
+                <div style="clear:both;"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

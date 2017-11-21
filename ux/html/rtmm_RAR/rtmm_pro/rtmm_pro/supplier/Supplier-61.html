@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="css/G.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Componet.css" rel="Stylesheet" />
+    <script src="js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="js/rtmm.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/jump.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/easyUI/jquery.easyui.min.js" charset="utf-8" type="text/javascript"></script>
+    <link type="text/css" href="css/easyUI/datagrid.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/pagination.css" rel="Stylesheet" />
+    <link type="text/css" href="css/easyUI/calendar.css" rel="Stylesheet" />
+    <style type="text/css">
+        .schedule {
+            width:272px;height:80px;margin-left:60px;margin-top:30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="TopMenu">
+        <div class="Logo"></div>
+        <ol class="MainMenu">
+            <li><a class="catalogue_management" title="分类管理" href="Catelog-11.html"><span class="longText">分类管理</span></a></li>
+            <li><a class="supplier_management supplier_management_on" title="厂商管理" href="Supplier-11.html"><span class="longText">厂商管理</span></a></li>
+            <li><a class="item_management" title="商品管理"><span class="longText">商品管理</span></a></li>
+            <li><a class="order_management" title="订单管理"><span class="longText">订单管理</span></a></li>
+            <li><a class="promotion_management" title="促销管理"><span class="longText">促销管理</span></a></li>
+            <li><a class="achievement_analysis" title="业绩分析"><span class="longText">业绩分析</span></a></li>
+            <li><a class="parameter_management" title="参数管理" href="Param-11.html"><span class="longText">参数管理</span></a></li>
+            <li><a class="day-end_management" title="日结管理"><span class="longText">日结管理</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">我的工作台</span></a></li>
+            <li><a class="workspace_overview" title="我的工作台"><span class="longText">ToBeAGood Programer!</span></a></li>
+        </ol>
+<ol class="RMenu">
+            <li class="MenuDrop"><a class="RM4"></a>
+                <ol class="FavDrop">
+                            <li class="FavDrop1"><div class="RM1"></div>
+                                <span>我的收藏</span>
+                            </li>
+                            <li class="FavDrop2"><div class="RM3"></div>
+                                <span>语言设置</span></li>
+                            <li class="FavDrop3"><div class="RM2"></div>
+                                <span>密码设置</span></li>
+                            <li class="FavDrop5"><div class="RM5"></div><span>退出帐号</span></li>
+                 </ol>
+            </li>
+            <li class="RMenu_Text"><div class="longText">欢迎，Java.管理员 Csharp Dot</div></li> 
+        </ol>
+        <ol class="MyFav" style="display:none;">
+            <li><a>我的收藏1</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏2</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏3</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏4</a><div class="Closediv CircleClose"></div></li>
+            <li><a>我的收藏5</a><div class="Closediv CircleClose"></div></li>
+        </ol>
+    </div>
+    <div class="Center">
+        <div class="LeftMenu">
+            <div class="SideBar Bar_off 1-id" onclick="DispOrHid('1-id')"><div class="SideBarText">公司信息</div></div>
+            <div class="SubMenu">
+                <div class="SubTool">
+                    <div class="Expend">
+                        <div class="Expend1"></div>
+                        <div class="Expend2"></div>
+                    </div>
+                    <div class="HiddenSub A-id" onclick="DispOrHid('A-id')"></div>
+                </div>
+                <ol class="SubList">
+                    <li>
+                        <a id="1www" class="Sub Sub_on" href="Supplier-11.html"><span class="L1_No"></span>
+                           <span class="SubText">集团信息</span>
+                           <span class="Fav"></span></a><!-- Fav_On-->
+                    </li>
+                    <li>
+                        <a id="1ee" class="Sub" href="Supplier-21.html"><span class="L1_No"></span>
+                           <span class="SubText">公司信息</span>
+                           <span class="Fav"></span></a>
+                    </li>
+                    <li>
+                        <a id="fff1"  class="Sub"><span class="L1_Yes"></span>
+                           <span class="SubText">厂商管理</span>
+                           <span class="Fav"></span></a>
+                           <ol style="display:block;">
+                            <li>
+                                <a  id="ggg" class="Sub" href="Supplier-31.html"><span class="L2_No"></span>
+                                   <span class="SubText">厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A1" class="Sub" href="Supplier-41.html"><span class="L2_No"></span>
+                                   <span class="SubText">未生效厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="A2" class="Sub Sub_on" href="Supplier-61.html"><span class="L2_No"></span>
+                                   <span class="SubText">内部厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa" class="Sub" href="Supplier-71.html"><span class="L2_No"></span>
+                                   <span class="SubText">DC厂商信息</span>
+                                   <span class="Fav"></span></a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="ToolBar">
+                <div class="SearchTool">
+                    <div class="Icon-size1 Tools1 B-id" title="检索" onclick="DispOrHid('B-id')" ></div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="Line-1"></td>
+                        <td class="Tools2"></td>
+                        <td></td>
+                        <td class="Tools3_disable"></td>
+                        <td></td>
+                        <td class="Tools23_disable"></td>
+                        <td></td>
+                        <td class="Tools23"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools6"></td>
+                        <td></td>
+                        <td class="Tools20"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools11"></td>
+                        <td></td>
+                        <td class="Tools10"></td>
+                        <td></td>
+                        <td class="Tools12"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools16"></td>
+                        <td></td>
+                        <td class="Tools17"></td>
+                        <td></td>
+                        <td class="Tools19"></td>
+                        <td></td>
+                        <td class="Tools18"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools24"></td>
+                        <td></td>
+                        <td class="Tools25"></td>
+                        <td></td>
+                        <td class="Tools26"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools27"></td>
+                        <td></td>
+                        <td class="Tools28"></td>
+                        <td class="Line-1"></td>
+                        <td class="Tools29"></td>
+                    </tr>
+                </table>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools22" title="content"></div>
+                </div>
+                <div class="RightTool">
+                    <div class="Icon-size1 Tools21" title="list"></div>
+                </div>
+
+            </div>
+            <div class="CTitle">
+                <!--第一个-->
+                            <div class="tags1_left tags1_left_on"></div>
+                            <div class="tagsM tagsM_on">内部厂商</div>
+                            <div class="tags tags3_r_on"></div>
+            </div>
+            <div class="Container-1">
+                <div class="Search" ><!-- Bar_on-->
+                    <div class="SearchTop">
+                        <span>查询条件</span>
+                        <div class="Icon-size1 CircleClose C-id" onclick="DispOrHid('C-id')"></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SMiddle">
+                        <table class="SearchTable" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="ST_td1"><span>内部厂编</span></td>
+                                <td class="ST_td2"><input type="text" class="inputText w80" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>厂商中文名称</span></td>
+                                <td><input type="text" class="inputText w80" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>厂商英文名称</span></td>
+                                <td><input type="text" class="inputText w80" /></td>
+                            </tr>
+                            <tr>
+                                <td><span>准备天数</span></td>
+                                <td><input type="text" class="inputText w80" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="line"></div>
+                    <div class="SearchFooter">
+                        <div class="Icon-size1 Tools20"></div>
+                        <div class="Icon-size1 Tools6"></div>
+                    </div>
+                </div>
+
+                <div class="Content" style="width:74%;">
+                    <div style="height:430px;">
+	                <table id="dg" style="height:430px;width:771px;"></table>
+                    </div>
+                    <div style="height:120px;margin-top:10px" class="CM">
+                        <div class="CM-bar"><div>选中项其他信息</div></div>
+                        <div class="CM-div">
+                                <div class="schedule">
+                                      <div style="height:25px;">
+                                                        <div class="wtitle">&nbsp;</div>
+                                                        <div class="week week20">
+                                                            <div>一</div>
+                                                            <div>二</div>
+                                                            <div>三</div>
+                                                            <div>四</div>
+                                                            <div>五</div>
+                                                            <div>六</div>
+                                                            <div>日</div>
+                                                        </div>
+                                                    </div>
+                                      <div style="height:1px;background:#999999;overflow:hidden;width:85%;"></div>
+                                      <div style="height:25px;">
+                                                        <div class="wtitle"><span>*送货行程&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+                                                        <div class="week week21">
+                                                            <div style="background-color:#B4DECD;"></div>
+                                                            <div></div>
+                                                            <div style="background-color:#B4DECD;"></div>
+                                                            <div style="background-color:#B4DECD;"></div>
+                                                            <div></div>
+                                                            <div style="background-color:#B4DECD;"></div>
+                                                            <div></div>
+                                                        </div>
+                                                        <div class="icondiv2 Rect2Check"></div>
+                                                        <!--<div class="icondiv2 Rect2Close"></div>-->
+                                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    <div id="date_div" style="width:160px;height:180px;display:none;position:absolute;z-index:9999;"></div>
+    <script type="text/javascript">
+        $('#dg').datagrid({
+            rownumbers: false,
+            //singleSelect: false,
+            pagination: true,
+            pageSize: 20,
+            url: 'json/x.json',
+            columns: [[
+            { field: 'ck', checkbox: true, },
+            { field: 'no', title: '内部厂编', sortable: true, },
+            { field: 'name', title: '厂商中文名称', sortable: true, },
+            { field: 'en_name', title: '厂商英文名称', },
+            { field: 'date', title: '准备天数', },
+            { field: 'date', title: '创建日期', },
+            { field: 'date', title: '创建人', },
+            { field: 'date', title: '修改日期', },
+            { field: 'date', title: '修改人', }
+            ]]
+        });
+
+        //日历
+        $('#date_div').calendar({
+            current: new Date()
+        });
+    </script>
+</body>
+</html>

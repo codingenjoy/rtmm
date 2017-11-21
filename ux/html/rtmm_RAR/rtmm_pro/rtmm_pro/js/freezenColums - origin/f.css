@@ -1,0 +1,33 @@
+﻿table,td,tr,input {
+            margin:0;padding:0;
+        }
+body,table {
+            font-size:12px;
+            font-family:'Microsoft YaHei',Arial;
+        }
+td{
+    border:0;
+    height:30px;
+    vertical-align:middle;
+    text-align:center;
+}
+input[type="checkbox"] {
+vertical-align:initial;
+}
+#frozen_cols,#move_cols {
+    overflow:hidden;float:left;border:0;
+}
+#f_cols_head ,#m_cols_head{
+    overflow:hidden;
+    width:100%;
+    height:30px;
+    background:#ffd800;
+}
+#f_cols_body {
+    overflow:hidden;
+    width:100%;
+}
+#m_cols_body {
+    overflow:auto;
+    width:100%;
+}

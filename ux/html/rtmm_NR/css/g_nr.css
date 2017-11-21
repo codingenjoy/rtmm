@@ -1,0 +1,1325 @@
+﻿/*宽度组件*/
+.w5 {
+    width:5%;
+}
+.w7 {
+    width:7%;
+}
+.w8 {
+    width:8%;
+}
+.w9 {
+    width:9%;
+}
+.w10 {
+    width:10%;
+}
+.w11{
+    width:11%;
+}
+.w12_5 {
+    width:12.5%;
+}
+.w14{
+    width:14%;
+}
+.w15{
+    width:15%;
+}
+.w17{
+    width:17%;
+}
+.w20{
+    width:20%;
+}
+.w23{
+    width:23%;
+}
+.w25 {
+    width:25%;
+}
+.w28 {
+    width:28%;
+}
+.w30 {
+    width:30.5%;
+}
+.w31 {
+    width:31%;
+}
+.w35 {
+    width:35%;
+}
+.w36 {
+    width:36%;
+}
+.w39 {
+    width:39%;
+}
+.w40 {
+    width:40%;
+}
+.w44 {
+    width:44%;
+}
+.w45 {
+    width:45%;
+}
+.w48 {
+    width:48%;
+}
+.w49 {
+    width:49%;
+}
+.w50 {
+    width:50%;
+}
+.w53 {
+    width:53%;
+}
+.w55 {
+    width:55%;
+}
+.w58 {
+    width:58%;
+}
+.w60 {
+    width:60%;
+}
+.w62 {
+    width:62%;
+}
+.w64 {
+    width:64%;
+}
+.w65 {
+    width:65%;
+}
+.w70 {
+    width:70%;
+}
+.w71 {
+    width:71%;
+}
+.w74 {
+    width:74%;
+}
+.w75 {
+    width:75%;
+}
+.w76 {
+    width:76%;
+}
+.w77 {
+    width:77%;
+}
+.w78 {
+    width:78%;
+}
+.w80 {
+    width:80%;
+}
+.w82 {
+    width:82%;
+}
+.w83 {
+    width:83%;
+}
+.w85 {
+    width:85%;
+}
+.w86 {
+    width:86%;
+}
+.w87{
+    width:87%;
+}
+.w90 {
+    width:90%;
+}
+.w91 {
+    width:91%;
+}
+.w93 {
+    width:93%;
+}
+.w94 {
+    width:94%;
+}
+.w95 {
+    width:95%;
+}
+.w96 {
+    width:96%;
+}
+.w100{
+    width:100%;
+}
+/*.ht30 {
+    height:30px;
+}*/
+body{
+    padding:0px;margin:0px auto;
+    width:1240px;
+    height:690px;
+    color:#333333;
+}
+body,table,span,select,input {
+    font-family:'Microsoft YaHei';
+    font-size:12px;
+}
+a {
+    border:0;
+    display:block;
+    text-decoration:none;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    color:#333333;
+}
+table {
+    border:none;
+    border-collapse:collapse;
+}
+table, td, tr ,ul,ol,li,input{
+    margin:0;
+    padding:0;
+}
+ol ,li{
+    list-style:none;
+}
+select {
+    height:22px;border: 1px solid #999999;padding:0;float:left;margin:0;
+}
+/*******顶部菜单TopMenu*******/
+.Logo {
+    cursor:pointer;
+    width:40px; height:40px;
+    float:left;
+    background:url(../images/topBg.png);
+    background-position:0px -802px;
+}
+.TopMenu {
+    width:100%;
+    height:40px;
+    background:#3F9673;
+    overflow:hidden;
+}
+.MainMenu li,.MainMenu a{
+    float:left;
+    height:100%;
+    height:40px;
+}
+.MainMenu {
+    width:1040px;
+    height:100%;
+    float:left;
+}
+.RMenu {
+    width:135px;
+    height:100%;
+    float:right;
+    background:url(../images/topBg.png);
+    background-position:-87px -803px;
+    background-repeat:no-repeat;
+}
+.MainMenu li ,.MainMenu a{
+    width:100px;
+    overflow:hidden;
+}
+.MainMenu span{
+    display:block;
+    height: 20px;
+    margin-top: 12px;
+    margin-left:33px;
+}
+.RMenu li, .RMenu a {
+    height:100%;
+    float:right;
+}
+.MenuDrop,.RM4 {
+    width:24px;
+}
+.RMenu_Text {
+    width:100px;
+}
+.RMenu li {
+    margin-right:2px;
+}
+.RMenu span {
+    color: #FFF;
+    line-height: 40px;
+}
+.RMenu div {
+    color: #FFF;
+    height:20px;
+    margin-top:10px;
+}
+/*发生变化菜单样式*/
+.catalogue_management {
+    background-image:url(../images/topBg.png);
+    background-position:0px 0px;
+    color:#fff;
+}
+.catalogue_management:hover {
+    background-image:url(../images/topBg.png);
+    background-color:#cccccc;
+    background-position:0px -40px;
+    color:#3F9673;
+}
+.catalogue_management_on{
+    background-image:url(../images/topBg.png);
+    background-color:#fff;
+    background-position:0px -40px;
+    color:#3F9673;
+}
+.supplier_management {
+    background-image:url(../images/topBg.png);
+    background-position:0px -80px;
+    color:#fff;
+}
+.supplier_management:hover {
+    background-image:url(../images/topBg.png);
+    background-color:#cccccc;
+    background-position:0px -121px;
+    color:#3F9673;
+}
+.supplier_management_on{
+    background-image:url(../images/topBg.png);background-color:#fff;
+    background-position:0px -121px;
+    color:#3F9673;
+}
+.item_management {
+    background-image:url(../images/topBg.png);
+    background-position:0px -161px;
+    color:#fff;
+}
+.item_management:hover {
+    background-image:url(../images/topBg.png);
+    background-color:#cccccc;
+    background-position:0px -201px;
+    color:#3F9673;
+}
+.item_management_on{
+    background-image:url(../images/topBg.png);background-color:#fff;
+    background-position:0px -201px;
+    color:#3F9673;
+}
+.order_management {
+    background-image:url(../images/topBg.png);
+    background-position:0px -241px;
+    color:#fff;
+}
+.order_management:hover {
+    background-image:url(../images/topBg.png);
+    background-color:#cccccc;
+    background-position:0px -281px;
+    color:#3F9673;
+}
+.order_management_on{
+    background-image:url(../images/topBg.png);background-color:#fff;
+    background-position:0px -281px;
+    color:#3F9673;
+}
+.promotion_management {
+    background-image:url(../images/topBg.png);
+    background-position:0px -321px;
+    color:#fff;
+}
+    .promotion_management:hover {
+    background-image:url(../images/topBg.png);
+    background-color:#cccccc;
+    background-position:0px -361px;
+    color:#3F9673;
+    }
+.promotion_management_on{
+    background-image:url(../images/topBg.png);background-color:#fff;
+    background-position:0px -361px;
+    color:#3F9673;
+}
+.achievement_analysis {
+    background-image:url(../images/topBg.png);
+    background-position:0px -401px;
+    color:#fff;
+}
+.achievement_analysis:hover {
+    background-image:url(../images/topBg.png);
+    background-color:#cccccc;
+    background-position:0px -441px;
+    color:#3F9673;
+    }
+.achievement_analysis_on{
+    background-image:url(../images/topBg.png);background-color:#fff;
+    background-position:0px -441px;
+    color:#3F9673;
+}
+/**/
+.parameter_management {
+    background-image:url(../images/topBg.png);
+    background-position:0px -481px;
+    color:#fff;
+}
+.parameter_management:hover {
+    background-image:url(../images/topBg.png);
+    background-color:#cccccc;
+    background-position:0px -521px;
+    color:#3F9673;
+}
+.parameter_management_on{
+    background-image:url(../images/topBg.png);background-color:#fff;
+    background-position:0px -521px;
+    color:#3F9673;
+}
+.day-end_management{
+    background-image:url(../images/topBg.png);
+    background-position:0px -561px;
+    color:#fff;
+}
+.day-end_management:hover {
+    background-image:url(../images/topBg.png);
+    background-color:#cccccc;
+    background-position:0px -601px;
+    color:#3F9673;
+    }
+.day-end_management_on{
+    background-image:url(../images/topBg.png);background-color:#fff;
+    background-position:0px -601px;
+    color:#3F9673;
+}
+.workspace_overview {
+    background-image:url(../images/topBg.png);
+    background-position:0px -641px;
+    color:#fff;
+}
+.workspace_overview:hover {
+    background-image:url(../images/topBg.png);
+    background-color:#cccccc;
+    background-position:0px -681px;
+    color:#3F9673;
+}
+.workspace_overview_on{
+    background-image:url(../images/topBg.png);background-color:#fff;
+    background-position:0px -681px;
+    color:#3F9673;
+}
+/*收藏，语言选择*/
+.RM1 {
+    background:url(../images/topBg.png);
+    background-position:0px -721px;
+}
+.RM2 {
+    background:url(../images/topBg.png);
+    background-position:-25px -721px;
+}
+.RM3 {
+    background:url(../images/topBg.png);
+    background-position:-50px -721px;
+}
+.RM5 {
+    background:url(../images/topBg.png);
+    background-position:-43px -803px;
+}
+.RM4 {
+    background:url(../images/topBg.png);
+    background-position:-75px -721px;
+}
+/*.RM4:hover,*/.RMenu:hover .RM4,.RM4_on{
+    background:url(../images/topBg.png);
+    background-position:-75px -761px;
+}
+/***start 顶部右侧下拉菜单**/
+.FavDrop{
+    display:none; width:134px;height:160px;float:right;position:relative;z-index:9999;background:#3F9673;
+}
+.FavDrop1:hover span,.FavDrop1_on span {
+    color:#3F9673;
+}
+.FavDrop1:hover div,.FavDrop1_on div{
+    background-image:url(../images/topBg.png);
+    background-position:0px -761px;
+}
+.FavDrop2:hover span {
+    color:#3F9673;
+}
+.FavDrop2:hover div{
+    background-image:url(../images/topBg.png);
+    background-position:-50px -761px;
+}
+.FavDrop3:hover span {
+    color:#3F9673;
+}
+.FavDrop3:hover div{
+    background-image:url(../images/topBg.png);
+    background-position:-25px -761px;
+}
+.FavDrop5:hover,.FavDrop3:hover,.FavDrop2:hover,.FavDrop1:hover,.FavDrop1_on{
+    background-color:#e7eaf7;
+}
+.FavDrop5:hover span {
+    color:#3F9673;
+}
+.FavDrop5:hover div{
+    background-image:url(../images/topBg.png);
+    background-position:-63px -803px;
+}
+.RMenu_selected {
+    display:block !important;
+    position:absolute;
+    left:1183px;
+    top:40px;
+}
+.FavDrop li {
+    height:40px;
+    width:100%;
+    cursor:pointer;
+    margin-right:0px;
+}
+.FavDrop div {
+    float:left;
+    width:20px;
+    height:40px;
+    margin:0px 10px auto 10px;
+}
+.FavDrop span {
+    float:left;
+    line-height:40px;
+}
+/***end 顶部右侧下拉菜单***/
+/**MyFav**/
+.MyFav {
+    width:210px;
+    max-height:600px;
+    overflow:auto;
+    background:#EEEEEE;
+    border:2px solid #fff;
+}
+.MyFav li {
+    height:30px;
+    width:100%;
+    cursor:pointer;
+    line-height:30px;
+}
+    .MyFav li:hover {
+        background:#3F9673;
+        color:#FFF;
+    }
+.Closediv {
+    width:16px;height:16px;float:right;margin:8px 5px auto auto;
+}
+.MyFav a {
+    width:160px;height:30px;display:block;float:left;margin-left:10px;
+}
+/****/
+.ToolBar {
+            width: 100%;
+            height: 40px;
+            background: #F9F9F9;
+        }
+        .SearchTool {
+            width: 40px;
+            height: 40px;
+            float: left;
+            text-align:center;
+        }
+        .searchToolBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: 2px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .searchToolBar_hover .searchToolBar{
+            background-position: -21px -4px;
+        }
+        .searchToolBar_selected,.listView_selected,.formView_selected {
+            background:#42BB8F;
+        }
+        .searchToolBar_selected .searchToolBar{
+            background-position: -778px -2px;
+        }
+        .searchToolBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: 2px -29px;
+            background-repeat: no-repeat;
+            cursor: no-drop;
+        }
+        .normalTools {
+            margin-top:10px;
+            float:left;
+            margin-right:10px;
+        }
+        .lineToolbar {
+            margin-top:10px;
+            float:left;
+            height:20px;
+            width:1px;
+            background:#333;
+            margin-right:10px;
+        }
+        .saveBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -45px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .printBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -80px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools4 {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -115px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .searchBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -205px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .clearBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -608px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .createNewBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -359px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .deleteBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -325px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .editBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -395px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .firstPageBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -446px -1px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .prevPageBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -474px -1px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .nextPageBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -501px -1px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .endPageBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -528px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .prevStepBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -827px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .nextStepBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -857px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .submitBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -887px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .approveBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -915px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .disapproveBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -944px -3px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .commentBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -971px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .importBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1048px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .exportBar {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1077px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .exportBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1077px -26px;
+            background-repeat: no-repeat;
+            cursor: no-drop;
+        }
+        .Tools31 {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1024px -3px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools30 {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1000px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools33 {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1149px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .RightTool {
+            float: right;
+            height: 40px;
+            width: 40px;
+            text-align:center;
+        }
+            .RightTool .listView, .RightTool .formView,.SearchTool .searchToolBar  {
+                display:inline-block;vertical-align:-100%;
+            }
+        .listView {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -731px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .formView {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -755px -2px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .saveBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -45px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .printBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -80px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools4_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -115px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .searchBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -205px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .clearBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -608px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .createNewBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -359px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .deleteBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -325px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .editBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -395px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .firstPageBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -446px -29px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .prevPageBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -474px -29px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .nextPageBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -501px -29px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .endPageBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -528px -30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .prevStepBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -827px -26px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .nextStepBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -857px -27px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .submitBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -887px -28px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .approveBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -915px -27px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .disapproveBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -944px -28px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .commentBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -971px -27px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .importBar_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1048px -26px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools31_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1024px -27px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools30_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -1000px -27px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .Tools33_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position:-1171px -2px;
+            background-repeat: no-repeat;
+            cursor: no-drop;
+        }
+        .formView_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -731px -28px;
+            background-repeat: no-repeat;
+            cursor: no-drop;
+        }
+        .listView_off {
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -755px -28px;
+            background-repeat: no-repeat;
+            cursor: no-drop;
+        }
+        .listView_selected .listView{
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -801px -28px;
+            background-repeat: no-repeat;
+        }
+        .formView_selected .formView{
+            width:20px;
+            height:20px;
+            background-image: url('../images/toolIcons.png');
+            background-position: -778px -28px;
+            background-repeat: no-repeat;
+        }
+/****/
+.CTitle {
+    width:100%;
+    height:30px;
+    background:#999999;
+}
+.tags1_left {
+    width:10px;height:30px;float:left;background:url(../images/tags.png) -16px 0px no-repeat;
+}
+.tagsM ,.tagsM_q{
+    line-height:27px;
+    white-space:nowrap;
+    word-break: normal; 
+    min-width:65px;max-width:500px;float:left;
+    background:#cccccc;
+    margin-top:3px;
+    cursor:pointer;
+}
+.tagsM_on {
+    background:#fff;
+    cursor:default;
+}
+.tags {
+    width:25px;height:30px;float:left;background:url(../images/tags.png) -162px 0px no-repeat;
+}
+.tags1_left_on {
+    background:url(../images/tags.png) 0px 0px no-repeat;
+}
+.tags_left_on {
+    background:url(../images/tags.png) -128px 0px no-repeat;
+}
+.tags_right_on{
+    background:url(../images/tags.png) -98px 0px no-repeat;
+}
+.tags3_r_on {
+    background:url(../images/tags.png) -72px 0px no-repeat;
+}
+.tags3_r_off {
+    background:url(../images/tags.png) -28px 0px no-repeat;
+}
+.tags3_close_on {
+    width:42px;
+    float:left;
+    height:30px;
+    background:url(../images/tags.png) -55px 0px no-repeat;
+}
+.tags_close {
+    cursor: pointer;
+    width:20px;height:30px;margin-left:3px;
+    background:url(../images/icon0402.png) -62px -8px no-repeat;
+}
+.tags_close:hover {
+    background:url(../images/icon0402.png) -530px -23px no-repeat;
+}
+/****/
+.longText{
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+}
+.on_nr {
+    display:block;
+}
+.off_nr,.Center  .off_nr {
+    display:none;
+}
+.align_center {
+    text-align: center;
+}
+.fl_left {
+    float:left;
+}
+.fl_right {
+    float:right;
+}
+.red_color {
+    color:#fb3d3d;
+}
+.clear {
+    clear:both;
+}
+.input_style {
+    border: 1px solid #999999;
+    height: 20px;
+    line-height: 20px;
+    float:left;color:#333333;
+}
+/*  center   */
+.Center {
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    position:relative;
+}
+.Content_nr {
+    height: 570px;
+    margin-top: 10px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.Container-1 {
+    position:relative;top:0;left:0;
+}
+/*默认情况下右侧内容区域的大小*/
+.Container_nr {
+    height:100%;margin-left:197px;
+}
+/*当sidebar显示时，leftmenu隐藏，右侧内容区域的大小*/
+.Center .Container_nr_SideBar {
+    margin-left:40px;
+}
+.LeftContainer {
+    position:absolute;top:0;left:0;
+    height:100%;
+    background: #EEEEEE;
+}
+.left_menu {
+    width: 197px;
+}
+.side_bar {
+    width: 40px;
+    cursor: pointer;
+    color: #3F9673;
+}
+/*left menu start*/
+.SubTool {
+    width:100%;height:40px;
+}
+.Expend {
+    width:40px;
+    float:left;
+    margin-left:10px;
+}
+.Expend div {
+    width:17px;
+    height:16px;
+    margin-top:11px;
+    cursor:pointer;
+}
+.Expend1 {
+    float:left;
+    background:url(../images/icon0401.png);
+    background-position:0px -189px;
+}
+.Expend2 {
+    float:right;
+    background:url(../images/icon0401.png);
+    background-position:-19px -189px;
+}
+.HiddenSub {
+    width:20px;
+    height:40px;
+    float:right;
+    margin-right:10px;
+    background:url(../images/icon0401.png);
+    background-position:0px -143px;
+    cursor:pointer;
+}
+.SubList li ,.SubList a,.SubList_w li ,.SubList_w a{
+    width:100%;
+    height:40px;
+    line-height:40px;
+}
+.SubList li,.SubList_w li{
+    height:auto;
+    clear:both;
+}
+.SubList ol{
+    background:#cccccc;
+}
+.SubText,.SubText_w {
+    float:left;
+    display:block;
+    width:120px;
+}
+.Fav {
+    display:block;
+    width:20px;
+    height:40px;
+    float:right;
+    margin-right:10px;
+    background:url(../images/icon0401.png);
+    /*background-position:0px -41px;*/
+}
+.Fav_On {
+    background-position:0px -35px;
+}
+.Fav_bigger1 {
+    background-position:-6px -500px;
+}
+.Fav_bigger2 {
+    background-position:-6px -532px;
+}
+.L1_No {/*一级菜单，没有子级*/
+    display:block;
+    width:35px;
+    height:100%;
+    float:left;
+}
+.L1_Yes,.L1_Yes_w{/*一级菜单，有子级*/
+    display:block;
+    width:35px;
+    height:40px;
+    float:left;
+    background:url(../images/icon0401.png);
+    background-position:0px -71px;
+}
+.L1_Yes_ss,.L1_Yes_ss_w{/*一级菜单，有子级*/
+    display:block;
+    width:35px;
+    height:40px;
+    float:left;
+    background:url(../images/icon0401.png);
+    background-position:0px -107px;
+}
+.L2_No {
+    display:block;
+    width:45px;
+    height:100%;
+    float:left;
+}
+.SubList a:hover {
+    background:url(../images/sub_over.jpg);
+    color:#3F9673;
+}
+.Sub_on {
+    background:url(../images/sub_on.jpg);
+    background-position:-600px 0px;
+    color:#3F9673;
+}
+.SideBar {
+    height: 100%;
+    cursor: pointer;
+    color: #3F9673;
+    display:table-caption;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.SideBarText {
+    display:table-cell;  
+}
+/*left menu end*/
+/**pagenation*/
+.paging {
+    font-size: 12px;
+    color: #575757;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    vertical-align: middle;
+}
+.paging .page_list {
+    width: 420px;
+    font-size: 12px;
+    color: #575757;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    vertical-align: middle;
+}
+.page_list a {
+    margin-top: 5px;
+}
+.paging a {
+    float: right;
+    min-width: 16px;
+    max-width:80px;
+    height: 16px;
+    line-height: 16px;
+    margin-left:3px;
+}
+.num {
+    background:#EEEEEE;
+}
+.page_first_block {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png') -1108px -7px no-repeat;
+    margin-right: 2px;
+}
+.page_first_block_off {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png') -449px -32px no-repeat;
+    margin-right: 2px;
+}
+.page_prev_block {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png') -1131px -6px no-repeat;
+    margin-right: 2px;
+}
+.page_prev_block_off {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png') -477px -32px no-repeat;
+    margin-right: 2px;
+}
+/*.click_block {
+    color: #FFF;
+    background-color: #3F9673;
+}*/
+.page_next_block {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png')  -1125px -30px no-repeat;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+.page_next_block_off {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png')  -503px -32px no-repeat;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+.page_end_block {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png') -1102px -31px no-repeat;
+    margin-right: 2px;
+}
+.page_end_block_off {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/toolIcons.png') -530px -33px no-repeat;
+    margin-right: 2px;
+}
+.page_list #goto_page {
+    width: 30px;
+    border: 1px solid #808080;
+}
+/**pagenation end*/

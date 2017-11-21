@@ -1,0 +1,94 @@
+﻿.paging {
+    font-size: 12px;
+    color: #575757;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    vertical-align: middle;
+}
+.paging .page_list2 {
+    font-size: 12px;
+    color: #575757;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    vertical-align: middle;
+}
+        .page_no_input2 {
+            width:30px;
+        }
+.page_list2 a {
+    margin-top: 5px;
+    float: left;
+    min-width: 16px;
+    max-width:80px;
+    height: 16px;
+    line-height: 16px;
+    margin-left:3px;
+}
+.num {
+    background:#EEEEEE;
+}
+.page_first_block {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('images/toolIcons.png') -1108px -7px no-repeat;
+    margin-right: 2px;
+}
+.page_first_block_off {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('images/toolIcons.png') -449px -32px no-repeat;
+    margin-right: 2px;
+}
+.page_prev_block {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('images/toolIcons.png') -1131px -6px no-repeat;
+    margin-right: 2px;
+}
+.page_prev_block_off {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('images/toolIcons.png') -477px -32px no-repeat;
+    margin-right: 2px;
+}
+.page_next_block {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('images/toolIcons.png')  -1125px -30px no-repeat;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+.page_next_block_off {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('images/toolIcons.png')  -503px -32px no-repeat;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+.page_end_block {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('images/toolIcons.png') -1102px -31px no-repeat;
+    margin-right: 2px;
+}
+.page_end_block_off {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('images/toolIcons.png') -530px -33px no-repeat;
+    margin-right: 2px;
+}
+.page_list2 #goto_page {
+    width: 30px;
+    border: 1px solid #808080;
+}
+/**pagenation end*/

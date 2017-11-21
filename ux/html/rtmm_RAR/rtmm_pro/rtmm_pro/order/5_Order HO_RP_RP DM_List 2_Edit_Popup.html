@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script type="text/javascript" src="../js/My97DatePicker/WdatePicker.js" charset="utf-8"></script>
+    <title></title>
+    <style type="text/css">
+
+        /*overwrite*/
+
+    </style>
+</head>
+<body>
+    <div class="Panel">
+        <div class="Panel_top">
+            <span>修改保留计划基本信息</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="Table_Panel">
+            <div class="ig_top10">
+                <div class="icol_text w30"><span>RP DM编号</span></div>
+                <input type="text" class="inputText w20" />
+            </div>
+            <div class="ig">
+                <div class="icol_text w30"><span>主题</span></div>
+                <input type="text" class="inputText w40" />
+            </div>
+            <div class="ig">
+                <div class="icol_text w30"><span>活动开始日</span></div>
+                <input class="Wdate w20" type="text" onclick="WdatePicker({ isShowClear: false, readOnly: true })" />
+               
+            </div>
+            <div class="ig">
+                <div class="icol_text w30"><span>活动结束日</span></div>
+                <input class="Wdate w20" type="text" onclick="WdatePicker({ isShowClear: false, readOnly: true })" />
+               
+            </div>
+            <div class="ig">
+                <div class="icol_text w30"><span>门店最少确认天数</span></div>
+                <input type="text" class="inputText w20 align_right" value="12" />&nbsp;天
+            </div>
+            <div class="ig">
+                <div class="icol_text w30"><span>SCM备货天数</span></div>
+                <input type="text" class="inputText w20 align_right" value="12" />&nbsp;天
+            </div>
+            <div class="ig">
+                <div class="icol_text w30"><span>门店补货提前天数</span></div>
+                <input type="text" class="inputText w20 align_right" value="12" />&nbsp;天
+            </div>
+            <div class="ig">
+                <div class="icol_text w30"><span>创建日期</span></div>
+                <input type="text" class="inputText w20" />
+            </div>
+            <div class="ig">
+                <div class="icol_text w30"><span>创建人</span></div>
+                <input type="text" class="inputText w20" />
+            </div>
+            <div class="ig">
+                <div class="icol_text w30"><span>修改日期</span></div>
+                <input type="text" class="inputText w20" />
+            </div>
+            <div class="ig">
+                <div class="icol_text w30"><span>修改人</span></div>
+                <input type="text" class="inputText w20" />
+            </div>
+            <div class="clearBoth"></div>
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">确定</div>
+                <div class="PanelBtn2">取消</div>
+            </div>
+        </div>
+        <div class="clearBoth"></div>
+    </div>
+    <script type="text/javascript">
+
+    </script>
+</body>
+</html>

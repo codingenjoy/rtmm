@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>auchan.rtmm</groupId>
+		<artifactId>rtmm-web-parent</artifactId>
+		<version>0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>rtmm-web-common</artifactId>
+	<packaging>jar</packaging>
+
+	<name>rtmm-web-common</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-users-core</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-users-common</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-common-common</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>auchan.rtmm</groupId>
+			<artifactId>rtmm-common-core</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jbarcode</groupId>
+			<artifactId>jbarcode</artifactId>
+			<version>0.2.8</version>
+		</dependency>
+
+	</dependencies>
+</project>

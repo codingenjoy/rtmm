@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="../css/G.css" rel="Stylesheet" />
+    <script src="../js/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../rtmm.js" type="text/javascript"></script>
+    <style type="text/css">
+        .SubList_w ol a:hover {
+            background:#559f47;
+            color:#fff;
+        }
+	    .SubList_w ol{
+		    background:#fff;
+	    }
+    </style>
+    <script type="text/javascript">
+        $(".father_li").live("click", function () {
+
+            $(this).next("ol").toggle();
+            $(this).find("span").first().toggleClass("L1_Yes_ss_w");
+            $(this).find("span").first().toggleClass("L1_Yes_w");
+        });
+        
+        $(".SubList_w ol a").live("click", function () {
+            $(".SubList_w ol li").find(".item_on").removeClass("item_on");
+            $(this).addClass("item_on");
+        });
+    </script>
+</head>
+<body>
+
+    <div class="Panel">
+        <div class="Panel_top">
+            <span>创建新地址</span>
+            <div class="PanelClose"></div>
+        </div>
+        <div class="t" style="height:360px;overflow-y:auto;">
+                <div style="height:20px;"></div>
+               <ol class="SubList_w">
+                    <li>
+                        <a id="1fff"  class="father_li"><span class=" L1_Yes_w"></span>
+                           <span class="SubText">系统管理</span></a>
+                        <ol>
+                            <li>
+                                <a  id="ggg"><span class="L2_No"></span>
+                                   <span class="SubText">角色与权限管理</span></a>
+                            </li>
+                            <li>
+                                <a  id="dsa"><span class="L2_No"></span>
+                                   <span class="SubText">职位与角色管理</span></a>
+                            </li>
+                            <li>
+                                <a id="asa"><span class="L2_No"></span>
+                                   <span class="SubText">用户管理</span></a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+
+                <ol class="SubList_w">
+                    <li>
+                        <a id="A1"  class="father_li"><span class="L1_Yes_ss_w"></span>
+                           <span class="SubText">系统管理</span></a>
+                        <ol class="o" style="display:none;">
+                            <li>
+                                <a  id="A2" ><span class="L2_No"></span>
+                                   <span class="SubText">角色与权限管理</span></a>
+                            </li>
+                            <li>
+                                <a  id="A3"><span class="L2_No"></span>
+                                   <span class="SubText">职位与角色管理</span></a>
+                            </li>
+                            <li>
+                                <a id="a4"><span class="L2_No"></span>
+                                   <span class="SubText">用户管理</span></a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+        </div>
+        <div class="Panel_footer">
+            <div class="PanelBtn">
+                <div class="PanelBtn1">保持</div>
+                <div class="PanelBtn2">取消</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
